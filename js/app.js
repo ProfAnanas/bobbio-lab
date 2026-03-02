@@ -69,7 +69,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
     document.getElementById('vista-ricetta').style.display = 'block';
     document.getElementById('titolo-ricetta-corrente').textContent = nomeRicetta;
     
-    // --> IL RESET DELLA PLANCIA <--
+    // --> Il reset della plancia <--
     // Rimuoviamo la modalità algoritmo (se era rimasta accesa)
     document.body.classList.remove('modalita-algoritmo');
     
@@ -89,14 +89,78 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         listaIngredienti.innerHTML = '';
         listaProcedimento.innerHTML = '';
         pannelloAlgoritmo.innerHTML = '';
+
+        // --- GESTIONE NOTA DOSI / STAMPO ---
+        // Rimuove eventuali note della ricetta precedente
+        const vecchiaNota = document.getElementById('nota-dosi-ricetta');
+        if (vecchiaNota) vecchiaNota.remove();
+
+        // Se la ricetta corrente ha una nota, crea il badge
+        if (ricetta.nota_dosi) {
+            const notaEl = document.createElement('div');
+            notaEl.id = 'nota-dosi-ricetta';
+            notaEl.classList.add('badge-nota-dosi');
+            notaEl.innerHTML = `<span>📏 ${ricetta.nota_dosi}</span>`;
+            
+            // Lo inserisce esattamente prima dell'elenco ingredienti
+            listaIngredienti.parentNode.insertBefore(notaEl, listaIngredienti);
+        }
+        // --- FINE NOTA DOSI ---
         
-        ricetta.ingredienti.forEach(ingrediente => {
+        // --- NUOVO MOTORE INGREDIENTI PROPORZIONALI ---
+        ricetta.ingredienti.forEach((ingrediente, index) => {
             const li = document.createElement('li');
-            li.textContent = ingrediente;
+
+            // Controlla se l'ingrediente è nel nuovo formato a oggetti e ha un numero valido
+            if (typeof ingrediente === 'object' && ingrediente.quantita !== null && ingrediente.quantita !== undefined) {
+                // Impaginazione a due colonne per ingredienti pesabili
+                li.classList.add('riga-ingrediente');
+                const quantitaBase = ingrediente.quantita;
+                const unitaDesc = ingrediente.unita_descrizione;
+
+                li.innerHTML = `
+                    <div class="ingrediente-originale">${quantitaBase} ${unitaDesc}</div>
+                    <div class="ingrediente-proporzionato">
+                        <input type="number" step="any" class="input-quantita" data-index="${index}" data-base="${quantitaBase}" value="${quantitaBase}">
+                    </div>
+                `;
+            } else {
+                // Rete di sicurezza e centratura elegante per "Q.b." e note
+                li.classList.add('riga-nota-ingrediente');
+                const testoIngrediente = typeof ingrediente === 'object' ? ingrediente.unita_descrizione : ingrediente;
+                li.innerHTML = `<span>${testoIngrediente}</span>`;
+            }
             listaIngredienti.appendChild(li);
         });
+
+        // La logica matematica del ricalcolo
+        const inputsQuantita = listaIngredienti.querySelectorAll('.input-quantita');
+        inputsQuantita.forEach(input => {
+            input.addEventListener('input', (evento) => {
+                const nuovoValore = parseFloat(evento.target.value);
+                const valoreBase = parseFloat(evento.target.getAttribute('data-base'));
+
+                // Blocca il calcolo se la casella è vuota o ha un valore zero/negativo
+                if (isNaN(nuovoValore) || nuovoValore <= 0 || isNaN(valoreBase) || valoreBase <= 0) return;
+
+                const fattoreDiScala = nuovoValore / valoreBase;
+
+                // Aggiorna istantaneamente tutte le altre caselle
+                inputsQuantita.forEach(altroInput => {
+                    if (altroInput !== evento.target) {
+                        const suaBase = parseFloat(altroInput.getAttribute('data-base'));
+                        let calcolo = suaBase * fattoreDiScala;
+                        
+                        // Arrotonda a un decimale per la pulizia visiva (es. 125.5 invece di 125.5342)
+                        calcolo = Math.round(calcolo * 10) / 10;
+                        altroInput.value = calcolo;
+                    }
+                });
+            });
+        });
+        // --- FINE MOTORE INGREDIENTI ---
         
-        ricetta.procedimento.forEach(passaggio => {
+ricetta.procedimento.forEach(passaggio => {
             if (passaggio.tipo === 'bivio') {
                 const divBivioTesto = document.createElement('div');
                 divBivioTesto.classList.add('blocco-bivio-testo');
@@ -118,6 +182,28 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 listaProcedimento.appendChild(divBivioTesto);
                 pannelloAlgoritmo.appendChild(divBivioNodi);
 
+            } else if (passaggio.tipo === 'parallelo') {
+                // (Nuovo blocco per le azioni in contemporanea)
+                const divParalleloTesto = document.createElement('div');
+                divParalleloTesto.classList.add('blocco-parallelo-testo');
+                
+                const divParalleloNodi = document.createElement('div');
+                divParalleloNodi.classList.add('contenitore-parallelo-visivo');
+                
+                passaggio.rami.forEach(ramo => {
+                    const stepTesto = creaTestoSinistra(ramo);
+                    divParalleloTesto.appendChild(stepTesto);
+                    
+                    const divNodo = creaNodoDestra(ramo);
+                    divNodo.classList.add('nodo-ramo');
+                    divParalleloNodi.appendChild(divNodo);
+                    
+                    attivaSincronia(stepTesto, divNodo);
+                });
+                
+                listaProcedimento.appendChild(divParalleloTesto);
+                pannelloAlgoritmo.appendChild(divParalleloNodi);
+
             } else {
                 const stepTesto = creaTestoSinistra(passaggio);
                 listaProcedimento.appendChild(stepTesto);
@@ -128,9 +214,10 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 attivaSincronia(stepTesto, divNodo);
             }
         });
+        
     } catch (error) {
         console.error('Errore nel caricamento della ricetta:', error);
-        document.getElementById('lista-ingredienti').innerHTML = '<li>Errore: Impossibile Caricare I Dati Della Ricetta.</li>';
+        document.getElementById('lista-ingredienti').innerHTML = '<li>Errore: Impossibile caricare i dati della ricetta.</li>';
     }
 }
 
@@ -198,7 +285,12 @@ function creaTestoSinistra(dati) {
     stepContainer.appendChild(testoStep);
 
     // (I clic per i popup sono stati spostati in "attivaSincronia" per farli dialogare coi nodi)
-
+if (dati.opzionale) {
+        const badgeOpzionale = document.createElement('span');
+        badgeOpzionale.classList.add('badge-opzionale');
+        badgeOpzionale.textContent = 'Opzionale';
+        testoStep.prepend(badgeOpzionale); // Lo inserisce all'inizio del testo
+    }
     return stepContainer;
 }
 
@@ -267,7 +359,9 @@ function creaNodoDestra(dati) {
         
         divNodo.appendChild(divParametri);
     }
-    
+    if (dati.opzionale) {
+        divNodo.classList.add('nodo-opzionale');
+    }
     return divNodo;
 }
 

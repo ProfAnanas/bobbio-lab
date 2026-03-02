@@ -1,13 +1,13 @@
 {
     "id": "pasta_all_uovo",
     "titolo": "Pasta all'uovo",
-    "ingredienti": [
-        "Per 10 persone",
-        "1000 g Farina 0",
-        "300 g Uova intere",
-        "50 g Acqua",
-        "30 g Olio EVO",
-        "20 g Sale fino"
+        "nota_dosi": "Per 10 persone",
+        "ingredienti": [
+        { "quantita": 1000, "unita_descrizione": "g Farina 0" },
+        { "quantita": 300, "unita_descrizione": "g Uova intere" },
+        { "quantita": 50, "unita_descrizione": "g Acqua" },
+        { "quantita": 30, "unita_descrizione": "g Olio EVO" },
+        { "quantita": 20, "unita_descrizione": "n° Sale fino" }
     ],
     "procedimento": [
         {

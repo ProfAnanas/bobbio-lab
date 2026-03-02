@@ -1,13 +1,14 @@
 {
   "id": "frolla_milano",
   "titolo": "Pasta frolla Milano (metodo classico)",
-  "ingredienti": [
-    "250 g Farina debole",
-    "125 g Burro",
-    "125 g Zucchero",
-    "50 g Uova",
-    "Aromi a piacere: vaniglia, scorza di agrumi"
-  ],
+      "ingredienti": 
+   [
+    { "quantita": 250, "unita_descrizione": "g Farina debole" },
+    { "quantita": 125, "unita_descrizione": "g Burro" },
+    { "quantita": 125, "unita_descrizione": "g Zucchero" },
+    { "quantita": 50, "unita_descrizione": "g Uova" },
+    { "quantita": null, "unita_descrizione": "Aromi a piacere (vaniglia, limone, ecc.)" }
+    ],
   "procedimento": [
     { "step_id": "step-1", "testo": "Nella planetaria munita di foglia (o a mano): impastare il burro a pomata con lo zucchero", "icona": "foglia", "velocita": "media"},
     { "step_id": "step-2", "testo": "Unire le uova poco per volta", "icona": "aggiungere" },

@@ -659,3 +659,152 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     color: #2c3e50;
     box-shadow: 0 0 12px rgba(241, 196, 15, 0.6);
 }
+
+/* --- STILE INGREDIENTI DINAMICI (Layout a 2 Colonne) --- */
+#lista-ingredienti {
+    list-style: none; /* Toglie i noiosi pallini dell'elenco */
+    padding: 0;
+    margin: 0;
+}
+
+.riga-ingrediente {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #bdc3c7;
+}
+
+/* Colonna di sinistra: Testo allineato in modo naturale */
+.ingrediente-originale {
+    flex: 2;
+    color: #4a5568;
+    font-size: 1.05em;
+    font-weight: bold;
+    text-align: left; /* Spostiamo l'allineamento a sinistra */
+    padding-left: 10px; /* Aggiungiamo un piccolo margine per non schiacciare il testo al bordo invisibile */
+    padding-right: 20px;
+    border-right: 2px solid #ecf0f1; 
+}
+
+/* Colonna di destra: stringiamo lo spazio per ospitare solo l'input */
+.ingrediente-proporzionato {
+    flex: 1; /* Ridotto da 1.2 a 1 */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.input-quantita {
+    width: 75px;
+    padding: 8px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    text-align: center; /* Numero perfettamente centrato */
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2980b9;
+    background-color: #f0f8ff;
+    transition: 0.2s;
+    /* Nasconde le freccette del numero per un look più pulito */
+    -moz-appearance: textfield; 
+    appearance: textfield;
+}
+.input-quantita::-webkit-outer-spin-button,
+.input-quantita::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-quantita:focus {
+    outline: none;
+    border-color: #2ecc71;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.3); /* Leggero alone verde quando scrivi */
+}
+
+/* Riga speciale per Aromi, Note o Varianti (i valori "null") */
+.riga-nota-ingrediente {
+    text-align: center;
+    padding: 18px 0;
+    font-style: italic;
+    color: #7f8c8d;
+    font-weight: bold;
+    border-bottom: 1px dashed #bdc3c7;
+    font-size: 0.95em;
+    background-color: #fafbfc; /* Sfondo lievissimo per farla risaltare */
+}
+
+/* --- STILE NOTA DOSI / RESA --- */
+.badge-nota-dosi {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fdf2e9; /* Un arancione chiarissimo e caldo */
+    color: #d35400; /* Testo arancione scuro per contrasto */
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95em;
+    border: 1px dashed #e67e22;
+}
+
+/* Stile per i nodi opzionali */
+.nodo-visivo.nodo-opzionale {
+    border-style: dashed !important; /* Forza il bordo a diventare tratteggiato mantenendo il colore dell'icona */
+    border-width: 3px;
+    opacity: 0.85; /* Lo rende leggermente più trasparente per indicare minore priorità */
+}
+
+/* Etichetta testuale a sinistra */
+.badge-opzionale {
+    font-size: 0.8em;
+    color: #f39c12; /* Un bell'arancione per farsi notare ma non allarmare */
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 8px;
+    padding: 2px 6px;
+    background-color: #fdf2e9;
+    border-radius: 4px;
+}
+
+/* Contenitore testuale azioni in parallelo */
+.blocco-parallelo-testo {
+    border-left: 3px solid #9b59b6; /* Un colore viola per distinguerlo dal bivio arancione */
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.blocco-parallelo-testo::before {
+    content: "IN CONTEMPORANEA:";
+    display: block;
+    font-size: 0.8em;
+    color: #9b59b6;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Contenitore dei nodi visivi in parallelo */
+.contenitore-parallelo-visivo {
+    display: flex;
+    gap: 30px; /* Più spazio per far respirare il segno + */
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #f4f0f7; /* Sfondo tenue che li unisce visivamente */
+    border-radius: 8px;
+    border: 1px dashed #9b59b6;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Il grande segno + in mezzo ai due nodi */
+.contenitore-parallelo-visivo::after {
+    content: "+";
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: #9b59b6;
+    /* Centratura perfetta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

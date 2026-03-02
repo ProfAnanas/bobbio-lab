@@ -1,14 +1,14 @@
 {
     "id": "fondo_vegetale",
     "titolo": "Fondo vegetale",
+        "nota_dosi": "Per 10 litri di fondo",
     "ingredienti": [
-        "Ingredienti per 10 litri di fondo",
-        "15 l Acqua",
-        "1200 g Cipolle",
-        "800 g Carote",
-        "800 g Sedano",
-        "2 n° Foglie Alloro",
-        "40 g Olio EVO"
+        { "quantita": 15, "unita_descrizione": "l Acqua" },
+        { "quantita": 1200, "unita_descrizione": "g Cipolle" },
+        { "quantita": 800, "unita_descrizione": "g Carote" },
+        { "quantita": 800, "unita_descrizione": "g Sedano" },
+        { "quantita": 2, "unita_descrizione": "n° Foglie di Alloro" },
+        { "quantita": 40, "unita_descrizione": "g Olio EVO" }
     ],
     "procedimento": [
         {

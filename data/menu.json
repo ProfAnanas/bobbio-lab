@@ -44,7 +44,14 @@
     "anno": "1, 2, 3",
     "tag": "diplomatica,chantilly,uovo,uova,latte,panna,cioccolato"
 },
-            { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" }
+            { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" },
+            {
+    "id": "focaccia-diretto",
+    "nome": "Focaccia (Impasto Diretto)",
+    "url_dati": "data/pasticceria/ricette_base/focaccia-diretto.json",
+    "anno": "1, 2, 3",
+    "tag": "pizza, biga"
+}
           ]
         },
         {

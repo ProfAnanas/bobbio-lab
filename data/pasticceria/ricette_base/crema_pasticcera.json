@@ -1,15 +1,16 @@
 {
     "id": "crema-pasticcera",
     "titolo": "Crema pasticcera",
-    "ingredienti": [
-        "500 g Latte intero fresco",
-        "200 g Tuorli",
-        "150 g Zucchero",
-        "25 g Amido di riso",
-        "25 g Amido di mais",
-        "Aromi a piacere (vaniglia, limone, ecc.)",
-        "Variante cioccolato fondente:",
-        "180 g cioccolato fondente 55% fuso caldo"
+    "ingredienti": 
+   [
+    { "quantita": 500, "unita_descrizione": "g Latte intero fresco" },
+    { "quantita": 200, "unita_descrizione": "g Tuorli" },
+    { "quantita": 150, "unita_descrizione": "g Zucchero" },
+    { "quantita": 25, "unita_descrizione": "g Amido di Riso" },
+    { "quantita": 25, "unita_descrizione": "g Amido di Mais" },
+    { "quantita": null, "unita_descrizione": "Aromi a piacere (vaniglia, limone, ecc.)" },
+    { "quantita": null, "unita_descrizione": "Per la variante al cioccolato:" },
+    { "quantita": 180, "unita_descrizione": "g cioccolato fondente 55% fuso caldo" }
     ],
     "procedimento": [
         {

@@ -1,18 +1,18 @@
 {
     "id": "focaccia_ligure",
     "titolo": "Focaccia ligure",
-    "ingredienti": [
-        "Per una teglia 40x30",
-        "500 g farina 00 media (200-250W)",
-        "300 g acqua",
-        "10 g lievito",
-        "12 g sale + 10 g circa acqua",
-        "40 g olio (o 20 olio e 20 strutto)",
-        "5 g Malto diastasico (o 5 g di miele)",
-        "Per la salamoia:",
-        "160 g Acqua",
-        "80 g Olio EVO",
-        "10 g Sale"
+        "nota_dosi": "Per una teglia 30x40",
+        "ingredienti": [
+        { "quantita": 500, "unita_descrizione": "g Farina 00 media (200-250W" },
+        { "quantita": 300, "unita_descrizione": "g Acqua" },
+        { "quantita": 10, "unita_descrizione": "g Lievito di birra fresco" },
+        { "quantita": 12, "unita_descrizione": "g Sale + 10g di Acqua" },
+        { "quantita": 40, "unita_descrizione": "g Olio EVO (o 20g e 20g di strutto)" },
+        { "quantita": 5, "unita_descrizione": "g Malto Diastasico (o 5g di miele)" },
+        { "quantita": null, "unita_descrizione": "Per la salamoia" },
+        { "quantita": 160, "unita_descrizione": "g Acqua" },
+        { "quantita": 80, "unita_descrizione": "g Olio EVO" },
+        { "quantita": 10, "unita_descrizione": "g Sale" }
     ],
     "procedimento": [
         {
