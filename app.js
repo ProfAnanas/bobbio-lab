@@ -7,7 +7,7 @@ let catalogoCompleto = [];
 
 async function caricaMenu() {
     try {
-        const response = await fetch('data/menu.json');
+        const response = await fetch('menu.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error('Errore nel caricamento del file menu.json');
         const data = await response.json();
         catalogoCompleto = data.catalogo;
