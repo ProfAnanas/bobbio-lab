@@ -1,0 +1,126 @@
+{
+    "id": "panzerotti_fritti",
+    "titolo": "Panzerotti fritti",
+    "nota_dosi": "per 15 panzerotti da 50g di impasto l'uno",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00 (debole o media)"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Semola rimacinata di grano duro"
+        },
+        {
+            "quantita": 270,
+            "unita_descrizione": "g Acqua a temperatura ambiente"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il ripieno"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Mozzarella asciutta per pizza"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Passata di pomodoro (molto densa)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "per condire la salsa: Origano, Sale, Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per friggere"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "l Olio di semi per Frittura"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Tagliare la mozzarella a cubetti molto piccoli e metterla a scolare in un colino, pressandola leggermente o lasciandola in frigorifero per qualche ora per fargli perdere il siero in eccesso.",
+                    "icona": "tagliare",
+                    "dimensione": "1cm"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Condire la passata di pomodoro con sale, poco olio e origano, assicurandosi che sia ristretta e non liquida. (in caso di passata liquida farla restringere in un pentolino a fiamma bassa e farla raffreddare)",
+                    "icona": "mescolare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Inserire nella ciotola della planetaria munita di gancio, le due farine e il lievito sbriciolato. Avviare la macchina a bassa velocità e aggiungere l'acqua in modo graduale.",
+            "icona": "gancio",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Quando la farina ha assorbito i liquidi e l'impasto inizia a prendere corpo, inserire l'olio extravergine a filo.",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Attendere che l'olio sia completamente assorbito dalla maglia glutinica, quindi aggiungere il sale. Continuare a impastare fino a ottenere una struttura liscia, omogenea e tenace. L'impasto finito non deve risultare appiccicoso.",
+            "icona": "gancio",
+            "velocita": "medio-alta"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Rovesciare l'impasto sul banco, pirlarlo formando una palla e riporlo in un contenitore leggermente unto. Lievitare a temperatura di 26-28°C per circa 1,5 o 2 ore, fino al raddoppio del volume.",
+            "icona": "lievitazione",
+            "tempo": "1.5-2 ore o raddoppio"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Sgonfiare dolcemente l'impasto e dividerlo in porzioni regolari da circa 50 grammi. Pirlare ogni singolo pezzo stringendolo bene per formare delle palline tese e lisce in superficie.",
+            "icona": "porzionare",
+            "dimensione": "50g"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Disporre le palline su una teglia spolverata con poca semola, coprire e lasciar riposare per 45-60 minuti (fase di appretto).",
+            "icona": "riposo",
+            "tempo": "45-60 min."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Stendere ogni pallina con il mattarello fino a ottenere un disco spesso tre millimetri. Posizionare un cucchiaio scarso di ripieno (pomodoro e mozzarella ben scolata) esattamente al centro del disco, facendo massima attenzione a non sporcare i bordi con l'unto o il pomodoro, altrimenti la pasta non riuscirà a sigillarsi.",
+            "icona": "mattarello",
+            "dimensione": "3 mm"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Inumidire leggermente i bordi di una metà del disco con un pennellino appena bagnato d'acqua. Chiudere l'impasto a mezzaluna, facendo uscire bene l'aria interna (che in frittura si dilaterebbe gonfiando e rompendo la pasta), e sigillare pressando con forza i polpastrelli. Ripiegare il bordo su se stesso creando un piccolo cordoncino, oppure sigillare ulteriormente schiacciando bene con i rebbi di una forchetta.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Tuffare i panzerotti, massimo due o tre per volta per non abbassare le temperature, in olio profondo portato rigorosamente a 170°C. Girarli spesso con una schiumarola a ragno per garantire una cottura uniforme e uno sviluppo omogeneo, fino a doratura completa. Scolare su carta assorbente da cucina.",
+            "icona": "pentolino",
+            "temperatura": "170°C"
+        }
+    ]
+}

@@ -84,7 +84,42 @@
     "url_dati": "data/pasticceria/ricette_avanzate/focaccia_ligure.json",
     "anno": "3, 4, 5",
     "tag": "pizza,focaccia,lievito"
-            }
+            },
+            {
+    "id": "maritozzi",
+    "nome": "Maritozzi",
+    "url_dati": "data/pasticceeria/ricette_avanzate/maritozzi.json",
+    "anno": "3",
+    "tag": "panna, lievito, roma"
+},
+{
+    "id": "pangoccioli",
+    "nome": "Pangoccioli",
+    "url_dati": "data/pasticceria/ricette_avanzate/pangoccioli.json",
+    "anno": "3",
+    "tag": "cioccolato, gocce di cioccolato, colazione, merenda"
+},
+{
+    "id": "krapfen",
+    "nome": "Krapfen",
+    "url_dati": "data/pasticceria/ricette_avanzate/krapfen.json",
+    "anno": "3",
+    "tag": "bomboloni, crema, fritto, ciambelle"
+},
+{
+    "id": "panini_colorati",
+    "nome": "Mini panini al latte colorati",
+    "url_dati": "data/pasticceria/ricette_avanzate/panini_colorati.json",
+    "anno": "tutti",
+    "tag": "paninetti, buns"
+},
+{
+    "id": "panzerotti_fritti",
+    "nome": "Panzerotti fritti",
+    "url_dati": "data/pasticceria/ricette_avanzate/panzerotti_fritti.json",
+    "anno": "3",
+    "tag": "calzoni, calzone, panzerotto, puglia, panzerotto pugliese"
+}
           ]
         }
       ]

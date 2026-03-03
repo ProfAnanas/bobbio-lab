@@ -87,19 +87,19 @@
             "icona": "porzionare"
         },
                 {
-            "step_id": "step-8",
+            "step_id": "step-6",
             "testo": "Appiattire ogni pallina (o stendere l'impasto intero), farcirlo a piacere e richiudere bene l'impasto.",
             "icona": "mattarello",
             "opzionale": true
         },
         {
-            "step_id": "step-6",
+            "step_id": "step-7",
             "testo": "Far lievitare almeno un'ora.",
             "icona": "lievitazione",
             "tempo": "1 ora"
         },
         {
-            "step_id": "step-7",
+            "step_id": "step-8",
             "testo": "Spennellare la/le brioche con uovo sbattuto (o latte e uovo o panna e uovo)",
             "opzionale": true,
             "icona": "spennellare"
