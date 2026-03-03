@@ -548,7 +548,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 
 /* Categoria Verde */
 .nodo-visivo.tipo-foglia, .nodo-visivo.tipo-frusta, .nodo-visivo.tipo-gancio, 
-.nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare, .nodo-visivo.tipo-versa, .nodo-visivo.tipo-porzionare {
+.nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare, .nodo-visivo.tipo-versare, .nodo-visivo.tipo-porzionare {
     border-color: #2ecc71;
     background-color: #f0fbf4;
 }
@@ -600,7 +600,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 }
 .nodo-visivo.tipo-pimer.nodo-attivo, .nodo-visivo.tipo-mixer.nodo-attivo, 
 .nodo-visivo.tipo-tagliare.nodo-attivo, .nodo-visivo.tipo-impastare_mano.nodo-attivo,
-.nodo-visivo.tipo-spennellare.nodo-attivo {
+.nodo-visivo.tipo-spennellare.nodo-attivo, .nodo-visivo.tipo-setacciare.nodo-attivo {
     background-color: #f1c40f;
     color: #2c3e50;
 }
@@ -828,4 +828,21 @@ body.modalita-algoritmo .badge-nota-dosi {
         text-align: right;
         box-shadow: none;
     }
+}
+/* Pulsante di ricarica anti-cache */
+.btn-sincronizza {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+}
+
+.btn-sincronizza:hover {
+    background-color: #c0392b;
 }

@@ -115,6 +115,7 @@
         {
             "step_id": "step-12",
             "testo": "Terminare la cottura per 10 minuti estraendo tutta l'umidità dal forno (deumidificazione al 100%)",
+            "icona": "forno_ventilato",
             "temperatura": "200°C",
             "tempo": "10 min.",
             "velocita": "Deumidificazione"

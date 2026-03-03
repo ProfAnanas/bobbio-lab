@@ -62,7 +62,8 @@
                 },
                 {
                     "step_id": "step-4b",
-                    "testo": "Montare gli albumi a neve ben ferma (becco di uccello)"
+                    "testo": "Montare gli albumi a neve ben ferma (becco di uccello)",
+                    "icona": "montare"
                 }
             ]
         },
@@ -78,7 +79,8 @@
         },
         {
             "step_id": "step-7",
-            "testo": "Aggiungere per ultimo il lievito."
+            "testo": "Aggiungere per ultimo il lievito.",
+            "icona": "aggiungere"
         },
         {
             "step_id": "step-8",

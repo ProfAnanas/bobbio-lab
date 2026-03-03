@@ -69,7 +69,7 @@
 {
     "id": "trota_incrosta",
     "nome": "Trota fario in crosta con spinacini e crema di peperoni",
-    "url_dati": "data/trota_incrosta.json",
+    "url_dati": "data/cucina/ricette_piemontesi/trota_incrosta.json",
     "anno": "3",
     "tag": "pesce, piemonte"
 },

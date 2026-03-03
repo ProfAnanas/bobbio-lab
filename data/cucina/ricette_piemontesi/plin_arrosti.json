@@ -90,6 +90,7 @@
         {
             "step_id": "step-5",
             "testo": "Abbattere il ripieno in positivo fino a raffreddamento.",
+            "icona": "frigorifero",
             "temperatura": "+4°C"
         },
         {
