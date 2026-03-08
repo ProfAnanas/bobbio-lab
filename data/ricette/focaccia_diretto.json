@@ -1,0 +1,86 @@
+{
+    "id": "focaccia_diretto",
+    "titolo": "Focaccia (Impasto Diretto)",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Farina 00 media (240W)"
+        },
+        {
+            "quantita": 260,
+            "unita_descrizione": "g Acqua a temperatura ambiente"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale (+20 g di Acqua)"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Olio EVO"
+        }
+    ],
+    "procedimento": [
+        { "tipo": "parallelo", "rami": [
+        { "step_id": "step-1a", "testo": "Sciogliere il lievito nell'acqua", "icona": "mescolare"},
+        { "step_id": "step-1b", "testo": "Sciogliere il sale nell'acqua", "icona": "mescolare"}
+      ]
+        },       
+        {
+            "step_id": "step-2",
+            "testo": "Nella planetaria munita di gancio versare la farina e l'acqua con il lievito",
+            "icona": "gancio",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Quando l'impasto inizia ad essere liscio, aggiungere il sale sciolto nell'acqua",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere l'olio in due volte.",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Ribaltare l'impasto sul banco da lavoro, coprire con una ciotola e far riposare 1 ora",
+            "icona": "riposo",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Stendere l'impasto in una teglia unta di olio",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far lievitare 1 ora a 26-28°C",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Preparare una salamoia con 150 g di acqua, 70 g di olio EVO e 8 g di sale.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Praticare i \"buchi\" nell'impasto e versare la salamoia (la salamoia non deve finire nel fondo della teglia, sotto l'impasto).",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Cuocere in forno a 230°C per 15-20 min.",
+            "icona": "forno_ventilato",
+            "temperatura": "230°C",
+            "tempo": "15-20 min."
+        }
+    ]
+}

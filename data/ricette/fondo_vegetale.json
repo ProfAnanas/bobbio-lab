@@ -1,0 +1,50 @@
+{
+    "id": "fondo_vegetale",
+    "titolo": "Fondo vegetale",
+        "nota_dosi": "Per 10 litri di fondo",
+    "ingredienti": [
+        { "quantita": 15, "unita_descrizione": "l Acqua" },
+        { "quantita": 1200, "unita_descrizione": "g Cipolle" },
+        { "quantita": 800, "unita_descrizione": "g Carote" },
+        { "quantita": 800, "unita_descrizione": "g Sedano" },
+        { "quantita": 2, "unita_descrizione": "n° Foglie di Alloro" },
+        { "quantita": 40, "unita_descrizione": "g Olio EVO" }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare e mondare tutte le verdure",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tagliare le verdure a mirepoix",
+            "icona": "tagliare",
+            "dimensione": "2 cm"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una pentola alta mettere l'olio e le verdure. Far rosolare a fuoco medio",
+            "icona": "pentola_alta",
+            "temperatura": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere l'acqua fredda e portare a ebollizione.",
+            "icona": "pentola_alta",
+            "temperatura": "alta"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Far sobbollire per 2 ore",
+            "icona": "pentola_alta",
+            "temperatura": "media-bassa",
+            "tempo": "2 ore"
+        },
+            { "tipo": "bivio", "rami": [
+        { "step_id": "step-6a", "testo": "Filtrare con chinoix e utilizzare.", "testo_nodo": "Filtrare e usare"},
+        { "step_id": "step-6b", "testo": "Filtrare e abbattere in positivo", "icona": "frigorifero","temperatura": "+3°C"}
+      ]
+    }
+  ]
+}

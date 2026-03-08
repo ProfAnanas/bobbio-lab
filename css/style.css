@@ -846,3 +846,8 @@ body.modalita-algoritmo .badge-nota-dosi {
 .btn-sincronizza:hover {
     background-color: #c0392b;
 }
+
+/* Forza la scomparsa dei blocchi quando il filtro lo decide */
+.blocco-categoria[style*="display: none"] {
+    display: none !important;
+}
