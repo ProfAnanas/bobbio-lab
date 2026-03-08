@@ -1,0 +1,146 @@
+{
+    "id": "panna_acida_salmone",
+    "titolo": "Piccola panna acida con tartare di salmone",
+    "nota_dosi": "Per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Pasta frolla salata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la panna acida"
+        },
+        {
+            "quantita": 480,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Yogurt intero"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Succo di limone"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Colla di pesce"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "erba cipollina"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la tartare di salmone"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Salmone marinato (o affumicato)"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Pernod (o pastis o vermouth bianco o vino bianco secco)"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "In un pentolino, scaldare la panna 35°C",
+                    "icona": "pentolino",
+                    "temperatura": "35°C"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Idratare la colla di pesce",
+                    "icona": "lavare",
+                    "tempo": "10 min."
+                }
+            ]
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "testo": "Fuori dal fuoco, aggiungere la colla di pesce alla panna.",
+                    "icona": "aggiungere"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Tritare finemente l'erba cipollina.",
+                    "icona": "tagliare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una ciotola unire: la panna, lo yogurt, il succo di limone, l'erba cipollina e aggiustare di sale.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Tagliare il salmone marinato a dadini tutti uguali di 1cm circa.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Condire il salmone con il Pernod (o l'alcolico in sostituzione), l'olio, il pepe e aggiustare di sale."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "In uno stampo in silicone a semisfera, riempire con la tartare di salmone per uno spessore di 1cm. Pressare bene.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Riempire gli stampini fino all'orlo con la panna acida quindi livellare bene.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Abbattere in negativo gli stampi in silicone",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Stendere la frolla salata ad uno spessore di 3mm.",
+            "icona": "mattarello",
+            "dimensione": "3 mm"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Coppare in dischi poco più grandi della semisfera.",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Cuocere in forno statico a 160°C per 10-15 minuti circa. (fino a cottura dorata)",
+            "icona": "forno_statico",
+            "temperatura": "160°C",
+            "tempo": "10-15 min."
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Una volta fredde, assemblare mettendo su ogni disco di frolla una semisfera di panna acida e tartare. Lucidare con un filo di olio EVO e decorare con l'erba cipollina",
+            "icona": "spennellare"
+        }
+    ]
+}

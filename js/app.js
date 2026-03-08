@@ -1,7 +1,7 @@
 // --- 1. DIZIONARIO SOTTOCATEGORIE ---
 const mappaSottocategorie = {
     cucina: ["Preparazioni base", "Stuzzichini e aperitivi", "Antipasti", "Primi", "Secondi", "Contorni", "Tecniche avanzate"],
-    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme", "Masse montate", "Torte da credenza", "Lievitati", "Cioccolato e pralineria", "Gelati e sorbetti", "Tecniche avanzate"],
+    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme", "Masse montate", "Torte da credenza", "Lievitati", "Cioccolato e pralineria", "Gelati e sorbetti", "Pasticceria salata", "Tecniche avanzate"],
     panificazione: ["Preparazioni base", "Lievitati", "Pani speciali", "Pizze e focacce", "Tecniche avanzate"]
 };
 
@@ -559,9 +559,11 @@ function esportaWord() {
     document.body.removeChild(link);
 }
 
+// --- FUNZIONE SCHERMO SEMPRE ON (Wake Lock API) ---
 let bloccoSchermo = null;
+
 async function attivaSchermo() {
-    const statoTesto = document.getElementById('stato-schermo'); 
+    const btnWakeLock = document.getElementById('btn-wake-lock'); 
     
     if (!('wakeLock' in navigator)) {
         alert("Il browser di questo dispositivo non supporta lo schermo sempre acceso.");
@@ -570,21 +572,38 @@ async function attivaSchermo() {
 
     try {
         if (bloccoSchermo !== null) {
+            // Spegne il blocco
             await bloccoSchermo.release();
             bloccoSchermo = null;
-            if (statoTesto) statoTesto.textContent = 'NORMALE';
+            if (btnWakeLock) {
+                btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                btnWakeLock.classList.remove('attivo'); // Usa la tua classe originale!
+            }
         } else {
+            // Accende il blocco
             bloccoSchermo = await navigator.wakeLock.request('screen');
-            if (statoTesto) statoTesto.textContent = 'SEMPRE ACCESO';
+            if (btnWakeLock) {
+                btnWakeLock.textContent = '☀️ Schermo: SEMPRE ACCESO';
+                btnWakeLock.classList.add('attivo'); // Usa la tua classe originale!
+            }
             
             bloccoSchermo.addEventListener('release', () => {
                 bloccoSchermo = null;
-                if (statoTesto) statoTesto.textContent = 'NORMALE';
+                if (btnWakeLock) {
+                    btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                    btnWakeLock.classList.remove('attivo');
+                }
             });
         }
     } catch (errore) {
         alert("Impossibile attivare lo schermo: " + errore.message);
     }
+}
+
+// Colleghiamo "l'interruttore" al bottone
+const bottoneSchermo = document.getElementById('btn-wake-lock');
+if (bottoneSchermo) {
+    bottoneSchermo.addEventListener('click', attivaSchermo);
 }
 
 function forzaAggiornamentoApp() {

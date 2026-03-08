@@ -11,7 +11,15 @@
             { "id": "pasta-all-uovo", "nome": "Pasta all'uovo", "url_dati": "data/ricette/pasta_all_uovo.json", "anno": "1, 2, 3", "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca" }
           ]
         },
-        { "nome_sottocategoria": "Stuzzichini e aperitivi", "preparazioni": [] },
+        { "nome_sottocategoria": "Stuzzichini e aperitivi", "preparazioni": [
+          {
+    "id": "panna_acida_salmone",
+    "nome": "Piccola panna acida con tartare di salmone",
+    "url_dati": "data/ricette/panna_acida_salmone.json",
+    "anno": "4, 5",
+    "tag": "mignon, aperitivo, amuse bouche"
+}
+        ] },
         {
           "nome_sottocategoria": "Antipasti",
           "preparazioni": [
@@ -82,7 +90,16 @@
         },
         { "nome_sottocategoria": "Cioccolato e pralineria", "preparazioni": [] },
         { "nome_sottocategoria": "Gelati e sorbetti", "preparazioni": [] },
-        { "nome_sottocategoria": "Tecniche avanzate", "preparazioni": [] }
+        { "nome_sottocategoria": "Tecniche avanzate", "preparazioni": [] },
+        { "nome_sottocategoria": "Pasticceria salata", "preparazioni": [
+          {
+    "id": "panna_acida_salmone",
+    "nome": "Piccola panna acida con tartare di salmone",
+    "url_dati": "data/ricette/panna_acida_salmone.json",
+    "anno": "4, 5",
+    "tag": "mignon, aperitivo, amuse bouche"
+}
+        ] }
       ]
     },
     {
