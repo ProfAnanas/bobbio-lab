@@ -851,3 +851,23 @@ body.modalita-algoritmo .badge-nota-dosi {
 .blocco-categoria[style*="display: none"] {
     display: none !important;
 }
+
+/* --- Sezioni speciali esami di qualifica --- */
+
+/* Azzurrino per qualifiche cucina */
+.blocco-categoria[data-id-macro="qualifiche_cucina"] {
+    background-color: #e3f2fd; 
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Verdino per qualifiche pasticceria */
+.blocco-categoria[data-id-macro="qualifiche_pasticceria"] {
+    background-color: #e8f5e9;
+    border: 2px solid #a5d6a7;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
