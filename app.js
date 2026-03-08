@@ -458,33 +458,37 @@ function cambiaVista() {
 }
 
 // --- FUNZIONE SCHERMO SEMPRE ON (Wake Lock API) ---
-let wakeLock = null;
-const btnWakeLock = document.getElementById('btn-wake-lock');
+let bloccoSchermo = null;
 
-if (btnWakeLock) {
-    btnWakeLock.addEventListener('click', async () => {
-        if (!wakeLock) {
-            try {
-                wakeLock = await navigator.wakeLock.request('screen');
-                btnWakeLock.classList.add('attivo');
-                btnWakeLock.textContent = '☀️ Schermo: SEMPRE ACCESO';
+async function attivaSchermo() {
+    const statoTesto = document.getElementById('stato-schermo'); // Assicurati che l'id sia corretto
+    
+    // Controlla se il browser supporta la funzione
+    if (!('wakeLock' in navigator)) {
+        alert("Il browser di questo dispositivo non supporta lo schermo sempre acceso.");
+        return;
+    }
 
-                wakeLock.addEventListener('release', () => {
-                    wakeLock = null;
-                    btnWakeLock.classList.remove('attivo');
-                    btnWakeLock.textContent = '🌙 Schermo: NORMALE';
-                });
-            } catch (err) {
-                console.error('Errore Wake Lock:', err.name, err.message);
-                alert('Il tuo browser o dispositivo non supporta il blocco dello schermo, oppure la batteria è in risparmio energetico estremo.');
-            }
+    try {
+        if (bloccoSchermo !== null) {
+            // Spegne il blocco
+            await bloccoSchermo.release();
+            bloccoSchermo = null;
+            if (statoTesto) statoTesto.textContent = 'NORMALE';
         } else {
-            await wakeLock.release();
-            wakeLock = null;
-            btnWakeLock.classList.remove('attivo');
-            btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+            // Accende il blocco
+            bloccoSchermo = await navigator.wakeLock.request('screen');
+            if (statoTesto) statoTesto.textContent = 'SEMPRE ACCESO';
+            
+            // Se l'utente cambia scheda, il blocco cade. Lo resettiamo.
+            bloccoSchermo.addEventListener('release', () => {
+                bloccoSchermo = null;
+                if (statoTesto) statoTesto.textContent = 'NORMALE';
+            });
         }
-    });
+    } catch (errore) {
+        alert("Impossibile attivare lo schermo: " + errore.message);
+    }
 }
 
 // --- GESTIONE RICERCA E FILTRO ANNUALITÀ ---
