@@ -170,7 +170,7 @@
             {
     "id": "maritozzi",
     "nome": "Maritozzi",
-    "url_dati": "data/pasticceeria/ricette_avanzate/maritozzi.json",
+    "url_dati": "data/pasticceria/ricette_avanzate/maritozzi.json",
     "anno": "3",
     "tag": "panna, lievito, roma"
 },
@@ -208,4 +208,5 @@
     }
   ]
 }
+
 
