@@ -1,0 +1,27 @@
+{
+    "id": "riduzione_balsamico_miele",
+    "titolo": "Riduzione di aceto balsamico e miele",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Aceto balsamico di Modena IGP"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Miele"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In un pentolino, portare a bollore gli ingredienti fino a ridurre il volume iniziale di un terzo.",
+            "icona": "pentolino",
+            "temperatura": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Conservare in bottiglie chiuse (o contenitore ermetico) anche a temperatura ambiente.",
+            "icona": "riposo"
+        }
+    ]
+}

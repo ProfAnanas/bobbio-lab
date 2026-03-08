@@ -1,0 +1,167 @@
+{
+    "id": "tartellette_russa",
+    "titolo": "Tartellette alla russa",
+    "nota_dosi": "per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Pasta frolla salata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il ripieno alla russa"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Patate"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Piselli fini"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Cetriolini sott'aceto"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Tonno"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Funghi sott'olio"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Maionese"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Salsa Worcester"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per le crocchette di gamberi"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Gamberi"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Petto di pollo"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Pane bianco"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Ghiaccio"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Coriandolo, zenzero"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Uova e pangrattato per l'impanatura"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la finitura"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Salsa alla maionese"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio per friggere"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Stendere la frolla a 2-3mm quindi rivestire gli stampi imburrati e infarinati e bucherellare con una forchetta.",
+            "icona": "mattarello",
+            "dimensione": "2-3 mm"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Cuocere in forno statico a 180°C per 15-20 min.",
+            "icona": "forno_statico"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Tagliare le patate e le carote a dadini di 5mm",
+                    "icona": "tagliare"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Tagliare a dadini i cetriolini e i funghetti"
+                }
+            ]
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-4a",
+                    "testo": "Sbollentare patate, carote e piselli per qualche minuto in acqua salata quindi raffreddare in acqua e ghiaccio",
+                    "icona": "pentolino"
+                },
+                {
+                    "step_id": "step-4b",
+                    "testo": "Sminuzzare il tonno",
+                    "icona": "tagliare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Raccogliere tutti gli ingredienti in una ciotola e condire con maionese, worcester e aggiustare di sale.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Pulire i gamberi (conservare il codino) e frullare insieme al petto di pollo tagliato a pezzi, al pane e al ghiaccio.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Unire l'albume, un pizzico di sale e pepe, il coriandolo tritato e lo zenzero grattugiato.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Formare delle piccole crocchette (grandi da stare dentro la tartelletta) quindi impanare con uovo e pangrattato. Infilare il codino del gambero (opzionale)",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Friggere in olio bollente a 170°C fino a doratura.",
+            "icona": "pentolino",
+            "temperatura": "170°C"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Comporre la tartelletta: riempire con l'insalata russa, farcire il bordo con la maionese quindi appoggiare una crocchetta di gamberi fritta."
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "id": "sable_parmigiano",
+    "titolo": "Sablé al Parmigiano Reggiano DOP",
+    "nota_dosi": "per 24 biscotti",
+    "ingredienti": [
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Farina 180W"
+        },
+        {
+            "quantita": 75,
+            "unita_descrizione": "g Burro (freddo di frigo)"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a piacere (pepe nero, noce moscata, erbe aromatiche tritate, ecc.)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di foglia inserire: farina, burro tagliato a cubetti, sale e aromi. Sabbiare a bassa velocità.",
+            "icona": "foglia",
+            "tempo": "fino a sabbiatura",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere il Parmigiano e far girare pochi secondi (giusto il tempo di amalgamarlo)",
+            "icona": "foglia",
+            "tempo": "10-15 sec.",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere i tuorli e far girare solo il tempo dell'assorbimento.",
+            "icona": "foglia",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Trasferite l'impasto sul banco, compattatelo rapidamente formando un panetto piatto.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Abbattere in positivo (o 2 ore in frigorifero)",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "fino a 2 ore."
+        }
+    ]
+}

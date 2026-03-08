@@ -1,0 +1,148 @@
+{
+    "id": "savarin_bagnacaoda",
+    "titolo": "Savarin di bagna caoda con peperoni arrostiti",
+    "nota_dosi": "per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la panna cotta alla bagna caoda"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Acciughe sott'olio"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Colla di pesce"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la cottura dell'aglio"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Aglio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Latte intero fresco"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per i peperoni"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Peperoni rossi"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Peperoni gialli"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la finitura"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Pasta frolla salata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "gelatina kappa"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "prezzemolo o cerfoglio"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Pelare l'aglio e metterlo in un pentolino con abbastanza olio per coprirlo.\nFar cuocere a fuoco basso fino a che l'aglio non si spappoli. Alla fine eliminare il latte in eccesso.",
+            "icona": "pentolino",
+            "temperatura": "bassa"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "testo": "Aggiungere la panna, le acciughe sott'olio, il burro e l'olio. Portare a 90°C",
+                    "icona": "pentolino",
+                    "temperatura": "90°C"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Idratare la colla di pesce",
+                    "icona": "lavare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In un bicchiere alto unire il composto di aglio e la colla di pesce quindi frullare e filtrare con un colino fine.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Colare negli stampi a forma di savarin, far raffreddare e abbattere in congelatore.",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Arrostire i peperoni quindi pelarli.",
+            "icona": "forno_ventilato"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Tagliare i peperoni in filetti piccoli quindi condire con olio, sale, pepe e cerfoglio (o prezzemolo)",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Riempire gli stampi a semisfera in silicone, schiacciare bene e abbattere in negativo.",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Tirare la pasta frolla ad uno spessore di 2mm. Coppare dei dischetti di diametro appena maggiore dei savarin quindi bucare con la forchetta.",
+            "icona": "mattarello",
+            "dimensione": "2 mm"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Cuocere a 160°C per 10-15 min circa (cottura dorata)",
+            "icona": "forno_statico",
+            "temperatura": "160°C",
+            "tempo": "10-15 min."
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Assemblare mettendo su ogni biscotto, il savarin di panna cotta e in cima la semisfera di peperoni. \nLasciar riposare a temperatura ambiente 30 min quindi gelatinare con gelatina kappa e decorare.",
+            "icona": "spennellare"
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "id": "pasticcera_salata",
+    "titolo": "Crema pasticcera salata",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Latte intero fresco"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 22,
+            "unita_descrizione": "g Amido di mais"
+        },
+        {
+            "quantita": 23,
+            "unita_descrizione": "g Amido di riso"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Noce moscata"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Portare a bollore il latte",
+                    "icona": "pentolino",
+                    "temperatura": "100°C"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Miscelare gli amidi, il Parmigiano Reggiano DOP, il sale e la noce moscata con la panna.",
+                    "icona": "mescolare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare il composto di amidi e panne nel latte e mescolare con una frusta energicamente. Far cuocere fino a che la crema non si addensa.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere i tuorli e mescolare energicamente per 1 minuto a fiamma bassa",
+            "icona": "aggiungere",
+            "tempo": "1 min."
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Togliere dal fuoco/piastra e unire il burro a dadini.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Trasferire in una pirofila bassa quindi abbattere con pellicola a contatto.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        }
+    ]
+}

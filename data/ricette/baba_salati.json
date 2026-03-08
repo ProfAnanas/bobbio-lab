@@ -1,0 +1,216 @@
+{
+    "id": "baba_salati",
+    "titolo": "Babà salati al pecorino",
+    "nota_dosi": "per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per i babà salati"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina 400W (manitoba)"
+        },
+        {
+            "quantita": 190,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Lievito di birra"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Miele di acacia"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Burro in pomata"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Pecorino grattugiato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Pepe rosa secco"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Noce moscata"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la bagna"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Latte intero fresco"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Pecorino grattugiato"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale, pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Alloro"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Noce moscata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la crema di acciughe"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Crema pasticcera salata"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Pasta di acciughe"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Acciughe sott'olio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aglio e prezzemolo"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la finitura"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Broccoli"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Uva sultanina"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Acciughe sott'olio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Peperoncino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gelatina kappa"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "OIio EVO"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di gancio unire: la farina, il miele, metà della uova e lievito. \nImpastare in modo da formare un composto abbastanza incordato.",
+            "icona": "gancio",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aumentare la velocità  e unire le restanti uova. Far lavorare fino a incordare.",
+            "icona": "gancio",
+            "velocita": "alta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Incorporare il burro un po' alla volta.",
+            "icona": "gancio",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere il pecorino, il pepe rosa, la noce moscata e il sale. Impastare per 2 minuti.",
+            "icona": "gancio",
+            "tempo": "2 min.",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Far riposare nel cestello della planetaria per 20 minuti.",
+            "icona": "riposo",
+            "tempo": "20 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Porzionare negli stampi a forma di savarin mignon",
+            "icona": "porzionare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Lievitare fino al raddoppio a 28-30°C",
+            "icona": "lievitazione",
+            "temperatura": "28-30°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere a 200°C in forno statico per 10-12 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "200°C",
+            "tempo": "10-12 min."
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Per la bagna: portare a bollore la panna con il latte",
+            "icona": "pentolino",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Unire gli altri ingredienti e mescolare bene per far sciogliere i formaggi grattugiati.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Far riposare 10 minuti quindi filtrare.",
+            "icona": "riposo",
+            "tempo": "10 min."
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Inzuppare i babà nella bagna calda.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Per la crema: Tritare le acciughe sott'olio con aglio e prezzemolo (a piacere)",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Miscelare la crema pasticcera salata con la pasta d'acciughe e il trito.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-15",
+            "testo": "Farcire il babà con uno spuntone di crema e decorare con broccoletto sbollentato, un pezzetto d'acciuga e un acino di uva sultanina idratata.",
+            "icona": "sac"
+        }
+    ]
+}

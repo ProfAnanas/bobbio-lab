@@ -1,0 +1,132 @@
+{
+    "id": "castagnole_salate",
+    "titolo": "Castagnole fritte salate",
+    "nota_dosi": "per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Farina 180W"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Farina 180W"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Maltitolo (o 8 g di zucchero semolato)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Bicarbonato d'ammonio (Ammoniaca per dolci)"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Peperoni"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Mais"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Piselli fini"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Mozzarella"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Parmigiano Reggiano DOP"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Peperoncino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la finitura"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Crema pasticcera salata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Peperoncino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In un pentolino portare a bollore: acqua, burro, maltitolo.",
+            "icona": "pentolino",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere la farina e cuocere il polentino finché non si stacca dalle pareti.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Trasferire nella planetaria munita di foglia e aggiungere le uova, una alla volta.",
+            "icona": "foglia"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere i 30g di farina miscelata con una punta di ammoniaca per dolci."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Tagliare tutte le verdure e la mozzarella a dadini.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Unire le verdure, la mozzarella, il parmigiano e un pizzico di peperoncino alla pasta choux quindi aggiustare di sale e pepe.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Trasferite in un sac-à-poche con la bocchetta liscia e abbastanza grande da far passare i dadini di verdura.",
+            "icona": "sac",
+            "dimensione": "bocchetta liscia"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Friggere piccole porzioni in olio a 150°C fino a doratura.",
+            "icona": "padella",
+            "temperatura": "150C°"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Farcire con crema pasticcera salata e spolverizzare con sale e peperoncino.",
+            "icona": "sac"
+        }
+    ]
+}

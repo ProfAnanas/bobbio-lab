@@ -1,0 +1,83 @@
+{
+    "id": "brise",
+    "titolo": "Pasta brisée con variante al Parmigiano Reggiano DOP",
+    "nota_dosi": "per 24 biscotti",
+    "ingredienti": [
+        {
+            "quantita": 140,
+            "unita_descrizione": "g Farina 180W"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Burro freddo a cubetti"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Acqua freddissima"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al Parmigiano Reggiano DOP"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Farina 180W"
+        },
+        {
+            "quantita": 68,
+            "unita_descrizione": "g Burro freddo a cubetti"
+        },
+        {
+            "quantita": 62,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Acqua freddissima"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di foglia, sabbiare la farina e il burro.",
+            "icona": "foglia",
+            "tempo": "fino a sabbiatura.",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Unire il sale, gli eventuali aromi e se previsto il Parmigiano Reggiano DOP grattugiato.",
+            "icona": "foglia",
+            "tempo": "10 sec.",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare l'acqua a filo con la macchina in movimento.\nFermare la macchina non appena l'impasto si unisce in panetto.",
+            "icona": "foglia",
+            "tempo": "fino a compattamento",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Stendere tra due fogli di carta da forno l'impasto ad uno spessore di 4-5cm.",
+            "icona": "mattarello",
+            "dimensione": "4-5cm"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Abbattere in positivo (o in frigorifero minimo 2 ore).",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "fino a 2 ore."
+        }
+    ]
+}

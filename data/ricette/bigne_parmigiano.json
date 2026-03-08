@@ -1,0 +1,69 @@
+{
+    "id": "bigne_parmigiano",
+    "titolo": "Bignè con chantilly al Parmigiano Reggiano DOP",
+    "nota_dosi": "per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": 24,
+            "unita_descrizione": "Bignè cotti"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la chantilly al Parmigiano Reggiano DOP"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Crema pasticcera salata"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Panna montata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la decorazione"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Panna montata"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Riduzione di aceto balsamico e miele"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale rosa secco"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Per la chantilly: prelevare metà crema pasticcera e scaldare nel microonde con il Parmigiano Reggiano DOP grattugiato.\nMescolare bene per sciogliere il formaggio.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Unire al resto della crema fredda quindi alleggerire con la panna montata.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Preparare le cialdine: mettere il Parmigiano Reggiano DOP negli stampi di silicone a forma di savarin quindi passarli nel microonde fino a doratura. Spolverare quando ancora caldi con pepe rosa sminuzzato.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Tagliare la parte superiore dei bignè, quindi farcire con la chantilly al parmigiano. Guarnire con una cialdina e completare con un anellino di panna montata.\nAl centro della panna decorare con la riduzione di balsamico al miele.",
+            "icona": "sac"
+        }
+    ]
+}

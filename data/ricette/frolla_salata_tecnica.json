@@ -1,0 +1,86 @@
+{
+    "id": "frolla_salata_tecnica",
+    "titolo": "Pasta frolla salata tecnica",
+    "nota_dosi": "per 1Kg di impasto",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Farina 180 W"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Maltitolo"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Fecola di patate"
+        },
+        {
+            "quantita": 7.5,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Latte in polvere (o 12g di Fecola di patate)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Noce moscata"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di foglia impastare: burro morbido, latte in polvere, maltitolo, sale, noce moscata e Parmigiano.",
+            "icona": "foglia",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere uova e tuorli poco alla volta",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere un terzo della farina. Far girare la macchina per 15 secondi.",
+            "icona": "foglia",
+            "tempo": "15 secondi",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere la farina rimanente e la fecola.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Trasferire l'impasto sul banco e dare la forma di panetto dopodiché stenderlo ad uno spessore di 4-5cm.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Abbattere in positivo. (o in frigorifero per 2 ore)",
+            "icona": "frigorifero",
+            "temperatura": "+4 °C",
+            "tempo": "fino a 2 ore"
+        }
+    ]
+}

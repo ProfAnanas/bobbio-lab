@@ -1,0 +1,65 @@
+{
+    "id": "salsa_maionese",
+    "titolo": "Salsa alla maionese",
+    "ingredienti": [
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 325,
+            "unita_descrizione": "g Olio di riso"
+        },
+        {
+            "quantita": 225,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Aceto di mele"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Senape fresca"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Succo di limone"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "g Sale"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In un bicchiere alto inserire le uova intere, i tuorli, la senape, il succo di limone e il sale. Frullare con un frullatore a immersione quindi versare a filo l'olio di riso.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Continuare a emulsionare versando l'olio EVO e infine l'aceto bollente.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Trasferire in una ciotola e unire la panna fresca liquida.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Conservare in frigorifero fino all'utilizzo.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        }
+    ]
+}

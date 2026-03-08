@@ -1,0 +1,168 @@
+{
+    "id": "aspic_passito_caprino",
+    "titolo": "Aspic di Passito con panna cotta di caprino",
+    "nota_dosi": "per 24 pezzi",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per l'aspic di Passito e uvetta"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Vino Passito"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Miele"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Colla di pesce"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Uvetta sultanina"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la panna cotta di caprino"
+        },
+        {
+            "quantita": 180,
+            "unita_descrizione": "g Formaggio caprino fresco"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Panna"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Latte intero fresco"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Colla di pesce"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Finocchio selvatico"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la finitura"
+        },
+        {
+            "quantita": 320,
+            "unita_descrizione": "g Pasta brioche"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "In un pentolino scaldare 1/3 di passito con il miele.",
+                    "icona": "pentolino",
+                    "temperatura": "bassa"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Idratare la colla di pesce",
+                    "icona": "lavare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Sciogliere la colla di pesce nel passito mescolando bene dopodiché aggiungere il restante passito.",
+            "icona": "montare"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Colare negli stampini in silicone un\nsottile strato di aspic (1 mm circa) e lasciare rapprendere.",
+                    "icona": "versare",
+                    "dimensione": "1mm"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Far idratare l'uvetta in un po' di acqua calda",
+                    "icona": "lavare",
+                    "temperatura": "acqua calda"
+                }
+            ]
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Strizzare l'uvetta, disporre negli stampini sopra lo strato di aspic rappreso. Versare quindi il resto della gelée fino a coprire l'uvetta.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Abbattere in positivo.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-6a",
+                    "testo": "In un pentolino scaldare a 85°C: panna, latte e caprino.",
+                    "icona": "pentolino",
+                    "temperatura": "85°C"
+                },
+                {
+                    "step_id": "step-6b",
+                    "testo": "Idratare la colla di pesce in acqua fredda",
+                    "icona": "lavare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Frullare il composto liquido.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Aggiustare di sale e pepe, finocchietto tritato quindi unire la colla di pesce e mescolare molto bene.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Lasciar raffreddare fino a raggiungere i 30°C.",
+            "icona": "frigorifero",
+            "temperatura": "30°C"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Mescolare bene e versare sopra gli aspic di Passito",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Abbattere in positivo (o in frigorifero per almeno 4 ore)",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "fino a 4 ore"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Prendere la pasta brioche cotta e ricavare delle rondelle di diametro leggermente maggiore rispetto agli stampini di panna cotta",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Tostare la pasta brioche, disporre sopra la panna cotta e decorare.",
+            "icona": "sac"
+        }
+    ]
+}
