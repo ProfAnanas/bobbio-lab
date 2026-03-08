@@ -11,64 +11,19 @@
             { "id": "pasta-all-uovo", "nome": "Pasta all'uovo", "url_dati": "data/ricette/pasta_all_uovo.json", "anno": "1, 2, 3", "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca" }
           ]
         },
-        { "nome_sottocategoria": "Stuzzichini e aperitivi", "preparazioni": [
-          {
-    "id": "panna_acida_salmone",
-    "nome": "Piccola panna acida con tartare di salmone",
-    "url_dati": "data/ricette/panna_acida_salmone.json",
-    "anno": "4, 5",
-    "tag": "mignon, aperitivo, amuse bouche"
-},
-{
-    "id": "aspic_passito_caprino",
-    "nome": "Aspic di Passito con panna cotta di caprino",
-    "url_dati": "data/ricette/aspic_passito_caprino.json",
-    "anno": "tutti",
-    "tag": ""
-},
-{
-    "id": "savarin_bagnacaoda",
-    "nome": "Savarin di bagna caoda con peperoni arrostiti",
-    "url_dati": "data/ricette/savarin_bagnacaoda.json",
-    "anno": "5",
-    "tag": ""
-},
-{
-    "id": "focaccine_panelle",
-    "nome": "Focaccine al kamut con panelle di ceci",
-    "url_dati": "data/ricette/focaccine_panelle.json",
-    "anno": "5",
-    "tag": "aperitivo, appetizer, amuse bouche, farinata, focaccia"
-},
-{
-    "id": "castagnole_salate",
-    "nome": "Castagnole fritte salate",
-    "url_dati": "data/ricette/castagnole_salate.json",
-    "anno": "5",
-    "tag": ""
-},
-{
-    "id": "baba_salati",
-    "nome": "Babà salati al pecorino",
-    "url_dati": "data/ricette/baba_salati.json",
-    "anno": "4, 5",
-    "tag": ""
-},
-{
-    "id": "bigne_parmigiano",
-    "nome": "Bignè con chantilly al Parmigiano Reggiano DOP",
-    "url_dati": "data/ricette/bigne_parmigiano.json",
-    "anno": "3, 4, 5",
-    "tag": ""
-},
-{
-    "id": "tartellette_russa",
-    "nome": "Tartellette alla russa",
-    "url_dati": "data/ricette/tartellette_russa.json",
-    "anno": "4, 5",
-    "tag": ""
-}
-        ] },
+        {
+          "nome_sottocategoria": "Stuzzichini e aperitivi",
+          "preparazioni": [
+            { "id": "panna_acida_salmone", "nome": "Piccola panna acida con tartare di salmone", "url_dati": "data/ricette/panna_acida_salmone.json", "anno": "4, 5", "tag": "mignon, aperitivo, amuse bouche" },
+            { "id": "aspic_passito_caprino", "nome": "Aspic di Passito con panna cotta di caprino", "url_dati": "data/ricette/aspic_passito_caprino.json", "anno": "tutti", "tag": "" },
+            { "id": "savarin_bagnacaoda", "nome": "Savarin di bagna caoda con peperoni arrostiti", "url_dati": "data/ricette/savarin_bagnacaoda.json", "anno": "5", "tag": "" },
+            { "id": "focaccine_panelle", "nome": "Focaccine al kamut con panelle di ceci", "url_dati": "data/ricette/focaccine_panelle.json", "anno": "5", "tag": "aperitivo, appetizer, amuse bouche, farinata, focaccia" },
+            { "id": "castagnole_salate", "nome": "Castagnole fritte salate", "url_dati": "data/ricette/castagnole_salate.json", "anno": "5", "tag": "" },
+            { "id": "baba_salati", "nome": "Babà salati al pecorino", "url_dati": "data/ricette/baba_salati.json", "anno": "4, 5", "tag": "" },
+            { "id": "bigne_parmigiano", "nome": "Bignè con chantilly al Parmigiano Reggiano DOP", "url_dati": "data/ricette/bigne_parmigiano.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "tartellette_russa", "nome": "Tartellette alla russa", "url_dati": "data/ricette/tartellette_russa.json", "anno": "4, 5", "tag": "" }
+          ]
+        },
         {
           "nome_sottocategoria": "Antipasti",
           "preparazioni": [
@@ -97,22 +52,13 @@
             { "id": "cipolle_ripiene", "nome": "Cipolle ripiene alla moda di Alba", "url_dati": "data/ricette/cipolle_ripiene.json", "anno": "3", "tag": "cipolla, piemonte" }
           ]
         },
-        { "nome_sottocategoria": "Salse e riduzioni", "preparazioni": [
-          {
-    "id": "riduzione_balsamico_miele",
-    "nome": "Riduzione di aceto balsamico e miele",
-    "url_dati": "data/ricette/riduzione_balsamico_miele.json",
-    "anno": "3, 4, 5",
-    "tag": ""
-},
-{
-    "id": "salsa_maionese",
-    "nome": "Salsa alla maionese",
-    "url_dati": "data/ricette/salsa_maionese.json",
-    "anno": "3, 4, 5",
-    "tag": ""
-}
-        ] }
+        {
+          "nome_sottocategoria": "Salse e riduzioni",
+          "preparazioni": [
+            { "id": "riduzione_balsamico_miele", "nome": "Riduzione di aceto balsamico e miele", "url_dati": "data/ricette/riduzione_balsamico_miele.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "salsa_maionese", "nome": "Salsa alla maionese", "url_dati": "data/ricette/salsa_maionese.json", "anno": "3, 4, 5", "tag": "" }
+          ]
+        }
       ]
     },
     {
@@ -124,44 +70,20 @@
           "nome_sottocategoria": "Frolle",
           "preparazioni": [
             { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/ricette/frolla_milano.json", "anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" },
-            {
-    "id": "frolla_salata_tecnica",
-    "nome": "Pasta frolla salata tecnica",
-    "url_dati": "data/ricette/frolla_salata_tecnica.json",
-    "anno": "5",
-    "tag": "burro, aperitivo, antipasto"
-},
-{
-    "id": "sable_parmigiano",
-    "nome": "Sablé al Parmigiano Reggiano DOP",
-    "url_dati": "data/ricette/sable_parmigiano.json",
-    "anno": "3, 4, 5",
-    "tag": "burro, aperitivo, frolla"
-},
-{
-    "id": "brise",
-    "nome": "Pasta brisée con variante al Parmigiano Reggiano DOP",
-    "url_dati": "data/ricette/brise.json",
-    "anno": "2, 3, 4, 5",
-    "tag": "frolla, biscotti, aperitivo, appetizer"
-}
+            { "id": "frolla_salata_tecnica", "nome": "Pasta frolla salata tecnica", "url_dati": "data/ricette/frolla_salata_tecnica.json", "anno": "5", "tag": "burro, aperitivo, antipasto" },
+            { "id": "sable_parmigiano", "nome": "Sablé al Parmigiano Reggiano DOP", "url_dati": "data/ricette/sable_parmigiano.json", "anno": "3, 4, 5", "tag": "burro, aperitivo, frolla" },
+            { "id": "brise", "nome": "Pasta brisée con variante al Parmigiano Reggiano DOP", "url_dati": "data/ricette/brise.json", "anno": "2, 3, 4, 5", "tag": "frolla, biscotti, aperitivo, appetizer" }
           ]
         },
         { "nome_sottocategoria": "Sfoglie e sfogliati", "preparazioni": [] },
         { "nome_sottocategoria": "Choux", "preparazioni": [] },
         { "nome_sottocategoria": "Biscotteria e piccola pasticceria", "preparazioni": [] },
         {
-          "nome_sottocategoria": "Creme",
+          "nome_sottocategoria": "Creme e dolci al cucchiaio",
           "preparazioni": [
             { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/ricette/crema_pasticcera.json", "anno": "1, 2, 3", "tag": "diplomatica,chantilly,uovo,uova,latte,panna,cioccolato" },
             { "id": "bonet", "nome": "Bonet", "url_dati": "data/ricette/bonet.json", "anno": "1, 2, 3", "tag": "bunet, amaretti, piemonte" },
-            {
-    "id": "pasticcera_salata",
-    "nome": "Crema pasticcera salata",
-    "url_dati": "data/ricette/pasticcera_salata.json",
-    "anno": "3, 4, 5",
-    "tag": ""
-}
+            { "id": "pasticcera_salata", "nome": "Crema pasticcera salata", "url_dati": "data/ricette/pasticcera_salata.json", "anno": "3, 4, 5", "tag": "" }
           ]
         },
         { "nome_sottocategoria": "Masse montate", "preparazioni": [] },
@@ -183,64 +105,19 @@
         { "nome_sottocategoria": "Cioccolato e pralineria", "preparazioni": [] },
         { "nome_sottocategoria": "Gelati e sorbetti", "preparazioni": [] },
         { "nome_sottocategoria": "Tecniche avanzate", "preparazioni": [] },
-        { "nome_sottocategoria": "Pasticceria salata", "preparazioni": [
-          {
-    "id": "panna_acida_salmone",
-    "nome": "Piccola panna acida con tartare di salmone",
-    "url_dati": "data/ricette/panna_acida_salmone.json",
-    "anno": "4, 5",
-    "tag": "mignon, aperitivo, amuse bouche"
-},
-{
-    "id": "aspic_passito_caprino",
-    "nome": "Aspic di Passito con panna cotta di caprino",
-    "url_dati": "data/ricette/aspic_passito_caprino.json",
-    "anno": "tutti",
-    "tag": ""
-},
-{
-    "id": "savarin_bagnacaoda",
-    "nome": "Savarin di bagna caoda con peperoni arrostiti",
-    "url_dati": "data/ricette/savarin_bagnacaoda.json",
-    "anno": "5",
-    "tag": ""
-},
-{
-    "id": "focaccine_panelle",
-    "nome": "Focaccine al kamut con panelle di ceci",
-    "url_dati": "data/ricette/focaccine_panelle.json",
-    "anno": "5",
-    "tag": "aperitivo, appetizer, amuse bouche, farinata, focaccia"
-},
-{
-    "id": "castagnole_salate",
-    "nome": "Castagnole fritte salate",
-    "url_dati": "data/ricette/castagnole_salate.json",
-    "anno": "5",
-    "tag": ""
-},
-{
-    "id": "baba_salati",
-    "nome": "Babà salati al pecorino",
-    "url_dati": "data/ricette/baba_salati.json",
-    "anno": "4, 5",
-    "tag": ""
-},
-{
-    "id": "bigne_parmigiano",
-    "nome": "Bignè con chantilly al Parmigiano Reggiano DOP",
-    "url_dati": "data/ricette/bigne_parmigiano.json",
-    "anno": "3, 4, 5",
-    "tag": ""
-},
-{
-    "id": "tartellette_russa",
-    "nome": "Tartellette alla russa",
-    "url_dati": "data/ricette/tartellette_russa.json",
-    "anno": "4, 5",
-    "tag": ""
-}
-        ] }
+        {
+          "nome_sottocategoria": "Pasticceria salata",
+          "preparazioni": [
+            { "id": "panna_acida_salmone", "nome": "Piccola panna acida con tartare di salmone", "url_dati": "data/ricette/panna_acida_salmone.json", "anno": "4, 5", "tag": "mignon, aperitivo, amuse bouche" },
+            { "id": "aspic_passito_caprino", "nome": "Aspic di Passito con panna cotta di caprino", "url_dati": "data/ricette/aspic_passito_caprino.json", "anno": "tutti", "tag": "" },
+            { "id": "savarin_bagnacaoda", "nome": "Savarin di bagna caoda con peperoni arrostiti", "url_dati": "data/ricette/savarin_bagnacaoda.json", "anno": "5", "tag": "" },
+            { "id": "focaccine_panelle", "nome": "Focaccine al kamut con panelle di ceci", "url_dati": "data/ricette/focaccine_panelle.json", "anno": "5", "tag": "aperitivo, appetizer, amuse bouche, farinata, focaccia" },
+            { "id": "castagnole_salate", "nome": "Castagnole fritte salate", "url_dati": "data/ricette/castagnole_salate.json", "anno": "5", "tag": "" },
+            { "id": "baba_salati", "nome": "Babà salati al pecorino", "url_dati": "data/ricette/baba_salati.json", "anno": "4, 5", "tag": "" },
+            { "id": "bigne_parmigiano", "nome": "Bignè con chantilly al Parmigiano Reggiano DOP", "url_dati": "data/ricette/bigne_parmigiano.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "tartellette_russa", "nome": "Tartellette alla russa", "url_dati": "data/ricette/tartellette_russa.json", "anno": "4, 5", "tag": "" }
+          ]
+        }
       ]
     },
     {
@@ -272,6 +149,38 @@
           ]
         },
         { "nome_sottocategoria": "Tecniche avanzate", "preparazioni": [] }
+      ]
+    },
+    {
+      "id_categoria": "qualifiche_cucina",
+      "nome_categoria": "Qualifiche cucina",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Prove d'esame",
+          "preparazioni": [
+            { "id": "plin_arrosti", "nome": "Ravioli al plin ai tre arrosti", "url_dati": "data/ricette/plin_arrosti.json", "anno": "3", "tag": "agnolotti, piemonte" },
+            { "id": "bonet", "nome": "Bonet", "url_dati": "data/ricette/bonet.json", "anno": "1, 2, 3", "tag": "bunet, amaretti, piemonte" },
+            { "id": "torta_langarola", "nome": "Torta langarola (Torta di nocciole)", "url_dati": "data/ricette/torta_langarola.json", "anno": "3", "tag": "tonda gentile trilobata, nocciola igp, alba, cuneo" },
+            { "id": "brasato", "nome": "Brasato al vino rosso con purea di patate", "url_dati": "data/ricette/brasato.json", "anno": "3", "tag": "barolo" },
+            { "id": "risotto_porri_toma", "nome": "Risotto ai porri e toma del lait brusc", "url_dati": "data/ricette/risotto_porri_toma.json", "anno": "3", "tag": "piemonte, riso, castelmagno, porro" }
+          ]
+        }
+      ]
+    },
+    {
+      "id_categoria": "qualifiche_pasticceria",
+      "nome_categoria": "Qualifiche pasticceria",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Prove d'esame",
+          "preparazioni": [
+            { "id": "maritozzi", "nome": "Maritozzi", "url_dati": "data/ricette/maritozzi.json", "anno": "3", "tag": "panna, lievito, roma" },
+            { "id": "pangoccioli", "nome": "Pangoccioli", "url_dati": "data/ricette/pangoccioli.json", "anno": "3", "tag": "cioccolato, gocce di cioccolato, colazione, merenda" },
+            { "id": "krapfen", "nome": "Krapfen", "url_dati": "data/ricette/krapfen.json", "anno": "3", "tag": "bomboloni, crema, fritto, ciambelle" },
+            { "id": "panzerotti_fritti", "nome": "Panzerotti fritti", "url_dati": "data/ricette/panzerotti_fritti.json", "anno": "3", "tag": "calzoni, calzone, panzerotto, puglia, panzerotto pugliese" },
+            { "id": "focaccia_indiretto", "nome": "Focaccia con poolish (Impasto indiretto)", "url_dati": "data/ricette/focaccia_indiretto.json", "anno": "2, 3", "tag": "pizza" }
+          ]
+        }
       ]
     }
   ]
