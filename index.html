@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bobbio Cooking Lab</title>
-    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 0.85em; color: #7f8c8d; font-family: 'Lexend', sans-serif;">
-    Versione 1.2.1
-</div>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2c3e50">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
@@ -22,7 +19,9 @@
                 <button id="btn-sync" onclick="sincronizzaRicetteOffline()" style="margin-bottom: 15px; background-color: #2c3e50; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-family: 'Lexend', sans-serif; font-weight: bold; width: 100%;">
     ☁️ Scarica Ricette per l'uso Offline
 </button>
-                <button class="btn-sincronizza" onclick="forzaAggiornamentoApp()">🔄 Forza aggiornamento</button>
+                <button id="btn-aggiorna-app" onclick="forzaAggiornamentoApp()" style="margin-top: 10px; background-color: #e74c3c; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-family: 'Lexend', sans-serif; font-size: 0.9em;">
+    🔄 Cerca aggiornamenti app
+</button>
                 <button id="btn-wake-lock">🌙 Schermo: NORMALE</button>
             </div>
 
@@ -85,5 +84,8 @@
     </main>
 
     <script src="js/app.js"></script>
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 0.85em; color: #7f8c8d; font-family: 'Lexend', sans-serif;">
+    Versione 1.2.2
+    </div>
 </body>
 </html>
