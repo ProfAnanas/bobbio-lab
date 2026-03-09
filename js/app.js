@@ -626,11 +626,11 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// --- 5. SINCRONIZZAZIONE OFFLINE (PWA) ---
+// --- 5. SINCRONIZZAZIONE OFFLINE (PWA) MIGLIORATA ---
 async function sincronizzaRicetteOffline() {
     const btn = document.getElementById('btn-sync');
     const testoOriginale = btn.innerHTML;
-    btn.innerHTML = '⏳ Download ricette in corso...';
+    btn.innerHTML = '⏳ Download in corso...';
     btn.disabled = true;
 
     try {
@@ -639,7 +639,7 @@ async function sincronizzaRicetteOffline() {
         if (!response.ok) throw new Error('Errore download menu');
         const data = await response.json();
         
-        // 2. Prepara la lista dei file da salvare (partendo dal menu stesso)
+        // 2. Prepara la lista
         let fileDaSalvare = ['data/menu.json'];
 
         data.catalogo.forEach(categoria => {
@@ -652,20 +652,34 @@ async function sincronizzaRicetteOffline() {
             });
         });
 
-        // 3. Apri la memoria del telefono e salva tutto
+        // 3. Apri la memoria del telefono
         const cache = await caches.open('bobbiolab-dati-v1');
         
-        // Svuota i vecchi dati per evitare conflitti e carica i nuovi
-        const vecchiFile = await cache.keys();
-        for (let req of vecchiFile) {
-            await cache.delete(req);
+        let scaricate = 0;
+        let fallite = 0;
+        
+        // 4. Scarica UNO A UNO, ignorando gli errori singoli
+        for (let url of fileDaSalvare) {
+            try {
+                // Aggiungiamo un parametro fittizio per forzare il download bypassando la cache del browser
+                await cache.add(url + '?v=' + new Date().getTime());
+                scaricate++;
+            } catch (e) {
+                console.warn('⚠️ Impossibile scaricare (file mancante o errore percorso):', url);
+                fallite++;
+            }
         }
-        await cache.addAll(fileDaSalvare);
 
-        alert('✅ Tutte le ricette sono state scaricate! Ora l\'app funzionerà anche senza internet.');
+        // 5. Feedback finale
+        if (fallite > 0) {
+            alert(`Download completato: ${scaricate} file salvati. Attenzione: ${fallite} ricette non sono state trovate. Controlla la console (F12) per vedere quali file mancano all'appello.`);
+        } else {
+            alert(`✅ Tutte le ${scaricate} ricette sono state scaricate! Ora l'app funzionerà offline.`);
+        }
+
     } catch (error) {
-        console.error('Errore di sincronizzazione:', error);
-        alert('❌ Errore durante il download. Assicurati di avere una buona connessione e riprova.');
+        console.error('Errore fatale di sincronizzazione:', error);
+        alert('❌ Errore generale durante il download. Assicurati di avere connessione.');
     } finally {
         btn.innerHTML = testoOriginale;
         btn.disabled = false;
