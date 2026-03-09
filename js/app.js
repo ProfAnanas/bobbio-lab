@@ -612,3 +612,62 @@ function forzaAggiornamentoApp() {
     const timestamp = new Date().getTime();
     window.location.href = window.location.pathname + '?clear=' + timestamp;
 }
+
+// --- REGISTRAZIONE SERVICE WORKER (PWA) ---
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then((registrazione) => {
+                console.log('Service Worker registrato con successo. Scope:', registrazione.scope);
+            })
+            .catch((errore) => {
+                console.error('Errore nella registrazione del Service Worker:', errore);
+            });
+    });
+}
+
+// --- 5. SINCRONIZZAZIONE OFFLINE (PWA) ---
+async function sincronizzaRicetteOffline() {
+    const btn = document.getElementById('btn-sync');
+    const testoOriginale = btn.innerHTML;
+    btn.innerHTML = '⏳ Download ricette in corso...';
+    btn.disabled = true;
+
+    try {
+        // 1. Scarica l'ultima versione del menu
+        const response = await fetch('data/menu.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error('Errore download menu');
+        const data = await response.json();
+        
+        // 2. Prepara la lista dei file da salvare (partendo dal menu stesso)
+        let fileDaSalvare = ['data/menu.json'];
+
+        data.catalogo.forEach(categoria => {
+            categoria.sottocategorie.forEach(sub => {
+                sub.preparazioni.forEach(ricetta => {
+                    if (ricetta.url_dati) {
+                        fileDaSalvare.push(ricetta.url_dati);
+                    }
+                });
+            });
+        });
+
+        // 3. Apri la memoria del telefono e salva tutto
+        const cache = await caches.open('bobbiolab-dati-v1');
+        
+        // Svuota i vecchi dati per evitare conflitti e carica i nuovi
+        const vecchiFile = await cache.keys();
+        for (let req of vecchiFile) {
+            await cache.delete(req);
+        }
+        await cache.addAll(fileDaSalvare);
+
+        alert('✅ Tutte le ricette sono state scaricate! Ora l\'app funzionerà anche senza internet.');
+    } catch (error) {
+        console.error('Errore di sincronizzazione:', error);
+        alert('❌ Errore durante il download. Assicurati di avere una buona connessione e riprova.');
+    } finally {
+        btn.innerHTML = testoOriginale;
+        btn.disabled = false;
+    }
+}

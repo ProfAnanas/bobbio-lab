@@ -1,0 +1,21 @@
+{
+  "name": "BobbioLab - Laboratorio Pratico",
+  "short_name": "BobbioLab",
+  "description": "L'app ufficiale per le ricette e le preparazioni di cucina e pasticceria del Norberto Bobbio.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c3e50",
+  "icons": [
+    {
+      "src": "assets/icone/icona192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icone/icona512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
