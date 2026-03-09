@@ -871,3 +871,46 @@ body.modalita-algoritmo .badge-nota-dosi {
     padding: 15px;
     margin-bottom: 20px;
 }
+/* --- Tasti di sistema (PWA e Schermo) --- */
+.gruppo-tasti-app {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tasto-app {
+    flex: 1; /* Distribuisce la larghezza in modo perfettamente uguale tra i tre tasti */
+    padding: 12px 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2c3e50;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.1s, filter 0.2s;
+}
+
+/* Effetto pressione */
+.tasto-app:active {
+    transform: scale(0.97);
+}
+
+/* Colore differenziato per il tasto di reset */
+.tasto-app.tasto-rosso {
+    background-color: #e74c3c;
+}
+
+/* Adattamento automatico per gli schermi dei telefoni */
+@media (max-width: 600px) {
+    .gruppo-tasti-app {
+        flex-direction: column; /* Su smartphone diventano 3 bei bottoni larghi uno sotto l'altro */
+    }
+    .tasto-app {
+        padding: 14px 10px; /* Più alti su mobile per essere facili da tappare */
+    }
+}

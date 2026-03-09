@@ -560,8 +560,7 @@ function esportaWord() {
     link.click();
     document.body.removeChild(link);
 }
-
-// --- FUNZIONE SCHERMO SEMPRE ON (Wake Lock API) ---
+// --- Funzione schermo sempre on (wake lock api) ---
 let bloccoSchermo = null;
 
 async function attivaSchermo() {
@@ -579,14 +578,14 @@ async function attivaSchermo() {
             bloccoSchermo = null;
             if (btnWakeLock) {
                 btnWakeLock.textContent = '🌙 Schermo: NORMALE';
-                btnWakeLock.classList.remove('attivo'); // Usa la tua classe originale!
+                btnWakeLock.classList.remove('attivo');
             }
         } else {
             // Accende il blocco
             bloccoSchermo = await navigator.wakeLock.request('screen');
             if (btnWakeLock) {
                 btnWakeLock.textContent = '☀️ Schermo: SEMPRE ACCESO';
-                btnWakeLock.classList.add('attivo'); // Usa la tua classe originale!
+                btnWakeLock.classList.add('attivo');
             }
             
             bloccoSchermo.addEventListener('release', () => {
@@ -608,12 +607,7 @@ if (bottoneSchermo) {
     bottoneSchermo.addEventListener('click', attivaSchermo);
 }
 
-function forzaAggiornamentoApp() {
-    const timestamp = new Date().getTime();
-    window.location.href = window.location.pathname + '?clear=' + timestamp;
-}
-
-// --- REGISTRAZIONE SERVICE WORKER (PWA) ---
+// --- Registrazione service worker (pwa) ---
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
@@ -626,14 +620,66 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// --- 6. FORZATURA AGGIORNAMENTO APP (PWA) ---
+// --- 5. Sincronizzazione offline ricette ---
+async function sincronizzaRicetteOffline() {
+    const btn = document.getElementById('btn-sync');
+    const testoOriginale = btn.innerHTML;
+    btn.innerHTML = '⏳ Download in corso...';
+    btn.disabled = true;
+
+    try {
+        const response = await fetch('data/menu.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error('Errore download menu');
+        const data = await response.json();
+        
+        let fileDaSalvare = ['data/menu.json'];
+
+        data.catalogo.forEach(categoria => {
+            categoria.sottocategorie.forEach(sub => {
+                sub.preparazioni.forEach(ricetta => {
+                    if (ricetta.url_dati) {
+                        fileDaSalvare.push(ricetta.url_dati);
+                    }
+                });
+            });
+        });
+
+        const cache = await caches.open('bobbiolab-dati-v1');
+        let scaricate = 0;
+        let fallite = 0;
+        
+        for (let url of fileDaSalvare) {
+            try {
+                await cache.add(url + '?v=' + new Date().getTime());
+                scaricate++;
+            } catch (e) {
+                console.warn('⚠️ Impossibile scaricare (file mancante):', url);
+                fallite++;
+            }
+        }
+
+        if (fallite > 0) {
+            alert(`Download completato: ${scaricate} file salvati. Attenzione: ${fallite} ricette non trovate (controlla console F12).`);
+        } else {
+            alert(`✅ Tutte le ${scaricate} ricette sono state scaricate! App pronta per l'uso offline.`);
+        }
+
+    } catch (error) {
+        console.error('Errore fatale di sincronizzazione:', error);
+        alert('❌ Errore generale durante il download. Controlla la connessione.');
+    } finally {
+        btn.innerHTML = testoOriginale;
+        btn.disabled = false;
+    }
+}
+
+// --- 6. Forzatura aggiornamento app (pwa) ---
 async function forzaAggiornamentoApp() {
     const btn = document.getElementById('btn-aggiorna-app');
     btn.innerHTML = '🔄 Pulizia e aggiornamento...';
     btn.disabled = true;
 
     try {
-        // 1. Deregistra tutti i Service Worker attivi
         if ('serviceWorker' in navigator) {
             const registrazioni = await navigator.serviceWorker.getRegistrations();
             for (let registrazione of registrazioni) {
@@ -641,13 +687,11 @@ async function forzaAggiornamentoApp() {
             }
         }
 
-        // 2. Svuota tutte le cache salvate dal browser
         const chiaviCache = await caches.keys();
         for (let chiave of chiaviCache) {
             await caches.delete(chiave);
         }
 
-        // 3. Ricarica la pagina forzatamente dal server bypassando il browser
         window.location.reload(true);
         
     } catch (error) {
