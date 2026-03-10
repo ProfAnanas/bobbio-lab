@@ -1,0 +1,72 @@
+{
+    "id": "insalata_russa",
+    "titolo": "Insalata russa",
+    "nota_dosi": "per 10 persone",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Patate"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "Piselli"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Fagiolini (facoltativi)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Sottaceti (cipolline e cetriolini)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Maionese"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Worcester"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mondare e lavare le verdure.",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tagliare tutte le verdure a mirepoix grande come un pisello"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Cuocere le verdure a vapore (separati) finché non saranno cotti ma ancora croccanti.",
+                    "icona": "forno_vapore"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Lessare le verdure (separate) in acqua bollente acidula finché non saranno cotte ma ancora croccanti",
+                    "icona": "pentolino"
+                }
+            ]
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Abbattere in positivo",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Condire le verdure con il sale, la maionese e la salsa worcester.",
+            "icona": "mescolare"
+        }
+    ]
+}

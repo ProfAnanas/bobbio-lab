@@ -1,0 +1,88 @@
+{
+    "id": "vitello_tonnato",
+    "titolo": "Vitello tonnato",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Girello di bovino adulto (o manzo)"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Sedano"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Cipolla"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la salsa tonnata"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "ml Maionese"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Tonno sott'olio"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Capperi"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° filetti di acciuga sott'olio o dissalati"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mondare e lavare le verdure.",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Preparare un fondo bianco vegetale.",
+            "icona": "pentola_alta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Legare la carne con il rosmarino quindi lessarla in acqua bollente fino a che non raggiunge i 58°C al cuore.",
+            "icona": "pentola_alta",
+            "tempo": "58°C al cuore"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Abbattere in positivo.",
+            "icona": "frigorifero"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Per la salsa: frullare il tonno sgocciolato, i capperi e le acciughe.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere la maionese",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Quando il girello è ormai freddo, tagliarlo all'affettatrice sottilmente. Quindi nappare con la salsa tonnata.",
+            "icona": "tagliare"
+        }
+    ]
+}

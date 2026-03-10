@@ -1,0 +1,134 @@
+{
+    "id": "plumcake",
+    "titolo": "Plumcake e varianti",
+    "nota_dosi": "stampo da 28 cm",
+    "ingredienti": [
+        {
+            "quantita": 280,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 260,
+            "unita_descrizione": "g Farina 00 (debole)"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 110,
+            "unita_descrizione": "g Panna fresca 35% grassi"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Burro fuso"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Olio di semi"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Baking (lievito per dolci)"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° scorza di limoni"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per lucidare"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Confettura di albicocche passata al setaccio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante allo yogurt"
+        },
+                {
+            "quantita": -110,
+            "unita_descrizione": "g Panna fresca 35% grassi"
+        },
+        {
+            "quantita": 75,
+            "unita_descrizione": "g Yogurt intero bianco o alla frutta (meglio se frullata)"
+        },
+        {
+            "quantita": 35,
+            "unita_descrizione": "g Burro fuso"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al cacao"
+        },
+        {
+            "quantita": -30,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Latte intero"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Sciogliere il burro e unirlo all'olio. Portare la miscela di grassi a 50°C.",
+                    "icona": "pentolino",
+                    "temperatura": "50°C"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "In una caraffa alta, inserire uova, zucchero, panna, sale e scorze di limone grattugiate.",
+                    "icona": "aggiungere"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Frullare con il mixer a immersione il contenuto della caraffa per sciogliere lo zucchero.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare a filo i grassi caldi mentre si continua a mixare, creando un'emulsione perfetta (come una maionese).",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Setacciare le polveri.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "In planetaria con la foglia o a mano con la marina, versare l'emulsione e le polveri e mescolare velocemente per non formare il glutine.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Versare nello stampo (imburrato e infarinato). Per ottenere la spaccatura centrale perfetta, intingere una spatola o un tarocco nel burro pomata e tracciare una riga longitudinale al centro dell'impasto crudo.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere a 165°C statico per circa 45-50 minuti. Inserire la sonda dopo 35 minuti circa. Sfornare al raggiungimento di 94-96°C. Se dovesse scurirsi troppo la superficie, coprire con carta stagnola.",
+            "icona": "forno_statico",
+            "temperatura": "165°C",
+            "tempo": "94-96°C al cuore"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Appena sfornato (ancora bollente), spennellare con confettura di albicocca calda setacciata per lucidare e sigillare l'umidità.",
+            "icona": "spennellare"
+        }
+    ]
+}

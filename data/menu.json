@@ -8,7 +8,9 @@
           "nome_sottocategoria": "Preparazioni base",
           "preparazioni": [
             { "id": "fondo_vegetale", "nome": "Fondo vegetale", "url_dati": "data/ricette/fondo_vegetale.json", "anno": "1", "tag": "brodo" },
-            { "id": "pasta-all-uovo", "nome": "Pasta all'uovo", "url_dati": "data/ricette/pasta_all_uovo.json", "anno": "1, 2, 3", "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca" }
+            { "id": "pasta-all-uovo", "nome": "Pasta all'uovo", "url_dati": "data/ricette/pasta_all_uovo.json", "anno": "1, 2, 3", "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca" },
+            { "id": "besciamella", "nome": "Besciamella", "url_dati": "data/ricette/besciamella.json", "anno": "1, 2, 3", "tag": "salsa madre" },
+            { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" }
           ]
         },
         {
@@ -29,15 +31,21 @@
           "preparazioni": [
             { "id": "rissoles", "nome": "Rissoles ai profumi dell'orto", "url_dati": "data/ricette/rissoles.json", "anno": "3", "tag": "sfoglia, ricotta, piemonte" },
             { "id": "bagna_caoda", "nome": "Bagna caoda con pinzimonio di verdure", "url_dati": "data/ricette/bagna_caoda.json", "anno": "3", "tag": "acciughe, piemonte" },
-            { "id": "cipolle_ripiene", "nome": "Cipolle ripiene alla moda di Alba", "url_dati": "data/ricette/cipolle_ripiene.json", "anno": "3", "tag": "cipolla, piemonte" }
-          ]
+            { "id": "cipolle_ripiene", "nome": "Cipolle ripiene alla moda di Alba", "url_dati": "data/ricette/cipolle_ripiene.json", "anno": "3", "tag": "cipolla, piemonte" },
+            { "id": "vitello_tonnato", "nome": "Vitello tonnato", "url_dati": "data/ricette/vitello_tonnato.json", "anno": "3", "tag": "piemonte, tonno, bovino, fassona" },
+            { "id": "vitello_antica", "nome": "Vitello tonnato 'antica maniera'", "url_dati": "data/ricette/vitello_antica.json", "anno": "3", "tag": "piemonte" },
+            { "id": "insalata_russa", "nome": "Insalata russa", "url_dati": "data/ricette/insalata_russa.json", "anno": "1, 2, 3", "tag": "piemonte" }
+                    ]
         },
         {
           "nome_sottocategoria": "Primi",
           "preparazioni": [
             { "id": "plin_arrosti", "nome": "Ravioli al plin ai tre arrosti", "url_dati": "data/ricette/plin_arrosti.json", "anno": "3", "tag": "agnolotti, piemonte" },
-            { "id": "risotto_porri_toma", "nome": "Risotto ai porri e toma del lait brusc", "url_dati": "data/ricette/risotto_porri_toma.json", "anno": "3", "tag": "piemonte, riso, castelmagno, porro" }
-          ]
+            { "id": "risotto_porri_toma", "nome": "Risotto ai porri e toma del lait brusc", "url_dati": "data/ricette/risotto_porri_toma.json", "anno": "3", "tag": "piemonte, riso, castelmagno, porro" },
+            { "id": "tagliolini_ragu_verdure", "nome": "Tagliolini al ragù di verdure", "url_dati": "data/ricette/tagliolini_ragu_verdure.json", "anno": "3", "tag": "piemonte" },
+            { "id": "pappardelle_gratinate", "nome": "Pappardelle gratinate", "url_dati": "data/ricette/pappardelle_gratinate.json", "anno": "3", "tag": "stracchino, rucola, pasta fresca" },
+            { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" }
+                    ]
         },
         {
           "nome_sottocategoria": "Secondi",
@@ -56,7 +64,9 @@
           "nome_sottocategoria": "Salse e riduzioni",
           "preparazioni": [
             { "id": "riduzione_balsamico_miele", "nome": "Riduzione di aceto balsamico e miele", "url_dati": "data/ricette/riduzione_balsamico_miele.json", "anno": "3, 4, 5", "tag": "" },
-            { "id": "salsa_maionese", "nome": "Salsa alla maionese", "url_dati": "data/ricette/salsa_maionese.json", "anno": "3, 4, 5", "tag": "" }
+            { "id": "salsa_maionese", "nome": "Salsa alla maionese", "url_dati": "data/ricette/salsa_maionese.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "ragu_verdura", "nome": "Ragù di verdure", "url_dati": "data/ricette/ragu_verdura.json", "anno": "1, 2, 3", "tag": "" },
+            { "id": "besciamella", "nome": "Besciamella", "url_dati": "data/ricette/besciamella.json", "anno": "1, 2, 3", "tag": "salsa madre" }
           ]
         }
       ]
@@ -86,11 +96,15 @@
             { "id": "pasticcera_salata", "nome": "Crema pasticcera salata", "url_dati": "data/ricette/pasticcera_salata.json", "anno": "3, 4, 5", "tag": "" }
           ]
         },
-        { "nome_sottocategoria": "Masse montate", "preparazioni": [] },
+        { "nome_sottocategoria": "Masse montate", "preparazioni": [
+          {
+          "id": "quattro_quarti", "nome": "Quattro quarti", "url_dati": "data/ricette/quattro_quarti.json", "anno": "3, 4","tag": "pan di spagna, torta, burro"}
+          ] },
         {
           "nome_sottocategoria": "Torte da credenza",
           "preparazioni": [
-            { "id": "torta_langarola", "nome": "Torta langarola (Torta di nocciole)", "url_dati": "data/ricette/torta_langarola.json", "anno": "3", "tag": "tonda gentile trilobata, nocciola igp, alba, cuneo" }
+            { "id": "torta_langarola", "nome": "Torta langarola (Torta di nocciole)", "url_dati": "data/ricette/torta_langarola.json", "anno": "3", "tag": "tonda gentile trilobata, nocciola igp, alba, cuneo" },
+            { "id": "plumcake","nome": "Plumcake e varianti","url_dati": "data/ricette/plumcake.json","anno": "1, 2, 3","tag": "merenda, torta" }
           ]
         },
         {

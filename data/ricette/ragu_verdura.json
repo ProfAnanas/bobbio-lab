@@ -1,0 +1,74 @@
+{
+    "id": "ragu_verdura",
+    "titolo": "Ragù di verdure",
+    "nota_dosi": "per 1,5l di ragu",
+    "ingredienti": [
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Sedano"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Cipolle"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Peperoni misti"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Piselli"
+        },
+        {
+            "quantita": 700,
+            "unita_descrizione": "g Passata di pomodoro"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Erbe aromatiche a piacere (rosmarino, alloro, ecc.)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mondare e lavare le verdure",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tagliare le verdure a brunoise.",
+            "icona": "tagliare",
+            "dimensione": "2-3mm"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una casseruola aggiungere l'olio, le verdure e far saltare fino a che non saranno belle rosolate.",
+            "icona": "tegame",
+            "temperatura": "alta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere la passata di pomodoro, le verdure aromatiche legate, aggiustare di sale e pepe.",
+            "icona": "aggiungere",
+            "temperatura": "media"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Quando prende il bollore, abbassare al minimo, coprire con coperchio e far cuocere per almeno 30 minuti.",
+            "icona": "tegame",
+            "temperatura": "bassa"
+        }
+    ]
+}

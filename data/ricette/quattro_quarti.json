@@ -1,0 +1,72 @@
+{
+    "id": "quattro_quarti",
+    "titolo": "Quattro quarti",
+    "nota_dosi": "stampo 24-26cm (28-30cm se da plumcake)",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Burro morbido (20-22°C)"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00 (debole)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Baking (lievito per dolci)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a scelta (vaniglia, limone, ecc.)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria montata con la foglia, montare burro, zucchero e aromi. Ci andranno almeno 10 minuti, la massa deve diventare bianca e spumosa.",
+            "icona": "foglia",
+            "tempo": "10 min.",
+            "velocita": "media"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "testo": "Inserire le uova una alla volta. (non aggiungere il successivo finché il precedente non è assorbito).",
+                    "icona": "aggiungere",
+                    "velocita": "media"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Setacciare farina e baking due volte.",
+                    "icona": "setacciare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Incorporare le polveri a mano con una marisa, mescolando solo il tempo necessario a bagnare la farina. (Non lavorare troppo l’impasto, se si sviluppa glutine, il cake diventerà gommoso)",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Imburrare e infarinare lo stampo e cuocere a 165°C ventilato per circa 40-50 min (prova stecchino). La temperatura al cuore deve raggiungere i 96-98°C.",
+            "icona": "forno_ventilato",
+            "temperatura": "160°C",
+            "tempo": "35-40 min. 96-98°C cuore"
+        }
+    ]
+}

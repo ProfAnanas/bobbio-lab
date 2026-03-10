@@ -1,0 +1,85 @@
+{
+    "id": "besciamella",
+    "titolo": "Besciamella",
+    "nota_dosi": "per 1 litro di salsa",
+    "ingredienti": [
+        {
+            "quantita": 1,
+            "unita_descrizione": "l Latte intero"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Noce moscata (facoltativa)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Il peso di burro e farina cambia in base all'utilizzo:"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g ognuno per besciamella da fonduta o salsa"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g ognuno per besciamella per nappare"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g ognuno per besciamella classica"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g ognuno per besciamella per farce o sformati cremosi"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g ognuno per besciamella per farce o sformati densi"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Portare a ebollizione il latte",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Sciogliere il burro",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Condire il burro con il sale e aggiungere la farina tutta in un colpo.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere per 1 minuto a fuoco/potenza moderato, mescolando con una frusta, per ottenere un roux bianco (o al massimo biondo)",
+            "icona": "tegame",
+            "temperatura": "bassa"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Fuori dal fuoco/piastra, versare il latte poco alla volta nel roux mescolando continuamente.",
+            "icona": "tegame",
+            "temperatura": "spento"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere a fuoco basso fino a che la besciamella non prende il bollore. Mescolare continuamente",
+            "icona": "tegame",
+            "temperatura": "bassa"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Se non si utilizza subito, abbattere in positivo con pellicola a contatto.",
+            "opzionale": true,
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        }
+    ]
+}

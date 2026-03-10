@@ -594,7 +594,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 }
 
 /* Categoria Giallo */
-.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare, .nodo-visivo.tipo-impastare_mano, .nodo-visivo.tipo-spennellare {
+.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-setacciare, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare, .nodo-visivo.tipo-impastare_mano, .nodo-visivo.tipo-spennellare {
     border-color: #f1c40f;
     background-color: #fef9e7;
 }

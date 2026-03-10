@@ -1,0 +1,88 @@
+{
+    "id": "gnocchi_patate",
+    "titolo": "Gnocchi di patate",
+    "nota_dosi": "Per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 2,
+            "unita_descrizione": "kg Patate vecchie (o a pasta bianca)"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Farina 00 (debole) + per il piano di lavoro"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Grana Padano DOP grattugiato"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Tuorli"
+        },
+        {
+            "quantita": 14,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Noce moscata (opzionale)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante senza uova, togliere tuorli e aggiungere:"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Farina 00 (debole)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare le patate.",
+            "icona": "lavare"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "testo": "Bollire le patate intere con la buccia",
+                    "icona": "pentola_alta"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Cuocere a vapore le patate, intere, finché la temperatura al cuore non sarà di 87°C. (circa 40minuti)",
+                    "icona": "forno_vapore",
+                    "tempo": "al cuore 87°C"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Scolare le patate, pelarle ancora calde e schiacciarle con lo schiacciapatate direttamente sul piano di lavoro leggermente infarinato. Lasciar intiepidire qualche istante per far evaporare l'umidità in eccesso.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Unire alle patate schiacciate la farina, il Grana Padano, il sale, gli eventuali tuorli e una grattugiata di noce moscata.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Amalgamare rapidamente gli ingredienti lavorando l'impasto il meno possibile, per evitare di sviluppare glutine e rendere gli gnocchi gommosi.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Prelevare delle porzioni di impasto, ricavare dei cordoni dello spessore desiderato e tagliarli regolarmente a pezzetti di circa 2-3 cm. Passare gli gnocchi sui rebbi di una forchetta o sull'apposito riga gnocchi per conferire la classica rigatura.",
+            "icona": "porzionare",
+            "dimensione": "2-3 cm"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere gli gnocchi in abbondante acqua bollente salata e scolarli con una schiumarola non appena salgono a galla. Condire a piacere.",
+            "icona": "pentola_alta"
+        }
+    ]
+}

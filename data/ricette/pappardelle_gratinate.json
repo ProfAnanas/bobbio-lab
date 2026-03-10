@@ -1,0 +1,77 @@
+{
+    "id": "pappardelle_gratinate",
+    "titolo": "Pappardelle gratinate",
+    "nota_dosi": "per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 1,
+            "unita_descrizione": "Kg Pasta fresca all'uovo"
+        },
+        {
+            "quantita": 1.5,
+            "unita_descrizione": "l besciamella forte (densa)"
+        },
+        {
+            "quantita": 800,
+            "unita_descrizione": "g Stracchino"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Rucola fresca pulita"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Grana Padano DOP grattugiato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e pepe"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare una besciamella densa con 1,5l di latte, 120g di farina e 120g di burro).",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tritare finemente la rucola",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In un pentolino capiente versare la besciamella e lo stracchino. Far sciogliere a fiamma bassa fino a creare una salsa cremosa.",
+            "icona": "pentolino",
+            "temperatura": "bassa"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Stendere la pasta fresca ad uno spessore di 1mm.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Ricavare le pappardelle tagliando delle strisce larghe 2cm e lunghe 10cm.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Tuffare le pappardelle in acqua bollente salata per circa 30-40 secondi (o quando vengono a galla)",
+            "icona": "pentola_alta",
+            "tempo": "30-40 sec."
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Unire la pasta alla fonduta di stracchino, aggiungere la rucola tritata e amalgamare delicatamente il tutto per distribuire bene il condimento.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Diisporre la pasta condita in apposite pirofile da forno imburrate. Cospargere uniformemente la superficie con il Grana Padano DOP grattugiato e gratinare in forno a 210-220°C (preferibilmente con funzione grill) fino alla formazione di una crosticina dorata e croccante.",
+            "icona": "forno_ventilato",
+            "temperatura": "210-220°C",
+            "tempo": "fino a doratura"
+        }
+    ]
+}

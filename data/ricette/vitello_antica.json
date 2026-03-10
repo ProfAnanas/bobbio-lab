@@ -1,0 +1,92 @@
+{
+    "id": "vitello_antica",
+    "titolo": "Vitello tonnato \"antica maniera\"",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Girello di bovino adulto (o manzo)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Sedano"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Cipolla"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Carota"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "ml Olio EVO"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Tonno in scatola"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Capperi dissalati"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Filetti di acciuga sott'olio o dissalati"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° tuorli d'uovo sodo"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Parare e legare la carne con il rosmarino",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Rosolare la carne in un tegame insieme alle verdure e all'olio. Condire con il sale.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Proseguire la cottura in forno misto (umidità al 60%) a 65°C. Il girello è pronto quando la sonda al cuore segna 53°C.",
+            "icona": "forno_ventilato",
+            "temperatura": "65°C - 60% umidità",
+            "tempo": "53°C cuore"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Se le verdure non sono ben cotte, proseguire la cottura delle verdure in un pentolino, aggiungendo poca acqua se necessario, fino ad ottenere una sorta di fondo bruno.",
+            "opzionale": true,
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Raffreddare il girello in abbattitore finchè non sarà a 3C° al cuore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "3°C al cuore"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Per la salsa: frullare le verdure con il tonno, i capperi e le acciughe.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Tagliare il girello in fette sottili e nappare con la salsa.",
+            "icona": "tagliare"
+        }
+    ]
+}
