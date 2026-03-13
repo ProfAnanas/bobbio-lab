@@ -938,12 +938,22 @@ body.modalita-algoritmo .badge-nota-dosi {
     margin-top: -10px;
 }
 
+/* --- Griglia Home Responsiva --- */
 .griglia-hub {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Forza l'impilamento (una card sotto l'altra) su schermi piccoli */
+@media screen and (max-width: 768px) {
+    .griglia-hub {
+        grid-template-columns: 1fr !important; /* 1 sola colonna al 100% */
+    }
 }
 
 .card-hub {
@@ -1087,4 +1097,9 @@ body.modalita-algoritmo .badge-nota-dosi {
 
 .tasto-home:hover {
     background-color: #2ecc71 !important;
+}
+/* --- Pulizia interfaccia Modalità Algoritmo --- */
+body.modalita-algoritmo #garnish-ricetta,
+body.modalita-algoritmo #contenitore-foto-spoiler {
+    display: none !important;
 }
