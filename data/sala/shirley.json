@@ -1,0 +1,40 @@
+{
+    "id": "shirley",
+    "titolo": "Shirley Temple",
+    "nota_dosi": "Collins o tumbler",
+    "garnish": "Con ghiaccio oppure liscio e guarnito con una o più ciliegie candite e/o con un disco di limone",
+    "foto": "assets/foto-sala/shirley-temple.jpg",
+    "foto_crediti": "Di Ryan Forsythe (fweez) - Flickr, CC BY-SA 2.0",
+    "ingredienti": [
+        {
+            "quantita": 15,
+            "unita_descrizione": "cl Sciroppo di granatina"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Ginger Ale"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Versare lo sciroppo di granatina nel tumbler alto colmo di ghiaccio",
+            "icona": "build"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Colmare il bicchiere con ginger ale.",
+            "icona": "build"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Miscelare delicatamente con il bar spoon dal basso verso l'alto per distribuire il colore.",
+            "icona": "stir"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Decorare con la ciliegina al maraschino.",
+            "icona": "garnish"
+        }
+    ]
+}

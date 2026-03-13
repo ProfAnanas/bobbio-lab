@@ -1050,45 +1050,70 @@ body.modalita-algoritmo .badge-nota-dosi {
     background-color: #732d91;
 }
 
-/* --- Colori per i nodi del Bar (Stato Attivo) --- */
+/* =========================================
+   COLORI NODI SALA BAR (Tinte tenui e bordi colorati)
+   ========================================= */
 
-/* Categoria: Liquidi / Ghiaccio (Azzurro) */
+/* --- 1. Categoria: Liquidi / Ghiaccio (Azzurro pastello) --- */
+.nodo-visivo.step-build, 
+.nodo-visivo.step-versare, 
+.nodo-visivo.step-fill {
+    border: 2px solid #6BB9F0 !important;
+    background-color: white !important; /* Forza lo sfondo bianco da inattivo */
+}
 .nodo-visivo.step-build.nodo-attivo, 
 .nodo-visivo.step-versare.nodo-attivo, 
 .nodo-visivo.step-fill.nodo-attivo {
-    background-color: #3498db !important;
-    border-color: #2980b9 !important;
+    background-color: #6BB9F0 !important;
     color: white !important;
 }
 
-/* Categoria: Miscelazione (Verde) */
+/* --- 2. Categoria: Miscelazione (Verde pastello) --- */
+.nodo-visivo.step-shake, 
+.nodo-visivo.step-stir, 
+.nodo-visivo.step-throw, 
+.nodo-visivo.step-blend {
+    border: 2px solid #87D37C !important;
+    background-color: white !important;
+}
 .nodo-visivo.step-shake.nodo-attivo, 
 .nodo-visivo.step-stir.nodo-attivo, 
 .nodo-visivo.step-throw.nodo-attivo, 
 .nodo-visivo.step-blend.nodo-attivo {
-    background-color: #2ecc71 !important;
-    border-color: #27ae60 !important;
+    background-color: #87D37C !important;
     color: white !important;
 }
 
-/* Categoria: Meccanica / Lavorazione (Arancione) */
+/* --- 3. Categoria: Meccanica / Lavorazione (Arancione pastello) --- */
+.nodo-visivo.step-muddle, 
+.nodo-visivo.step-squeeze, 
+.nodo-visivo.step-strain, 
+.nodo-visivo.step-double_strain {
+    border: 2px solid #F4B350 !important;
+    background-color: white !important;
+}
 .nodo-visivo.step-muddle.nodo-attivo, 
 .nodo-visivo.step-squeeze.nodo-attivo, 
 .nodo-visivo.step-strain.nodo-attivo, 
 .nodo-visivo.step-double_strain.nodo-attivo {
-    background-color: #e67e22 !important;
-    border-color: #d35400 !important;
+    background-color: #F4B350 !important;
     color: white !important;
 }
 
-/* Categoria: Servizio / Estetica (Viola) */
+/* --- 4. Categoria: Servizio / Estetica (Viola pastello) --- */
+.nodo-visivo.step-garnish, 
+.nodo-visivo.step-twist, 
+.nodo-visivo.step-smoke {
+    border: 2px solid #BE90D4 !important;
+    background-color: white !important;
+}
 .nodo-visivo.step-garnish.nodo-attivo, 
 .nodo-visivo.step-twist.nodo-attivo, 
 .nodo-visivo.step-smoke.nodo-attivo {
-    background-color: #9b59b6 !important;
-    border-color: #8e44ad !important;
+    background-color: #BE90D4 !important;
     color: white !important;
 }
+
 /* Colore specifico per il tasto Home */
 .tasto-home {
     background-color: #27ae60 !important; /* Un bel verde che indica ritorno/salvezza */
@@ -1102,4 +1127,20 @@ body.modalita-algoritmo .badge-nota-dosi {
 body.modalita-algoritmo #garnish-ricetta,
 body.modalita-algoritmo #contenitore-foto-spoiler {
     display: none !important;
+}
+/* --- Stile per i crediti delle foto --- */
+.crediti-foto {
+    font-size: 11px;
+    color: #95a5a6;
+    margin-top: 8px;
+    font-style: italic;
+    text-align: center;
+}
+.crediti-foto a {
+    color: #95a5a6;
+    text-decoration: none;
+    border-bottom: 1px dotted #95a5a6;
+}
+.crediti-foto a:hover {
+    color: #7f8c8d;
 }

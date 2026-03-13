@@ -1,0 +1,48 @@
+{
+    "id": "bramble",
+    "titolo": "Bramble",
+    "nota_dosi": "Old fashioned",
+    "garnish": "Mora, fetta di limone",
+    "foto": "assets/foto-sala/bramble.jpg",
+    "foto_crediti": "Di © Erich Wagner (www.eventografie.de), CC BY-SA 4.0",
+    "ingredienti": [
+        {
+            "quantita": 5,
+            "unita_descrizione": "cl Gin"
+        },
+        {
+            "quantita": 1.25,
+            "unita_descrizione": "cl Sciroppo di zucchero"
+        },
+        {
+            "quantita": 2.5,
+            "unita_descrizione": "cl Succo di limone fresco"
+        },
+        {
+            "quantita": 1.5,
+            "unita_descrizione": "cl Liquore alle more"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Shakerare il gin, lo sciroppo di zucchero e il succo di limone.",
+            "icona": "shake"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare filtrando sul bicchiere riempito di ghiaccio tritato",
+            "icona": "strain"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "versare con moto circolare il liquore alle more sopra il cocktail",
+            "icona": "build"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Concludere il cocktail decorando con una fetta di limone e due more.",
+            "icona": "garnish"
+        }
+    ]
+}

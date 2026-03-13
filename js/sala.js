@@ -191,14 +191,17 @@ if (ricetta.nota_dosi) {
             listaIngredienti.parentNode.insertBefore(garnishEl, listaIngredienti);
         }
 
-        // --- SISTEMA FOTO SPOILER ---
+// --- SISTEMA FOTO SPOILER ---
         if (ricetta.foto) {
+            const htmlCrediti = ricetta.foto_crediti ? `<div class="crediti-foto">${ricetta.foto_crediti}</div>` : '';
+            
             const spoilerDiv = document.createElement('div');
             spoilerDiv.id = 'contenitore-foto-spoiler';
             spoilerDiv.innerHTML = `
                 <div class="btn-spoiler" id="btn-toggle-foto" style="background-color: #8e44ad; color: white; padding: 10px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; display: inline-block; font-weight: bold; text-align: center; width: 100%; box-sizing: border-box;">📸 Mostra foto suggerita</div>
-                <div id="foto-cocktail" class="contenitore-foto" style="display: none; margin-bottom: 20px; text-align: center; border-radius: 10px; overflow: hidden; border: 3px solid #8e44ad;">
+                <div id="foto-cocktail" class="contenitore-foto" style="display: none; margin-bottom: 20px; text-align: center; border-radius: 10px; overflow: hidden; border: 3px solid #8e44ad; padding-bottom: 10px;">
                     <img src="${ricetta.foto}" alt="${ricetta.titolo}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                    ${htmlCrediti}
                 </div>
             `;
             listaIngredienti.parentNode.insertBefore(spoilerDiv, listaIngredienti);

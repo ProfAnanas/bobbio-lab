@@ -14,12 +14,15 @@
         {
           "nome_sottocategoria": "Contemporary Classics",
           "preparazioni": [
+            { "id": "bellini", "nome": "Bellini", "url_dati": "data/sala/bellini.json", "funzione": "pre-dinner", "famiglia": "sparkling", "quantita": "medium", "tag": "cl prosecco doc, cl purea di pesca fresca, varianti, puccini: succo di mandarino, rossini: purea di fragola fresca, tintoretto: succo di melagrana" }
 
           ]
         },
         {
           "nome_sottocategoria": "New Era Drinks",
-          "preparazioni": []
+          "preparazioni": [
+            { "id": "bramble", "nome": "Bramble", "url_dati": "data/sala/bramble.json", "funzione": "all-day", "famiglia": "ancestral", "quantita": "medium", "tag": "cl gin, cl sciroppo di zucchero, cl succo di limone fresco, cl liquore alle more" }
+          ]
         }
       ]
     },
@@ -30,7 +33,7 @@
         {
           "nome_sottocategoria": "Grandi Classici",
           "preparazioni": [
-
+{ "id": "shirley", "nome": "Shirley Temple", "url_dati": "data/sala/shirley.json", "funzione": "dissetanti", "famiglia": "highball-collins", "quantita": "long", "tag": "cl sciroppo di granatina, ginger ale" }
           ]
         },
         {

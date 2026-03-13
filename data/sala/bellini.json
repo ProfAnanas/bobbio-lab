@@ -1,0 +1,56 @@
+{
+    "id": "bellini",
+    "titolo": "Bellini",
+    "nota_dosi": "flute",
+    "garnish": "nessuna",
+    "foto": "assets/foto-sala/bellini.png",
+    "foto_crediti": "Di Bruce The Deus - Opera propria, CC BY-SA 4.0",
+    "ingredienti": [
+        {
+            "quantita": 10,
+            "unita_descrizione": "cl Prosecco DOC"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "cl Purea di pesca fresca"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Varianti"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Puccini: succo di mandarino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rossini: purea di fragola fresca"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Tintoretto: succo di melagrana"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Miscelare la purea in mixing glass con ghiaccio",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere il Prosecco DOC",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Mescolare bene.",
+            "icona": "stir"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Filtrare dentro il flute",
+            "icona": "strain"
+        }
+    ]
+}
