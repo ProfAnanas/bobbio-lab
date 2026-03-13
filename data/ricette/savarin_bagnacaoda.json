@@ -79,7 +79,7 @@
     "procedimento": [
         {
             "step_id": "step-1",
-            "testo": "Pelare l'aglio e metterlo in un pentolino con abbastanza olio per coprirlo.\nFar cuocere a fuoco basso fino a che l'aglio non si spappoli. Alla fine eliminare il latte in eccesso.",
+            "testo": "Pelare l'aglio e metterlo in un pentolino con abbastanza latte per coprirlo.\nFar cuocere a fuoco basso fino a che l'aglio non si spappoli. Alla fine eliminare il latte in eccesso.",
             "icona": "pentolino",
             "temperatura": "bassa"
         },

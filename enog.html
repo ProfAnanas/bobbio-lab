@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Enogastronomia/Pasticceria - Bobbio Hub</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Enogastronomia e Pasticceria</h1>
+        
+        <div id="pannello-controllo" style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto;">
+            
+            <div class="gruppo-tasti-app">
+                <a href="index.html" class="tasto-app tasto-home" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">🏠 Home</a>
+                <button id="btn-sync" class="tasto-app" onclick="sincronizzaRicetteOffline()">☁️ Scarica ricette</button>
+                <button id="btn-wake-lock" class="tasto-app">🌙 Schermo</button>
+            </div>
+
+            <div style="width: 100%;">
+                <input type="text" id="campo-ricerca" placeholder="Cerca tecnica o ricetta (es. brunoise, frolla)..." style="width: 100%; box-sizing: border-box; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+            </div>
+
+            <div id="pannello-filtri" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #e9ecef; box-sizing: border-box;">
+                
+                <select id="filtro-categoria" style="flex: 1; min-width: 150px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Lexend', sans-serif;">
+                    <option value="">Tutte le categorie</option>
+                    <option value="cucina">Cucina</option>
+                    <option value="pasticceria">Pasticceria</option>
+                    <option value="panificazione">Panificazione</option>
+                    <option value="qualifiche_cucina">Qualifiche cucina</option>
+                    <option value="qualifiche_pasticceria">Qualifiche pasticceria</option>
+                </select>
+
+                <select id="filtro-sottocategoria" style="flex: 1; min-width: 150px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Lexend', sans-serif;" disabled>
+                    <option value="">Tutte le sottocategorie</option>
+                </select>
+
+                <select id="filtro-anno" style="flex: 1; min-width: 150px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Lexend', sans-serif;">
+                    <option value="">Tutte le classi</option>
+                    <option value="1">Classe 1ª</option>
+                    <option value="2">Classe 2ª</option>
+                    <option value="3">Classe 3ª</option>
+                    <option value="4">Classe 4ª</option>
+                    <option value="5">Classe 5ª</option>
+                </select>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="griglia-menu"></section>
+
+        <section id="vista-ricetta" style="display: none;">
+            <div id="testata-ricetta">
+                <button id="pulsante-indietro" onclick="chiudiAlgoritmo()">Torna al menu</button>
+                <h2 id="titolo-ricetta-corrente"></h2>
+                <div id="pulsanti-esportazione" style="margin-bottom: 15px; display: flex; gap: 10px;">
+                    <button class="btn-stampa" onclick="window.print()" style="background-color: #34495e; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">🖨️ Salva/Stampa in PDF</button>
+                    <button class="btn-stampa" onclick="esportaWord()" style="background-color: #2980b9; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">📄 Scarica in Word</button>
+                </div>
+                <button id="pulsante-toggle-vista" onclick="cambiaVista()">Mostra algoritmo</button>
+            </div>
+            
+            <div id="plancia-doppia">
+                <div id="pannello-testo">
+                    <h3>Ingredienti</h3>
+                    <ul id="lista-ingredienti"></ul>
+                    <h3>Procedimento</h3>
+                    <div id="lista-procedimento"></div>
+                </div>
+                <div id="pannello-algoritmo"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

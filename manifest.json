@@ -1,7 +1,7 @@
 {
-  "name": "BobbioLab - Laboratorio Pratico",
+  "name": "BobbioLab",
   "short_name": "BobbioLab",
-  "description": "L'app ufficiale per le ricette e le preparazioni di cucina e pasticceria del Norberto Bobbio.",
+  "description": "L'app ufficiale per i laboratori del Bobbio.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",

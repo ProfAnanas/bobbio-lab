@@ -1,13 +1,13 @@
-const NOME_CACHE = 'bobbiolab-cache-v1.3.1';
+const NOME_CACHE = 'bobbiolab-cache-v1.4.0';
 
 // Elenco dei file base da salvare per far funzionare l'interfaccia offline
 const FILE_DA_SALVARE = [
     './',
-    './index.html',
+    './index.html',  // Il nostro nuovo Hub
+    './enog.html',   // La tua app principale rinominata
     './css/style.css',
     './js/app.js',
     './manifest.json'
-    // Se hai dei loghi svg strutturali, inserisci anche loro (es. './assets/icone/tuo-logo.svg')
 ];
 
 // Fase di installazione: il telefono scarica i file e li mette in "cassaforte"

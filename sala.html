@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Sala E Vendita - Bobbio Hub</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Bobbio Bar Lab</h1>
+        
+        <div id="pannello-controllo" style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto;">
+            
+            <div class="gruppo-tasti-app">
+                <a href="index.html" class="tasto-app tasto-home" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">🏠 Home</a>
+                <button id="btn-sync" class="tasto-app" onclick="sincronizzaRicetteOffline()">☁️ Scarica Ricette</button>
+                <button id="btn-wake-lock" class="tasto-app">🌙 Schermo</button>
+            </div>
+
+            <div style="width: 100%;">
+                <input type="text" id="campo-ricerca" placeholder="Cerca Cocktail O Ingrediente (Es. Negroni, Gin)..." style="width: 100%; box-sizing: border-box; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+            </div>
+
+            <div id="pannello-filtri" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #e9ecef; box-sizing: border-box;">
+                
+                <select id="filtro-funzione" style="flex: 1; min-width: 150px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Lexend', sans-serif;">
+                    <option value="">Tutte Le Funzioni</option>
+                    <option value="pre-dinner">Pre-Dinner (Aperitivi)</option>
+                    <option value="after-dinner">After-Dinner</option>
+                    <option value="all-day">All Day (All Time)</option>
+                    <option value="dissetanti">Long Drink (Dissetanti)</option>
+                </select>
+
+                <select id="filtro-famiglia" style="flex: 1; min-width: 150px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Lexend', sans-serif;">
+                    <option value="">Tutte Le Famiglie</option>
+                <option value="ancestral">Ancestral (Old fashioned)</option>
+                <option value="duo-trio">Duo / Trio</option>
+                <option value="sour">Sour</option>
+                <option value="highball-collins">Highball / Collins</option>
+                <option value="sparkling">Sparkling (Flûte)</option>
+                <option value="pestati">Pestati (Muddled)</option>
+                <option value="tiki-tropical">Tiki / Tropical</option>
+                <option value="cream">Cream / Dessert</option>
+                <option value="frozen">Frozen</option>
+                <option value="fizz">Fizz</option>
+                </select>
+
+                <select id="filtro-quantita" style="flex: 1; min-width: 150px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Lexend', sans-serif;">
+                    <option value="">Tutte Le Quantità</option>
+                    <option value="short">Short Drink (6-9 Cl)</option>
+                    <option value="medium">Medium Drink (10-12 Cl)</option>
+                    <option value="long">Long Drink (Oltre 12 Cl)</option>
+                </select>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="griglia-menu"></section>
+
+        <section id="vista-ricetta" style="display: none;">
+            <div id="testata-ricetta">
+                <button id="pulsante-indietro" onclick="chiudiAlgoritmo()">Torna Al Menu</button>
+                <h2 id="titolo-ricetta-corrente"></h2>
+                <div id="pulsanti-esportazione" style="margin-bottom: 15px; display: flex; gap: 10px;">
+                    <button class="btn-stampa" onclick="window.print()" style="background-color: #34495e; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">🖨️ Salva/Stampa In PDF</button>
+                    <button class="btn-stampa" onclick="esportaWord()" style="background-color: #2980b9; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">📄 Scarica In Word</button>
+                </div>
+                <button id="pulsante-toggle-vista" onclick="cambiaVista()">Mostra Algoritmo</button>
+            </div>
+            
+            <div id="plancia-doppia">
+                <div id="pannello-testo">
+                    <h3>Ingredienti</h3>
+                    <ul id="lista-ingredienti"></ul>
+                    <h3>Procedimento</h3>
+                    <div id="lista-procedimento"></div>
+                </div>
+                <div id="pannello-algoritmo"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/sala.js"></script>
+</body>
+</html>

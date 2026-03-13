@@ -1,109 +1,58 @@
-// --- 1. DIZIONARIO SOTTOCATEGORIE ---
-const mappaSottocategorie = {
-    cucina: ["Preparazioni base", "Stuzzichini e aperitivi", "Antipasti", "Primi", "Secondi", "Contorni", "Salse e riduzioni"],
-    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme e dolci al cucchiaio", "Masse montate", "Torte da credenza", "Lievitati", "Cioccolato e pralineria", "Gelati e sorbetti", "Pasticceria salata", "Tecniche avanzate"],
-    panificazione: ["Preparazioni base", "Lievitati", "Pani speciali", "Pizze e focacce", "Tecniche avanzate"],
-    qualifiche_cucina: ["Prove d'esame"],
-    qualifiche_pasticceria: ["Prove d'esame"]
-};
-
-// --- 2. AVVIO E COLLEGAMENTO SENSORI ---
+// --- 1. AVVIO E COLLEGAMENTO SENSORI ---
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Sicurezza: Carica il menu SOLO se esiste la griglia nella pagina
+    // Carica il menu solo se esiste la griglia nella pagina
     if (document.getElementById('griglia-menu')) {
-        caricaMenu();
+        caricaMenuSala();
     }
 
-    const filtroCategoria = document.getElementById('filtro-categoria');
-    const filtroSottocategoria = document.getElementById('filtro-sottocategoria');
-    const filtroAnno = document.getElementById('filtro-anno');
+    const filtroFunzione = document.getElementById('filtro-funzione');
+    const filtroFamiglia = document.getElementById('filtro-famiglia');
+    const filtroQuantita = document.getElementById('filtro-quantita');
     const campoRicerca = document.getElementById('campo-ricerca');
 
-    // Assicuriamoci che all'avvio la tendina delle sottocategorie sia bloccata
-    if (filtroSottocategoria) filtroSottocategoria.disabled = true;
-
-    if (filtroCategoria) {
-        filtroCategoria.addEventListener('change', (e) => {
-            aggiornaSottocategorie(e.target.value);
-            applicaFiltri();
-        });
-    }
-
-    if (filtroSottocategoria) filtroSottocategoria.addEventListener('change', applicaFiltri);
-    if (filtroAnno) filtroAnno.addEventListener('change', applicaFiltri);
-    if (campoRicerca) campoRicerca.addEventListener('input', applicaFiltri);
+    // Tutti i filtri sono sbloccati fin dall'inizio e ascoltano i cambiamenti
+    if (filtroFunzione) filtroFunzione.addEventListener('change', applicaFiltriSala);
+    if (filtroFamiglia) filtroFamiglia.addEventListener('change', applicaFiltriSala);
+    if (filtroQuantita) filtroQuantita.addEventListener('change', applicaFiltriSala);
+    if (campoRicerca) campoRicerca.addEventListener('input', applicaFiltriSala);
 });
 
-// --- 3. LOGICA DEI FILTRI A TENDINA ---
-function aggiornaSottocategorie(categoriaSel) {
-    const selectSub = document.getElementById('filtro-sottocategoria');
-    if (!selectSub) return;
-
-    if (!categoriaSel) {
-        selectSub.innerHTML = '<option value="">Tutte le sottocategorie</option>';
-        selectSub.disabled = true;
-        return;
-    }
-
-    selectSub.disabled = false;
-    selectSub.innerHTML = '<option value="">Tutte le sottocategorie</option>';
-    
-    const lista = mappaSottocategorie[categoriaSel] || [];
-    lista.forEach(sub => {
-        const opt = document.createElement('option');
-        opt.value = sub.toLowerCase().trim();
-        opt.textContent = sub;
-        selectSub.appendChild(opt);
-    });
-}
-
-function applicaFiltri() {
+// --- 2. LOGICA DEI FILTRI FACCETTATI (Tag Incrociati) ---
+function applicaFiltriSala() {
     const campoRicerca = document.getElementById('campo-ricerca');
-    const filtroAnno = document.getElementById('filtro-anno');
-    const filtroCategoria = document.getElementById('filtro-categoria');
-    const filtroSottocategoria = document.getElementById('filtro-sottocategoria');
+    const filtroFunzione = document.getElementById('filtro-funzione');
+    const filtroFamiglia = document.getElementById('filtro-famiglia');
+    const filtroQuantita = document.getElementById('filtro-quantita');
 
     const query = campoRicerca ? campoRicerca.value.toLowerCase().trim() : '';
-    const annoSel = filtroAnno ? filtroAnno.value.toLowerCase().trim() : '';
-    const catSel = filtroCategoria ? filtroCategoria.value.toLowerCase().trim() : '';
-    const subSel = filtroSottocategoria && !filtroSottocategoria.disabled ? filtroSottocategoria.value.toLowerCase().trim() : '';
+    const selFunzione = filtroFunzione ? filtroFunzione.value.toLowerCase().trim() : '';
+    const selFamiglia = filtroFamiglia ? filtroFamiglia.value.toLowerCase().trim() : '';
+    const selQuantita = filtroQuantita ? filtroQuantita.value.toLowerCase().trim() : '';
 
     const blocchiMacro = document.querySelectorAll('.blocco-categoria');
 
     blocchiMacro.forEach(catFolder => {
-        const idMacro = catFolder.getAttribute('data-id-macro') || '';
-
-        // REGOLE MACRO: Se scelgo Cucina, spengo Pasticceria e Panificazione all'istante
-        if (catSel !== "" && idMacro !== catSel) {
-            catFolder.style.display = 'none';
-            return; 
-        }
-
         let catHaContenuto = false;
         const sottocategorieFolder = catFolder.querySelectorAll('.blocco-sottocategoria');
 
         sottocategorieFolder.forEach(subFolder => {
-            const nomeSub = subFolder.querySelector('summary').textContent.toLowerCase().trim();
-
-            // REGOLE SOTTOCATEGORIA: Se cerco Frolle, nascondo Creme, Lievitati ecc.
-            if (subSel !== "" && nomeSub !== subSel) {
-                subFolder.style.display = 'none';
-                return;
-            }
-
             let subHaContenuto = false;
             const ricette = subFolder.querySelectorAll('.btn-ricetta');
 
             ricette.forEach(btn => {
-                const bAnno = btn.getAttribute('data-anno') || 'tutti';
+                const bFunzione = (btn.getAttribute('data-funzione') || '').toLowerCase();
+                const bFamiglia = (btn.getAttribute('data-famiglia') || '').toLowerCase();
+                const bQuantita = (btn.getAttribute('data-quantita') || '').toLowerCase();
                 const bNome = (btn.getAttribute('data-nome') || '').toLowerCase();
                 const bTag = (btn.getAttribute('data-tag') || '').toLowerCase();
 
-                const passaAnno = annoSel === '' || annoSel === 'tutti' || bAnno.includes(annoSel) || bAnno === 'tutti';
+                const passaFunzione = selFunzione === '' || bFunzione.includes(selFunzione);
+                const passaFamiglia = selFamiglia === '' || bFamiglia.includes(selFamiglia);
+                const passaQuantita = selQuantita === '' || bQuantita.includes(selQuantita);
                 const passaRicerca = query === '' || bNome.includes(query) || bTag.includes(query);
 
-                if (passaAnno && passaRicerca) {
+                if (passaFunzione && passaFamiglia && passaQuantita && passaRicerca) {
                     btn.style.display = 'block';
                     subHaContenuto = true;
                     catHaContenuto = true;
@@ -119,31 +68,29 @@ function applicaFiltri() {
     });
 }
 
-// --- 4. CARICAMENTO E GENERAZIONE MENU ---
-async function caricaMenu() {
+// --- 3. CARICAMENTO E GENERAZIONE MENU SALA ---
+async function caricaMenuSala() {
     try {
-        const response = await fetch('data/menu.json?v=' + new Date().getTime());
-        if (!response.ok) throw new Error('Errore nel caricamento del file menu.json');
+        const response = await fetch('data/menu-sala.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error('Errore nel caricamento del file menu-sala.json');
         const data = await response.json();
-        disegnaGrigliaMenu(data.catalogo);
-        applicaFiltri(); 
+        disegnaGrigliaMenuSala(data.catalogo);
+        applicaFiltriSala(); 
     } catch (error) {
         console.error('Errore fatale:', error);
         const grigliaMenu = document.getElementById('griglia-menu');
-        if (grigliaMenu) grigliaMenu.innerHTML = '<p>Errore nel caricamento dell\'archivio.</p>';
+        if (grigliaMenu) grigliaMenu.innerHTML = '<p>Errore nel caricamento dell\'archivio bar.</p>';
     }
 }
 
-function disegnaGrigliaMenu(catalogo) {
+function disegnaGrigliaMenuSala(catalogo) {
     const contenitore = document.getElementById('griglia-menu');
-    // Sicurezza: se il contenitore non esiste, non fare nulla
     if (!contenitore) return;
     contenitore.innerHTML = '';
 
     catalogo.forEach(categoria => {
         const detailsCat = document.createElement('details');
         detailsCat.classList.add('blocco-categoria');
-        // ID MACRO FONDAMENTALE PER IL FILTRO
         detailsCat.setAttribute('data-id-macro', categoria.id_categoria.toLowerCase().trim());
         
         const summaryCat = document.createElement('summary');
@@ -166,7 +113,9 @@ function disegnaGrigliaMenu(catalogo) {
                 bottone.textContent = ricetta.nome;
                 bottone.classList.add('btn-ricetta');
                 
-                bottone.setAttribute('data-anno', String(ricetta.anno || 'tutti').toLowerCase());
+                bottone.setAttribute('data-funzione', String(ricetta.funzione || '').toLowerCase());
+                bottone.setAttribute('data-famiglia', String(ricetta.famiglia || '').toLowerCase());
+                bottone.setAttribute('data-quantita', String(ricetta.quantita || '').toLowerCase());
                 bottone.setAttribute('data-tag', String(ricetta.tag || '').toLowerCase());
                 bottone.setAttribute('data-nome', String(ricetta.nome).toLowerCase());
                 
@@ -181,7 +130,7 @@ function disegnaGrigliaMenu(catalogo) {
     });
 }
 
-// --- 5. LOGICA DELLA SINGOLA RICETTA ---
+// --- 4. LOGICA DELLA SINGOLA RICETTA E ALGORITMO VISIVO ---
 async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
     document.getElementById('griglia-menu').style.display = 'none';
     const pannelloFiltri = document.getElementById('pannello-filtri');
@@ -206,6 +155,9 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
     const vecchiaNota = document.getElementById('nota-dosi-ricetta');
     if (vecchiaNota) vecchiaNota.remove();
     
+    const vecchioSpoiler = document.getElementById('contenitore-foto-spoiler');
+    if (vecchioSpoiler) vecchioSpoiler.remove();
+    
     try {
         const response = await fetch(urlDati + '?v=' + new Date().getTime());
         if (!response.ok) throw new Error('File ricetta non trovato');
@@ -214,12 +166,54 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         window.ricettaCorrente = ricetta; 
         listaIngredienti.innerHTML = '';
 
-        if (ricetta.nota_dosi) {
+if (ricetta.nota_dosi) {
             const notaEl = document.createElement('div');
             notaEl.id = 'nota-dosi-ricetta';
             notaEl.classList.add('badge-nota-dosi');
-            notaEl.innerHTML = `<span>${ricetta.nota_dosi}</span>`;
+            notaEl.innerHTML = `<span>🍸 <strong>Bicchiere:</strong> ${ricetta.nota_dosi}</span>`;
             listaIngredienti.parentNode.insertBefore(notaEl, listaIngredienti);
+        }
+
+        // --- NUOVO: STAMPA DELLA GARNISH ---
+        if (ricetta.garnish) {
+            const garnishEl = document.createElement('div');
+            garnishEl.id = 'garnish-ricetta';
+            garnishEl.style.backgroundColor = '#f39c12'; // Arancione brillante
+            garnishEl.style.color = 'white';
+            garnishEl.style.padding = '8px 15px';
+            garnishEl.style.borderRadius = '5px';
+            garnishEl.style.marginBottom = '20px';
+            garnishEl.style.fontWeight = 'bold';
+            garnishEl.style.display = 'inline-block';
+            garnishEl.innerHTML = `🍋 Decorazione: ${ricetta.garnish}`;
+            
+            // La inseriamo subito dopo il bicchiere
+            listaIngredienti.parentNode.insertBefore(garnishEl, listaIngredienti);
+        }
+
+        // --- SISTEMA FOTO SPOILER ---
+        if (ricetta.foto) {
+            const spoilerDiv = document.createElement('div');
+            spoilerDiv.id = 'contenitore-foto-spoiler';
+            spoilerDiv.innerHTML = `
+                <div class="btn-spoiler" id="btn-toggle-foto" style="background-color: #8e44ad; color: white; padding: 10px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; display: inline-block; font-weight: bold; text-align: center; width: 100%; box-sizing: border-box;">📸 Mostra foto suggerita</div>
+                <div id="foto-cocktail" class="contenitore-foto" style="display: none; margin-bottom: 20px; text-align: center; border-radius: 10px; overflow: hidden; border: 3px solid #8e44ad;">
+                    <img src="${ricetta.foto}" alt="${ricetta.titolo}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            `;
+            listaIngredienti.parentNode.insertBefore(spoilerDiv, listaIngredienti);
+
+            const btnToggleFoto = spoilerDiv.querySelector('#btn-toggle-foto');
+            const fotoCont = spoilerDiv.querySelector('#foto-cocktail');
+            btnToggleFoto.addEventListener('click', () => {
+                if (fotoCont.style.display === 'none') {
+                    fotoCont.style.display = 'block';
+                    btnToggleFoto.textContent = '🙈 Nascondi foto';
+                } else {
+                    fotoCont.style.display = 'none';
+                    btnToggleFoto.textContent = '📸 Mostra foto suggerita';
+                }
+            });
         }
         
         // --- MOTORE INGREDIENTI PROPORZIONALI ---
@@ -315,7 +309,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
 
     } catch (error) {
         console.error('Errore nel caricamento della ricetta:', error);
-        document.getElementById('lista-ingredienti').innerHTML = '<li>Errore: Impossibile caricare i dati della ricetta.</li>';
+        document.getElementById('lista-ingredienti').innerHTML = '<li>Errore: impossibile caricare i dati della ricetta.</li>';
     }
 }
 
@@ -325,10 +319,10 @@ function chiudiAlgoritmo() {
     document.getElementById('pannello-controllo').style.display = 'flex';
     const pannelloFiltri = document.getElementById('pannello-filtri');
     if (pannelloFiltri) pannelloFiltri.style.display = 'flex'; 
-    applicaFiltri();
+    applicaFiltriSala();
 }
 
-// --- 6. FUNZIONI DI SUPPORTO GRAFICO ---
+// --- 5. FUNZIONI DI SUPPORTO GRAFICO ---
 function creaTestoSinistra(dati) {
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
@@ -383,12 +377,17 @@ function creaNodoDestra(dati) {
     divNodo.id = 'nodo-' + dati.step_id;
     
     if (dati.icona) {
-        divNodo.classList.add('tipo-' + dati.icona);
+        divNodo.classList.add('tipo-' + dati.icona); // Mantiene retrocompatibilità
+        divNodo.classList.add('step-' + dati.icona); // Nuova classe usata dal bar
+        
         const divIcona = document.createElement('div');
         divIcona.classList.add('icona-principale');
         const imgIcona = document.createElement('img');
-        imgIcona.src = `assets/icone/${dati.icona}.svg`; 
+        
+        // PERCORSO AGGIORNATO PER LA SALA
+        imgIcona.src = `assets/icone-sala/${dati.icona}.svg`; 
         imgIcona.onerror = () => { console.warn(`Icona mancante: ${dati.icona}.svg`); };
+        
         divIcona.appendChild(imgIcona);
         divNodo.appendChild(divIcona);
     } else if (dati.testo_nodo) {
@@ -402,36 +401,6 @@ function creaNodoDestra(dati) {
         divNodo.appendChild(testoPlaceholder);
     }
 
-    if (dati.temperatura || dati.tempo || dati.dimensione || dati.velocita) {
-        const divParametri = document.createElement('div');
-        divParametri.classList.add('pannello-parametri');
-        
-        if (dati.temperatura) {
-            const badgeTemp = document.createElement('span');
-            badgeTemp.classList.add('badge-parametro', 'badge-temp');
-            badgeTemp.textContent = `🌡️ ${dati.temperatura}`;
-            divParametri.appendChild(badgeTemp);
-        }
-        if (dati.tempo) {
-            const badgeTempo = document.createElement('span');
-            badgeTempo.classList.add('badge-parametro', 'badge-tempo');
-            badgeTempo.textContent = `⏱️ ${dati.tempo}`;
-            divParametri.appendChild(badgeTempo);
-        }
-        if (dati.dimensione) {
-            const badgeDim = document.createElement('span');
-            badgeDim.classList.add('badge-parametro', 'badge-dim');
-            badgeDim.textContent = `📏 ${dati.dimensione}`;
-            divParametri.appendChild(badgeDim);
-        }
-        if (dati.velocita) {
-            const badgeVel = document.createElement('span');
-            badgeVel.classList.add('badge-parametro', 'badge-vel');
-            badgeVel.textContent = `⚙️ ${dati.velocita}`;
-            divParametri.appendChild(badgeVel);
-        }
-        divNodo.appendChild(divParametri);
-    }
     if (dati.opzionale) {
         divNodo.classList.add('nodo-opzionale');
     }
@@ -518,7 +487,7 @@ function cambiaVista() {
     }
 }
 
-// --- 7. ESPORTAZIONE E UTILITÀ ---
+// --- 6. ESPORTAZIONE IN WORD (Formattazione Mantenuta) ---
 function esportaWord() {
     if (!window.ricettaCorrente) return alert("Nessuna ricetta caricata!");
     const r = window.ricettaCorrente;
@@ -568,7 +537,7 @@ function esportaWord() {
     document.body.removeChild(link);
 }
 
-// --- 8. FUNZIONE SCHERMO SEMPRE ON (Wake Lock API) ---
+// --- 7. WAKE LOCK E SERVICE WORKER ---
 let bloccoSchermo = null;
 
 async function attivaSchermo() {
@@ -581,25 +550,23 @@ async function attivaSchermo() {
 
     try {
         if (bloccoSchermo !== null) {
-            // Spegne il blocco
             await bloccoSchermo.release();
             bloccoSchermo = null;
             if (btnWakeLock) {
-                btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                btnWakeLock.textContent = '🌙 Schermo';
                 btnWakeLock.classList.remove('attivo');
             }
         } else {
-            // Accende il blocco
             bloccoSchermo = await navigator.wakeLock.request('screen');
             if (btnWakeLock) {
-                btnWakeLock.textContent = '☀️ Schermo: SEMPRE ACCESO';
+                btnWakeLock.textContent = '☀️ Schermo';
                 btnWakeLock.classList.add('attivo');
             }
             
             bloccoSchermo.addEventListener('release', () => {
                 bloccoSchermo = null;
                 if (btnWakeLock) {
-                    btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                    btnWakeLock.textContent = '🌙 Schermo';
                     btnWakeLock.classList.remove('attivo');
                 }
             });
@@ -609,72 +576,57 @@ async function attivaSchermo() {
     }
 }
 
-// Colleghiamo "l'interruttore" al bottone
 const bottoneSchermo = document.getElementById('btn-wake-lock');
 if (bottoneSchermo) {
     bottoneSchermo.addEventListener('click', attivaSchermo);
 }
 
-// --- 9. REGISTRAZIONE SERVICE WORKER ---
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
-            .then((registrazione) => {
-                console.log('Service Worker registrato con successo. Scope:', registrazione.scope);
-            })
-            .catch((errore) => {
-                console.error('Errore nella registrazione del Service Worker:', errore);
-            });
+            .catch((errore) => console.error('Errore SW:', errore));
     });
 }
 
-// --- 10. SINCRONIZZAZIONE OFFLINE RICETTE ---
+// --- 8. SINCRONIZZAZIONE (Punta a menu_sala.json) ---
 async function sincronizzaRicetteOffline() {
     const btn = document.getElementById('btn-sync');
     const testoOriginale = btn.innerHTML;
-    btn.innerHTML = '⏳ Download in corso...';
+    btn.innerHTML = '⏳ Download...';
     btn.disabled = true;
 
     try {
-        const response = await fetch('data/menu.json?v=' + new Date().getTime());
-        if (!response.ok) throw new Error('Errore download menu');
+        const response = await fetch('data/menu_sala.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error('Errore download menu_sala');
         const data = await response.json();
         
-        let fileDaSalvare = ['data/menu.json'];
+        let fileDaSalvare = ['data/menu_sala.json'];
 
         data.catalogo.forEach(categoria => {
             categoria.sottocategorie.forEach(sub => {
                 sub.preparazioni.forEach(ricetta => {
-                    if (ricetta.url_dati) {
-                        fileDaSalvare.push(ricetta.url_dati);
-                    }
+                    if (ricetta.url_dati) fileDaSalvare.push(ricetta.url_dati);
                 });
             });
         });
 
         const cache = await caches.open('bobbiolab-dati-v1');
-        let scaricate = 0;
-        let fallite = 0;
+        let scaricate = 0; let fallite = 0;
         
         for (let url of fileDaSalvare) {
             try {
                 await cache.add(url + '?v=' + new Date().getTime());
                 scaricate++;
             } catch (e) {
-                console.warn('⚠️ Impossibile scaricare (file mancante):', url);
                 fallite++;
             }
         }
 
-        if (fallite > 0) {
-            alert(`Download completato: ${scaricate} file salvati. Attenzione: ${fallite} ricette non trovate (controlla console F12).`);
-        } else {
-            alert(`✅ Tutte le ${scaricate} ricette sono state scaricate! App pronta per l'uso offline.`);
-        }
+        if (fallite > 0) alert(`Scaricati ${scaricate} file. Mancanti: ${fallite}.`);
+        else alert(`✅ Tutte le ${scaricate} ricette bar scaricate!`);
 
     } catch (error) {
-        console.error('Errore fatale di sincronizzazione:', error);
-        alert('❌ Errore generale durante il download. Controlla la connessione.');
+        alert('❌ Errore generale durante il download.');
     } finally {
         btn.innerHTML = testoOriginale;
         btn.disabled = false;

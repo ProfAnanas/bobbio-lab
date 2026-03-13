@@ -1,0 +1,57 @@
+{
+  "catalogo": [
+    {
+      "id_categoria": "iba",
+      "nome_categoria": "Cocktail IBA",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "The Unforgettables",
+          "preparazioni": [
+            { "id": "alexander", "nome": "Alexander", "url_dati": "data/sala/alexander.json", "funzione": "after-dinner", "famiglia": "duo-trio", "quantita": "medium", "tag": "cl cognac, cl crema di cacao scura, cl panna fresca" }
+
+          ]
+        },
+        {
+          "nome_sottocategoria": "Contemporary Classics",
+          "preparazioni": [
+
+          ]
+        },
+        {
+          "nome_sottocategoria": "New Era Drinks",
+          "preparazioni": []
+        }
+      ]
+    },
+    {
+      "id_categoria": "mocktail",
+      "nome_categoria": "Mocktail E Analcolici",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Grandi Classici",
+          "preparazioni": [
+
+          ]
+        },
+        {
+          "nome_sottocategoria": "Pestati E Dissetanti",
+          "preparazioni": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "id_categoria": "qualifica_sala",
+      "nome_categoria": "Esame Di Qualifica",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Prove d'esame",
+          "preparazioni": [
+
+          ]
+        }
+      ]
+    }
+  ]
+}

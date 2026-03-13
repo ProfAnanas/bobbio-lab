@@ -1,0 +1,43 @@
+{
+    "id": "alexander",
+    "titolo": "Alexander",
+    "nota_dosi": "Doppia coppetta da cocktail",
+    "garnish": "Una grattugiata di noce moscata.",
+    "foto": "assets/foto-sala/alexander.png",
+    "ingredienti": [
+        {
+            "quantita": 3,
+            "unita_descrizione": "cl Cognac"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "cl Crema di cacao scura"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "cl Panna fresca"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Versare il Cognac, la Crema di Cacao scura e la panna fresca nello shaker",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere abbondante ghiaccio e shakerare vigorosamente per emulsionare la panna",
+            "icona": "shake"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Filtrare il drink nella coppetta (precedentemente raffreddata) trattenendo il ghiaccio.",
+            "icona": "strain"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Grattugiare la noce moscata fresca sulla superficie.",
+            "icona": "garnish"
+        }
+    ]
+}
