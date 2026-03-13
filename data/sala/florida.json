@@ -1,0 +1,47 @@
+{
+    "id": "florida",
+    "titolo": "Florida",
+    "nota_dosi": "Tumbler o Highball",
+    "garnish": "Spiedino di frutta fresca e foglie di menta fresca",
+    "foto": "assets/foto-sala/florida.png",
+    "ingredienti": [
+        {
+            "quantita": 4,
+            "unita_descrizione": "cl Sciroppo di granatina"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "cl Succo di limone o Lime"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "cl Succo di arancia"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "cl Succo di pompelmo"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Versare tutti gli ingredienti nello shaker.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Shakerare energicamente.",
+            "icona": "shake"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Filtrare in un tumbler alto pieno di ghiaccio a cubetti.",
+            "icona": "strain"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Decora con 2 cannucce e con uno spiedino di frutta fresca e foglie di menta fresca.",
+            "icona": "garnish"
+        }
+    ]
+}

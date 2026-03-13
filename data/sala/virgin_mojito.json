@@ -1,0 +1,57 @@
+{
+    "id": "virgin_mojito",
+    "titolo": "Virgin Mojito",
+    "nota_dosi": "Tumbler alto colmo di ghiaccio tritato",
+    "garnish": "Ciuffo di menta fresca e fetta di lime",
+    "foto": "assets/foto-sala/virginmojito.png",
+    "ingredienti": [
+        {
+            "quantita": 0.5,
+            "unita_descrizione": "n° Lime tagliato a pezzi"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Bar spoon Zucchero di canna bianco"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "n° Foglie menta fresca"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Soda Water (o Ginger Ale per una versione più dolce)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mettere il lime e lo zucchero di canna nel bicchiere e pestare energicamente per estrarre succo ed oli essenziali.\"",
+            "icona": "muddle"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere le foglie di menta dopo averle leggermente schiacciate tra le mani per sprigionarne l'aroma.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Riempire il bicchiere fino all'orlo con ghiaccio tritato",
+            "icona": "fill"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Colmare con la soda water.",
+            "icona": "build"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Miscelare delicatamente con il bar spoon con un movimento dal basso verso l'alto per sollevare lo zucchero e il lime.",
+            "icona": "stir"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Decorare con il ciuffo di menta e servire con una cannuccia.",
+            "icona": "garnish"
+        }
+    ]
+}
