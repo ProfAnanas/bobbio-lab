@@ -33,13 +33,16 @@
         {
           "nome_sottocategoria": "Grandi Classici",
           "preparazioni": [
-{ "id": "shirley", "nome": "Shirley Temple", "url_dati": "data/sala/shirley.json", "funzione": "dissetanti", "famiglia": "highball-collins", "quantita": "long", "tag": "cl sciroppo di granatina, ginger ale" }
+{ "id": "shirley", "nome": "Shirley Temple", "url_dati": "data/sala/shirley.json", "funzione": "dissetanti", "famiglia": "highball-collins", "quantita": "long", "tag": "cl sciroppo di granatina, ginger ale" },
+{ "id": "florida", "nome": "Florida", "url_dati": "data/sala/florida.json", "funzione": "dissetanti", "famiglia": "sour", "quantita": "long", "tag": "cl sciroppo di granatina, cl succo di limone o lime, cl succo di arancia, cl succo di pompelmo" }
+
           ]
         },
         {
           "nome_sottocategoria": "Pestati E Dissetanti",
           "preparazioni": [
-
+            { "id": "virgin_mojito", "nome": "Virgin Mojito", "url_dati": "data/sala/virgin_mojito.json", "funzione": "dissetanti", "famiglia": "pestati", "quantita": "long", "tag": "n° lime tagliato a pezzi, n° bar spoon zucchero di canna bianco, n° foglie menta fresca, soda water (o ginger ale per una versione più dolce)" }
+            
           ]
         }
       ]
