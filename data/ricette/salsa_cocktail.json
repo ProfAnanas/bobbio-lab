@@ -1,0 +1,33 @@
+{
+    "id": "salsa_cocktail",
+    "titolo": "Salsa cocktail (salsa rosa)",
+    "ingredienti": [
+        {
+            "quantita": 600,
+            "unita_descrizione": "g Maionese"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Ketchup"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Cognac"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Worcestershire Sauce"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Panna fresca"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Incorporare tutti gli ingredienti alla maionese.",
+            "icona": "mescolare"
+        }
+    ]
+}

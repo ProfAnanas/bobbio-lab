@@ -1,0 +1,52 @@
+{
+    "id": "tartara",
+    "titolo": "Salsa tartara",
+    "ingredienti": [
+        {
+            "quantita": 600,
+            "unita_descrizione": "g Maionese"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Cetriolini sott'aceto"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Capperi sotto sale"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Tuorli sodi"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Prezzemolo tritato"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Senape (meglio se all'antica)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare gli ingredienti: dissalare i capperi e tritarli insieme ai cetriolini e al prezzemolo.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Montare i tuorli sodi con la senape fino a creare una crema liscia e omogenea.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Inizialmente con una frusta, unire il trito alla crema di tuorli sodi e mescolare bene.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Agigungere la maionese e mescolare con una marina per amalgamare il composto.",
+            "icona": "mescolare"
+        }
+    ]
+}

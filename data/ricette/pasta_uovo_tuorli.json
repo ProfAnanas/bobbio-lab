@@ -1,0 +1,66 @@
+{
+    "id": "pasta_uovo_tuorli",
+    "titolo": "Pasta all'uovo solo tuorli (e variante moderna)",
+    "ingredienti": [
+        {
+            "quantita": 800,
+            "unita_descrizione": "g Farina 0"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Semola di grano duro"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Tuorli d'uovo"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante moderna"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina media-forte (12g Proteine)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Semola di grano duro"
+        },
+        {
+            "quantita": 600,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Olio EVO"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Preparare la pasta all'uovo come di norma.",
+                    "icona": "gancio"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Preparare la pasta all'uovo come di norma.",
+                    "icona": "impastare_mano"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Se l'impasto è preparato con la ricetta moderna, mettere sottovuoto e abbattere in positivo per almeno 6-8 ore",
+            "opzionale": true,
+            "icona": "frigorifero",
+            "tempo": "6-8 ore"
+        }
+    ]
+}

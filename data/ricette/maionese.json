@@ -1,0 +1,61 @@
+{
+    "id": "maionese",
+    "titolo": "Maionese (salsa madre)",
+    "nota_dosi": "per 1 litro di maionese",
+    "ingredienti": [
+        {
+            "quantita": 1,
+            "unita_descrizione": "l Olio di semi di arachidi o girasole"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Tuorli pastorizzati"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Limone succo"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Senape"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "In planetaria munita di frusta, montare  i  tuorli  d’uovo  con  il  sale  fino  e  la  senape,  a  velocità ridotta, per circa 30 secondi",
+                    "icona": "frusta",
+                    "tempo": "30 sec.",
+                    "velocita": "bassa"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "In una bastardella, appoggiata su una ciotola con il fondo piatto per avere più stabilità, montare  i  tuorli  d’uovo  con  il  sale  fino  e  la  senape fino ad ottenere una crema densa e omogenea.",
+                    "icona": "montare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare a filo l'olio aumentando la velocità della montata. Tenere puliti i bordi della ciotola raccogliendo la salsa che si sta creando sempre tutta insieme.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Incorporato  l’olio,  aggiungere  il  succo  di  limone  filtrato.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Conservare in frigorifero a +4°C con pellicola a contatto",
+            "icona": "frigorifero"
+        }
+    ]
+}

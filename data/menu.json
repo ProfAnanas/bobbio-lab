@@ -9,20 +9,14 @@
             { "id": "fondo_vegetale", "nome": "Fondo vegetale", "url_dati": "data/ricette/fondo_vegetale.json", "anno": "1", "tag": "brodo" },
             { "id": "pasta-all-uovo", "nome": "Pasta all'uovo", "url_dati": "data/ricette/pasta_all_uovo.json", "anno": "1, 2, 3", "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca" },
             { "id": "besciamella", "nome": "Besciamella", "url_dati": "data/ricette/besciamella.json", "anno": "1, 2, 3", "tag": "salsa madre" },
-            { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" }
+            { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" },
+            { "id": "maionese", "nome": "Maionese (salsa madre)", "url_dati": "data/ricette/maionese.json", "anno": "1, 2", "tag": "salsa madre, mayo, mayonese" }
           ]
         },
         {
           "nome_sottocategoria": "Stuzzichini e aperitivi",
           "preparazioni": [
-            { "id": "panna_acida_salmone", "nome": "Piccola panna acida con tartare di salmone", "url_dati": "data/ricette/panna_acida_salmone.json", "anno": "4, 5", "tag": "mignon, aperitivo, amuse bouche" },
-            { "id": "aspic_passito_caprino", "nome": "Aspic di Passito con panna cotta di caprino", "url_dati": "data/ricette/aspic_passito_caprino.json", "anno": "tutti", "tag": "" },
-            { "id": "savarin_bagnacaoda", "nome": "Savarin di bagna caoda con peperoni arrostiti", "url_dati": "data/ricette/savarin_bagnacaoda.json", "anno": "5", "tag": "" },
-            { "id": "focaccine_panelle", "nome": "Focaccine al kamut con panelle di ceci", "url_dati": "data/ricette/focaccine_panelle.json", "anno": "5", "tag": "aperitivo, appetizer, amuse bouche, farinata, focaccia" },
-            { "id": "castagnole_salate", "nome": "Castagnole fritte salate", "url_dati": "data/ricette/castagnole_salate.json", "anno": "5", "tag": "" },
-            { "id": "baba_salati", "nome": "Babà salati al pecorino", "url_dati": "data/ricette/baba_salati.json", "anno": "4, 5", "tag": "" },
-            { "id": "bigne_parmigiano", "nome": "Bignè con chantilly al Parmigiano Reggiano DOP", "url_dati": "data/ricette/bigne_parmigiano.json", "anno": "3, 4, 5", "tag": "" },
-            { "id": "tartellette_russa", "nome": "Tartellette alla russa", "url_dati": "data/ricette/tartellette_russa.json", "anno": "4, 5", "tag": "" }
+          
           ]
         },
         {
@@ -43,7 +37,8 @@
             { "id": "risotto_porri_toma", "nome": "Risotto ai porri e toma del lait brusc", "url_dati": "data/ricette/risotto_porri_toma.json", "anno": "3", "tag": "piemonte, riso, castelmagno, porro" },
             { "id": "tagliolini_ragu_verdure", "nome": "Tagliolini al ragù di verdure", "url_dati": "data/ricette/tagliolini_ragu_verdure.json", "anno": "3", "tag": "piemonte" },
             { "id": "pappardelle_gratinate", "nome": "Pappardelle gratinate", "url_dati": "data/ricette/pappardelle_gratinate.json", "anno": "3", "tag": "stracchino, rucola, pasta fresca" },
-            { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" }
+            { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" },
+            { "id": "pasta_uovo_tuorli", "nome": "Pasta all'uovo solo tuorli (e variante moderna)", "url_dati": "data/ricette/pasta_uovo_tuorli.json", "anno": "3, 4, 5", "tag": "" }
                     ]
         },
         {
@@ -65,7 +60,9 @@
             { "id": "riduzione_balsamico_miele", "nome": "Riduzione di aceto balsamico e miele", "url_dati": "data/ricette/riduzione_balsamico_miele.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "salsa_maionese", "nome": "Salsa alla maionese", "url_dati": "data/ricette/salsa_maionese.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "ragu_verdura", "nome": "Ragù di verdure", "url_dati": "data/ricette/ragu_verdura.json", "anno": "1, 2, 3", "tag": "" },
-            { "id": "besciamella", "nome": "Besciamella", "url_dati": "data/ricette/besciamella.json", "anno": "1, 2, 3", "tag": "salsa madre" }
+            { "id": "besciamella", "nome": "Besciamella", "url_dati": "data/ricette/besciamella.json", "anno": "1, 2, 3", "tag": "salsa madre" },
+            { "id": "salsa_cocktail", "nome": "Salsa cocktail (salsa rosa)", "url_dati": "data/ricette/salsa_cocktail.json", "anno": "1, 2", "tag": "maionese, mayo" },
+            { "id": "tartara", "nome": "Salsa tartara", "url_dati": "data/ricette/tartara.json", "anno": "1, 2", "tag": "maionese, mayo, tartare" }
           ]
         }
       ]
