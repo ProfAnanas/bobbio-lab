@@ -15,19 +15,15 @@
         
         <div id="pannello-controllo" style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto;">
             
-            <div class="gruppo-tasti-app">
-                <a href="index.html" class="tasto-app tasto-home" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">🏠 Home</a>
-                <button id="btn-sync" class="tasto-app" onclick="sincronizzaRicetteOffline()">☁️ Scarica ricette</button>
-                <a href="glossario_cucina.html" style="text-decoration: none; display: flex;">
-    <button style="background-color: #d35400; color: white; border: none; padding: 10px 15px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 100%; min-width: 80px;">
-        <span style="font-size: 18px;">👨‍🍳</span>
-        <span>Glossario<br>tecnico</span>
-    </button>
-</a>
-    </button>
-</a>
-                <button id="btn-wake-lock" class="tasto-app">🌙 Schermo</button>
-            </div>
+           <div class="gruppo-tasti-app">
+    <a href="index.html" class="tasto-app tasto-home" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">🏠 Home</a>
+    
+    <button id="btn-sync" class="tasto-app" onclick="sincronizzaRicetteOffline()">☁️ Scarica ricette</button>
+    
+    <a href="glossario_cucina.html" class="tasto-app" style="background-color: #d35400; color: white; text-decoration: none; display: flex; align-items: center; justify-content: center;">👨‍🍳 Glossario tecnico</a>
+    
+    <button id="btn-wake-lock" class="tasto-app">🌙 Schermo</button>
+</div>
 
             <div style="width: 100%;">
                 <input type="text" id="campo-ricerca" placeholder="Cerca tecnica o ricetta (es. brunoise, frolla)..." style="width: 100%; box-sizing: border-box; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
