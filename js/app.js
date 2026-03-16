@@ -1,3 +1,66 @@
+// --- 0. MOTORE GLOSSARIO CUCINA AUTOMATICO ---
+let dizionarioGlossarioCucina = {};
+
+async function caricaGlossarioCucina() {
+    try {
+        const response = await fetch('data/ricette/glossario_cucina.json');
+        dizionarioGlossarioCucina = await response.json();
+        creaModaleGlossarioCucina(); 
+    } catch (error) {
+        console.error("Errore nel caricamento del glossario cucina:", error);
+    }
+}
+
+function creaModaleGlossarioCucina() {
+    if (document.getElementById('modale-glossario-cucina')) return;
+    
+    const modaleDiv = document.createElement('div');
+    modaleDiv.id = 'modale-glossario-cucina';
+    modaleDiv.className = 'modale-overlay';
+    modaleDiv.innerHTML = `
+        <div class="modale-box modale-box-cucina">
+            <h2 id="modale-titolo-cucina" class="modale-titolo modale-titolo-cucina"></h2>
+            <p id="modale-testo-cucina" class="modale-testo"></p>
+            <button class="btn-chiudi-modale" style="background-color: #d35400;" onclick="chiudiModaleGlossarioCucina()">Chiudi</button>
+        </div>
+    `;
+    document.body.appendChild(modaleDiv);
+    
+    modaleDiv.addEventListener('click', (e) => {
+        if(e.target === modaleDiv) chiudiModaleGlossarioCucina();
+    });
+}
+
+function apriModaleGlossarioCucina(termine) {
+    const definizione = dizionarioGlossarioCucina[termine.toLowerCase()];
+    if(definizione) {
+        document.getElementById('modale-titolo-cucina').textContent = termine;
+        document.getElementById('modale-testo-cucina').textContent = definizione;
+        document.getElementById('modale-glossario-cucina').style.display = 'flex';
+    }
+}
+
+function chiudiModaleGlossarioCucina() {
+    document.getElementById('modale-glossario-cucina').style.display = 'none';
+}
+
+function analizzaTestoGlossarioCucina(testo) {
+    if(!testo || Object.keys(dizionarioGlossarioCucina).length === 0) return testo;
+
+    let testoModificato = testo;
+    const chiavi = Object.keys(dizionarioGlossarioCucina).sort((a, b) => b.length - a.length);
+
+    chiavi.forEach(chiave => {
+        const regex = new RegExp(`\\b(${chiave})\\b`, 'gi');
+        testoModificato = testoModificato.replace(regex, `<span class="termine-cucina" onclick="apriModaleGlossarioCucina('$1')">$1</span>`);
+    });
+
+    return testoModificato;
+}
+
+caricaGlossarioCucina();
+
+
 // --- 1. DIZIONARIO SOTTOCATEGORIE ---
 const mappaSottocategorie = {
     cucina: ["Preparazioni base", "Stuzzichini e aperitivi", "Antipasti", "Primi", "Secondi", "Contorni", "Salse e riduzioni"],
@@ -339,7 +402,9 @@ function creaTestoSinistra(dati) {
 
     const testoStep = document.createElement('div');
     testoStep.classList.add('testo-step');
-    testoStep.textContent = dati.testo;
+    
+    // QUI AVVIENE LA MAGIA PER LA CUCINA: Passiamo il testo al motore del glossario cucina
+    testoStep.innerHTML = analizzaTestoGlossarioCucina(dati.testo);
 
     const divCheck = document.createElement('div');
     divCheck.classList.add('contenitore-check');

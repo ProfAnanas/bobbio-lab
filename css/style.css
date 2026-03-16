@@ -1213,3 +1213,26 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
 .btn-chiudi-modale:hover {
     background-color: #95a5a6;
 }
+/* =========================================
+   Glossario Cucina E Pasticceria
+   ========================================= */
+
+.termine-cucina {
+    color: #d35400;
+    border-bottom: 2px dotted #d35400;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.termine-cucina:hover {
+    background-color: #fdf2e9;
+    border-radius: 3px;
+}
+
+.modale-box-cucina {
+    border-top: 6px solid #d35400 !important; /* Forza L'Arancione Sulla Righina Alta */
+}
+
+.modale-titolo-cucina {
+    color: #d35400 !important; /* Forza L'Arancione Sul Titolo */
+}
