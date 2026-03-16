@@ -1,3 +1,66 @@
+// --- 0. MOTORE GLOSSARIO AUTOMATICO ---
+let dizionarioGlossario = {};
+
+async function caricaGlossario() {
+    try {
+        const response = await fetch('data/sala/glossario_sala.json');
+        dizionarioGlossario = await response.json();
+        creaModaleGlossario(); 
+    } catch (error) {
+        console.error("Errore nel caricamento del glossario:", error);
+    }
+}
+
+function creaModaleGlossario() {
+    if (document.getElementById('modale-glossario')) return;
+    
+    const modaleDiv = document.createElement('div');
+    modaleDiv.id = 'modale-glossario';
+    modaleDiv.className = 'modale-overlay';
+    modaleDiv.innerHTML = `
+        <div class="modale-box">
+            <h2 id="modale-titolo" class="modale-titolo"></h2>
+            <p id="modale-testo" class="modale-testo"></p>
+            <button class="btn-chiudi-modale" onclick="chiudiModaleGlossario()">Chiudi</button>
+        </div>
+    `;
+    document.body.appendChild(modaleDiv);
+    
+    modaleDiv.addEventListener('click', (e) => {
+        if(e.target === modaleDiv) chiudiModaleGlossario();
+    });
+}
+
+function apriModaleGlossario(termine) {
+    const definizione = dizionarioGlossario[termine.toLowerCase()];
+    if(definizione) {
+        document.getElementById('modale-titolo').textContent = termine;
+        document.getElementById('modale-testo').textContent = definizione;
+        document.getElementById('modale-glossario').style.display = 'flex';
+    }
+}
+
+function chiudiModaleGlossario() {
+    document.getElementById('modale-glossario').style.display = 'none';
+}
+
+function analizzaTestoGlossario(testo) {
+    if(!testo || Object.keys(dizionarioGlossario).length === 0) return testo;
+
+    let testoModificato = testo;
+    const chiavi = Object.keys(dizionarioGlossario).sort((a, b) => b.length - a.length);
+
+    chiavi.forEach(chiave => {
+        const regex = new RegExp(`\\b(${chiave})\\b`, 'gi');
+        testoModificato = testoModificato.replace(regex, `<span class="termine-glossario" onclick="apriModaleGlossario('$1')">$1</span>`);
+    });
+
+    return testoModificato;
+}
+
+caricaGlossario();
+
+
 // --- 1. AVVIO E COLLEGAMENTO SENSORI ---
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -166,7 +229,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         window.ricettaCorrente = ricetta; 
         listaIngredienti.innerHTML = '';
 
-if (ricetta.nota_dosi) {
+        if (ricetta.nota_dosi) {
             const notaEl = document.createElement('div');
             notaEl.id = 'nota-dosi-ricetta';
             notaEl.classList.add('badge-nota-dosi');
@@ -174,11 +237,11 @@ if (ricetta.nota_dosi) {
             listaIngredienti.parentNode.insertBefore(notaEl, listaIngredienti);
         }
 
-        // --- NUOVO: STAMPA DELLA GARNISH ---
+        // --- STAMPA DELLA GARNISH ---
         if (ricetta.garnish) {
             const garnishEl = document.createElement('div');
             garnishEl.id = 'garnish-ricetta';
-            garnishEl.style.backgroundColor = '#f39c12'; // Arancione brillante
+            garnishEl.style.backgroundColor = '#f39c12'; 
             garnishEl.style.color = 'white';
             garnishEl.style.padding = '8px 15px';
             garnishEl.style.borderRadius = '5px';
@@ -187,11 +250,10 @@ if (ricetta.nota_dosi) {
             garnishEl.style.display = 'inline-block';
             garnishEl.innerHTML = `🍋 Decorazione: ${ricetta.garnish}`;
             
-            // La inseriamo subito dopo il bicchiere
             listaIngredienti.parentNode.insertBefore(garnishEl, listaIngredienti);
         }
 
-// --- SISTEMA FOTO SPOILER ---
+        // --- SISTEMA FOTO SPOILER ---
         if (ricetta.foto) {
             const htmlCrediti = ricetta.foto_crediti ? `<div class="crediti-foto">${ricetta.foto_crediti}</div>` : '';
             
@@ -336,7 +398,9 @@ function creaTestoSinistra(dati) {
 
     const testoStep = document.createElement('div');
     testoStep.classList.add('testo-step');
-    testoStep.textContent = dati.testo;
+    
+    // QUI AVVIENE LA MAGIA: Passiamo il testo al motore del glossario invece di stamparlo piatto!
+    testoStep.innerHTML = analizzaTestoGlossario(dati.testo);
 
     const divCheck = document.createElement('div');
     divCheck.classList.add('contenitore-check');
@@ -380,14 +444,13 @@ function creaNodoDestra(dati) {
     divNodo.id = 'nodo-' + dati.step_id;
     
     if (dati.icona) {
-        divNodo.classList.add('tipo-' + dati.icona); // Mantiene retrocompatibilità
-        divNodo.classList.add('step-' + dati.icona); // Nuova classe usata dal bar
+        divNodo.classList.add('tipo-' + dati.icona); 
+        divNodo.classList.add('step-' + dati.icona); 
         
         const divIcona = document.createElement('div');
         divIcona.classList.add('icona-principale');
         const imgIcona = document.createElement('img');
         
-        // PERCORSO AGGIORNATO PER LA SALA
         imgIcona.src = `assets/icone-sala/${dati.icona}.svg`; 
         imgIcona.onerror = () => { console.warn(`Icona mancante: ${dati.icona}.svg`); };
         

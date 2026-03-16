@@ -1,0 +1,75 @@
+{
+    "id": "farcia_vegetale",
+    "titolo": "Farcia ricotta e spinaci per pasta fresca",
+    "nota_dosi": "per 1Kg di impasto",
+    "ingredienti": [
+        {
+            "quantita": 800,
+            "unita_descrizione": "g Spinaci freschi (o 600 g surgelati)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Ricotta fresca asciutta"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Parmigiano Reggiano DOP"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale, Pepe e Noce moscata"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Uova (Opzionale)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aglio (opzionale)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO (opzionale)"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Far appassire gli spinaci in padella con uno spicchio d'aglio in camicia e un filo d'olio EVO",
+                    "icona": "padella"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Cuocere a vapore gli spinaci",
+                    "icona": "forno_vapore"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Strizzare molto bene gli spinaci e frullarli",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Se la ricotta è molto umida, lasciarla scolare. (trasferirla in un colino e lasciarla tutta la notte in frigorifero)",
+            "icona": "frigorifero",
+            "temperatura": "+4C°",
+            "tempo": "8 ore"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Per una farcia più setosa, setacciare la ricotta.",
+            "opzionale": true,
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Impastare la ricotta con il formaggio, gli spinaci. Aggiustare di sale, pepe e noce moscata. Se previsto inserire quindi le uova.",
+            "icona": "mescolare"
+        }
+    ]
+}

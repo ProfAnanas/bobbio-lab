@@ -1,0 +1,51 @@
+{
+    "id": "pasta_semola",
+    "titolo": "Pasta fresca di semola",
+    "nota_dosi": "per 10 persone (1,5Kg di impasto)",
+    "ingredienti": [
+        {
+            "quantita": 1000,
+            "unita_descrizione": "g Semola di grano duro"
+        },
+        {
+            "quantita": 550,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "impasto idratato al 55% (si può scendere al 50% per una pasta più asciutta perfetta per formati \"trascinati\" come orecchiette e trofie)"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Sale fino"
+        }
+    ],
+        "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Disporre la farina a fontana",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare al centro della fontana le uova, l'acqua, l'olio e il sale.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Mescolare i liquidi al centro della fontana e pian piano incorporare la farina.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": " Impastare a mano fino a ottenere un impasto omogeneo",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Avvolgere l’impasto con carta pellicola e stabilizzare a +3 °C per 1 ora",
+            "icona": "frigorifero",
+            "tempo": "1 ora"
+        }
+    ]
+}

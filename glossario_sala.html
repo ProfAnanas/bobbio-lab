@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossario Sala Bar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 20px;
+        }
+        .contenitore-glossario {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header-glossario {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        h1 {
+            color: #8e44ad;
+            margin: 0;
+            font-size: 28px;
+        }
+        .btn-indietro {
+            background-color: #7f8c8d;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-indietro:hover {
+            background-color: #95a5a6;
+        }
+        
+        /* Barra di ricerca */
+        .barra-ricerca {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .barra-ricerca:focus {
+            border-color: #8e44ad;
+        }
+
+        /* Stile delle schede */
+        .lista-termini {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .scheda-termine {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 6px solid #8e44ad;
+        }
+        .titolo-termine {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #8e44ad;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+        .testo-termine {
+            margin: 0;
+            line-height: 1.6;
+            color: #34495e;
+            font-size: 16px;
+        }
+        .messaggio-vuoto {
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+            padding: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenitore-glossario">
+    <div class="header-glossario">
+        <h1>Glossario Tecnico Sala Bar</h1>
+        <a href="sala.html" class="btn-indietro">⬅ Torna Al Lab</a>
+    </div>
+
+    <p style="color: #7f8c8d; margin-bottom: 25px;">Cerca un termine o una tecnica per leggerne la definizione.</p>
+
+    <input type="text" id="cerca-termine" class="barra-ricerca" placeholder="🔍 Cerca una parola (es. shakerare, jigger...)">
+
+    <div id="lista-termini" class="lista-termini">
+        </div>
+    <div id="messaggio-vuoto" class="messaggio-vuoto">
+        Nessun termine trovato. Prova con un'altra parola.
+    </div>
+</div>
+
+<script>
+    let dizionario = {};
+
+    // 1. Scarica i dati dal file JSON
+    async function caricaDati() {
+        try {
+            // Aggiungiamo un parametro v per evitare problemi di cache sul cellulare
+            const response = await fetch('data/sala/glossario_sala.json?v=' + new Date().getTime());
+            if (!response.ok) throw new Error("File non trovato");
+            dizionario = await response.json();
+            stampaTermini(''); // Stampa tutto all'inizio
+        } catch (error) {
+            document.getElementById('lista-termini').innerHTML = '<p style="color:red;">Errore nel caricamento del glossario.</p>';
+            console.error(error);
+        }
+    }
+
+    // 2. Genera le schede HTML
+    function stampaTermini(filtroTesto) {
+        const contenitore = document.getElementById('lista-termini');
+        const msgVuoto = document.getElementById('messaggio-vuoto');
+        contenitore.innerHTML = '';
+        
+        let trovati = 0;
+        const query = filtroTesto.toLowerCase().trim();
+
+        // Estrae le parole, le mette in ordine alfabetico e crea le schede
+        Object.keys(dizionario).sort().forEach(parola => {
+            const definizione = dizionario[parola];
+            
+            // Filtro di ricerca (cerca sia nel titolo che nella definizione)
+            if (parola.toLowerCase().includes(query) || definizione.toLowerCase().includes(query)) {
+                
+                const scheda = document.createElement('div');
+                scheda.className = 'scheda-termine';
+                scheda.innerHTML = `
+                    <h2 class="titolo-termine">${parola}</h2>
+                    <p class="testo-termine">${definizione}</p>
+                `;
+                contenitore.appendChild(scheda);
+                trovati++;
+            }
+        });
+
+        // Mostra o nasconde il messaggio "Nessun termine trovato"
+        if (trovati === 0) {
+            msgVuoto.style.display = 'block';
+        } else {
+            msgVuoto.style.display = 'none';
+        }
+    }
+
+    // 3. Ascolta la barra di ricerca
+    document.getElementById('cerca-termine').addEventListener('input', (e) => {
+        stampaTermini(e.target.value);
+    });
+
+    // Avvia tutto all'apertura
+    caricaDati();
+</script>
+
+</body>
+</html>

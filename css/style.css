@@ -1144,3 +1144,72 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
 .crediti-foto a:hover {
     color: #7f8c8d;
 }
+/* =========================================
+   Glossario e popup modale
+   ========================================= */
+
+/* Come appare la parola cliccabile nel testo della ricetta */
+.termine-glossario {
+    color: #8e44ad;
+    border-bottom: 2px dotted #8e44ad;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.termine-glossario:hover {
+    background-color: #f3e5f5;
+    border-radius: 3px;
+}
+
+/* Lo sfondo scuro semi-trasparente che copre l'app */
+.modale-overlay {
+    display: none; /* Nascosto di default */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Il quadratino bianco col testo della definizione */
+.modale-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-top: 6px solid #8e44ad;
+    position: relative;
+}
+
+.modale-titolo {
+    margin-top: 0;
+    color: #8e44ad;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+.modale-testo {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+/* Il bottone per chiudere */
+.btn-chiudi-modale {
+    margin-top: 20px;
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn-chiudi-modale:hover {
+    background-color: #95a5a6;
+}

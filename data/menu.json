@@ -8,9 +8,11 @@
           "preparazioni": [
             { "id": "fondo_vegetale", "nome": "Fondo vegetale", "url_dati": "data/ricette/fondo_vegetale.json", "anno": "1", "tag": "brodo" },
             { "id": "pasta-all-uovo", "nome": "Pasta all'uovo", "url_dati": "data/ricette/pasta_all_uovo.json", "anno": "1, 2, 3", "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca" },
+            { "id": "pasta_semola", "nome": "Pasta fresca di semola", "url_dati": "data/ricette/pasta_semola.json", "anno": "1, 2, 3", "tag": "orecchiette, trofie, fusilli, penne, spaghetti" },
             { "id": "besciamella", "nome": "Besciamella", "url_dati": "data/ricette/besciamella.json", "anno": "1, 2, 3", "tag": "salsa madre" },
             { "id": "gnocchi_patate", "nome": "Gnocchi di patate", "url_dati": "data/ricette/gnocchi_patate.json", "anno": "1, 2, 3", "tag": "" },
-            { "id": "maionese", "nome": "Maionese (salsa madre)", "url_dati": "data/ricette/maionese.json", "anno": "1, 2", "tag": "salsa madre, mayo, mayonese" }
+            { "id": "maionese", "nome": "Maionese (salsa madre)", "url_dati": "data/ricette/maionese.json", "anno": "1, 2", "tag": "salsa madre, mayo, mayonese" },
+            { "id": "farcia_vegetale", "nome": "Farcia ricotta e spinaci per pasta fresca", "url_dati": "data/ricette/farcia_vegetale.json", "anno": "1, 2, 3", "tag": "spinaci, ricotta, verdure, agnolotti, plin, tortelloni" }
           ]
         },
         {
