@@ -116,7 +116,7 @@
         },
         {
             "step_id": "step-3",
-            "testo": "Farcire i bignè con la crema allo zabaione e stabilizzare in abbattitore per 15 min.",
+            "testo": "Per i bignè: Farcire i bignè con la crema allo zabaione e stabilizzare in abbattitore per 15 min.",
             "icona": "sac",
             "temperatura": "+4°C",
             "tempo": "15 min"
@@ -143,7 +143,7 @@
             "rami": [
                 {
                     "step_id": "step-5a",
-                    "testo": "Passare la frutta nella pastella",
+                    "testo": "Passare la frutta e i bignè nella pastella",
                     "icona": "impastare_mano"
                 },
                 {
@@ -158,13 +158,13 @@
             "rami": [
                 {
                     "step_id": "step-6a",
-                    "testo": "friggere in immersione in olio di semi a 160°C",
+                    "testo": "friggere la frutta e i bignè in immersione in olio di semi a 160°C",
                     "icona": "tegame",
                     "temperatura": "160°C"
                 },
                 {
                     "step_id": "step-6b",
-                    "testo": "Cuocere a 210°C modalità calore misto, con il 10% di umidità (o in modalità automatica: impanati pollo, doratura 1",
+                    "testo": "Cuocere i biscotti e i semolini a 210°C modalità calore misto, con il 10% di umidità (o in modalità automatica: impanati pollo, doratura 1",
                     "icona": "forno_ventilato",
                     "temperatura": "210°C"
                 }
