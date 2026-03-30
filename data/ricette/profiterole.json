@@ -1,0 +1,94 @@
+{
+    "id": "profiterole",
+    "titolo": "Profiterole",
+    "nota_dosi": "per 30 bignè",
+    "ingredienti": [
+        {
+            "quantita": 30,
+            "unita_descrizione": "n° <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_QUI', 'data/ricette/choux.json', 'Bignè')\">(clicca qui)</span>"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la farcitura"
+        },
+        {
+            "quantita": 600,
+            "unita_descrizione": "g <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_QUI', 'data/ricette/chantilly_mascarpone.json', 'chantilly al mascarpone')\">(clicca qui)</span>"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la copertura"
+        },
+        {
+            "quantita": 165,
+            "unita_descrizione": "g Panna fresca 35%"
+        },
+        {
+            "quantita": 165,
+            "unita_descrizione": "g Latte intero fresco (o panna fresca 35%)"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Sciroppo di glucosio"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Cioccolato fondente 50-55%"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Sminuzzare finemente il cioccolato fondente e raccoglierlo in una caraffa dai bordi alti",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un pentolino, portare a sfiorare il bollore il latte, la panna e lo sciroppo di glucosio.",
+            "icona": "pentolino",
+            "temperatura": "80-90°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare i liquidi caldi sul cioccolato in tre o quattro volte, non tutto in una volta.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Mescolare energicamente con una marisa partendo dal centro (per creare un \"cuore\" elastico e lucido) e allargando via via il movimento per incorporare il resto del liquido.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Emulsionare la ganache con un frullatore a immersione per un paio di minuti (mantenendo la campana ben immersa sul fondo per non inglobare bolle d'aria).",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Lasciar riposare la ganache coperta con pellicola a contatto fino a farle raggiungere i 30-32°C. A questa temperatura avrà la viscosità perfetta per nappare i bignè, lasciando uno strato coprente ma non eccessivamente pesante.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Farcire i bignè con la chantilly praticando un foro sul fondo del bignè con uno spelucchino",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Abbattere i bignè ripieni per far rassodare la crema e raffreddare la superficie del bignè.",
+            "icona": "abbattitore",
+            "temperatura": "-18°C",
+            "tempo": "5-10 min."
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Ricoprire i bignè di ganache",
+            "icona": "versare"
+        }
+    ]
+}

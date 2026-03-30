@@ -29,8 +29,8 @@
             { "id": "cipolle_ripiene", "nome": "Cipolle ripiene alla moda di Alba", "url_dati": "data/ricette/cipolle_ripiene.json", "anno": "3", "tag": "cipolla, piemonte" },
             { "id": "vitello_tonnato", "nome": "Vitello tonnato", "url_dati": "data/ricette/vitello_tonnato.json", "anno": "3", "tag": "piemonte, tonno, bovino, fassona" },
             { "id": "vitello_antica", "nome": "Vitello tonnato 'antica maniera'", "url_dati": "data/ricette/vitello_antica.json", "anno": "3", "tag": "piemonte" },
-            { "id": "insalata_russa", "nome": "Insalata russa", "url_dati": "data/ricette/insalata_russa.json", "anno": "1, 2, 3", "tag": "piemonte" }
-                    ]
+            { "id": "insalata_russa", "nome": "Insalata russa", "url_dati": "data/ricette/insalata_russa.json", "anno": "1, 2, 3", "tag": "piemonte" },
+            { "id": "quiche_lorraine", "nome": "Quiche Lorraine classique", "url_dati": "data/ricette/quiche_lorraine.json", "anno": "3, 4, 5", "tag": "loira, francia, quiche, torta salata, brisè" }                    ]
         },
         {
           "nome_sottocategoria": "Primi",
@@ -83,13 +83,24 @@
             { "id": "brise", "nome": "Pasta brisée con variante al Parmigiano Reggiano DOP", "url_dati": "data/ricette/brise.json", "anno": "2, 3, 4, 5", "tag": "frolla, biscotti, aperitivo, appetizer" }
           ]
         },
-        { "nome_sottocategoria": "Sfoglie e sfogliati", "preparazioni": [] },
-        { "nome_sottocategoria": "Choux", "preparazioni": [] },
+        { "nome_sottocategoria": "Sfoglie e sfogliati", "preparazioni": [
+          { "id": "sfoglia_base", "nome": "Pasta sfoglia base (francese)", "url_dati": "data/ricette/sfoglia_base.json", "anno": "1, 2, 3", "tag": "sfoglia, sfogliati" },
+          { "id": "sfoglia_italiana", "nome": "Pasta sfoglia all'italiana", "url_dati": "data/ricette/sfoglia_italiana.json", "anno": "1, 2, 3", "tag": "sfoglia, sfogliati" },
+          { "id": "sfoglia_italiana_cacao", "nome": "Pasta sfoglia all'italiana al cacao", "url_dati": "data/ricette/sfoglia_italiana_cacao.json", "anno": "2, 3, 4", "tag": "sfoglia, quiche" },
+          { "id": "pasta_matta", "nome": "Pasta matta", "url_dati": "data/ricette/pasta_matta.json", "anno": "1, 2, 3", "tag": "sfoglia" }       
+          ] },
+        { "nome_sottocategoria": "Choux", "preparazioni": [
+          { "id": "choux", "nome": "Pasta choux", "url_dati": "data/ricette/choux.json", "anno": "1, 2, 3", "tag": "bigne, bignè" },
+          { "id": "bigne_craquelin", "nome": "Bignè craquelin (e variante cacao)", "url_dati": "data/ricette/bigne_craquelin.json", "anno": "3, 4, 5", "tag": "bigne, choux" },
+          { "id": "eclair", "nome": "Base Eclair", "url_dati": "data/ricette/eclair.json", "anno": "3, 4, 5", "tag": "bigne, bignè, choux" },
+          { "id": "profiterole", "nome": "Profiterole", "url_dati": "data/ricette/profiterole.json", "anno": "2, 3", "tag": "profitterol, profitterole, profiteroles, francia, coux, bigne" }
+        ] },
         { "nome_sottocategoria": "Biscotteria e piccola pasticceria", "preparazioni": [] },
         {
           "nome_sottocategoria": "Creme e dolci al cucchiaio",
           "preparazioni": [
             { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/ricette/crema_pasticcera.json", "anno": "1, 2, 3", "tag": "diplomatica,chantilly,uovo,uova,latte,panna,cioccolato" },
+            { "id": "chantilly_mascarpone", "nome": "Chantilly al mascarpone", "url_dati": "data/ricette/chantilly_mascarpone.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "bonet", "nome": "Bonet", "url_dati": "data/ricette/bonet.json", "anno": "1, 2, 3", "tag": "bunet, amaretti, piemonte" },
             { "id": "pasticcera_salata", "nome": "Crema pasticcera salata", "url_dati": "data/ricette/pasticcera_salata.json", "anno": "3, 4, 5", "tag": "" }
           ]
@@ -102,7 +113,8 @@
           "nome_sottocategoria": "Torte da credenza",
           "preparazioni": [
             { "id": "torta_langarola", "nome": "Torta langarola (Torta di nocciole)", "url_dati": "data/ricette/torta_langarola.json", "anno": "3", "tag": "tonda gentile trilobata, nocciola igp, alba, cuneo" },
-            { "id": "plumcake","nome": "Plumcake e varianti","url_dati": "data/ricette/plumcake.json","anno": "1, 2, 3","tag": "merenda, torta" }
+            { "id": "plumcake","nome": "Plumcake e varianti","url_dati": "data/ricette/plumcake.json","anno": "1, 2, 3","tag": "merenda, torta" },
+            { "id": "pastiera", "nome": "Pastiera", "url_dati": "data/ricette/pastiera.json", "anno": "2, 3, 4", "tag": "napoli, napoletana, pasqua, frolla" }
           ]
         },
         {

@@ -1,0 +1,202 @@
+{
+    "id": "pastiera",
+    "titolo": "Pastiera",
+    "nota_dosi": "per una tortiera da 30cm o 2 da 18-20cm",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la frolla"
+        },
+        {
+            "quantita": 390,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 55,
+            "unita_descrizione": "g Farina di mandorle"
+        },
+        {
+            "quantita": 135,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 75,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": 220,
+            "unita_descrizione": "g Burro in pomata"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Vaniglia"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il ripieno"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Grano cotto"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "ml Latte fresco intero"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Strutto (o burro)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Scorza di limone"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Scorza di arancia"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Ricotta vaccina fresca (meglio di bufala)"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "Uova intere"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "Tuorli"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cannella in polvere"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Canditi di arancia e cedro"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "n° gocce di aroma fiori di arancio"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di foglia mescolare il burro con la farina di mandorle, lo zucchero a velo, la vaniglia e il sale.",
+            "icona": "foglia",
+            "tempo": "10 sec.",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Incorporare le uova una alla volta",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere la farina, far girare poco la macchina, giusto il tempo di creare il panetto.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Formare sul banco di lavoro una palla compatta, avvolgere con la pellicola e far riposare in frigo o abbattitore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "In una pentola, cuocere a fuoco bassissimo grano, latte, strutto, scorza di agrumi per circa 30 minuti (deve diventare una crema)",
+            "icona": "pentolino",
+            "temperatura": "minimo",
+            "tempo": "30 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Filtrare e far raffreddare in abbattitore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "fino a raffreddamento"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "A mano o in planetaria munita di frusta, montare: ricotta, zucchero, uova, tuorli e cannella.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Aggiungere il composto di grano, i canditi e l'aroma fiori di arancio",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "mescolare molto bene con una marisa.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Foderare una tortiera con la pasta frolla, fondo e bordi spessi 4 mm.",
+            "icona": "mattarello",
+            "dimensione": "4 mm"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Riempire la tortiera con il composto del ripieno",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Ricavare con la frolla rimasta 7 strisce e intrecciarle sopra la torta.",
+            "icona": "mattarello",
+            "dimensione": "4 mm"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-14a",
+                    "testo": "Cuocere in forno statico a 190°C per circa un'ora. a metà ripiano",
+                    "icona": "forno_statico",
+                    "temperatura": "190°C",
+                    "tempo": "1 ora"
+                },
+                {
+                    "step_id": "step-14b",
+                    "testo": "Cuocere in forno statico a 160-170°C per circa un'ora.",
+                    "icona": "forno_ventilato",
+                    "temperatura": "160-170°C",
+                    "tempo": "1 ora"
+                }
+            ]
+        },
+        {
+            "step_id": "step-15",
+            "testo": "Se la pastiera tende a scurirsi troppo, coprirla con un foglio di stagnola e abbassare di 10 gradi il forno",
+            "opzionale": true,
+            "testo_nodo": "ATTENZIONE!"
+        },
+        {
+            "step_id": "step-16",
+            "testo": "A cottura ultimata, spegnere il forno e lasciare rassodare a forno socchiuso per almeno 1 ora e 30.",
+            "icona": "riposo",
+            "tempo": "1,30 h"
+        },
+        {
+            "step_id": "step-17",
+            "testo": "NON METTERE SUBITO LA PASTIERA IN ABBATTITORE: questo crea un collasso della torta, crepe in superficie e non permette all'umidità di uscire lasciando la pastiera bagnata come se fosse cruda.",
+            "opzionale": true,
+            "testo_nodo": "ATTENZIONE!"
+        }
+    ]
+}

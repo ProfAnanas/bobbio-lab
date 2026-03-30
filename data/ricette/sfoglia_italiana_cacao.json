@@ -1,0 +1,105 @@
+{
+    "id": "sfoglia_italiana_cacao",
+    "titolo": "Pasta sfoglia all'italiana al cacao",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il pastello"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Farina media 280W"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Burro 82% materia grassa"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il panetto"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Burro 82% materia grassa"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Impastare tutti gli ingredienti del pastello fino a creare un impasto liscio e omogeneo",
+            "icona": "gancio"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Far riposare il pastello avvolto nella pellicola, in frigorifero o abbattitore per 50 minuti.",
+            "icona": "gancio",
+            "temperatura": "+4°C",
+            "tempo": "50 min"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Impastare il burro freddo e il cacao insieme creando un panetto.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Stendere il panetto ad un altezza di 1cm",
+            "icona": "mattarello",
+            "dimensione": "1 cm"
+        },
+                {
+            "step_id": "step-5",
+            "testo": "Far raffreddare il panetto in frigorifero o abbattitore",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Incassare il burro freddo.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far riposare l'impasto avvolto in pellicola per 40 minuti, sempre in frigorifero o abbattitore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "40 min."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Sfogliare dando una piega a 3 e una a 4.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Far riposare in frigorifero o abbattitore per almeno un'ora.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Fare altre due pieghe: una a 3 e una a 4.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Far riposare in frigorifero o abbattitore per almeno un'ora poi usare a piacere",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        }
+    ]
+}

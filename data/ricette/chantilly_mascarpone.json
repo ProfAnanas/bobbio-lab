@@ -1,0 +1,36 @@
+{
+    "id": "chantilly_mascarpone",
+    "titolo": "Chantilly al mascarpone",
+    "nota_dosi": "Questa chantilly è super stabile, si può usare per decorare e farcire.",
+    "ingredienti": [
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Panna fresca 35%"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Mascarpone"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Latte condensato zuccherato"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mescolare con una frusta (o frullare con frullatore a immersione) la panna con il mascarpone",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere il latte condensato",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Montare in planetaria fino ad ottenere la consistenza della panna morbida ma che non si frastaglia.",
+            "icona": "frusta"
+        }
+    ]
+}

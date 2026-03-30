@@ -1,0 +1,106 @@
+{
+    "id": "sfoglia_italiana",
+    "titolo": "Pasta sfoglia all'italiana",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il pastello"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Farina media 280W"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Burro 82% materia grassa (o margarina da incasso)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il panetto"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Burro da incasso (o margarina)"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Farina media 280W"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Impastare in planetaria munita di gancio o a mano, gli ingredienti del pastello creando un impasto liscio e omogeneo.",
+            "icona": "gancio",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Lasciar riposare il panetto avvolto da pellicola per almeno 50 min in frigorifero o abbattitore",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "50 min."
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Impastare il burro freddo e la farina insieme creando un panetto.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Stendere il panetto ad un altezza di 1cm",
+            "icona": "mattarello",
+            "dimensione": "1 cm"
+        },
+                {
+            "step_id": "step-5",
+            "testo": "Far raffreddare il panetto in frigorifero o abbattitore",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Incassare il burro freddo.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far riposare l'impasto avvolto in pellicola per 40 minuti, sempre in frigorifero o abbattitore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "40 min."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Sfogliare dando una piega a 3 e una a 4.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Far riposare in frigorifero o abbattitore per almeno un'ora.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Fare altre due pieghe: una a 3 e una a 4.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Far riposare in frigorifero o abbattitore per almeno un'ora poi usare a piacere",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        }
+    ]
+}

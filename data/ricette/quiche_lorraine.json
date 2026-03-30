@@ -1,0 +1,125 @@
+{
+    "id": "quiche_lorraine",
+    "titolo": "Quiche Lorraine classique",
+    "nota_dosi": "per 2 tortiere da 20 cm",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la brisée"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Burro a cubetti freddo da frigo"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Uovo (1 uovo intero)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la farcia"
+        },
+        {
+            "quantita": 240,
+            "unita_descrizione": "g Pancetta affumicata"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Uova intere"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Tuorli"
+        },
+        {
+            "quantita": 360,
+            "unita_descrizione": "g Panna fresca 35% grassi"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale, Pepe, Noce moscata"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "A mano o nella planetaria munita di foglia: preparare la brisée mischiando gli ingredienti e lavorando poco l'impasto.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Formare sul banco di lavoro una palla, schiacciarla ad una altezza di 3-4 cm e avvolgerla nella pellicola. Far riposare in frigorifero per almeno 1 ora. (o in abbattitore per ridurre i tempi)",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora",
+            "dimensione": "3-4 cm"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stendere la pasta ad uno spessore di 3mm e rivestire due stampi da 20cm con bordo alto 3cm.",
+            "icona": "mattarello",
+            "dimensione": "3mm"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Abbattere gli stampi per 15-30 min.",
+            "icona": "frigorifero"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Rivestire lo stampo di carta da forno, aggiungere i pesi per la cottura in bianco e cuocere a 190°C per 15 min.",
+            "icona": "forno_statico",
+            "temperatura": "190°C",
+            "tempo": "15 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Togliere i pesi e cuocere per altri 5 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "190°C",
+            "tempo": "5 min."
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Tagliare la pancetta a cubetti di 1cm",
+            "icona": "tagliare",
+            "dimensione": "1 cm"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Far sudare la pancetta in padella senza farla stracuocere, il grasso deve iniziare a diventare trasparente.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "In una ciotola mescolare con una frusta le uova, i tuorli e la panna. Il composto non deve montare ma solo diventare omogeneo",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Aggiungere il sale, pepe e la noce moscata.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Distribuire la pancetta sul guscio di pasta e coprire con il composto di uova fino al bordo.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Cuocere in forno statico a 180°C per circa 25-30 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "25-30 min."
+        }
+    ]
+}

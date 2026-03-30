@@ -1,0 +1,81 @@
+{
+    "id": "sfoglia_base",
+    "titolo": "Pasta sfoglia base (francese)",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il pastello"
+        },
+        {
+            "quantita": 1000,
+            "unita_descrizione": "g Farina forte (W 300-320)"
+        },
+        {
+            "quantita": 550,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il panetto (o Beurrage)"
+        },
+        {
+            "quantita": 1000,
+            "unita_descrizione": "g Burro da incasso (o margarina)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Impastare in planetaria munita di gancio o a mano, gli ingredienti del pastello creando un impasto liscio e omogeneo.",
+            "icona": "gancio",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Lasciar riposare il panetto avvolto da pellicola per almeno 30 min in frigorifero o abbattitore",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "30 min."
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Incassare il burro plastico, pastello e panetto devono avere la stessa consistenza per un incasso ottimale.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Far riposare l'impasto avvolto in pellicola per 40 minuti, sempre in frigorifero o abbattitore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "40 min."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Sfogliare dando una piega a 3 e una a 4.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Far riposare in frigorifero o abbattitore per almeno un'ora.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Fare altre due pieghe a 4.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Far riposare in frigorifero o abbattitore per almeno un'ora poi usare a piacere",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "1 ora"
+        }
+    ]
+}

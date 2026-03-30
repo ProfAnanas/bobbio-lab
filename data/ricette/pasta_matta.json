@@ -1,0 +1,58 @@
+{
+    "id": "pasta_matta",
+    "titolo": "Pasta matta",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina media"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Burro freddissimo"
+        },
+        {
+            "quantita": 275,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Tagliare il burro in grossi dadi da 2cm",
+            "icona": "tagliare",
+            "dimensione": "2 cm"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Impastare per pochissimo tempo il burro, l'acqua, la farina e il sale. Non si deve raggiungere un impastamento completo ma solo abbozzato in cui i cubetti di burro sono ancora intatti.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stendere il composto e fare subito una piega a quattro. (piegare i due lembi verso il centro e poi chiudere come fosse un libro).",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Far riposare in frigorifero o abbattitore per 15 minuti.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Ripetere la piega a 4 e il riposo di 15 minuti altre TRE VOLTE (totale 4 giri doppi)",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Finite le pieghe far riposare la pasta almeno 30 minuti prima di utilizzarla, in frigorifero o abbattitore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "30 min."
+        }
+    ]
+}
