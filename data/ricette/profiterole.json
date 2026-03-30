@@ -5,7 +5,7 @@
     "ingredienti": [
         {
             "quantita": 30,
-            "unita_descrizione": "n° <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_QUI', 'data/ricette/choux.json', 'Bignè')\">(clicca qui)</span>"
+            "unita_descrizione": "<span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/choux.json', 'Pasta choux')\">Bignè</span>"
         },
         {
             "quantita": null,
@@ -13,7 +13,7 @@
         },
         {
             "quantita": 600,
-            "unita_descrizione": "g <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_QUI', 'data/ricette/chantilly_mascarpone.json', 'chantilly al mascarpone')\">(clicca qui)</span>"
+            "unita_descrizione": "<span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/chantilly_mascarpone.json', 'Chantilly al mascarpone')\">Chantilly al mascarpone</span>"
         },
         {
             "quantita": null,
