@@ -4,9 +4,9 @@
     "nota_dosi": "per 10 porzioni (100-110 ravioli)",
     "ingredienti": [
         {
-            "quantita": 750,
-            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/pasta_all_uovo.json', 'Pasta all'uovo')\">Pasta fresca all'uovo</span>"
-        },
+    "quantita": 750,
+    "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('pasta_all_uovo', 'data/ricette/pasta_all_uovo.json', 'Pasta all&apos;uovo')\">Pasta fresca all'uovo</span>"
+},
         {
             "quantita": 500,
             "unita_descrizione": "g Spinaci saltati ed aromatizzati con burro e aglio (ben asciutti)"

@@ -36,7 +36,7 @@
         },
         {
             "quantita": 30,
-            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/bacidama.json', 'Baci di dama')\">Baci di dama</span>"
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('bacidama', 'data/ricette/bacidama.json', 'Baci di dama')\">Baci di dama</span>"
         },
         {
             "quantita": null,
@@ -44,7 +44,7 @@
         },
         {
             "quantita": 20,
-            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/amaretti_secchi.json', 'Amaretti secchi')\">Amaretti secchi</span>"
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('amaretti_secchi', 'data/ricette/amaretti_secchi.json', 'Amaretti secchi')\">Amaretti secchi</span>"
         },
         {
             "quantita": null,
@@ -52,7 +52,7 @@
         },
         {
             "quantita": 20,
-            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/semolino.json', 'Semolino')\">Semolino</span>"
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('semolino', 'data/ricette/semolino.json', 'Semolino')\">Semolino</span>"
         },
         {
             "quantita": null,
@@ -60,11 +60,11 @@
         },
         {
             "quantita": 50,
-            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/choux.json', 'Pasta choux')\">Bignè</span>"
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('choux', 'data/ricette/choux.json', 'Pasta choux')\">Bignè</span>"
         },
         {
             "quantita": 500,
-            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/crema_pasticcera.json', 'Crema pasticciera')\">Crema pasticciera</span>"
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('crema_pasticcera', 'data/ricette/crema_pasticcera.json', 'Crema pasticciera')\">Crema pasticciera</span>"
         },
         {
             "quantita": null,

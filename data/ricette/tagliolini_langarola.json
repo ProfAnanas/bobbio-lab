@@ -4,9 +4,9 @@
     "nota_dosi": "per 8-10 porzioni",
     "ingredienti": [
         {
-            "quantita": 750,
-            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/pasta_uovo_tuorli.json', 'Pasta all'uovo solo tuorli')\">Pasta all'uovo solo tuorli</span>"
-        },
+    "quantita": 750,
+    "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('pasta_uovo_tuorli', 'data/ricette/pasta_uovo_tuorli.json', 'Pasta all&apos;uovo solo tuorli')\">Pasta all'uovo solo tuorli</span>"
+},
         {
             "quantita": 150,
             "unita_descrizione": "g Nocciole sgusciate"
