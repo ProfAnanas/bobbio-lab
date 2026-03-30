@@ -1,0 +1,64 @@
+{
+    "id": "ravioli_erbette_seirass",
+    "titolo": "Ravioli alle erbette e seirass",
+    "nota_dosi": "per 10 porzioni (100-110 ravioli)",
+    "ingredienti": [
+        {
+            "quantita": 750,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/pasta_all_uovo.json', 'Pasta all'uovo')\">Pasta fresca all'uovo</span>"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Spinaci saltati ed aromatizzati con burro e aglio (ben asciutti)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Seirass (o ricotta vaccina asciutta)"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Grana Padano DOP grattugiato"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Tritare gli spinaci",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In una ciotola unire il seirass, gli spinaci tritati e poco formaggio grattugiato",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stendere la pasta sottile utilizzando la sfogliatrice a mano. Poco per volta, per evitare che si secchi. Man mano che viene utilizzata, si può procedere a stendere il foglio successivo.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Formare i ravioli mettendo degli spuntoncini di ripieno a distanza regolare sul foglio di pasta.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Coprire con un secondo foglio, premere lo spazio vuoto per incollare i due fogli di pasta",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Tagliare con la rotella festonata",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere in abbondante acqua salata e condire saltando i ravioli (delicatamente) in burro emulsionato con poca acqua di cottura e Grana Padano. Il burro può essere aromatizzato con erbe aromatiche (salvia, maggiorana, ecc)",
+            "icona": "padella"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "id": "savoiardi",
+    "titolo": "Savoiardi",
+    "nota_dosi": "per 40 savoiardi (o una teglia 60x40cm)",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la prima montata"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Vaniglia"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la seconda montata"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Altri ingredienti"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Fecola di patate"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la finitura"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Zucchero a velo"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Montare i tuorli d’uovo con lo zucchero a velo e la vaniglia.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Montare a parte gli albumi d’uovo e lo zucchero a velo. Partire a velocità bassa e aumentare pian piano.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Incorporare metà massa di albumi a quella di tuorli.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Setacciare la farina e la fecola",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Incorporare quindi metà fecola e metà farina nella massa principale.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Procedere così per le rimanenti parti di albumi montati e di polveri setacciate.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Riempire un sac à poche e farcire gli stampi cannellati (ondulati), oppure formare delle strisce di pasta lunghe dieci centimetri circa su fogli di carta forno.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cospargere la superficie dei biscotti con zucchero a velo.",
+            "icona": "setacciare"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-9a",
+                    "testo": "Se in stampo, cuocere in forno statico a 160 °C per 20 minuti",
+                    "icona": "forno_statico",
+                    "temperatura": "160°C",
+                    "tempo": "20 min."
+                },
+                {
+                    "step_id": "step-9b",
+                    "testo": "Se in teglia cuocere in forno statico a 180-200 °C per 12 minuti circa",
+                    "icona": "forno_statico",
+                    "temperatura": "180-200°C",
+                    "tempo": "12 min."
+                }
+            ]
+        }
+    ]
+}

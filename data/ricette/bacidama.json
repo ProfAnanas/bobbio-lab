@@ -1,0 +1,73 @@
+{
+    "id": "bacidama",
+    "titolo": "Baci di dama",
+    "nota_dosi": "Per 35-40 baci di dama (70-80 semisfere)",
+    "ingredienti": [
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Farina di frutta secca (o mix)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Burro morbido"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Cioccolato fondente"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Impastare il burro freddo con tutti gli altri ingredienti in modo molto veloce affinché non si ammorbidisca (si può usare il cutter).",
+            "icona": "foglia"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Lasciare riposare in frigo come per una frolla.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Realizzare delle palline identiche tra loro, di 5-6 g di peso",
+            "icona": "porzionare",
+            "dimensione": "5-6 g"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Per fare tutte le palline uguali, stendere l'impasto ad altezza 1 cm e tagliare tanti tondini uguali con un coppapasta e poi arrotolare per creare la pallina.",
+            "opzionale": true,
+            "testo_nodo": "ATTENZIONE"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Congelare le palline",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere per 8-10 minuti a 160°C",
+            "icona": "forno_statico",
+            "temperatura": "160°C",
+            "tempo": "8-10 min."
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Farcire ogni semisfera con un po’ di cioccolato temperato (o sciolto in microonde/bagnomaria) e dopo qualche secondo accoppiare con un’altra semisfera."
+        }
+    ]
+}

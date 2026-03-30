@@ -1,0 +1,65 @@
+{
+    "id": "tonno_coniglio",
+    "titolo": "Tonno di coniglio",
+    "nota_dosi": "Una variante interessante di questo piatto prevede la sostituzione delle verdure da accompagnamento con frutta acidula, come pesche, lamponi ecc.",
+    "ingredienti": [
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Cosce di coniglio"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "ml Olio EVO"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Spicchio di aglio"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino e Salvia"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lessare il coniglio abbastanza a lungo. Deve risultare morbido",
+            "icona": "pentola_alta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Farlo raffreddare in abbattitore positivo.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Disossare il coniglio ormai freddo con attenzione.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Sfilacciare la carne ottenuta: dev’essere ridotta in striscioline abbastanza regolari",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Mettere la carne a marinare nell'olio aromatizzato con l’aglio, il rosmarino e la salvia, il più a lungo possibile. Per accelerare i tempi si può utilizzare la tecnica del sottovuoto.",
+            "icona": "riposo"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Tagliare le carote a striscioline. Va bene la lama del pelapatate o, in alternativa, su può fare un taglio julienne regolare e passarle per qualche istante a vapore. Giusto da ammorbidirle appena.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Disporre sul piatto le carote (ad es. a nido) e porvi al centro la porzione di coniglio (ben sgocciolato).",
+            "icona": "impiattare"
+        }
+    ]
+}

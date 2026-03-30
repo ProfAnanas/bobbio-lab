@@ -1,0 +1,125 @@
+{
+    "id": "biscuit",
+    "titolo": "Biscuit leggero (e varianti)",
+    "nota_dosi": "per due teglia 30x40cm o una teglia 60x40",
+    "ingredienti": [
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": 105,
+            "unita_descrizione": "g Zucchero per gli albumi"
+        },
+        {
+            "quantita": 35,
+            "unita_descrizione": "g Fecola di patate"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 155,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Zucchero per le uova"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Scorza di limone"
+        },
+        {
+            "quantita": 23,
+            "unita_descrizione": "g Burro sciolto"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante frutta secca: sostituire le polveri con:"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 110,
+            "unita_descrizione": "g Farina di frutta secca"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante cacao, sostituire le polveri con:"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 18,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante all'olio, sostituire il burro con:"
+        },
+        {
+            "quantita": 18,
+            "unita_descrizione": "g Olio di semi (o olio evo delicato)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Montare gli albumi con la prima quantità di zucchero.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Montare le uova e la seconda parte di zucchero",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Setacciare le polveri",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Unire le polveri in più riprese alla montata di uova, alternandole con gli albumi.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Prelevare una parte di montata e amalgamare con il burro sciolto.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Incorporare, infine, il composto base burro e il resto della montata.",
+            "icona": "mescolare"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-7a",
+                    "testo": "Stendere 250 g di impasto in ognuna delle teglie 30x40.",
+                    "icona": "versare"
+                },
+                {
+                    "step_id": "step-7b",
+                    "testo": "Stendere l'impasto nella teglia 60x40.",
+                    "icona": "versare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocete in forno statico a 190 °C per 8-10 minuti. (se teglia 60x40, ruotare a metà cottura per una cottura uniforme)",
+            "icona": "forno_statico",
+            "temperatura": "190°C",
+            "tempo": "8-10 min."
+        }
+    ]
+}

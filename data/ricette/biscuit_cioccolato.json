@@ -1,0 +1,87 @@
+{
+    "id": "biscuit_cioccolato",
+    "titolo": "Biscuit al cioccolato",
+    "nota_dosi": "per due teglia 30x40cm o una teglia 60x40",
+    "ingredienti": [
+        {
+            "quantita": 185,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": 95,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 65,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 210,
+            "unita_descrizione": "g Cioccolato fondente 65%"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Burro"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Montare a neve gli albumi con lo zucchero. (partire da velocità bassa e alzarla pian piano)",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere i tuorli a filo mentre l'albume gira ancora.",
+            "icona": "frusta",
+            "velocita": "media"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Fare fondere il cioccolato",
+                    "icona": "pentolino"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Fare fondere il burro",
+                    "icona": "pentolino"
+                }
+            ]
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Unire il cioccolato fuso al burro fuso",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Stemperare un po' di massa montata nel burro e cioccolato e unire i due composti.",
+            "icona": "mescolare"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-6a",
+                    "testo": "Pesare 300 g di impasto per ognuna delle due teglie 30x40.",
+                    "icona": "versare"
+                },
+                {
+                    "step_id": "step-6b",
+                    "testo": "Versare il composto nella teglia 60x40",
+                    "icona": "versare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere in forno statico a 175°C per 8 minuti. (Aprire la valvola l'ultimo minuto di cottura)",
+            "icona": "forno_statico",
+            "temperatura": "175°C",
+            "tempo": "8 min."
+        }
+    ]
+}

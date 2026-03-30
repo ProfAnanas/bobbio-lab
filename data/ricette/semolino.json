@@ -1,0 +1,99 @@
+{
+    "id": "semolino",
+    "titolo": "Semolino (e variante al cacao)",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Latte intero"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Semolino"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "Limone (scorza)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al cacao, aggiungere:"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Latte intero"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una casseruola dal fondo spesso, versare il latte, lo zucchero, il pizzico di sale e (solo per la versione classica) la scorza di limone intera. Portare dolcemente a sfiorare il bollore.",
+            "icona": "pentolino",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Rimuovere la scorza di limone",
+            "opzionale": true,
+            "icona": "pentolino"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Versare il semolino a pioggia mescolando energicamente e in continuazione con una frusta per evitare la formazione di grumi",
+                    "icona": "montare"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Versare il semolino, precedentemente miscelato con il cacao setacciato, a pioggia mescolando energicamente e in continuazione con una frusta per evitare la formazione di grumi",
+                    "icona": "montare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Abbassare la fiamma al minimo e cuocere per 10-15 minuti, sostituendo la frusta con un cucchiaio di legno o una marisa rigida quando il composto inizia ad addensarsi. L'impasto sarà pronto quando si staccherà in modo netto dalle pareti della pentola.",
+            "icona": "pentolino",
+            "temperatura": "minimo",
+            "tempo": "10-15 min."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Versare la massa ancora bollente in una teglia o una pirofila precedentemente unta con poco olio di semi o staccante spray.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Livellare rapidamente la superficie con una spatola bagnata d'acqua, cercando di ottenere uno spessore uniforme di circa 2-3 cm.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Coprire con pellicola a contatto e far raffreddare in abbattitore (ciclo positivo) oppure in frigorifero per almeno un paio d'ore, finché il blocco non sarà perfettamente sodo e freddo.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Sformare il blocco su un tagliere pulito. Tagliare a losanghe (tradizionali) o a cubetti regolari della grandezza di un dado di lievito fresco.",
+            "icona": "forma"
+        }
+    ]
+}

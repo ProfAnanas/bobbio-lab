@@ -1,0 +1,174 @@
+{
+    "id": "fritto_piemontese_dolce",
+    "titolo": "Fritto misto dolce alla piemontese",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per i pavesini farciti"
+        },
+        {
+            "quantita": 44,
+            "unita_descrizione": "n° Pavesini"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Confettura"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la frutta disidratata e fresca"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Prugne"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Fichi"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Mele"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per i baci di dama"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/bacidama.json', 'Baci di dama')\">Baci di dama</span>"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per gli amaretti"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/amaretti_secchi.json', 'Amaretti secchi')\">Amaretti secchi</span>"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il semolino"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/semolino.json', 'Semolino')\">Semolino</span>"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per i bignè allo zabaione"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/choux.json', 'Pasta choux')\">Bignè</span>"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/crema_pasticcera.json', 'Crema pasticciera')\">Crema pasticciera</span>"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la panatura"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "n° Uova"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "Kg Pane pesto"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la pastella"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Uova"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Latte"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Lievito per dolci"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Per i pavesini: Disporre la metà dei pavesini in 4 file.\nMettere la confettura in un cornetto e stenderne una strisciolina sui biscotti.\nChiudere accoppiando i biscotti restanti a quelli farciti.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Per la frutta: Controllare che le prugne non abbiano i noccioli. I fichi il picciolo.\nSbucciare le mele, privarle del torsolo (utilizzando l’apposito strumento) e tagliarle orizzontalmente (a dischi spessi circa mezzo cm).",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Farcire i bignè con la crema allo zabaione e stabilizzare in abbattitore per 15 min.",
+            "icona": "sac",
+            "temperatura": "+4°C",
+            "tempo": "15 min"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-4a",
+                    "testo": "FRUTTA DISIDRATATA, FRUTTA FRESCA E BIGNE FARCITI: Preparare la pastella",
+                    "opzionale": true,
+                    "icona": "mescolare"
+                },
+                {
+                    "step_id": "step-4b",
+                    "testo": "PAVESINI, BACI DI DAMA, AMARETTI, SEMOLINO:  Sbattere bene le uova",
+                    "opzionale": true,
+                    "icona": "montare"
+                }
+            ]
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-5a",
+                    "testo": "Passare la frutta nella pastella",
+                    "icona": "impastare_mano"
+                },
+                {
+                    "step_id": "step-5b",
+                    "testo": "Passare velocemente i biscotti farciti nell’uovo (non devono ammollarsi) e poi nel pan pesto.\nUngere leggermente un lato dei biscotti già impanati. Utilizzare un pennello o un po’ di carta intinta nell’olio.\nDisporli su di una teglia antiaderenti col lato unto rivolto verso l’alto.",
+                    "icona": "impastare_mano"
+                }
+            ]
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-6a",
+                    "testo": "friggere in immersione in olio di semi a 160°C",
+                    "icona": "tegame",
+                    "temperatura": "160°C"
+                },
+                {
+                    "step_id": "step-6b",
+                    "testo": "Cuocere a 210°C modalità calore misto, con il 10% di umidità (o in modalità automatica: impanati pollo, doratura 1",
+                    "icona": "forno_ventilato",
+                    "temperatura": "210°C"
+                }
+            ]
+        }
+    ]
+}

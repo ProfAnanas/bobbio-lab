@@ -1,0 +1,88 @@
+{
+    "id": "pandispagna_m",
+    "titolo": "Pan di spagna versatile (montata media)",
+    "nota_dosi": "Per una tortiera da 20-22cm",
+    "ingredienti": [
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al cacao, sostituire la farina con:"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante più soffice, sostiituire la farina con:"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Fecola di patate"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+            "step_id": "step-1",
+            "testo": "Montata a caldo: le uova e lo zucchero vengono montati a bagnomaria o scaldati insieme in precedenza, fino a raggiungere circa 40-45 °C. Questo passaggio consente di ottenere una struttura più stabile e un volume maggiore. Si aggiungono, quindi, la farina e gli eventuali altri ingredienti, mescolando delicatamente con una spatola per non smontare il composto.",
+            "opzionale": true
+        },
+                {
+                    "step_id": "step-2a",
+                    "testo": "Montata unica: montare le uova intere con lo zucchero",
+                    "icona": "frusta"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Montare i tuorli con metà zucchero e separatamente gli albumi con la restante metà di zucchero",
+                    "icona": "frusta"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Se la montata è separata: unire le due masse montate: aggiungere un po' di massa tuorlo negli albumi, mescolare velocemente quindi unire le due montate insieme. Fare pochi giri di marisa per non smontare l'impasto.",
+            "opzionale": true,
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Setacciare due volte la farina",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere la farina alla montata",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Versare nello stampo e infornare a 160-180°C, forno statico, per 20-25 min.",
+            "icona": "forno_statico",
+            "temperatura": "160-180°C",
+            "tempo": "20-25 min."
+        }
+    ]
+}

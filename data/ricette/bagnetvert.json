@@ -1,0 +1,60 @@
+{
+    "id": "bagnetvert",
+    "titolo": "Bagnet Vert",
+    "ingredienti": [
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Prezzemolo fresco"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Pane raffermo"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Latte"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Aceto"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "ml Olio EVO"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "Uovo sodo"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "ml Ketchup o rubra (facoltativo)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "Spicchio d'aglio"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare e mondare il prezzemolo tenendo solo le foglie",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un cutter o food processor, inserire tutti gli ingredienti.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Frullare facendo attenzione a non scaldare troppo il composto.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Versare il bagnet vert in un contenitore per conservarlo e coprirlo con olio EVO per evitare l'ossidazione.",
+            "icona": "versare"
+        }
+    ]
+}

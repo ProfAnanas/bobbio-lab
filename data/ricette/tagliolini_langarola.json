@@ -1,0 +1,54 @@
+{
+    "id": "tagliolini_langarola",
+    "titolo": "Tagliolini alla langarola",
+    "nota_dosi": "per 8-10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 750,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('ID_RICETTA', 'data/ricette/pasta_uovo_tuorli.json', 'Pasta all'uovo solo tuorli')\">Pasta all'uovo solo tuorli</span>"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Nocciole sgusciate"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Acciughe"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Grana Padano DOP"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Stendere la pasta sottile e tagliarla con l’apposita taglierina",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Battere le nocciole con il batticarne,  in modo da romperle non troppo finemente",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Far tostare le nocciole in padella, abbassare la temperatura ed aggiungere il burro e le acciughe",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere i tagliolini al dente e saltarli insieme alle nocciole, il burro e le acciughe.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Cospargere di formaggio grattugiato e servire",
+            "icona": "impiattare"
+        }
+    ]
+}

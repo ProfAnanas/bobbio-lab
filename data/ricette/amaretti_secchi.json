@@ -1,0 +1,71 @@
+{
+    "id": "amaretti_secchi",
+    "titolo": "Amaretti secchi",
+    "ingredienti": [
+        {
+            "quantita": 240,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Mandorle dolci pelate"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Armelline (mandorle amare)"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Nel cutter, tritare finemente le mandorle e le armelline insieme a metà dello zucchero.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In planetaria, montare gli albumi a neve ferma con il pizzico di sale. Quando iniziano a schiumare, inserire la restante metà dello zucchero a pioggia, ottenendo una meringa lucida e stabile.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Incorporare le polveri alla meringa, mescolando delicatamente dal basso verso l'alto con una marisa per non smontare la struttura",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Trasferire il composto in una sac à poche con bocchetta liscia (circa 10 mm).",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Dressare delle piccole semisfere su una teglia foderata di carta forno, distanziandole bene perché in cottura si allargheranno.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Spolverare leggermente la superficie con zucchero a velo prima di infornare.",
+            "opzionale": true,
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere in forno statico a 150-160 °C per circa 20-25 minuti. Devono dorare, gonfiarsi, crepare in superficie e, soprattutto, asciugarsi completamente all'interno",
+            "icona": "forno_statico",
+            "temperatura": "150-160°C",
+            "tempo": "20-25 min."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Lasciar raffreddare del tutto sulla teglia prima di staccarli.",
+            "icona": "riposo"
+        }
+    ]
+}

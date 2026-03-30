@@ -1,6 +1,6 @@
 {
     "id": "crema-pasticcera",
-    "titolo": "Crema pasticcera",
+    "titolo": "Crema pasticcera (e varianti)",
     "ingredienti": 
    [
     { "quantita": 500, "unita_descrizione": "g Latte intero fresco" },
@@ -10,34 +10,51 @@
     { "quantita": 25, "unita_descrizione": "g Amido di Mais" },
     { "quantita": null, "unita_descrizione": "Aromi a piacere (vaniglia, limone, ecc.)" },
     { "quantita": null, "unita_descrizione": "Per la variante al cioccolato:" },
-    { "quantita": 180, "unita_descrizione": "g cioccolato fondente 55% fuso caldo" }
+    { "quantita": 180, "unita_descrizione": "g cioccolato fondente 55% fuso caldo" },
+    {
+            "quantita": null,
+            "unita_descrizione": "Variante al marsala, sostituire il latte con:"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Marsala"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Latte intero fresco"
+        }
     ],
     "procedimento": [
         {
             "step_id": "step-1",
+            "testo": "Versare circa 400 g di Marsala in un pentolino e farlo bollire lentamente per un paio di minuti per far evaporare la parte alcolica. Pesare esattamente 300 g di liquido ridotto e unirlo al latte.",
+            "opzionale": true
+        },
+        {
+            "step_id": "step-2",
             "testo": "Portare a bollore il latte",
             "icona": "pentolino",
             "temperatura": "100°C"
         },
         {
-            "step_id": "step-2",
+            "step_id": "step-3",
             "testo": "In una ciotola mescolare tuorli, zucchero, amidi e aromi.",
             "icona": "mescolare"
         },
         {
-            "step_id": "step-3",
+            "step_id": "step-4",
             "testo": "Stemperare un po' di latte nel composto di uova in modo che la consistenza sia più vicina possibile al latte.\nQuindi aggiungere il composto ammorbidito nel latte.",
             "icona": "aggiungere"
         },
         {
-            "step_id": "step-4",
+            "step_id": "step-5",
             "testo": "Cuocere a fiamma bassa mescolando continuamente fino a che la crema non raggiunge gli 85°C.",
             "icona": "pentolino",
             "temperatura": "84°C "
         },
         { "tipo": "bivio", "rami": [
-        { "step_id": "step-5a", "testo": "Emulsionare con un frullatore ad immersione", "icona": "pimer"},
-        { "step_id": "step-5b", "testo": "Variante al cioccolato: Emulsionare aggiungendo il cioccolato caldo fuso", "icona": "pimer"}
+        { "step_id": "step-6a", "testo": "Emulsionare con un frullatore ad immersione", "icona": "pimer"},
+        { "step_id": "step-6b", "testo": "Variante al cioccolato: Emulsionare aggiungendo il cioccolato caldo fuso", "icona": "pimer"}
       ]},
       {
             "step_id": "step-7",
