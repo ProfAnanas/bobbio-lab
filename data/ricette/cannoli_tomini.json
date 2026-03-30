@@ -5,7 +5,7 @@
     "ingredienti": [
         {
     "quantita": 600,
-    "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('sfoglia_base', 'data/ricette/sfoglia_base.json', 'Pasta sfoglia')\">Pasta sfoglia</span> o <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('sfoglia_italiana', 'data/ricette/sfoglia_italiana.json', 'Pasta sfoglia all&apos;italiana')\">Pasta sfoglia all'italiana</span>"
+    "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`sfoglia_base`, `data/ricette/sfoglia_base.json`, `Pasta sfoglia`)\">Pasta sfoglia</span> o <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`sfoglia_italiana`, `data/ricette/sfoglia_italiana.json`, `Pasta sfoglia all'italiana`)\">Pasta sfoglia all'italiana</span>"
 },
         {
             "quantita": null,

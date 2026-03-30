@@ -5,7 +5,7 @@
     "ingredienti": [
         {
     "quantita": 750,
-    "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo('pasta_all_uovo', 'data/ricette/pasta_all_uovo.json', 'Pasta all&apos;uovo')\">Pasta fresca all'uovo</span>"
+    "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`pasta_all_uovo`, `data/ricette/pasta_all_uovo.json`, `Pasta all'uovo`)\">Pasta fresca all'uovo</span>"
 },
         {
             "quantita": 500,
