@@ -1236,3 +1236,19 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
 .modale-titolo-cucina {
     color: #d35400 !important; /* Forza L'Arancione Sul Titolo */
 }
+/* =========================================
+   Logica Bivio Interattivo (Condizioni)
+   ========================================= */
+.blocco-condizionato {
+    display: none !important; /* Nascosto di default */
+    border-left: 4px solid #f39c12 !important; /* Bordo arancione per far capire che è legato a un bivio */
+    background-color: #fdfaed;
+}
+.blocco-condizionato.mostra-step {
+    display: flex !important; /* Lo fa riapparire */
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

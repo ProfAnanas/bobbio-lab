@@ -112,7 +112,8 @@
             "opzionale": true,
             "icona": "frigorifero",
             "temperatura": "+4°C",
-            "tempo": "10-15 min."
+            "tempo": "10-15 min.",
+            "condizione": "a"
         },
         {
             "step_id": "step-8",

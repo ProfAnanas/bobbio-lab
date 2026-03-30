@@ -396,6 +396,11 @@ function creaTestoSinistra(dati) {
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
 
+    // --- NUOVO: Se ha una condizione, gli diamo le classi per nasconderlo ---
+    if (dati.condizione) {
+        stepContainer.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
+    }
+
     const numeroStep = document.createElement('div');
     numeroStep.classList.add('numero-step');
     numeroStep.textContent = dati.step_id.replace('step-', '');
@@ -426,6 +431,31 @@ function creaTestoSinistra(dati) {
             numeroStep.classList.remove('numero-barrato');
             if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nodo-completato');
         }
+
+        // --- NUOVA MAGIA: LOGICA DEL BIVIO INTERATTIVO ---
+        const match = dati.step_id.match(/step-\d+([ab])$/);
+        if (match) {
+            const lettera = match[1]; // 'a' oppure 'b'
+            const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+
+            if (checkStep.checked) {
+                // Mostra i passaggi nascosti della tua lettera
+                document.querySelectorAll('.condizione-' + lettera).forEach(el => el.classList.add('mostra-step'));
+                // Nasconde quelli dell'altra strada
+                document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => el.classList.remove('mostra-step'));
+                
+                // Toglie la spunta alla checkbox dell'altra strada
+                const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+                const checkOpposto = document.getElementById('check-' + idOpposto);
+                if (checkOpposto && checkOpposto.checked) {
+                    checkOpposto.checked = false;
+                    checkOpposto.dispatchEvent(new Event('change'));
+                }
+            } else {
+                // Nasconde di nuovo tutto se togli la spunta
+                document.querySelectorAll('.condizione-' + lettera).forEach(el => el.classList.remove('mostra-step'));
+            }
+        }
     });
 
     divCheck.appendChild(checkStep);
@@ -446,6 +476,11 @@ function creaNodoDestra(dati) {
     const divNodo = document.createElement('div');
     divNodo.classList.add('nodo-visivo');
     divNodo.id = 'nodo-' + dati.step_id;
+    
+    // --- NUOVO: Nasconde anche i nodi grafici a destra ---
+    if (dati.condizione) {
+        divNodo.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
+    }
     
     if (dati.icona) {
         divNodo.classList.add('tipo-' + dati.icona);
