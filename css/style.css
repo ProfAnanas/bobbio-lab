@@ -1277,3 +1277,37 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     margin: 0 15px;
     opacity: 0.5;
 }
+/* Rende semitrasparente qualsiasi elemento a cui viene applicata (inclusi i bivi scartati) */
+.nascosto-step {
+    opacity: 0.25 !important;
+    filter: grayscale(80%) !important;
+    transition: all 0.4s ease;
+}
+/* =========================================
+   Grafica Bivio per l'Algoritmo (DSA friendly)
+   ========================================= */
+.divisore-bivio-nodo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #d35400;
+    margin: 10px auto;
+    font-size: 14px;
+    background: white;
+    border: 2px dashed #f39c12;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Quando un nodo visivo si "accende", gli diamo un bordo completo, non solo a sinistra */
+.nodo-visivo.blocco-condizionato.mostra-step {
+    border-left: none !important; /* Rimuove la riga laterale del testo */
+    border: 3px solid #f39c12 !important; /* Cornice dorata evidente */
+    background-color: #fdfaed;
+    transform: scale(1.02); /* Lo ingrandisce impercettibilmente per dargli importanza */
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.2);
+}

@@ -341,12 +341,19 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                     const stepTesto = creaTestoSinistra(ramo);
                     divBivioTesto.appendChild(stepTesto);
                     
-                    // --- NUOVO: Aggiunge la scritta "OPPURE" tra i due rami ---
+                    // --- NUOVO: Divisori visivi tra il ramo A e il ramo B ---
                     if (indiceRamo === 0) {
+                        // 1. Divisore per il Testo
                         const divisore = document.createElement('div');
                         divisore.classList.add('divisore-bivio');
                         divisore.innerHTML = '<span>oppure scegli:</span>';
                         divBivioTesto.appendChild(divisore);
+
+                        // 2. Divisore per l'Algoritmo (DSA friendly)
+                        const divisoreNodo = document.createElement('div');
+                        divisoreNodo.classList.add('divisore-bivio-nodo');
+                        divisoreNodo.textContent = 'O'; 
+                        divBivioNodi.appendChild(divisoreNodo);
                     }
                     
                     const divNodo = creaNodoDestra(ramo);
@@ -402,6 +409,9 @@ function chiudiAlgoritmo() {
 function creaTestoSinistra(dati) {
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
+    
+    // --- NUOVO: Diamo un ID al contenitore per poterlo "spegnere" dopo ---
+    stepContainer.id = 'testo-' + dati.step_id; 
 
     // Se ha una condizione, lo rendiamo semitrasparente di base
     if (dati.condizione) {
@@ -437,33 +447,51 @@ function creaTestoSinistra(dati) {
             if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nodo-completato');
         }
 
-        // --- MAGIA DEL BIVIO: ACCESO / SPENTO ---
+        // --- MAGIA DEL BIVIO: ACCESO / SPENTO + RAMI SCARTATI ---
         const match = dati.step_id.match(/step-\d+([ab])$/);
         if (match) {
             const lettera = match[1]; // 'a' oppure 'b'
             const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+            const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+
+            const containerAttuale = document.getElementById('testo-' + dati.step_id);
+            const containerOpposto = document.getElementById('testo-' + idOpposto);
+            const nodoOpposto = document.getElementById('nodo-' + idOpposto);
 
             if (checkStep.checked) {
-                // 1. Illumina al 100% i passaggi della strada scelta
+                // 1. Illumina i passaggi futuri della strada scelta
                 document.querySelectorAll('.condizione-' + lettera).forEach(el => {
                     el.classList.add('mostra-step');
                     el.classList.remove('nascosto-step');
                 });
-                // 2. Spegne quasi del tutto i passaggi dell'altra strada
+                // 2. Spegne i passaggi futuri dell'altra strada
                 document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
                     el.classList.remove('mostra-step');
                     el.classList.add('nascosto-step');
                 });
                 
-                // 3. Toglie la spunta all'altra strada se ci avevi ripensato
-                const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+                // 3. SPEGNE IL RAMO DEL BIVIO SCARTATO (Testo e Nodo a destra)
+                if (containerOpposto) containerOpposto.classList.add('nascosto-step');
+                if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
+
+                // Assicuriamoci che il ramo scelto sia ben visibile
+                if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+                if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nascosto-step');
+                
+                // 4. Toglie la spunta all'altra strada
                 const checkOpposto = document.getElementById('check-' + idOpposto);
                 if (checkOpposto && checkOpposto.checked) {
                     checkOpposto.checked = false;
                     checkOpposto.dispatchEvent(new Event('change'));
                 }
             } else {
-                // Se togli la spunta, torna tutto nella semitrasparenza iniziale
+                // Se togli la spunta, riaccende i rami del bivio per farti scegliere di nuovo
+                if (containerOpposto) containerOpposto.classList.remove('nascosto-step');
+                if (nodoOpposto) nodoOpposto.classList.remove('nascosto-step');
+                if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+                if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nascosto-step');
+
+                // I passaggi futuri tornano alla trasparenza "in attesa"
                 document.querySelectorAll('.condizione-' + lettera).forEach(el => {
                     el.classList.remove('mostra-step');
                     el.classList.remove('nascosto-step');

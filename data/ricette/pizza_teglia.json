@@ -86,6 +86,7 @@
                 {
                     "step_id": "step-9b",
                     "testo": "Cuocerere in forno statico a 220°C poggiando la teglia direttamente sul fondo del forno per 10-12 minuti poi Spostare la teglia a metà del forno per i restanti 3-5 minuti.",
+                    "icona": "forno_statico",
                     "temperatura": "220°C",
                     "tempo": "15-18 min."
                 }
