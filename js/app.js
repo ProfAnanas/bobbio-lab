@@ -593,6 +593,12 @@ function attivaSincronia(testo, nodo, dati) {
         evento.stopPropagation();
         evento.preventDefault(); // Blocca lo zoom di default dei telefoni
         
+        // --- CANCELLO DI SICUREZZA: Non puoi completare un passaggio spento o scartato! ---
+        if (testo.classList.contains('nascosto-step') || 
+           (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
+            return; // Esce dalla funzione senza fare niente
+        }
+        
         const completato = testoStep.classList.contains('testo-barrato');
         
         if (!completato) {

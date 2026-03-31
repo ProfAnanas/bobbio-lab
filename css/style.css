@@ -1259,7 +1259,6 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     opacity: 0.25 !important;
     filter: grayscale(80%) !important;
     transition: all 0.4s ease;
-    pointer-events: none !important; /* Blocca il doppio tap sui rami scartati */
 }
 
 /* =========================================
