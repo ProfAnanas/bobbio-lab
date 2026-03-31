@@ -1237,28 +1237,33 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     color: #d35400 !important; /* Forza L'Arancione Sul Titolo */
 }
 /* =========================================
-   Logica Bivio Interattivo (Trasparenza)
+   Logica Bivio Interattivo (Trasparenza e Scelte)
    ========================================= */
 .blocco-condizionato {
-    opacity: 0.35; /* Semitrasparente di default (spento) */
-    pointer-events: none; /* Non si può cliccare/spuntare finché è spento */
-    transition: all 0.4s ease; /* Effetto dissolvenza morbido */
-    filter: grayscale(80%); /* Toglie un po' di colore per farlo sembrare inattivo */
+    opacity: 0.35; 
+    pointer-events: none; 
+    transition: all 0.4s ease; 
+    filter: grayscale(80%); 
 }
 
 .blocco-condizionato.mostra-step {
-    opacity: 1 !important; /* Si accende al 100% ! */
-    pointer-events: auto; /* Torna cliccabile */
+    opacity: 1 !important; 
+    pointer-events: auto; 
     filter: grayscale(0%);
-    border-left: 4px solid #f39c12 !important; /* Bordo arancione per capire che è figlio di un bivio */
+    border-left: 4px solid #f39c12 !important; 
     background-color: #fdfaed;
 }
 
-.blocco-condizionato.nascosto-step {
-    opacity: 0.1 !important; /* Diventa quasi invisibile se hai scelto l'ALTRA strada */
+/* Rende inattivo e semitrasparente qualsiasi elemento scartato */
+.nascosto-step {
+    opacity: 0.25 !important;
+    filter: grayscale(80%) !important;
+    transition: all 0.4s ease;
+    pointer-events: none !important; /* Blocca il doppio tap sui rami scartati */
 }
+
 /* =========================================
-   Divisore per i bivi
+   Divisori per i bivi (Testo e Algoritmo)
    ========================================= */
 .divisore-bivio {
     display: flex;
@@ -1277,15 +1282,7 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     margin: 0 15px;
     opacity: 0.5;
 }
-/* Rende semitrasparente qualsiasi elemento a cui viene applicata (inclusi i bivi scartati) */
-.nascosto-step {
-    opacity: 0.25 !important;
-    filter: grayscale(80%) !important;
-    transition: all 0.4s ease;
-}
-/* =========================================
-   Grafica Bivio per l'Algoritmo (DSA friendly)
-   ========================================= */
+
 .divisore-bivio-nodo {
     display: flex;
     align-items: center;
@@ -1303,27 +1300,20 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Quando un nodo visivo si "accende", gli diamo un bordo completo, non solo a sinistra */
 .nodo-visivo.blocco-condizionato.mostra-step {
-    border-left: none !important; /* Rimuove la riga laterale del testo */
-    border: 3px solid #f39c12 !important; /* Cornice dorata evidente */
+    border-left: none !important; 
+    border: 3px solid #f39c12 !important; 
     background-color: #fdfaed;
-    transform: scale(1.02); /* Lo ingrandisce impercettibilmente per dargli importanza */
+    transform: scale(1.02); 
     box-shadow: 0 4px 8px rgba(243, 156, 18, 0.2);
 }
+
 /* =========================================
    Ottimizzazione Gesti Mobile (Tap e Doppio Tap)
    ========================================= */
 .step-ricetta, .nodo-visivo {
-    /* Fondamentale: impedisce al telefono di zoomare quando si fa doppio tap */
     touch-action: manipulation; 
-    /* Evita che il testo diventi blu evidenziato quando si tocca velocemente */
     user-select: none; 
     -webkit-user-select: none;
     cursor: pointer;
-}
-
-/* Nascondiamo per sicurezza vecchi residui di checkbox */
-.contenitore-check, .label-selezione-ramo { 
-    display: none !important; 
 }
