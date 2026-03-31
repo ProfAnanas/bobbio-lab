@@ -474,48 +474,43 @@ body.modalita-algoritmo #pannello-testo {
     overflow: visible; /* IMPORTANTE: se è 'auto' o 'hidden' il popup sparisce */
 }
 
-/* Assicuriamoci che il popup sia davvero sopra a ogni cosa */
-body.modalita-algoritmo .testo-step.mostra-testo-popup {
-    display: block;
-    z-index: 10000; 
-}
+/* =========================================
+   Pannello di lettura inferiore (Sostituisce il vecchio popup)
+   ========================================= */
 
 body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) {
-    position: relative;
-    z-index: 10000;
+    z-index: 10;
 }
 
-/* IL POPUP MODIFICATO (Anti-Sbordamento e Riposizionato) */
 body.modalita-algoritmo .testo-step.mostra-testo-popup {
-    display: block;
-    position: absolute;
-    left: 80px; /* Spostato più a destra rispetto a prima (era 55px) */
-    top: 50%;
-    transform: translateY(-50%);
-    
-    /* Regole salva-schermo per cellulari aggiornate al nuovo spazio */
-    max-width: calc(100vw - 110px);
-    width: max-content;
-    
-    /* ... il resto rimane uguale ... */
-    background-color: #ffffff;
-    border-left: 5px solid #f39c12;
-    padding: 12px 15px;
-    border-radius: 6px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    z-index: 9999; 
-    cursor: pointer; 
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
-    animation: comparsaFluida 0.25s ease-out forwards;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: fixed !important;
+    bottom: 25px !important;
+    left: 5% !important;
+    top: auto !important;
+    transform: none !important;
+    width: 90% !important;
+    min-height: 70px;
+    background-color: #fdfaed !important;
+    border: 2px solid #f39c12 !important;
+    border-left: 8px solid #f39c12 !important;
+    padding: 15px 20px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2) !important;
+    z-index: 10000 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    text-align: center !important;
+    /* Animazione a comparsa dal basso */
+    animation: comparsaPannello 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards !important;
 }
 
-/* Animazione aggiornata */
-@keyframes comparsaFluida {
-    from { opacity: 0; transform: translate(-15px, -50%); }
-    to { opacity: 1; transform: translate(0, -50%); }
+@keyframes comparsaPannello {
+    from { transform: translateY(150px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 body.modalita-algoritmo .numero-step {
@@ -531,7 +526,6 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     background-color: #f39c12;
     border-color: #f39c12;
 }
-
 /* --- COLORI DINAMICI DEI NODI --- */
 
 .nodo-visivo, .nodo-visivo.tipo-normale {

@@ -330,7 +330,6 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         });
         
         // --- MOTORE PROCEDIMENTO ---
-        // --- MOTORE PROCEDIMENTO ---
         ricetta.procedimento.forEach(passaggio => {
             if (passaggio.tipo === 'bivio') {
                 const divBivioTesto = document.createElement('div');
@@ -358,8 +357,8 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                     divNodo.classList.add('nodo-ramo');
                     divBivioNodi.appendChild(divNodo);
                     
-                    // PASSAGGIAMO I DATI ALLA SINCRONIA
-                    attivaSincronia(stepTesto, divNodo, ramo); 
+                    // PASSAGGIAMO L'ETICHETTA 'bivio'
+                    attivaSincronia(stepTesto, divNodo, ramo, 'bivio'); 
                 });
                 
                 listaProcedimento.appendChild(divBivioTesto);
@@ -377,7 +376,9 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                     const divNodo = creaNodoDestra(ramo);
                     divNodo.classList.add('nodo-ramo');
                     divParalleloNodi.appendChild(divNodo);
-                    attivaSincronia(stepTesto, divNodo, ramo);
+                    
+                    // PASSAGGIAMO L'ETICHETTA 'parallelo'
+                    attivaSincronia(stepTesto, divNodo, ramo, 'parallelo');
                 });
                 
                 listaProcedimento.appendChild(divParalleloTesto);
@@ -388,7 +389,9 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 listaProcedimento.appendChild(stepTesto);
                 const divNodo = creaNodoDestra(passaggio);
                 pannelloAlgoritmo.appendChild(divNodo);
-                attivaSincronia(stepTesto, divNodo, passaggio);
+                
+                // PASSAGGIAMO L'ETICHETTA 'singolo'
+                attivaSincronia(stepTesto, divNodo, passaggio, 'singolo');
             }
         });
     } catch (error) {
@@ -503,11 +506,10 @@ function creaNodoDestra(dati) {
     return divNodo;
 }
 
-function attivaSincronia(testo, nodo, dati) {
+function attivaSincronia(testo, nodo, dati, tipoPadre) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
-    // Manteniamo l'effetto hover per chi usa il PC col mouse
     testo.addEventListener('mouseenter', () => {
         testo.classList.add('evidenziato');
         nodo.classList.add('nodo-attivo');
@@ -532,92 +534,90 @@ function attivaSincronia(testo, nodo, dati) {
         }
     });
 
-    // 1. CLICK SINGOLO: Sceglie il ramo o apre l'ingrandimento
-    function gestisciClickSingolo(evento) {
+    let timerTocco = null;
+    let tocchi = 0;
+
+    function gestisciInterazione(evento) {
         evento.stopPropagation();
-        
-        // Magia del Bivio (si attiva se il passaggio ha 'a' o 'b')
-        const match = dati.step_id.match(/step-\d+([ab])$/);
-        if (match) {
-            const lettera = match[1];
-            const letteraOpposta = lettera === 'a' ? 'b' : 'a';
-            const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+        tocchi++; 
 
-            // Accende la strada scelta
-            document.querySelectorAll('.condizione-' + lettera).forEach(el => {
-                el.classList.add('mostra-step');
-                el.classList.remove('nascosto-step');
-            });
-            // Spegne la strada scartata
-            document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
-                el.classList.remove('mostra-step');
-                el.classList.add('nascosto-step');
-            });
-
-            // Spegne il ramo del bivio non scelto
-            const containerOpposto = document.getElementById('testo-' + idOpposto);
-            const nodoOpposto = document.getElementById('nodo-' + idOpposto);
-            if (containerOpposto) containerOpposto.classList.add('nascosto-step');
-            if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
-
-            // Accende se stesso
-            const containerAttuale = document.getElementById('testo-' + dati.step_id);
-            if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
-            if (nodo) nodo.classList.remove('nascosto-step');
-        }
-
-        // Se sei in modalità Algoritmo, il singolo tocco ingrandisce il testo
-        if (document.body.classList.contains('modalita-algoritmo')) {
-            const eraAperto = testoStep.classList.contains('mostra-testo-popup');
-            
-            document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
-            document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
-            document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
-            
-            if (!eraAperto) {
-                testoStep.classList.add('mostra-testo-popup');
-                testo.classList.add('evidenziato');
-                nodo.classList.add('nodo-attivo');
+        if (tocchi === 1) {
+            timerTocco = setTimeout(() => {
+                tocchi = 0; 
                 
-                if (evento.currentTarget === nodo) {
-                    nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const match = dati.step_id.match(/step-\d+([ab])$/);
+                
+                // LA MODIFICA È QUI: la magia di spegnimento avviene SOLO se è un bivio
+                if (match && tipoPadre === 'bivio') {
+                    const lettera = match[1];
+                    const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+                    const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+
+                    document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                        el.classList.add('mostra-step');
+                        el.classList.remove('nascosto-step');
+                    });
+                    document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                        el.classList.remove('mostra-step');
+                        el.classList.add('nascosto-step');
+                    });
+
+                    const containerOpposto = document.getElementById('testo-' + idOpposto);
+                    const nodoOpposto = document.getElementById('nodo-' + idOpposto);
+                    if (containerOpposto) containerOpposto.classList.add('nascosto-step');
+                    if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
+
+                    const containerAttuale = document.getElementById('testo-' + dati.step_id);
+                    if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+                    if (nodo) nodo.classList.remove('nascosto-step');
                 }
+
+                if (document.body.classList.contains('modalita-algoritmo')) {
+                    const eraAperto = testoStep.classList.contains('mostra-testo-popup');
+                    
+                    document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
+                    document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
+                    document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
+                    
+                    if (!eraAperto) {
+                        testoStep.classList.add('mostra-testo-popup');
+                        testo.classList.add('evidenziato');
+                        nodo.classList.add('nodo-attivo');
+                        
+                        if (evento.currentTarget === nodo) {
+                            nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else {
+                            testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            }, 250); 
+            
+        } else if (tocchi === 2) {
+            clearTimeout(timerTocco); 
+            tocchi = 0; 
+            
+            if (testo.classList.contains('nascosto-step') || 
+               (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
+                return; 
+            }
+            
+            const completato = testoStep.classList.contains('testo-barrato');
+            
+            if (!completato) {
+                testoStep.classList.add('testo-barrato');
+                if(numeroStep) numeroStep.classList.add('numero-barrato');
+                if(nodo) nodo.classList.add('nodo-completato');
+            } else {
+                testoStep.classList.remove('testo-barrato');
+                if(numeroStep) numeroStep.classList.remove('numero-barrato');
+                if(nodo) nodo.classList.remove('nodo-completato');
             }
         }
     }
 
-    // 2. DOPPIO CLICK: Tira la riga di completamento
-    function gestisciDoppioClick(evento) {
-        evento.stopPropagation();
-        evento.preventDefault(); // Blocca lo zoom di default dei telefoni
-        
-        // --- CANCELLO DI SICUREZZA: Non puoi completare un passaggio spento o scartato! ---
-        if (testo.classList.contains('nascosto-step') || 
-           (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
-            return; // Esce dalla funzione senza fare niente
-        }
-        
-        const completato = testoStep.classList.contains('testo-barrato');
-        
-        if (!completato) {
-            testoStep.classList.add('testo-barrato');
-            if(numeroStep) numeroStep.classList.add('numero-barrato');
-            if(nodo) nodo.classList.add('nodo-completato');
-        } else {
-            testoStep.classList.remove('testo-barrato');
-            if(numeroStep) numeroStep.classList.remove('numero-barrato');
-            if(nodo) nodo.classList.remove('nodo-completato');
-        }
-    }
-
-    // Colleghiamo le funzioni ai tocchi
-    testo.addEventListener('click', gestisciClickSingolo);
-    nodo.addEventListener('click', gestisciClickSingolo);
-    
-    testo.addEventListener('dblclick', gestisciDoppioClick);
-    nodo.addEventListener('dblclick', gestisciDoppioClick);
+    testo.addEventListener('click', gestisciInterazione);
+    nodo.addEventListener('click', gestisciInterazione);
 }
 function cambiaVista() {
     const body = document.body;
