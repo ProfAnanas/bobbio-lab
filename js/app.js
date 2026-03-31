@@ -330,6 +330,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         });
         
         // --- MOTORE PROCEDIMENTO ---
+        // --- MOTORE PROCEDIMENTO ---
         ricetta.procedimento.forEach(passaggio => {
             if (passaggio.tipo === 'bivio') {
                 const divBivioTesto = document.createElement('div');
@@ -338,8 +339,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 divBivioNodi.classList.add('contenitore-bivio-visivo');
                 
                 passaggio.rami.forEach((ramo, indiceRamo) => {
-                    // Passo l'etichetta 'bivio' per fargli disegnare il pulsante
-                    const stepTesto = creaTestoSinistra(ramo, 'bivio');
+                    const stepTesto = creaTestoSinistra(ramo);
                     divBivioTesto.appendChild(stepTesto);
                     
                     if (indiceRamo === 0) {
@@ -357,7 +357,9 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                     const divNodo = creaNodoDestra(ramo);
                     divNodo.classList.add('nodo-ramo');
                     divBivioNodi.appendChild(divNodo);
-                    attivaSincronia(stepTesto, divNodo);
+                    
+                    // PASSAGGIAMO I DATI ALLA SINCRONIA
+                    attivaSincronia(stepTesto, divNodo, ramo); 
                 });
                 
                 listaProcedimento.appendChild(divBivioTesto);
@@ -370,23 +372,23 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 divParalleloNodi.classList.add('contenitore-parallelo-visivo');
                 
                 passaggio.rami.forEach(ramo => {
-                    const stepTesto = creaTestoSinistra(ramo, 'parallelo');
+                    const stepTesto = creaTestoSinistra(ramo);
                     divParalleloTesto.appendChild(stepTesto);
                     const divNodo = creaNodoDestra(ramo);
                     divNodo.classList.add('nodo-ramo');
                     divParalleloNodi.appendChild(divNodo);
-                    attivaSincronia(stepTesto, divNodo);
+                    attivaSincronia(stepTesto, divNodo, ramo);
                 });
                 
                 listaProcedimento.appendChild(divParalleloTesto);
                 pannelloAlgoritmo.appendChild(divParalleloNodi);
 
             } else {
-                const stepTesto = creaTestoSinistra(passaggio, 'singolo');
+                const stepTesto = creaTestoSinistra(passaggio);
                 listaProcedimento.appendChild(stepTesto);
                 const divNodo = creaNodoDestra(passaggio);
                 pannelloAlgoritmo.appendChild(divNodo);
-                attivaSincronia(stepTesto, divNodo);
+                attivaSincronia(stepTesto, divNodo, passaggio);
             }
         });
     } catch (error) {
@@ -403,7 +405,8 @@ function chiudiAlgoritmo() {
     applicaFiltri();
 }
 
-function creaTestoSinistra(dati, tipoPadre) {
+// --- 6. FUNZIONI DI SUPPORTO GRAFICO ---
+function creaTestoSinistra(dati) {
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
     stepContainer.id = 'testo-' + dati.step_id; 
@@ -420,33 +423,6 @@ function creaTestoSinistra(dati, tipoPadre) {
     testoStep.classList.add('testo-step');
     testoStep.innerHTML = analizzaTestoGlossarioCucina(dati.testo);
 
-    // 1. LA CHECKBOX CLASSICA (Serve SOLO per depennare il testo quando hai finito)
-    const divCheck = document.createElement('div');
-    divCheck.classList.add('contenitore-check');
-
-    const checkStep = document.createElement('input');
-    checkStep.type = 'checkbox';
-    checkStep.id = 'check-' + dati.step_id; 
-    checkStep.classList.add('checkbox-stato-step');
-
-    checkStep.addEventListener('change', () => {
-        const nodoVisivoTarget = document.getElementById('nodo-' + dati.step_id);
-        if (checkStep.checked) {
-            testoStep.classList.add('testo-barrato');
-            numeroStep.classList.add('numero-barrato');
-            if (nodoVisivoTarget) nodoVisivoTarget.classList.add('nodo-completato');
-        } else {
-            testoStep.classList.remove('testo-barrato');
-            numeroStep.classList.remove('numero-barrato');
-            if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nodo-completato');
-        }
-    });
-
-    divCheck.appendChild(checkStep);
-    stepContainer.appendChild(divCheck);
-    stepContainer.appendChild(numeroStep);
-    stepContainer.appendChild(testoStep);
-
     if (dati.opzionale) {
         const badgeOpzionale = document.createElement('span');
         badgeOpzionale.classList.add('badge-opzionale');
@@ -454,56 +430,9 @@ function creaTestoSinistra(dati, tipoPadre) {
         testoStep.prepend(badgeOpzionale); 
     }
 
-    // 2. IL NUOVO PULSANTE DI SCELTA (Appare SOLO se è un bivio)
-    if (tipoPadre === 'bivio') {
-        const divSelezione = document.createElement('label');
-        divSelezione.classList.add('label-selezione-ramo');
-        
-        // Estraiamo il numero puro per raggruppare i radio button (es. da "6a" estrae "6")
-        const numeroGruppo = dati.step_id.replace(/[ab]/, '');
-        
-        divSelezione.innerHTML = `
-            <input type="radio" name="bivio-${numeroGruppo}" value="${dati.step_id}">
-            <span>👈 Scegli questa variante</span>
-        `;
-
-        // Logica di spegnimento/accensione agganciata al pulsante Radio
-        divSelezione.querySelector('input').addEventListener('change', (e) => {
-            if (e.target.checked) {
-                const match = dati.step_id.match(/step-\d+([ab])$/);
-                if (match) {
-                    const lettera = match[1];
-                    const letteraOpposta = lettera === 'a' ? 'b' : 'a';
-                    const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
-
-                    // A. Accende i passaggi futuri collegati
-                    document.querySelectorAll('.condizione-' + lettera).forEach(el => {
-                        el.classList.add('mostra-step');
-                        el.classList.remove('nascosto-step');
-                    });
-                    // B. Spegne i passaggi futuri dell'altra scelta
-                    document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
-                        el.classList.remove('mostra-step');
-                        el.classList.add('nascosto-step');
-                    });
-
-                    // C. Spegne il ramo scartato (Testo e Nodo)
-                    const containerOpposto = document.getElementById('testo-' + idOpposto);
-                    const nodoOpposto = document.getElementById('nodo-' + idOpposto);
-                    if (containerOpposto) containerOpposto.classList.add('nascosto-step');
-                    if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
-
-                    // D. Assicura che il ramo scelto sia acceso (in caso di cambi idea)
-                    const containerAttuale = document.getElementById('testo-' + dati.step_id);
-                    const nodoAttuale = document.getElementById('nodo-' + dati.step_id);
-                    if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
-                    if (nodoAttuale) nodoAttuale.classList.remove('nascosto-step');
-                }
-            }
-        });
-
-        stepContainer.appendChild(divSelezione);
-    }
+    // PULIZIA ASSOLUTA: Niente più checkbox o bottoni radio!
+    stepContainer.appendChild(numeroStep);
+    stepContainer.appendChild(testoStep);
 
     return stepContainer;
 }
@@ -513,7 +442,7 @@ function creaNodoDestra(dati) {
     divNodo.classList.add('nodo-visivo');
     divNodo.id = 'nodo-' + dati.step_id;
     
-    // --- NUOVO: Nasconde anche i nodi grafici a destra ---
+    // Nasconde anche i nodi grafici a destra se c'è condizione
     if (dati.condizione) {
         divNodo.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
     }
@@ -574,10 +503,11 @@ function creaNodoDestra(dati) {
     return divNodo;
 }
 
-function attivaSincronia(testo, nodo) {
+function attivaSincronia(testo, nodo, dati) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
+    // Manteniamo l'effetto hover per chi usa il PC col mouse
     testo.addEventListener('mouseenter', () => {
         testo.classList.add('evidenziato');
         nodo.classList.add('nodo-attivo');
@@ -593,7 +523,6 @@ function attivaSincronia(testo, nodo) {
     nodo.addEventListener('mouseenter', () => {
         nodo.classList.add('nodo-attivo');
         testo.classList.add('evidenziato');
-        testo.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
     });
     
     nodo.addEventListener('mouseleave', () => {
@@ -603,9 +532,42 @@ function attivaSincronia(testo, nodo) {
         }
     });
 
-    function toggleSincronizzato(evento) {
+    // 1. CLICK SINGOLO: Sceglie il ramo o apre l'ingrandimento
+    function gestisciClickSingolo(evento) {
+        evento.stopPropagation();
+        
+        // Magia del Bivio (si attiva se il passaggio ha 'a' o 'b')
+        const match = dati.step_id.match(/step-\d+([ab])$/);
+        if (match) {
+            const lettera = match[1];
+            const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+            const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+
+            // Accende la strada scelta
+            document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                el.classList.add('mostra-step');
+                el.classList.remove('nascosto-step');
+            });
+            // Spegne la strada scartata
+            document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                el.classList.remove('mostra-step');
+                el.classList.add('nascosto-step');
+            });
+
+            // Spegne il ramo del bivio non scelto
+            const containerOpposto = document.getElementById('testo-' + idOpposto);
+            const nodoOpposto = document.getElementById('nodo-' + idOpposto);
+            if (containerOpposto) containerOpposto.classList.add('nascosto-step');
+            if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
+
+            // Accende se stesso
+            const containerAttuale = document.getElementById('testo-' + dati.step_id);
+            if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+            if (nodo) nodo.classList.remove('nascosto-step');
+        }
+
+        // Se sei in modalità Algoritmo, il singolo tocco ingrandisce il testo
         if (document.body.classList.contains('modalita-algoritmo')) {
-            evento.stopPropagation();
             const eraAperto = testoStep.classList.contains('mostra-testo-popup');
             
             document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
@@ -617,7 +579,7 @@ function attivaSincronia(testo, nodo) {
                 testo.classList.add('evidenziato');
                 nodo.classList.add('nodo-attivo');
                 
-                if (evento.currentTarget === numeroStep) {
+                if (evento.currentTarget === nodo) {
                     nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
                     testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -626,21 +588,31 @@ function attivaSincronia(testo, nodo) {
         }
     }
 
-    if (numeroStep) numeroStep.addEventListener('click', toggleSincronizzato);
-    nodo.addEventListener('click', toggleSincronizzato);
-
-    if (testoStep) {
-        testoStep.addEventListener('click', (evento) => {
-            if (document.body.classList.contains('modalita-algoritmo')) {
-                evento.stopPropagation();
-                testoStep.classList.remove('mostra-testo-popup');
-                testo.classList.remove('evidenziato');
-                nodo.classList.remove('nodo-attivo');
-            }
-        });
+    // 2. DOPPIO CLICK: Tira la riga di completamento
+    function gestisciDoppioClick(evento) {
+        evento.stopPropagation();
+        evento.preventDefault(); // Blocca lo zoom di default dei telefoni
+        
+        const completato = testoStep.classList.contains('testo-barrato');
+        
+        if (!completato) {
+            testoStep.classList.add('testo-barrato');
+            if(numeroStep) numeroStep.classList.add('numero-barrato');
+            if(nodo) nodo.classList.add('nodo-completato');
+        } else {
+            testoStep.classList.remove('testo-barrato');
+            if(numeroStep) numeroStep.classList.remove('numero-barrato');
+            if(nodo) nodo.classList.remove('nodo-completato');
+        }
     }
-}
 
+    // Colleghiamo le funzioni ai tocchi
+    testo.addEventListener('click', gestisciClickSingolo);
+    nodo.addEventListener('click', gestisciClickSingolo);
+    
+    testo.addEventListener('dblclick', gestisciDoppioClick);
+    nodo.addEventListener('dblclick', gestisciDoppioClick);
+}
 function cambiaVista() {
     const body = document.body;
     const btn = document.getElementById('pulsante-toggle-vista');
