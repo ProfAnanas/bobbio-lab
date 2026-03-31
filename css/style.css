@@ -482,10 +482,9 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) {
     z-index: 10;
 }
 
+/* IL POPUP MODIFICATO (Corretto il bug delle parole del glossario spezzate) */
 body.modalita-algoritmo .testo-step.mostra-testo-popup {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+    display: block !important; /* RISOLTO: Rimossi flex, align-items e justify-content */
     position: fixed !important;
     bottom: 25px !important;
     left: 5% !important;
@@ -496,7 +495,7 @@ body.modalita-algoritmo .testo-step.mostra-testo-popup {
     background-color: #fdfaed !important;
     border: 2px solid #f39c12 !important;
     border-left: 8px solid #f39c12 !important;
-    padding: 15px 20px !important;
+    padding: 15px 20px !important; /* Il padding garantisce che il testo sia centrato bene */
     border-radius: 12px !important;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.2) !important;
     z-index: 10000 !important;

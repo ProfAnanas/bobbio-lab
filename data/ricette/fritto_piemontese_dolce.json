@@ -144,12 +144,14 @@
                 {
                     "step_id": "step-5a",
                     "testo": "Passare la frutta e i bignè nella pastella",
-                    "icona": "impastare_mano"
+                    "icona": "impastare_mano",
+                    "condizione": "a"
                 },
                 {
                     "step_id": "step-5b",
                     "testo": "Passare velocemente i biscotti farciti nell’uovo (non devono ammollarsi) e poi nel pan pesto.\nUngere leggermente un lato dei biscotti già impanati. Utilizzare un pennello o un po’ di carta intinta nell’olio.\nDisporli su di una teglia antiaderenti col lato unto rivolto verso l’alto.",
-                    "icona": "impastare_mano"
+                    "icona": "impastare_mano",
+                    "condizione": "b"
                 }
             ]
         },
@@ -160,13 +162,15 @@
                     "step_id": "step-6a",
                     "testo": "friggere la frutta e i bignè in immersione in olio di semi a 160°C",
                     "icona": "tegame",
-                    "temperatura": "160°C"
+                    "temperatura": "160°C",
+                    "condizione": "a"
                 },
                 {
                     "step_id": "step-6b",
                     "testo": "Cuocere i biscotti e i semolini a 210°C modalità calore misto, con il 10% di umidità (o in modalità automatica: impanati pollo, doratura 1",
                     "icona": "forno_ventilato",
-                    "temperatura": "210°C"
+                    "temperatura": "210°C",
+                    "condizione": "b"
                 }
             ]
         }
