@@ -32,7 +32,8 @@
             { "id": "insalata_russa", "nome": "Insalata russa", "url_dati": "data/ricette/insalata_russa.json", "anno": "1, 2, 3", "tag": "piemonte" },
             { "id": "quiche_lorraine", "nome": "Quiche Lorraine classique", "url_dati": "data/ricette/quiche_lorraine.json", "anno": "3, 4, 5", "tag": "loira, francia, quiche, torta salata, brisè" },
           { "id": "cannoli_tomini", "nome": "Tomini croccanti al bagnet vert", "url_dati": "data/ricette/cannoli_tomini.json", "anno": "3, 4", "tag": "piemonte, piemontese, tradizione, tomini, bagnetto, bagnetto verde" },
-          { "id": "tonno_coniglio", "nome": "Tonno di coniglio", "url_dati": "data/ricette/tonno_coniglio.json", "anno": "3, 4", "tag": "piemonte, piemontese" }
+          { "id": "tonno_coniglio", "nome": "Tonno di coniglio", "url_dati": "data/ricette/tonno_coniglio.json", "anno": "3, 4", "tag": "piemonte, piemontese" },
+          { "id": "pasqualina", "nome": "Torta pasqualina", "url_dati": "data/ricette/pasqualina.json", "anno": "2, 3, 4", "tag": "torta salata, spinaci, biete" }
                      ]
         },
         {
@@ -191,6 +192,7 @@
             { "id": "focaccia_diretto", "nome": "Focaccia (Impasto diretto)", "url_dati": "data/ricette/focaccia_diretto.json", "anno": "1, 2, 3", "tag": "pizza, biga" },
             { "id": "focaccia_indiretto", "nome": "Focaccia con poolish (Impasto indiretto)", "url_dati": "data/ricette/focaccia_indiretto.json", "anno": "2, 3", "tag": "pizza" },
             { "id": "focaccia_ligure", "nome": "Focaccia ligure", "url_dati": "data/ricette/focaccia_ligure.json", "anno": "3, 4, 5", "tag": "pizza,focaccia,lievito" },
+            { "id": "pizza_teglia", "nome": "Impasto pizza in teglia", "url_dati": "data/ricette/pizza_teglia.json", "anno": "tutti", "tag": "" },
             { "id": "panzerotti_fritti", "nome": "Panzerotti fritti", "url_dati": "data/ricette/panzerotti_fritti.json", "anno": "3", "tag": "calzoni, calzone, panzerotto, puglia, panzerotto pugliese" }
           ]
         },

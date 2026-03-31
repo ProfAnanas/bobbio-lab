@@ -337,9 +337,18 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 const divBivioNodi = document.createElement('div');
                 divBivioNodi.classList.add('contenitore-bivio-visivo');
                 
-                passaggio.rami.forEach(ramo => {
+                passaggio.rami.forEach((ramo, indiceRamo) => {
                     const stepTesto = creaTestoSinistra(ramo);
                     divBivioTesto.appendChild(stepTesto);
+                    
+                    // --- NUOVO: Aggiunge la scritta "OPPURE" tra i due rami ---
+                    if (indiceRamo === 0) {
+                        const divisore = document.createElement('div');
+                        divisore.classList.add('divisore-bivio');
+                        divisore.innerHTML = '<span>oppure scegli:</span>';
+                        divBivioTesto.appendChild(divisore);
+                    }
+                    
                     const divNodo = creaNodoDestra(ramo);
                     divNodo.classList.add('nodo-ramo');
                     divBivioNodi.appendChild(divNodo);
@@ -381,7 +390,6 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         document.getElementById('lista-ingredienti').innerHTML = '<li>Errore: Impossibile caricare i dati della ricetta.</li>';
     }
 }
-
 function chiudiAlgoritmo() {
     document.getElementById('vista-ricetta').style.display = 'none';
     document.getElementById('griglia-menu').style.display = 'block';
@@ -391,12 +399,11 @@ function chiudiAlgoritmo() {
     applicaFiltri();
 }
 
-// --- 6. FUNZIONI DI SUPPORTO GRAFICO ---
 function creaTestoSinistra(dati) {
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
 
-    // --- NUOVO: Se ha una condizione, gli diamo le classi per nasconderlo ---
+    // Se ha una condizione, lo rendiamo semitrasparente di base
     if (dati.condizione) {
         stepContainer.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
     }
@@ -408,7 +415,6 @@ function creaTestoSinistra(dati) {
     const testoStep = document.createElement('div');
     testoStep.classList.add('testo-step');
     
-    // QUI AVVIENE LA MAGIA PER LA CUCINA: Passiamo il testo al motore del glossario cucina
     testoStep.innerHTML = analizzaTestoGlossarioCucina(dati.testo);
 
     const divCheck = document.createElement('div');
@@ -418,7 +424,6 @@ function creaTestoSinistra(dati) {
     checkStep.type = 'checkbox';
     checkStep.id = 'check-' + dati.step_id; 
     checkStep.classList.add('checkbox-stato-step');
-    checkStep.setAttribute('aria-label', `Segna step ${dati.step_id.replace('step-','')} come completato`);
 
     checkStep.addEventListener('change', () => {
         const nodoVisivoTarget = document.getElementById('nodo-' + dati.step_id);
@@ -432,19 +437,25 @@ function creaTestoSinistra(dati) {
             if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nodo-completato');
         }
 
-        // --- NUOVA MAGIA: LOGICA DEL BIVIO INTERATTIVO ---
+        // --- MAGIA DEL BIVIO: ACCESO / SPENTO ---
         const match = dati.step_id.match(/step-\d+([ab])$/);
         if (match) {
             const lettera = match[1]; // 'a' oppure 'b'
             const letteraOpposta = lettera === 'a' ? 'b' : 'a';
 
             if (checkStep.checked) {
-                // Mostra i passaggi nascosti della tua lettera
-                document.querySelectorAll('.condizione-' + lettera).forEach(el => el.classList.add('mostra-step'));
-                // Nasconde quelli dell'altra strada
-                document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => el.classList.remove('mostra-step'));
+                // 1. Illumina al 100% i passaggi della strada scelta
+                document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                    el.classList.add('mostra-step');
+                    el.classList.remove('nascosto-step');
+                });
+                // 2. Spegne quasi del tutto i passaggi dell'altra strada
+                document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                    el.classList.remove('mostra-step');
+                    el.classList.add('nascosto-step');
+                });
                 
-                // Toglie la spunta alla checkbox dell'altra strada
+                // 3. Toglie la spunta all'altra strada se ci avevi ripensato
                 const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
                 const checkOpposto = document.getElementById('check-' + idOpposto);
                 if (checkOpposto && checkOpposto.checked) {
@@ -452,8 +463,15 @@ function creaTestoSinistra(dati) {
                     checkOpposto.dispatchEvent(new Event('change'));
                 }
             } else {
-                // Nasconde di nuovo tutto se togli la spunta
-                document.querySelectorAll('.condizione-' + lettera).forEach(el => el.classList.remove('mostra-step'));
+                // Se togli la spunta, torna tutto nella semitrasparenza iniziale
+                document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                    el.classList.remove('mostra-step');
+                    el.classList.remove('nascosto-step');
+                });
+                document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                    el.classList.remove('mostra-step');
+                    el.classList.remove('nascosto-step');
+                });
             }
         }
     });

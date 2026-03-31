@@ -1,0 +1,107 @@
+{
+    "id": "pizza_teglia",
+    "titolo": "Impasto pizza in teglia",
+    "nota_dosi": "per una teglia 30x40. Per una leccarda del forno di casa, calcolare usando 410g di farina",
+    "ingredienti": [
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Farina 00 con 12,5g di proteine"
+        },
+        {
+            "quantita": 260,
+            "unita_descrizione": "ml Acqua"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Malto diastasico (o miele)"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "ml Olio EVO"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "A mano o in una planetaria con gancio inserire la farina, il lievito sbriciolato e circa i 3/4 dell'acqua (210ml)",
+            "icona": "gancio"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Quando l'impasto ha preso consistenza, aggiungere il sale e in più volte la restante acqua (aggiungere il sorso di acqua successivo solo quando l'impasto torna liscio)",
+            "icona": "gancio"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere infine l'olio",
+            "icona": "gancio"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Far lievitare 3 ore a 20-22°C, fino al raddoppio della massa.",
+            "icona": "lievitazione",
+            "temperatura": "20-22°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Formare un panetto dando un giro di pieghe (slap and fold)",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Far lievitare ancora un'ora.",
+            "icona": "lievitazione",
+            "temperatura": "20-22°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Stendere in teglia unta",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Condire con il pomodoro",
+            "icona": "aggiungere"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-9a",
+                    "testo": "Se il forno lo consente cuocere a 250°C, statico per 10/13 minuti.",
+                    "icona": "forno_statico",
+                    "temperatura": "250°C",
+                    "tempo": "10/13 min."
+                },
+                {
+                    "step_id": "step-9b",
+                    "testo": "Cuocerere in forno statico a 220°C poggiando la teglia direttamente sul fondo del forno per 10-12 minuti poi Spostare la teglia a metà del forno per i restanti 3-5 minuti.",
+                    "temperatura": "220°C",
+                    "tempo": "15-18 min."
+                }
+            ]
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Aggiungere la mozzarella e gli altri condimenti.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Finire la cottura per altri 2/3 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "220-250°C",
+            "tempo": "2-3 min."
+        }
+    ]
+}

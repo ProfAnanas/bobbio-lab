@@ -1,0 +1,141 @@
+{
+    "id": "pasqualina",
+    "titolo": "Torta pasqualina",
+    "nota_dosi": "per uno stampo da 20-22 cm",
+    "ingredienti": [
+        {
+            "quantita": 480,
+            "unita_descrizione": "g di  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`brise`, `data/ricette/brise.json`, `Pasta Brisè`)\">Pasta brisè</span>"
+        },
+        {
+            "quantita": 1000,
+            "unita_descrizione": "g di biete o spinaci puliti (o 800 g surgelati)"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Ricotta vaccina"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Formaggio grattugiato"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Cipollotto fresco"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "n° Uova"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Maggiorana"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare e mondare il cipollotto",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tritare finemente il cipollotto",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una padella mettere l'olio, il cipollotto e far soffriggere.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere le  biete e la maggiorana, abbassare la fiamma/potenza e far appassire con il coperchio, se serve aggiungere un cucchiaio di acqua.",
+            "icona": "tegame",
+            "temperatura": "bassa"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Quando sono morbidi, togliere il coperchio per far asciugare gli spinaci.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Far raffreddare in abbattitore",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "aggiungere agli spinaci la ricotta sgocciolata perfettamente, il parmigiano il sale e un uovo.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Prendere il panetto di pasta brisè e dividerlo in due. Stendere una parte dell'impasto ad uno spessore di 3mm e foderare uno stampo alla base e ai bordi",
+            "icona": "mattarello",
+            "dimensione": "3 mm"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Inserire la farcia livellandola bene con il dorso di un cucchiaio o una marisa",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Creare quattro piccole conche ben distanziate nella farcia e sgusciare un uovo crudo all'interno di ciascuna.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Stendere il secondo panetto di pasta ad uno spessore di 2 mm e posizionarlo sopra il ripieno per chiudere la torta.",
+            "icona": "mattarello",
+            "dimensione": "2mm"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Sigillare accuratamente i bordi delle due sfoglie (creando il classico cordoncino) e bucherellare delicatamente la superficie del coperchio con i rebbi di una forchetta o uno stecchino per permettere al vapore di uscire durante la cottura in forno.",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Far riposare la torta in frigorifero o abbattitore per circa 30 min.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "30 min."
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Spennellare la superficie della torta con un uovo intero sbattuto.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-15",
+            "testo": "Cuocere in forno statico a 200°C per circa 25 minuti",
+            "icona": "forno_statico",
+            "temperatura": "200°C",
+            "tempo": "25 min."
+        },
+        {
+            "step_id": "step-16",
+            "testo": "Abbassare la temperatura del forno a 180°C e proseguire la cottura per altri 15-20 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "15-20 min."
+        },
+        {
+            "step_id": "step-17",
+            "testo": "Sfornare e lasciare raffreddare 15 minuti in teglia.",
+            "icona": "riposo",
+            "tempo": "15 min."
+        }
+    ]
+}

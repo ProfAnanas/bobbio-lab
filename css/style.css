@@ -1237,18 +1237,43 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     color: #d35400 !important; /* Forza L'Arancione Sul Titolo */
 }
 /* =========================================
-   Logica Bivio Interattivo (Condizioni)
+   Logica Bivio Interattivo (Trasparenza)
    ========================================= */
 .blocco-condizionato {
-    display: none !important; /* Nascosto di default */
-    border-left: 4px solid #f39c12 !important; /* Bordo arancione per far capire che è legato a un bivio */
+    opacity: 0.35; /* Semitrasparente di default (spento) */
+    pointer-events: none; /* Non si può cliccare/spuntare finché è spento */
+    transition: all 0.4s ease; /* Effetto dissolvenza morbido */
+    filter: grayscale(80%); /* Toglie un po' di colore per farlo sembrare inattivo */
+}
+
+.blocco-condizionato.mostra-step {
+    opacity: 1 !important; /* Si accende al 100% ! */
+    pointer-events: auto; /* Torna cliccabile */
+    filter: grayscale(0%);
+    border-left: 4px solid #f39c12 !important; /* Bordo arancione per capire che è figlio di un bivio */
     background-color: #fdfaed;
 }
-.blocco-condizionato.mostra-step {
-    display: flex !important; /* Lo fa riapparire */
-    animation: fadeIn 0.4s ease-in-out;
+
+.blocco-condizionato.nascosto-step {
+    opacity: 0.1 !important; /* Diventa quasi invisibile se hai scelto l'ALTRA strada */
 }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* =========================================
+   Divisore per i bivi
+   ========================================= */
+.divisore-bivio {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #d35400;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+.divisore-bivio::before, .divisore-bivio::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px dashed #f39c12;
+    margin: 0 15px;
+    opacity: 0.5;
 }
