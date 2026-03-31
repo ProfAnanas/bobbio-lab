@@ -1311,3 +1311,29 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     transform: scale(1.02); /* Lo ingrandisce impercettibilmente per dargli importanza */
     box-shadow: 0 4px 8px rgba(243, 156, 18, 0.2);
 }
+/* =========================================
+   Pulsanti di Scelta per i Bivi
+   ========================================= */
+.label-selezione-ramo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: #fdf2e9;
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d35400;
+    transition: all 0.2s;
+}
+.label-selezione-ramo:hover {
+    background: #f39c12;
+    color: white;
+}
+.label-selezione-ramo input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.3);
+    cursor: pointer;
+}
