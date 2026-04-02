@@ -58,15 +58,30 @@ function disegnaGrigliaMenu(catalogo) {
         summaryCat.textContent = categoria.nome_categoria;
         detailsCat.appendChild(summaryCat);
 
+        // QUI CAMBIA LA MAGIA: Usiamo la nuova griglia a quadratoni
         const divProcedure = document.createElement('div');
-        divProcedure.classList.add('lista-ricette');
+        divProcedure.classList.add('griglia-bottoni-accoglienza');
 
         categoria.procedure.forEach(proc => {
             const bottone = document.createElement('button');
-            bottone.textContent = proc.nome;
-            bottone.classList.add('btn-ricetta');
+            bottone.classList.add('bottone-quadrato-accoglienza');
             bottone.setAttribute('data-tag', String(proc.tag || '').toLowerCase());
             bottone.setAttribute('data-nome', String(proc.nome).toLowerCase());
+            
+            // 1. Creiamo l'immagine centrale
+            const img = document.createElement('img');
+            // Se non c'è nel JSON, prova a caricare default.png per non rompere nulla
+            img.src = `assets/accoglienza/${proc.icona || 'default.png'}`; 
+            img.alt = proc.nome;
+            img.classList.add('icona-bottone-accoglienza');
+
+            // 2. Creiamo il testo in basso
+            const testo = document.createElement('span');
+            testo.textContent = proc.nome;
+
+            // Mettiamo immagine e testo dentro il bottone
+            bottone.appendChild(img);
+            bottone.appendChild(testo);
             
             bottone.onclick = () => apriProcedura(proc.id, proc.url_dati, proc.nome);
             divProcedure.appendChild(bottone);

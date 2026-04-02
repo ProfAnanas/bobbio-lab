@@ -1,14 +1,15 @@
 {
     "catalogo": [
         {
-            "id_categoria": "procedure_base",
-            "nome_categoria": "Procedure di base",
+            "id_categoria": "procedure",
+            "nome_categoria": "Procedure",
             "procedure": [
                 {
                     "id": "proc-centralino",
-                    "nome": "Gestione del centralino",
+                    "nome": "Centralino",
                     "url_dati": "data/accoglienza/centralino.json",
-                    "tag": "telefono, chiamate, reception"
+                    "tag": "telefono, chiamate, reception",
+                    "icona": "centralino.png"
                 }
             ]
         }

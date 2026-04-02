@@ -1311,3 +1311,70 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     -webkit-user-select: none;
     cursor: pointer;
 }
+/* =========================================
+   DASHBOARD ACCOGLIENZA (Bottoni Quadrati)
+   ========================================= */
+
+/* Rendiamo il contenitore una griglia flessibile */
+.griglia-bottoni-accoglienza {
+    display: grid;
+    /* Crea colonne quadrate che si adattano allo schermo del telefono/tablet */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+/* Il singolo bottone quadrato */
+.bottone-quadrato-accoglienza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Colore di fondo molto chiaro */
+    border: 2px solid #ecf0f1;
+    border-radius: 15px;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    aspect-ratio: 1 / 1; /* Questo trucco CSS lo rende un quadrato perfetto! */
+}
+
+/* Effetto al passaggio del mouse o tocco */
+.bottone-quadrato-accoglienza:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #f1c40f; /* Si illumina di oro */
+    background-color: #fffdf5;
+}
+
+/* L'immagine dentro il bottone */
+.icona-bottone-accoglienza {
+    width: 55px; /* Dimensione dell'immagine */
+    height: 55px;
+    object-fit: contain; /* Evita che l'immagine si deformi */
+    margin-bottom: 12px;
+}
+
+/* Il testo sotto l'immagine */
+.bottone-quadrato-accoglienza span {
+    font-size: 1em;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Facciamo sembrare il menu a tendina "Procedure" un bel tasto principale */
+body.body-accoglienza .blocco-categoria summary {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    list-style: none; /* Toglie la freccina standard se possibile */
+}
+body.body-accoglienza .blocco-categoria summary::-webkit-details-marker {
+    display: none; /* Nasconde la freccina su Safari/Chrome vecchi */
+}
