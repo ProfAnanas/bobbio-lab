@@ -1050,13 +1050,15 @@ body.modalita-algoritmo .badge-nota-dosi {
 /* --- 1. Categoria: Liquidi / Ghiaccio (Azzurro pastello) --- */
 .nodo-visivo.step-build, 
 .nodo-visivo.step-versare, 
-.nodo-visivo.step-fill {
+.nodo-visivo.step-fill,
+.nodo-visivo.step-splash {
     border: 2px solid #6BB9F0 !important;
     background-color: white !important; /* Forza lo sfondo bianco da inattivo */
 }
 .nodo-visivo.step-build.nodo-attivo, 
 .nodo-visivo.step-versare.nodo-attivo, 
-.nodo-visivo.step-fill.nodo-attivo {
+.nodo-visivo.step-fill.nodo-attivo,
+.nodo-visivo.step-splash.nodo-attivo {
     background-color: #6BB9F0 !important;
     color: white !important;
 }

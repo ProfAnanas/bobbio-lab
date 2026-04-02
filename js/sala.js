@@ -60,7 +60,6 @@ function analizzaTestoGlossario(testo) {
 
 caricaGlossario();
 
-
 // --- 1. AVVIO E COLLEGAMENTO SENSORI ---
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -333,13 +332,27 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 const divBivioNodi = document.createElement('div');
                 divBivioNodi.classList.add('contenitore-bivio-visivo');
                 
-                passaggio.rami.forEach(ramo => {
+                passaggio.rami.forEach((ramo, indiceRamo) => {
                     const stepTesto = creaTestoSinistra(ramo);
                     divBivioTesto.appendChild(stepTesto);
+                    
+                    if (indiceRamo === 0) {
+                        const divisore = document.createElement('div');
+                        divisore.classList.add('divisore-bivio');
+                        divisore.innerHTML = '<span>oppure scegli:</span>';
+                        divBivioTesto.appendChild(divisore);
+
+                        const divisoreNodo = document.createElement('div');
+                        divisoreNodo.classList.add('divisore-bivio-nodo');
+                        divisoreNodo.textContent = 'O'; 
+                        divBivioNodi.appendChild(divisoreNodo);
+                    }
+                    
                     const divNodo = creaNodoDestra(ramo);
                     divNodo.classList.add('nodo-ramo');
                     divBivioNodi.appendChild(divNodo);
-                    attivaSincronia(stepTesto, divNodo);
+                    
+                    attivaSincronia(stepTesto, divNodo, ramo, 'bivio');
                 });
                 
                 listaProcedimento.appendChild(divBivioTesto);
@@ -357,7 +370,8 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                     const divNodo = creaNodoDestra(ramo);
                     divNodo.classList.add('nodo-ramo');
                     divParalleloNodi.appendChild(divNodo);
-                    attivaSincronia(stepTesto, divNodo);
+                    
+                    attivaSincronia(stepTesto, divNodo, ramo, 'parallelo');
                 });
                 
                 listaProcedimento.appendChild(divParalleloTesto);
@@ -368,7 +382,8 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 listaProcedimento.appendChild(stepTesto);
                 const divNodo = creaNodoDestra(passaggio);
                 pannelloAlgoritmo.appendChild(divNodo);
-                attivaSincronia(stepTesto, divNodo);
+                
+                attivaSincronia(stepTesto, divNodo, passaggio, 'singolo');
             }
         });
 
@@ -391,6 +406,11 @@ function chiudiAlgoritmo() {
 function creaTestoSinistra(dati) {
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
+    stepContainer.id = 'testo-' + dati.step_id; 
+
+    if (dati.condizione) {
+        stepContainer.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
+    }
 
     const numeroStep = document.createElement('div');
     numeroStep.classList.add('numero-step');
@@ -402,39 +422,16 @@ function creaTestoSinistra(dati) {
     // QUI AVVIENE LA MAGIA: Passiamo il testo al motore del glossario invece di stamparlo piatto!
     testoStep.innerHTML = analizzaTestoGlossario(dati.testo);
 
-    const divCheck = document.createElement('div');
-    divCheck.classList.add('contenitore-check');
-
-    const checkStep = document.createElement('input');
-    checkStep.type = 'checkbox';
-    checkStep.id = 'check-' + dati.step_id; 
-    checkStep.classList.add('checkbox-stato-step');
-    checkStep.setAttribute('aria-label', `Segna step ${dati.step_id.replace('step-','')} come completato`);
-
-    checkStep.addEventListener('change', () => {
-        const nodoVisivoTarget = document.getElementById('nodo-' + dati.step_id);
-        if (checkStep.checked) {
-            testoStep.classList.add('testo-barrato');
-            numeroStep.classList.add('numero-barrato');
-            if (nodoVisivoTarget) nodoVisivoTarget.classList.add('nodo-completato');
-        } else {
-            testoStep.classList.remove('testo-barrato');
-            numeroStep.classList.remove('numero-barrato');
-            if (nodoVisivoTarget) nodoVisivoTarget.classList.remove('nodo-completato');
-        }
-    });
-
-    divCheck.appendChild(checkStep);
-    stepContainer.appendChild(divCheck);
-    stepContainer.appendChild(numeroStep);
-    stepContainer.appendChild(testoStep);
-
     if (dati.opzionale) {
         const badgeOpzionale = document.createElement('span');
         badgeOpzionale.classList.add('badge-opzionale');
         badgeOpzionale.textContent = 'Opzionale';
         testoStep.prepend(badgeOpzionale); 
     }
+    
+    stepContainer.appendChild(numeroStep);
+    stepContainer.appendChild(testoStep);
+    
     return stepContainer;
 }
 
@@ -442,6 +439,10 @@ function creaNodoDestra(dati) {
     const divNodo = document.createElement('div');
     divNodo.classList.add('nodo-visivo');
     divNodo.id = 'nodo-' + dati.step_id;
+    
+    if (dati.condizione) {
+        divNodo.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
+    }
     
     if (dati.icona) {
         divNodo.classList.add('tipo-' + dati.icona); 
@@ -473,7 +474,7 @@ function creaNodoDestra(dati) {
     return divNodo;
 }
 
-function attivaSincronia(testo, nodo) {
+function attivaSincronia(testo, nodo, dati, tipoPadre) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
@@ -492,7 +493,6 @@ function attivaSincronia(testo, nodo) {
     nodo.addEventListener('mouseenter', () => {
         nodo.classList.add('nodo-attivo');
         testo.classList.add('evidenziato');
-        testo.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
     });
     
     nodo.addEventListener('mouseleave', () => {
@@ -502,42 +502,91 @@ function attivaSincronia(testo, nodo) {
         }
     });
 
-    function toggleSincronizzato(evento) {
-        if (document.body.classList.contains('modalita-algoritmo')) {
-            evento.stopPropagation();
-            const eraAperto = testoStep.classList.contains('mostra-testo-popup');
-            
-            document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
-            document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
-            document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
-            
-            if (!eraAperto) {
-                testoStep.classList.add('mostra-testo-popup');
-                testo.classList.add('evidenziato');
-                nodo.classList.add('nodo-attivo');
+    let timerTocco = null;
+    let tocchi = 0;
+
+    function gestisciInterazione(evento) {
+        evento.stopPropagation();
+        tocchi++; 
+
+        if (tocchi === 1) {
+            timerTocco = setTimeout(() => {
+                tocchi = 0; 
                 
-                if (evento.currentTarget === numeroStep) {
-                    nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const match = dati.step_id.match(/step-\d+([ab])$/);
+                
+                // Magia di spegnimento (SOLO se è un bivio)
+                if (match && tipoPadre === 'bivio') {
+                    const lettera = match[1];
+                    const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+                    const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+
+                    document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                        el.classList.add('mostra-step');
+                        el.classList.remove('nascosto-step');
+                    });
+                    document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                        el.classList.remove('mostra-step');
+                        el.classList.add('nascosto-step');
+                    });
+
+                    const containerOpposto = document.getElementById('testo-' + idOpposto);
+                    const nodoOpposto = document.getElementById('nodo-' + idOpposto);
+                    if (containerOpposto) containerOpposto.classList.add('nascosto-step');
+                    if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
+
+                    const containerAttuale = document.getElementById('testo-' + dati.step_id);
+                    if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+                    if (nodo) nodo.classList.remove('nascosto-step');
                 }
+
+                if (document.body.classList.contains('modalita-algoritmo')) {
+                    const eraAperto = testoStep.classList.contains('mostra-testo-popup');
+                    
+                    document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
+                    document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
+                    document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
+                    
+                    if (!eraAperto) {
+                        testoStep.classList.add('mostra-testo-popup');
+                        testo.classList.add('evidenziato');
+                        nodo.classList.add('nodo-attivo');
+                        
+                        if (evento.currentTarget === nodo) {
+                            nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else {
+                            testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            }, 250); 
+            
+        } else if (tocchi === 2) {
+            clearTimeout(timerTocco); 
+            tocchi = 0; 
+            
+            // Cancello di sicurezza
+            if (testo.classList.contains('nascosto-step') || 
+               (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
+                return; 
+            }
+            
+            const completato = testoStep.classList.contains('testo-barrato');
+            
+            if (!completato) {
+                testoStep.classList.add('testo-barrato');
+                if(numeroStep) numeroStep.classList.add('numero-barrato');
+                if(nodo) nodo.classList.add('nodo-completato');
+            } else {
+                testoStep.classList.remove('testo-barrato');
+                if(numeroStep) numeroStep.classList.remove('numero-barrato');
+                if(nodo) nodo.classList.remove('nodo-completato');
             }
         }
     }
 
-    if (numeroStep) numeroStep.addEventListener('click', toggleSincronizzato);
-    nodo.addEventListener('click', toggleSincronizzato);
-
-    if (testoStep) {
-        testoStep.addEventListener('click', (evento) => {
-            if (document.body.classList.contains('modalita-algoritmo')) {
-                evento.stopPropagation();
-                testoStep.classList.remove('mostra-testo-popup');
-                testo.classList.remove('evidenziato');
-                nodo.classList.remove('nodo-attivo');
-            }
-        });
-    }
+    testo.addEventListener('click', gestisciInterazione);
+    nodo.addEventListener('click', gestisciInterazione);
 }
 
 function cambiaVista() {

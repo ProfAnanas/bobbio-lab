@@ -1,0 +1,38 @@
+{
+    "id": "americano",
+    "titolo": "Americano",
+    "nota_dosi": "Old fashioned",
+    "garnish": "Fettina d'arancia e buccia di limone",
+    "foto": "assets/foto-sala/Americano_cocktail.jpg",
+    "ingredienti": [
+        {
+            "quantita": 30,
+            "unita_descrizione": "ml Bitter Campari"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "ml Vermouth rosso"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Splash di Soda"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Versare direttamente nel bicchiere colmo di ghiaccio il vermouth rosso e il bitter",
+            "icona": "build"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Colmare con la soda",
+            "icona": "fill"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Decorare con fettina d'arancia e buccia di limone",
+            "icona": "garnish"
+        }
+    ]
+}

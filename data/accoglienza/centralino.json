@@ -1,0 +1,94 @@
+{
+    "id": "centralino",
+    "titolo": "Gestione del centralino",
+    "frasi_chiave": [
+        {
+            "contesto": "Chiamata esterna",
+            "testo": "Istituto Alberghiero, buongiorno, sono l’allievo NOME, in che cosa posso esserLe utile?"
+        },
+        {
+            "contesto": "Chiamata interna",
+            "testo": "Reception buongiorno, sono l’allievo NOME, in che cosa posso esserLe utile?"
+        },
+        {
+            "contesto": "Identificazione (Se richiesto)",
+            "testo": "Chi la desidera, per cortesia?"
+        },
+        {
+            "contesto": "Messa in attesa",
+            "testo": "Attenda in linea, grazie."
+        },
+        {
+            "contesto": "Inoltro chiamata",
+            "testo": "Buongiorno, il Sig. X gradisce parlare con Lei, posso inoltrare la chiamata?"
+        },
+        {
+            "contesto": "Destinatario occupato",
+            "testo": "In questo momento la Vicepreside/Professore è impegnata/o, La preghiamo di richiamare più tardi o, se preferisce, può lasciare un messaggio."
+        },
+        {
+            "contesto": "Presa messaggio",
+            "testo": "Può lasciarmi gentilmente il Suo recapito telefonico? Informeremo al più presto il destinatario."
+        },
+        {
+            "contesto": "Congedo finale",
+            "testo": "Le auguro una buona giornata."
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Rispondere alla chiamata entro il terzo squillo. Mantenere la cornetta a circa 5 cm dalla bocca e utilizzare il \"sorriso telefonico\".",
+            "icona": "telefono"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "condizione": "a",
+                    "testo": "Se la chiamata arriva dall'esterno (es. genitori, fornitori), presentarsi con la formula completa per le chiamate esterne.",
+                    "icona": "esterno"
+                },
+                {
+                    "step_id": "step-2b",
+                    "condizione": "b",
+                    "testo": "Se la chiamata arriva dall'interno (es. aule, laboratori), usare la formula rapida per la reception.",
+                    "icona": "interno"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Ascoltare la richiesta. Se l'interlocutore chiede di parlare con qualcuno, procedere con l'identificazione chiedendo chi lo desidera.",
+            "icona": "ascolto"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Dopo che l'utente si è presentato, metterlo in attesa premendo il tasto HOLD sulla pulsantiera.",
+            "icona": "attesa"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-5a",
+                    "condizione": "a",
+                    "testo": "Se il destinatario è disponibile, premere l'interno, annunciare la chiamata e riagganciare solo dopo averla passata.",
+                    "icona": "inoltro"
+                },
+                {
+                    "step_id": "step-5b",
+                    "condizione": "b",
+                    "testo": "Se il destinatario è impegnato (In lezione, riunione), comunicare l'indisponibilità e proporre di richiamare o lasciare un messaggio.",
+                    "icona": "occupato"
+                }
+            ]
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Se il cliente lascia un messaggio, prendere nota del recapito e rassicurarlo. Concludere la chiamata augurando buona giornata e agganciando per ultimi.",
+            "icona": "messaggio"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Laboratorio di accoglienza</title>
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+</head>
+<body>
+    <header class="header-app">
+        <h1>Accoglienza turistica</h1>
+        <button class="tasto-app" onclick="window.location.href='index.html'">Torna all'hub</button>
+    </header>
+
+    <main class="contenitore-principale">
+        <section id="pannello-controllo">
+            <input type="text" id="campo-ricerca" placeholder="Cerca procedura (es. Centralino)..." class="input-ricerca">
+        </section>
+
+        <div id="griglia-menu">
+            <p style="text-align: center;">Caricamento procedure in corso...</p>
+        </div>
+
+        <div id="vista-ricetta" style="display: none;">
+            <div class="intestazione-ricetta">
+                <h2 id="titolo-ricetta-corrente">Nome procedura</h2>
+                <div class="comandi-ricetta">
+                    <button class="tasto-app tasto-secondario" onclick="chiudiAlgoritmo()">Torna alle procedure</button>
+                    <button class="tasto-app tasto-evidenza" id="pulsante-toggle-vista" onclick="cambiaVista()">Mostra diagramma</button>
+                </div>
+            </div>
+
+            <div id="plancia-doppia">
+                <div id="pannello-ingredienti">
+                    <h3>Frasi chiave (Il gobbo)</h3>
+                    <ul id="lista-gobbo" class="lista-stile-gobbo"></ul>
+                </div>
+
+                <div id="pannello-testo">
+                    <div id="lista-procedimento"></div>
+                </div>
+
+                <div id="pannello-algoritmo"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/accoglienza.js?v=1.0"></script>
+</body>
+</html>
