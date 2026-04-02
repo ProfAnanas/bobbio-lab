@@ -137,9 +137,10 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
             if (passaggio.tipo === 'bivio') {
                 const divBivioTesto = document.createElement('div');
                 divBivioTesto.classList.add('blocco-bivio-testo');
-                // divBivioNodi Logic Removed
                 
-                // FIX: Iterate through branches and correctly pass TYPE and DATA to activaSincronia
+                // Catturiamo lo scopo dal JSON (se non c'è, è 'locale')
+                const scopoBivio = passaggio.scopo || 'locale';
+
                 passaggio.rami.forEach((ramo, indiceRamo) => {
                     const stepTesto = creaTestoSinistra(ramo);
                     divBivioTesto.appendChild(stepTesto);
@@ -149,12 +150,10 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
                         divisore.classList.add('divisore-bivio');
                         divisore.innerHTML = '<span>oppure:</span>';
                         divBivioTesto.appendChild(divisore);
-                        // divisoreNodo logic removed
                     }
-                    // creaNodoDestra logic removed
-
-                    // Crucial Fix: Pass types/dati for tap functionality in bivio (NODE ARGUMENT REMOVED)
-                    attivaSincronia(stepTesto, ramo, 'bivio'); 
+                    
+                    // Passiamo il parametro scopoBivio alla funzione dei tocchi!
+                    attivaSincronia(stepTesto, ramo, 'bivio', scopoBivio); 
                 });
                 
                 listaProcedimento.appendChild(divBivioTesto);
@@ -214,11 +213,10 @@ function creaTestoSinistra(dati) {
 // creaNodoDestra function logic removed
 
 // Updated signature: NO NODE passed. Node listeners removed.
-function attivaSincronia(testo, dati, tipoPadre) {
+function attivaSincronia(testo, dati, tipoPadre, scopoBivio = 'locale') {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
-    // Highlighter on text only (hover state defined in CSS)
     testo.addEventListener('mouseenter', () => testo.classList.add('evidenziato'));
     testo.addEventListener('mouseleave', () => testo.classList.remove('evidenziato'));
 
@@ -228,49 +226,48 @@ function attivaSincronia(testo, dati, tipoPadre) {
     function gestisciInterazione(evento) {
         evento.stopPropagation();
         
-        // Disable selection during tap processing
         testo.style.userSelect = 'none';
         testo.style.webkitUserSelect = 'none';
-
         tocchi++; 
 
         if (tocchi === 1) {
             timerTocco = setTimeout(() => {
                 tocchi = 0; 
-                testo.style.userSelect = 'auto'; // restore
+                testo.style.userSelect = 'auto';
                 testo.style.webkitUserSelect = 'auto';
 
                 const match = dati.step_id.match(/step-\d+([ab])$/);
                 
-                // FIX: Handling tap functionality inside bivio without diagram nodes
                 if (match && tipoPadre === 'bivio') {
                     const lettera = match[1];
                     const letteraOpposta = lettera === 'a' ? 'b' : 'a';
                     const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
 
-                    // Show standard procedure classes condition-a text elements
-                    document.querySelectorAll('.condizione-' + lettera).forEach(el => { el.classList.add('mostra-step'); el.classList.remove('nascosto-step'); });
-                    document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => { el.classList.remove('mostra-step'); el.classList.add('nascosto-step'); });
-
-                    // Handle specific text container ID hiding (for the branching step itself)
-                    const containerOpposto = document.getElementById('testo-' + idOpposto);
-                    if (containerOpposto) containerOpposto.classList.add('nascosto-step');
-
-                    const containerAttuale = document.getElementById('testo-' + dati.step_id);
-                    if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+                    // SMISTATORE LOGICO: Globale vs Locale
+                    if (scopoBivio === 'globale') {
+                        document.querySelectorAll('.condizione-' + lettera).forEach(el => { el.classList.add('mostra-step'); el.classList.remove('nascosto-step'); });
+                        document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => { el.classList.remove('mostra-step'); el.classList.add('nascosto-step'); });
+                    } else {
+                        const containerOpposto = document.getElementById('testo-' + idOpposto);
+                        if (containerOpposto) {
+                            containerOpposto.classList.add('nascosto-step');
+                            containerOpposto.classList.remove('mostra-step');
+                        }
+                        const containerAttuale = document.getElementById('testo-' + dati.step_id);
+                        if (containerAttuale) {
+                            containerAttuale.classList.remove('nascosto-step');
+                            containerAttuale.classList.add('mostra-step');
+                        }
+                    }
                 }
-
-                // Diagram interaction logic removed
-                // Popup handling logic removed as diagram is disabled.
             }, 250); 
             
         } else if (tocchi === 2) {
             clearTimeout(timerTocco); 
             tocchi = 0; 
-            testo.style.userSelect = 'auto'; // restore
+            testo.style.userSelect = 'auto';
             testo.style.webkitUserSelect = 'auto';
             
-            // Cancello di sicurezza: Target completion strike on text container.
             if (testo.classList.contains('nascosto-step') || (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) return; 
             
             const completato = testoStep.classList.contains('testo-barrato');
