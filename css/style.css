@@ -991,10 +991,11 @@ body.modalita-algoritmo .badge-nota-dosi {
 /* Colori specifici per differenziare a colpo d'occhio le aree */
 .card-enog:hover { border-color: #f39c12; }
 .card-sala:hover { border-color: #9b59b6; }
-.card-accoglienza { opacity: 0.7; cursor: default; } /* Opacità abbassata perché è in lavorazione */
-.card-accoglienza:hover { transform: none; box-shadow: 0 8px 15px rgba(0,0,0,0.05); }
+.card-accoglienza:hover { border-color: #f1c40f; } /* Bordo oro scuro per accoglienza */
 
-/* Badge per le sezioni non ancora attive */
+/* Ho ELIMINATO il blocco .card-accoglienza che fissava l'opacità a 0.7 e bloccava l'hover */
+
+/* Badge per le sezioni non ancora attive (lo teniamo nel css, magari in futuro aggiungi un quarto laboratorio!) */
 .badge-futuro {
     position: absolute;
     top: 15px;

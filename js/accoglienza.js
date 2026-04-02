@@ -77,23 +77,24 @@ function disegnaGrigliaMenu(catalogo) {
     });
 }
 
-// --- 4. LOGICA DELLA PROCEDURA E ALGORITMO ---
+// --- 4. LOGICA DELLA PROCEDURA E PROCEDIMENTO (Diagramma Visivo RIMOSSO) ---
 async function apriProcedura(idProc, urlDati, nomeProc) {
     document.getElementById('griglia-menu').style.display = 'none';
     document.getElementById('pannello-controllo').style.display = 'none';
     document.getElementById('vista-ricetta').style.display = 'block';
     document.getElementById('titolo-ricetta-corrente').textContent = nomeProc;
     
-    document.body.classList.remove('modalita-algoritmo');
-    document.getElementById('pulsante-toggle-vista').textContent = 'Mostra diagramma';
+    // Rimosse regole per modalita-algoritmo e pulsante toggle
+    // document.body.classList.remove('modalita-algoritmo');
+    // document.getElementById('pulsante-toggle-vista').textContent = 'Mostra diagramma';
     
     const listaGobbo = document.getElementById('lista-gobbo');
     const listaProcedimento = document.getElementById('lista-procedimento');
-    const pannelloAlgoritmo = document.getElementById('pannello-algoritmo');
+    // const pannelloAlgoritmo = document.getElementById('pannello-algoritmo'); // Diagram panel removed
     
     listaGobbo.innerHTML = '<li style="text-align: center;">Caricamento...</li>';
     listaProcedimento.innerHTML = '';
-    pannelloAlgoritmo.innerHTML = '';
+    // pannelloAlgoritmo.innerHTML = ''; // Diagram panel removed
     
     try {
         const response = await fetch(urlDati + '?v=' + new Date().getTime());
@@ -111,14 +112,14 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
             });
         }
         
-        // --- MOTORE PROCEDIMENTO (Identico a cucina/sala) ---
+        // --- MOTORE PROCEDIMENTO (Identico a cucina/sala, but text only appended) ---
         procedura.procedimento.forEach(passaggio => {
             if (passaggio.tipo === 'bivio') {
                 const divBivioTesto = document.createElement('div');
                 divBivioTesto.classList.add('blocco-bivio-testo');
-                const divBivioNodi = document.createElement('div');
-                divBivioNodi.classList.add('contenitore-bivio-visivo');
+                // divBivioNodi Logic Removed
                 
+                // FIX: Iterate through branches and correctly pass TYPE and DATA to activaSincronia
                 passaggio.rami.forEach((ramo, indiceRamo) => {
                     const stepTesto = creaTestoSinistra(ramo);
                     divBivioTesto.appendChild(stepTesto);
@@ -128,35 +129,37 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
                         divisore.classList.add('divisore-bivio');
                         divisore.innerHTML = '<span>oppure:</span>';
                         divBivioTesto.appendChild(divisore);
-
-                        const divisoreNodo = document.createElement('div');
-                        divisoreNodo.classList.add('divisore-bivio-nodo');
-                        divisoreNodo.textContent = 'O'; 
-                        divBivioNodi.appendChild(divisoreNodo);
+                        // divisoreNodo logic removed
                     }
-                    
-                    const divNodo = creaNodoDestra(ramo);
-                    divNodo.classList.add('nodo-ramo');
-                    divBivioNodi.appendChild(divNodo);
-                    
-                    attivaSincronia(stepTesto, divNodo, ramo, 'bivio');
+                    // creaNodoDestra logic removed
+
+                    // Crucial Fix: Pass types/dati for tap functionality in bivio (NODE ARGUMENT REMOVED)
+                    attivaSincronia(stepTesto, ramo, 'bivio'); 
                 });
                 
                 listaProcedimento.appendChild(divBivioTesto);
-                pannelloAlgoritmo.appendChild(divBivioNodi);
+                // pannelloAlgoritmo logic removed
+
+            } else if (passaggio.tipo === 'parallelo') {
+                 // Logic simplified for parallel text flow, strike-through handles completion
+                 passaggio.rami.forEach(ramo => {
+                     const stepTesto = creaTestoSinistra(ramo);
+                     listaProcedimento.appendChild(stepTesto);
+                     // attivaSincronia flat or strike only logic if diagram gone
+                      attivaSincronia(stepTesto, ramo, 'parallelo'); 
+                 });
 
             } else {
                 const stepTesto = creaTestoSinistra(passaggio);
                 listaProcedimento.appendChild(stepTesto);
-                const divNodo = creaNodoDestra(passaggio);
-                pannelloAlgoritmo.appendChild(divNodo);
-                
-                attivaSincronia(stepTesto, divNodo, passaggio, 'singolo');
+                // creaNodoDestra logic removed
+                attivaSincronia(stepTesto, passaggio, 'singolo'); 
             }
         });
 
     } catch (error) {
         listaGobbo.innerHTML = '<li>Errore caricamento dati.</li>';
+        listaProcedimento.innerHTML = '<li>Errore caricamento dati.</li>';
     }
 }
 
@@ -188,118 +191,80 @@ function creaTestoSinistra(dati) {
     return stepContainer;
 }
 
-function creaNodoDestra(dati) {
-    const divNodo = document.createElement('div');
-    divNodo.classList.add('nodo-visivo');
-    divNodo.id = 'nodo-' + dati.step_id;
-    
-    if (dati.condizione) divNodo.classList.add('blocco-condizionato', 'condizione-' + dati.condizione);
-    
-    if (dati.icona) {
-        divNodo.classList.add('tipo-' + dati.icona, 'step-' + dati.icona); 
-        const divIcona = document.createElement('div');
-        divIcona.classList.add('icona-principale');
-        const imgIcona = document.createElement('img');
-        
-        imgIcona.src = `assets/icone-accoglienza/${dati.icona}.svg`; 
-        imgIcona.onerror = () => { console.warn(`Icona mancante: ${dati.icona}.svg`); };
-        
-        divIcona.appendChild(imgIcona);
-        divNodo.appendChild(divIcona);
-    } else {
-        const testoPlaceholder = document.createElement('div');
-        testoPlaceholder.textContent = "Step " + dati.step_id.replace('step-', '');
-        divNodo.appendChild(testoPlaceholder);
-    }
-    return divNodo;
-}
+// creaNodoDestra function logic removed
 
-function attivaSincronia(testo, nodo, dati, tipoPadre) {
+// Updated signature: NO NODE passed. Node listeners removed.
+function attivaSincronia(testo, dati, tipoPadre) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
-    testo.addEventListener('mouseenter', () => { testo.classList.add('evidenziato'); nodo.classList.add('nodo-attivo'); });
-    testo.addEventListener('mouseleave', () => { if (!testoStep.classList.contains('mostra-testo-popup')) { testo.classList.remove('evidenziato'); nodo.classList.remove('nodo-attivo'); } });
-    nodo.addEventListener('mouseenter', () => { nodo.classList.add('nodo-attivo'); testo.classList.add('evidenziato'); });
-    nodo.addEventListener('mouseleave', () => { if (!testoStep.classList.contains('mostra-testo-popup')) { nodo.classList.remove('nodo-attivo'); testo.classList.remove('evidenziato'); } });
+    // Highlighter on text only (hover state defined in CSS)
+    testo.addEventListener('mouseenter', () => testo.classList.add('evidenziato'));
+    testo.addEventListener('mouseleave', () => testo.classList.remove('evidenziato'));
 
     let timerTocco = null;
     let tocchi = 0;
 
     function gestisciInterazione(evento) {
         evento.stopPropagation();
+        
+        // Disable selection during tap processing
+        testo.style.userSelect = 'none';
+        testo.style.webkitUserSelect = 'none';
+
         tocchi++; 
 
         if (tocchi === 1) {
             timerTocco = setTimeout(() => {
                 tocchi = 0; 
+                testo.style.userSelect = 'auto'; // restore
+                testo.style.webkitUserSelect = 'auto';
+
                 const match = dati.step_id.match(/step-\d+([ab])$/);
                 
+                // FIX: Handling tap functionality inside bivio without diagram nodes
                 if (match && tipoPadre === 'bivio') {
                     const lettera = match[1];
                     const letteraOpposta = lettera === 'a' ? 'b' : 'a';
                     const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
 
+                    // Show standard procedure classes condition-a text elements
                     document.querySelectorAll('.condizione-' + lettera).forEach(el => { el.classList.add('mostra-step'); el.classList.remove('nascosto-step'); });
                     document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => { el.classList.remove('mostra-step'); el.classList.add('nascosto-step'); });
 
+                    // Handle specific text container ID hiding (for the branching step itself)
                     const containerOpposto = document.getElementById('testo-' + idOpposto);
-                    const nodoOpposto = document.getElementById('nodo-' + idOpposto);
                     if (containerOpposto) containerOpposto.classList.add('nascosto-step');
-                    if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
 
                     const containerAttuale = document.getElementById('testo-' + dati.step_id);
                     if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
-                    if (nodo) nodo.classList.remove('nascosto-step');
                 }
 
-                if (document.body.classList.contains('modalita-algoritmo')) {
-                    const eraAperto = testoStep.classList.contains('mostra-testo-popup');
-                    document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
-                    document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
-                    document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
-                    
-                    if (!eraAperto) {
-                        testoStep.classList.add('mostra-testo-popup');
-                        testo.classList.add('evidenziato');
-                        nodo.classList.add('nodo-attivo');
-                        if (evento.currentTarget === nodo) nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        else testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
-                }
+                // Diagram interaction logic removed
+                // Popup handling logic removed as diagram is disabled.
             }, 250); 
             
         } else if (tocchi === 2) {
             clearTimeout(timerTocco); 
             tocchi = 0; 
+            testo.style.userSelect = 'auto'; // restore
+            testo.style.webkitUserSelect = 'auto';
+            
+            // Cancello di sicurezza: Target completion strike on text container.
             if (testo.classList.contains('nascosto-step') || (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) return; 
             
             const completato = testoStep.classList.contains('testo-barrato');
             if (!completato) {
                 testoStep.classList.add('testo-barrato');
                 if(numeroStep) numeroStep.classList.add('numero-barrato');
-                if(nodo) nodo.classList.add('nodo-completato');
             } else {
                 testoStep.classList.remove('testo-barrato');
                 if(numeroStep) numeroStep.classList.remove('numero-barrato');
-                if(nodo) nodo.classList.remove('nodo-completato');
             }
         }
     }
 
     testo.addEventListener('click', gestisciInterazione);
-    nodo.addEventListener('click', gestisciInterazione);
 }
 
-function cambiaVista() {
-    const body = document.body;
-    const btn = document.getElementById('pulsante-toggle-vista');
-    body.classList.toggle('modalita-algoritmo');
-
-    if (body.classList.contains('modalita-algoritmo')) {
-        btn.textContent = 'Mostra cruscotto testuale';
-    } else {
-        btn.textContent = 'Mostra diagramma';
-        document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
-    }
-}
+// cambiaVista function logic removed
