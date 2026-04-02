@@ -54,28 +54,33 @@ function disegnaGrigliaMenu(catalogo) {
         const detailsCat = document.createElement('details');
         detailsCat.classList.add('blocco-categoria');
         
+        // Teniamo la categoria già aperta di default per mostrare subito la dashboard!
+        detailsCat.open = true; 
+        
         const summaryCat = document.createElement('summary');
         summaryCat.textContent = categoria.nome_categoria;
         detailsCat.appendChild(summaryCat);
 
-        // QUI CAMBIA LA MAGIA: Usiamo la nuova griglia a quadratoni
         const divProcedure = document.createElement('div');
         divProcedure.classList.add('griglia-bottoni-accoglienza');
 
         categoria.procedure.forEach(proc => {
             const bottone = document.createElement('button');
             bottone.classList.add('bottone-quadrato-accoglienza');
+            
+            // ECCO IL PEZZO MANCANTE CHE ROMPEVA IL FILTRO INVISIBILE
+            bottone.classList.add('btn-ricetta'); 
+            
             bottone.setAttribute('data-tag', String(proc.tag || '').toLowerCase());
             bottone.setAttribute('data-nome', String(proc.nome).toLowerCase());
             
-            // 1. Creiamo l'immagine centrale
+            // Creiamo l'immagine centrale
             const img = document.createElement('img');
-            // Se non c'è nel JSON, prova a caricare default.png per non rompere nulla
             img.src = `assets/accoglienza/${proc.icona || 'default.png'}`; 
             img.alt = proc.nome;
             img.classList.add('icona-bottone-accoglienza');
 
-            // 2. Creiamo il testo in basso
+            // Creiamo il testo in basso
             const testo = document.createElement('span');
             testo.textContent = proc.nome;
 
