@@ -1237,7 +1237,6 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
    ========================================= */
 .blocco-condizionato {
     opacity: 0.35; 
-    pointer-events: none; 
     transition: all 0.4s ease; 
     filter: grayscale(80%); 
 }
