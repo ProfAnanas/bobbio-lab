@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Laboratorio di accoglienza</title>
-    <link rel="stylesheet" href="css/style.css?v=2.5">
+    <link rel="stylesheet" href="css/style.css?v=2.7">
 </head>
 <body class="body-accoglienza"> 
-    <header class="header-app">
+    
+    <header style="text-align: center; padding: 20px 0;">
         <h1>Accoglienza turistica</h1>
-        <button class="tasto-app" onclick="window.location.href='index.html'">Torna all'hub</button>
+        
+        <div id="pannello-controllo" style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto;">
+            
+            <div class="gruppo-tasti-app" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; width: 100%;">
+                <a href="index.html" class="tasto-app tasto-home" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">🏠 Home</a>
+                
+                <button id="btn-sync" class="tasto-app" onclick="window.location.reload(true)">☁️ Scarica materiale</button>
+                
+                <a href="glossario_accoglienza.html" class="tasto-app" style="background-color: #d39e00; color: white; text-decoration: none; display: flex; align-items: center; justify-content: center;">📖 Glossario tecnico</a>
+                
+                <button id="btn-wake-lock" class="tasto-app">🌙 Schermo</button>
+            </div>
+
+            <div style="width: 100%; padding: 0 15px; box-sizing: border-box;">
+                <input type="text" id="campo-ricerca" placeholder="Cerca procedura (es. centralino, booking)..." style="width: 100%; box-sizing: border-box; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+            </div>
+
+        </div>
     </header>
 
     <main class="contenitore-principale">
-        <section id="pannello-controllo" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
-            <input type="text" id="campo-ricerca" placeholder="Cerca procedura..." class="input-ricerca" style="flex-grow: 1; min-width: 200px;">
-            <button class="tasto-app" onclick="window.location.href='glossario_accoglienza.html'" style="background-color: #d39e00; color: white; border: none; flex-grow: 1; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                📖 Glossario
-            </button>
-        </section>
-
         <div id="griglia-menu">
             <p style="text-align: center;">Caricamento procedure in corso...</p>
         </div>
@@ -45,6 +56,6 @@
         </div>
     </main>
 
-    <script src="js/accoglienza.js?v=2.4"></script>
+    <script src="js/accoglienza.js?v=2.7"></script>
 </body>
 </html>

@@ -340,3 +340,49 @@ function mostraDefinizioneAccoglienza(termine) {
         setTimeout(() => popup.remove(), 400);
     }, 6000); // Lo lasciamo visibile per 6 secondi per dare tempo di leggere
 }
+// --- 8. FUNZIONE SCHERMO SEMPRE ON (Wake Lock API) ---
+let bloccoSchermo = null;
+
+async function attivaSchermo() {
+    const btnWakeLock = document.getElementById('btn-wake-lock'); 
+    
+    if (!('wakeLock' in navigator)) {
+        alert("Il browser di questo dispositivo non supporta lo schermo sempre acceso.");
+        return;
+    }
+
+    try {
+        if (bloccoSchermo !== null) {
+            // Spegne il blocco
+            await bloccoSchermo.release();
+            bloccoSchermo = null;
+            if (btnWakeLock) {
+                btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                btnWakeLock.classList.remove('attivo');
+            }
+        } else {
+            // Accende il blocco
+            bloccoSchermo = await navigator.wakeLock.request('screen');
+            if (btnWakeLock) {
+                btnWakeLock.textContent = '☀️ Schermo: SEMPRE ACCESO';
+                btnWakeLock.classList.add('attivo');
+            }
+            
+            bloccoSchermo.addEventListener('release', () => {
+                bloccoSchermo = null;
+                if (btnWakeLock) {
+                    btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                    btnWakeLock.classList.remove('attivo');
+                }
+            });
+        }
+    } catch (errore) {
+        alert("Impossibile attivare lo schermo: " + errore.message);
+    }
+}
+
+// Colleghiamo "l'interruttore" al bottone
+const bottoneSchermo = document.getElementById('btn-wake-lock');
+if (bottoneSchermo) {
+    bottoneSchermo.addEventListener('click', attivaSchermo);
+}
