@@ -42,7 +42,7 @@
     async function caricaDati() {
         try {
             // Assicurati che il percorso del file JSON corrisponda a quello che hai creato!
-            const response = await fetch('data/accoglienza/glossario.json?v=' + new Date().getTime());
+            const response = await fetch('data/accoglienza/glossario-accoglienza.json?v=' + new Date().getTime());
             if (!response.ok) throw new Error("File non trovato");
             dizionario = await response.json();
             stampaTermini('');

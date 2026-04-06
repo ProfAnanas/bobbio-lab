@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function caricaGlossarioAccoglienza() {
     try {
-        const response = await fetch('data/accoglienza/glossario.json?v=' + new Date().getTime());
+        const response = await fetch('data/accoglienza/glossario-accoglienza.json?v=' + new Date().getTime());
         if (response.ok) {
             glossarioAccoglienza = await response.json();
         }

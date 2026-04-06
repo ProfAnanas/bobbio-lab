@@ -45,7 +45,7 @@
         },
         {
             "quantita": 400,
-            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`crema-pasticcera`, `data/ricette/crema-pasticcera.json`, `Crema Pasticcera`)\">Crema pasticcera</span>"
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`crema-pasticcera`, `data/ricette/crema_pasticcera.json`, `Crema Pasticcera`)\">Crema pasticcera</span>"
         },
         {
             "quantita": 400,
