@@ -1233,6 +1233,21 @@ body.modalita-algoritmo #contenitore-foto-spoiler {
     color: #d35400 !important; /* Forza L'Arancione Sul Titolo */
 }
 /* =========================================
+   Glossario Accoglienza Turistica
+   ========================================= */
+
+.termine-accoglienza {
+    color: #d39e00; /* Un oro scuro, ben leggibile sul bianco */
+    border-bottom: 2px dotted #d39e00;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.termine-accoglienza:hover {
+    background-color: #fffdf5;
+    border-radius: 3px;
+}
+/* =========================================
    Logica Bivio Interattivo (Trasparenza e Scelte)
    ========================================= */
 .blocco-condizionato {

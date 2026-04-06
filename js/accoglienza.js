@@ -1,3 +1,5 @@
+let glossarioAccoglienza = {}; // Variabile per memorizzare il dizionario
+
 // --- 1. AVVIO E COLLEGAMENTO SENSORI ---
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('griglia-menu')) {
@@ -5,7 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const campoRicerca = document.getElementById('campo-ricerca');
     if (campoRicerca) campoRicerca.addEventListener('input', applicaFiltriAccoglienza);
+
+    // Carica il dizionario all'avvio dell'app
+    caricaGlossarioAccoglienza();
 });
+
+async function caricaGlossarioAccoglienza() {
+    try {
+        const response = await fetch('data/accoglienza/glossario.json?v=' + new Date().getTime());
+        if (response.ok) {
+            glossarioAccoglienza = await response.json();
+        }
+    } catch (error) {
+        console.warn('File glossario.json non trovato.');
+    }
+}
 
 // --- 2. LOGICA DI RICERCA ---
 function applicaFiltriAccoglienza() {
@@ -104,17 +120,11 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
     document.getElementById('vista-ricetta').style.display = 'block';
     document.getElementById('titolo-ricetta-corrente').textContent = nomeProc;
     
-    // Rimosse regole per modalita-algoritmo e pulsante toggle
-    // document.body.classList.remove('modalita-algoritmo');
-    // document.getElementById('pulsante-toggle-vista').textContent = 'Mostra diagramma';
-    
     const listaGobbo = document.getElementById('lista-gobbo');
     const listaProcedimento = document.getElementById('lista-procedimento');
-    // const pannelloAlgoritmo = document.getElementById('pannello-algoritmo'); // Diagram panel removed
     
     listaGobbo.innerHTML = '<li style="text-align: center;">Caricamento...</li>';
     listaProcedimento.innerHTML = '';
-    // pannelloAlgoritmo.innerHTML = ''; // Diagram panel removed
     
     try {
         const response = await fetch(urlDati + '?v=' + new Date().getTime());
@@ -127,12 +137,13 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
             procedura.frasi_chiave.forEach(frase => {
                 const li = document.createElement('li');
                 li.classList.add('riga-nota-ingrediente'); // Usiamo lo stile base per ora
-                li.innerHTML = `<strong>${frase.contesto}:</strong><br><span style="font-size: 1.1em; color: #d35400;">"${frase.testo}"</span>`;
+                // Applichiamo il glossario alle frasi del gobbo
+                li.innerHTML = `<strong>${frase.contesto}:</strong><br><span style="font-size: 1.1em; color: #d35400;">"${applicaGlossario(frase.testo)}"</span>`;
                 listaGobbo.appendChild(li);
             });
         }
         
-        // --- MOTORE PROCEDIMENTO (Identico a cucina/sala, but text only appended) ---
+        // --- MOTORE PROCEDIMENTO ---
         procedura.procedimento.forEach(passaggio => {
             if (passaggio.tipo === 'bivio') {
                 const divBivioTesto = document.createElement('div');
@@ -157,21 +168,17 @@ async function apriProcedura(idProc, urlDati, nomeProc) {
                 });
                 
                 listaProcedimento.appendChild(divBivioTesto);
-                // pannelloAlgoritmo logic removed
 
             } else if (passaggio.tipo === 'parallelo') {
-                 // Logic simplified for parallel text flow, strike-through handles completion
                  passaggio.rami.forEach(ramo => {
                      const stepTesto = creaTestoSinistra(ramo);
                      listaProcedimento.appendChild(stepTesto);
-                     // attivaSincronia flat or strike only logic if diagram gone
-                      attivaSincronia(stepTesto, ramo, 'parallelo'); 
+                     attivaSincronia(stepTesto, ramo, 'parallelo'); 
                  });
 
             } else {
                 const stepTesto = creaTestoSinistra(passaggio);
                 listaProcedimento.appendChild(stepTesto);
-                // creaNodoDestra logic removed
                 attivaSincronia(stepTesto, passaggio, 'singolo'); 
             }
         });
@@ -202,7 +209,8 @@ function creaTestoSinistra(dati) {
 
     const testoStep = document.createElement('div');
     testoStep.classList.add('testo-step');
-    testoStep.innerHTML = dati.testo;
+    // Applichiamo il filtro del glossario al testo prima di stamparlo
+    testoStep.innerHTML = applicaGlossario(dati.testo);
 
     stepContainer.appendChild(numeroStep);
     stepContainer.appendChild(testoStep);
@@ -210,9 +218,6 @@ function creaTestoSinistra(dati) {
     return stepContainer;
 }
 
-// creaNodoDestra function logic removed
-
-// Updated signature: NO NODE passed. Node listeners removed.
 function attivaSincronia(testo, dati, tipoPadre, scopoBivio = 'locale') {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
@@ -284,4 +289,54 @@ function attivaSincronia(testo, dati, tipoPadre, scopoBivio = 'locale') {
     testo.addEventListener('click', gestisciInterazione);
 }
 
-// cambiaVista function logic removed
+// --- 6. MOTORE DEL GLOSSARIO ---
+function applicaGlossario(testo) {
+    if (!glossarioAccoglienza || Object.keys(glossarioAccoglienza).length === 0) return testo;
+    let testoModificato = testo;
+    
+    for (const [termine, definizione] of Object.entries(glossarioAccoglienza)) {
+        // Cerca la parola e applica la TUA classe CSS
+        const regex = new RegExp(`\\b(${termine})\\b`, 'g');
+        testoModificato = testoModificato.replace(regex, `<span class="termine-accoglienza" onclick="mostraDefinizioneAccoglienza('${termine}')">$1</span>`);
+    }
+    return testoModificato;
+}
+
+function mostraDefinizioneAccoglienza(termine) {
+    const definizione = glossarioAccoglienza[termine];
+    if (!definizione) return;
+
+    // Rimuove vecchi popup
+    const vecchioPopup = document.getElementById('popup-glossario');
+    if (vecchioPopup) vecchioPopup.remove();
+
+    // Crea un popup usando uno stile coerente con il Bobbio lab
+    const popup = document.createElement('div');
+    popup.id = 'popup-glossario';
+    
+    // Stile elegante, bordo oro e sfondo chiaro
+    popup.style.position = 'fixed';
+    popup.style.bottom = '25px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.width = '85%';
+    popup.style.backgroundColor = '#fdfaed';
+    popup.style.border = '2px solid #f1c40f';
+    popup.style.borderLeft = '8px solid #f1c40f';
+    popup.style.padding = '15px 20px';
+    popup.style.borderRadius = '12px';
+    popup.style.boxShadow = '0 -5px 20px rgba(0,0,0,0.2)';
+    popup.style.zIndex = '10000';
+    popup.style.color = '#2c3e50';
+    popup.style.textAlign = 'center';
+    
+    popup.innerHTML = `<strong style="font-size: 1.1em; color: #d39e00;">${termine}</strong><br><span style="font-size: 0.95em; line-height: 1.4;">${definizione}</span>`;
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        popup.style.opacity = '0';
+        popup.style.transition = 'opacity 0.4s ease';
+        setTimeout(() => popup.remove(), 400);
+    }, 6000); // Lo lasciamo visibile per 6 secondi per dare tempo di leggere
+}

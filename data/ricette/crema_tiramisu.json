@@ -1,0 +1,148 @@
+{
+    "id": "crema_tiramisu",
+    "titolo": "Crema Tiramisù (2 varianti)",
+    "nota_dosi": "Versione con pate a bombe e con crema pasticcera",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Versione Pate a Bombe"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Mascarpone (40% grassi)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Panna fresca (35% grassi)"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Tuorli pastorizzati"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 75,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Vaniglia"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Opzionale (in caso di stratificazione o abbattimento in negativo)"
+        },
+        {
+            "quantita": 12,
+            "unita_descrizione": "g Gelatina 200 Bloom"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Versione crema pasticcera"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`crema-pasticcera`, `data/ricette/crema-pasticcera.json`, `Crema Pasticcera`)\">Crema pasticcera</span>"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Mascarpone"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Panna fresca (35%)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Opzionale"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Gelatina 200 Bloom"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Versione Pate a Bombe\nIn un pentolino preparare uno sciroppo di acqua e zucchero portandolo a 121°C.",
+                    "icona": "pentolino",
+                    "temperatura": "121°C"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Versione Crema pasticcera:\nNella planetaria munita di frusta, far stemperare la crema pasticcera fredda finchè non risulta lucida.",
+                    "icona": "frusta"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare a filo sui tuorli in planetaria mentre iniziano a schiumare.",
+            "condizione": "a",
+            "opzionale": true,
+            "icona": "frusta",
+            "velocita": "alta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Montare fino a completo raffreddamento",
+            "condizione": "a",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Lavorare il mascarpone con una marisa per renderlo cremoso e incorporarlo alla base di tuorli.",
+            "condizione": "a",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Semimontare la panna",
+            "condizione": "a",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere la panna semimontata al composto di tuorli e mascarpone con movimenti dal basso verso l'alto per massimizzare l'aria inglobata.",
+            "condizione": "a",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Se la crema serve per un dessert che necessita un abbattimento in negativo (o una stratificazione) è possibile aggiungere 12-15g di gelatina, idratata in poca acqua e aggiunta alla pate a bombe ancora calda.",
+            "condizione": "a",
+            "opzionale": true,
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Unire il mascarpone alla crema pasticcera in due volte per evitare i grumi.",
+            "condizione": "b",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Se si usa la gelatina, scioglierla in 20 g di panna calda e inserirla nel composto.",
+            "condizione": "b",
+            "opzionale": true
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Semimontare la panna fresca",
+            "condizione": "b",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Alleggerire con la panna semimontata, mantenendo la temperatura del composto tra i 10°C e i 14°C per una stabilità ottimale.",
+            "condizione": "b",
+            "icona": "mescolare"
+        }
+    ]
+}

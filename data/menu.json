@@ -114,6 +114,7 @@
             { "id": "crema_diplomatica", "nome": "Crema diplomatica", "url_dati": "data/ricette/crema_diplomatica.json", "anno": "1, 2, 3", "tag": "pasticciera, torta, pasticcera" },
             { "id": "chantilly_mascarpone", "nome": "Chantilly al mascarpone", "url_dati": "data/ricette/chantilly_mascarpone.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "bonet", "nome": "Bonet", "url_dati": "data/ricette/bonet.json", "anno": "1, 2, 3", "tag": "bunet, amaretti, piemonte" },
+            { "id": "crema_tiramisu", "nome": "Crema Tiramisù (2 varianti)", "url_dati": "data/ricette/crema_tiramisu.json", "anno": "2, 3", "tag": "tiramisu, mascarpone, savoiardi" },
             { "id": "pasticcera_salata", "nome": "Crema pasticcera salata", "url_dati": "data/ricette/pasticcera_salata.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "semolino", "nome": "Semolino (e variante al cacao)", "url_dati": "data/ricette/semolino.json", "anno": "2, 3", "tag": "piemonte, piemontese" }
           ]

@@ -1,0 +1,75 @@
+{
+    "id": "booking-telefonico",
+    "titolo": "Prenotazione telefonica",
+    "frasi_chiave": [
+        {
+            "contesto": "Apertura",
+            "testo": "Hotel Bobbio, buongiorno, sono NOME, in che cosa posso esserLe utile?"
+        },
+        {
+            "contesto": "Identificazione",
+            "testo": "Potrei sapere gentilmente il Suo nominativo?"
+        },
+        {
+            "contesto": "Messa in attesa",
+            "testo": "Attenda in linea, grazie. Verifichiamo subito la disponibilità."
+        },
+        {
+            "contesto": "Ripresa telefonata",
+            "testo": "Sig. NOME, abbiamo verificato e per il periodo da Lei richiesto abbiamo la disponibilità di..."
+        },
+        {
+            "contesto": "Congedo",
+            "testo": "Sig. NOME, La ringraziamo per aver scelto il nostro hotel e nell’attesa di riceverLa come nostro gradito ospite Le auguriamo una buona giornata."
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Rispondere alla chiamata entro il terzo squillo. Mantenere la cornetta a 5 cm dalla bocca, parlare lentamente e utilizzare il \"sorriso telefonico\".",
+            "icona": "telefono"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Se non specificato dal cliente, chiedere le informazioni chiave: periodo (arrivo e partenza), numero di notti e tipologia di arrangiamento (RO, BB, HB, FB, AI, DU).",
+            "icona": "ascolto"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Mettere in attesa con il tasto HOLD. Verificare sul planning (retino) la disponibilità incastrando le date per ottimizzare l'occupazione delle camere.",
+            "icona": "attesa"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Riprendere la telefonata usando il cognome del cliente. Offrire eventuali alternative in up-selling (es. camera superior), calcolare il prezzo dal listino e comunicarlo.",
+            "icona": "inoltro"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Se il cliente accetta, compilare il reservation form in ogni sua parte (fondamentali: numero di telefono e email). Comunicare l'eventuale imposta di soggiorno.",
+            "icona": "messaggio"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-6a",
+                    "condizione": "a",
+                    "testo": "Conferma tramite bonifico bancario: richiedere il versamento del 25% come acconto e inviare le coordinate bancarie tramite email.",
+                    "icona": "esterno"
+                },
+                {
+                    "step_id": "step-6b",
+                    "condizione": "b",
+                    "testo": "Conferma tramite carta di credito: richiedere numero carta (16 cifre), data di scadenza (MM/AA), nome titolare, CVV/CVC (3 o 4 cifre) e circuito.",
+                    "icona": "interno"
+                }
+            ]
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Riepilogare l'intera prenotazione rileggendo la scheda. Ringraziare e salutare il cliente, ricordandosi di agganciare il telefono per ultimi.",
+            "icona": "telefono"
+        }
+    ]
+}

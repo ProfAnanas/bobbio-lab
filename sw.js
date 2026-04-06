@@ -1,12 +1,19 @@
-const NOME_CACHE = 'bobbiolab-cache-v1.7.6';
+const NOME_CACHE = 'bobbiolab-cache-v1.7.7';
 
 // Elenco dei file base da salvare per far funzionare l'interfaccia offline
 const FILE_DA_SALVARE = [
     './',
-    './index.html',  // Il nostro nuovo Hub
-    './enog.html',   // La tua app principale rinominata
+    './index.html',
+    './enog.html',
+    './sala.html',
+    './accoglienza.html',
+    './glossario_cucina.html',
+    './glossario_sala.html',
+    './glossario_accoglienza.html',
     './css/style.css',
     './js/app.js',
+    './js/sala.js',
+    './js/accoglienza.js',
     './manifest.json'
 ];
 

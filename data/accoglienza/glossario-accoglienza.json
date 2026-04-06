@@ -1,0 +1,10 @@
+{
+    "RO": "Room only. Indica il solo pernottamento, senza alcun pasto incluso.",
+    "BB": "Bed and breakfast. Indica camera e prima colazione.",
+    "HB": "Half board. Mezza pensione: include camera, colazione e un pasto (di solito la cena).",
+    "FB": "Full board. Pensione completa: include camera, colazione, pranzo e cena.",
+    "AI": "All inclusive. Tutto incluso: pensione completa più bevande e servizi accessori.",
+    "DU": "Day use. Uso diurno della camera per poche ore, senza pernottamento.",
+    "Planning": "Documento (cartaceo o digitale) che rappresenta la disponibilità delle camere nel tempo.",
+    "Reservation form": "Modulo per la raccolta di tutti i dati necessari a confermare una prenotazione."
+}

@@ -5,11 +5,18 @@
             "nome_categoria": "Procedure",
             "procedure": [
                 {
-                    "id": "proc-centralino",
+                    "id": "centralino",
                     "nome": "Centralino",
                     "url_dati": "data/accoglienza/centralino.json",
                     "tag": "telefono, chiamate, reception",
                     "icona": "centralino.png"
+                },
+                {
+                    "id": "booking-telefonico",
+                    "nome": "Prenotazione telefonica",
+                    "url_dati": "data/accoglienza/booking-telefonico.json",
+                    "tag": "telefono, chiamate, prenotazione, booking, mezza pensione, pensione completa, room only",
+                    "icona": "booking.png"
                 }
             ]
         }
