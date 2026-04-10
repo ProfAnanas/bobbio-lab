@@ -76,33 +76,32 @@
         if (!inputId) return;
 
         try {
-            // INCOLLA QUI IL LINK ".CSV" CHE TI HA DATO GOOGLE FOGLI
-            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9OFdqfrexzl5zJcPHyIECZx-6Qd5S4Z1WVdDcjIn58YjBDsY4-I1JzYniPRb_wRB6YgFmqZ9x3yn3/pub?gid=213780094&single=true&output=csv';
+            // Ricordati di rimettere qui il tuo link del CSV pubblicato!
+            const csvUrl = 'INCOLLA_QUI_IL_TUO_LINK_CSV';
             
-            // Va a leggere il Foglio Google in tempo reale
             const response = await fetch(csvUrl);
             const csvText = await response.text();
 
-            // Trasforma il testo del CSV in un dizionario usabile
             const righe = csvText.split('\n');
             let database = {};
 
-            // Il ciclo parte da 1 per saltare la prima riga di intestazione del foglio (Timestamp, ecc.)
+            // Partiamo da 1 per saltare la riga dei titoli
             for (let i = 1; i < righe.length; i++) {
-                const colonne = righe[i].split(',');
-                // Assicurati che l'ID sia nella colonna B (indice 1) e il Link nella colonna C (indice 2)
-                if (colonne.length >= 3 && colonne[1] && colonne[2]) {
-                    const id = colonne[1].trim().toUpperCase();
-                    const link = colonne[2].trim();
+                // Gestisce sia la virgola che il punto e virgola come separatore
+                const colonne = righe[i].split(/,|;/);
+
+                // Controlla che la riga abbia almeno 4 colonne, poi legge indice 2 (ID) e indice 3 (Link)
+                if (colonne.length >= 4 && colonne[2] && colonne[3]) {
+                    // Rimuove eventuali virgolette di formattazione e pulisce il testo
+                    const id = colonne[2].replace(/"/g, '').trim().toUpperCase();
+                    const link = colonne[3].replace(/"/g, '').trim();
                     database[id] = link;
                 }
             }
 
             if (database[inputId]) {
-                // Se l'ID esiste nel Foglio Google, fa il redirect
                 window.location.href = database[inputId];
             } else {
-                // Se l'ID non c'è, mostra l'errore
                 messaggioErrore.style.display = 'block';
             }
         } catch (error) {
