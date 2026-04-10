@@ -99,6 +99,7 @@
           ] },
         { "nome_sottocategoria": "Choux", "preparazioni": [
           { "id": "choux", "nome": "Pasta choux", "url_dati": "data/ricette/choux.json", "anno": "1, 2, 3", "tag": "bigne, bignè" },
+          { "id": "bigne_dorin", "nome": "Bignè leggero e alveolato", "url_dati": "data/ricette/bigne_dorin.json", "anno": "1, 2, 3", "tag": "choux, bigne" },
           { "id": "bigne_craquelin", "nome": "Bignè craquelin (e variante cacao)", "url_dati": "data/ricette/bigne_craquelin.json", "anno": "3, 4, 5", "tag": "bigne, choux" },
           { "id": "eclair", "nome": "Base Eclair", "url_dati": "data/ricette/eclair.json", "anno": "3, 4, 5", "tag": "bigne, bignè, choux" },
           { "id": "profiterole", "nome": "Profiterole", "url_dati": "data/ricette/profiterole.json", "anno": "2, 3", "tag": "profitterol, profitterole, profiteroles, francia, coux, bigne" }

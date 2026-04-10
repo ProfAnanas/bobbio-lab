@@ -1,11 +1,11 @@
 {
-    "id": "choux",
-    "titolo": "Pasta choux",
-    "nota_dosi": "per circa 30-35 bignè. Perfetto per profitterol: friabile, morso corto e poco alveolato.",
+    "id": "bigne_dorin",
+    "titolo": "Bignè leggero e alveolato",
+    "nota_dosi": "circa 35 bignè. perfetto per farce ariose come chantilly, panna e mousse.",
     "ingredienti": [
         {
-            "quantita": 180,
-            "unita_descrizione": "g Uova intere"
+            "quantita": 170,
+            "unita_descrizione": "g Acqua"
         },
         {
             "quantita": 100,
@@ -13,15 +13,15 @@
         },
         {
             "quantita": 100,
-            "unita_descrizione": "g Acqua (o 50% acqua e 50% latte)"
+            "unita_descrizione": "g Farina"
         },
         {
-            "quantita": 100,
-            "unita_descrizione": "g Farina 00"
+            "quantita": 1,
+            "unita_descrizione": "pizzico sale"
         },
         {
-            "quantita": 2,
-            "unita_descrizione": "g Sale"
+            "quantita": 200,
+            "unita_descrizione": "g Uova (forse 250g)"
         }
     ],
     "procedimento": [
@@ -44,7 +44,7 @@
         },
         {
             "step_id": "step-4",
-            "testo": "Trasferire l'impasto nella planetaria e far girare finché l'impasto non raggiunga i 50°C",
+            "testo": "Trasferire l'impasto nella planetaria e far girare finché l'impasto non raggiunge i 50°C",
             "icona": "foglia",
             "temperatura": "50°C",
             "velocita": "alta"
@@ -57,16 +57,16 @@
         },
         {
             "step_id": "step-6",
-            "testo": "Formare delle semisfere da 4 g circa con una sac à poche a bocchetta liscia.",
+            "testo": "Formare delle semisfere con una sac à poche a bocchetta liscia.",
             "icona": "sac",
             "dimensione": "4g"
         },
         {
             "step_id": "step-7",
-            "testo": "Cuocere in forno a 190 °C per 10-11 minuti con valvola inizialmente chiusa, e aperta negli ultimi 3 minuti.",
+            "testo": "Cuocere in forno a 190 °C per 15-20 minuti con valvola chiusa, abbassare la temperatura a 170°C e proseguire la cottura per altri 10 minuti. Gli ultimi 3 minuti aprire la valvola.",
             "icona": "forno_statico",
-            "temperatura": "190°C",
-            "tempo": "10-11 min."
+            "temperatura": "190°C poi 170°C",
+            "tempo": "15-20 min poi 10 min."
         }
     ]
 }

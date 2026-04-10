@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portale verifiche - Norberto Bobbio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 { color: #333; font-size: 24px; margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 20px; }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #004494; }
+        #messaggioErrore {
+            color: #d9534f;
+            margin-top: 15px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Accesso alle verifiche</h1>
+        <p>Inserisci il codice ID fornito dal tuo insegnante.</p>
+        
+        <input type="text" id="codiceVerifica" placeholder="Es. PASTICC-5A" autocomplete="off">
+        <button onclick="accediAllaVerifica()">Vai alla verifica</button>
+        
+        <p id="messaggioErrore">Codice non valido o non trovato. Riprova.</p>
+    </div>
+
+<script>
+    async function accediAllaVerifica() {
+        const inputId = document.getElementById('codiceVerifica').value.trim().toUpperCase();
+        const messaggioErrore = document.getElementById('messaggioErrore');
+        
+        if (!inputId) return;
+
+        try {
+            // INCOLLA QUI IL LINK ".CSV" CHE TI HA DATO GOOGLE FOGLI
+            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/TUO_LINK_LUNGHISSIMO/pub?output=csv';
+            
+            // Va a leggere il Foglio Google in tempo reale
+            const response = await fetch(csvUrl);
+            const csvText = await response.text();
+
+            // Trasforma il testo del CSV in un dizionario usabile
+            const righe = csvText.split('\n');
+            let database = {};
+
+            // Il ciclo parte da 1 per saltare la prima riga di intestazione del foglio (Timestamp, ecc.)
+            for (let i = 1; i < righe.length; i++) {
+                const colonne = righe[i].split(',');
+                // Assicurati che l'ID sia nella colonna B (indice 1) e il Link nella colonna C (indice 2)
+                if (colonne.length >= 3 && colonne[1] && colonne[2]) {
+                    const id = colonne[1].trim().toUpperCase();
+                    const link = colonne[2].trim();
+                    database[id] = link;
+                }
+            }
+
+            if (database[inputId]) {
+                // Se l'ID esiste nel Foglio Google, fa il redirect
+                window.location.href = database[inputId];
+            } else {
+                // Se l'ID non c'è, mostra l'errore
+                messaggioErrore.style.display = 'block';
+            }
+        } catch (error) {
+            console.error("Errore di connessione a Google Fogli:", error);
+            messaggioErrore.textContent = "Errore di connessione al database scolastico.";
+            messaggioErrore.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
