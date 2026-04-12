@@ -1,0 +1,88 @@
+{
+    "id": "sable_classica",
+    "titolo": "Pasta frolla sablé",
+    "nota_dosi": "perfetta per cream tarte, biscotteria fine e crostate moderne.",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Burro freddo"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi (vaniglia, limone, arancia, ecc.)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante senza tuorli, sostituirli con:"
+        },
+        {
+            "quantita": 37,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante uova intere, sostituire i tuorli con:"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante cacao:"
+        },
+        {
+            "quantita": -50,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mettere nella planetaria, munita di foglia, farina, vaniglia e burro freddo (ma non freddissimo, a circa 10-15 °C).\nLavorare fino ad ottenere l'effetto sabbiato",
+            "icona": "foglia",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere lo zucchero e i tuorli e amalgamare all'impasto.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stendere a uno spessore di 5mm tra due fogli di carta forno.",
+            "icona": "mattarello",
+            "dimensione": "5 mm"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Lasciare riposare 2 ore in frigo.",
+            "icona": "frigorifero",
+            "tempo": "2 ore"
+        },
+        { "step_id": "step-5", "testo": "Dare alla frolla la forma desiderata.", "icona":"forma" },
+        { "step_id": "step-6", "testo": "Cuocere a 160-170°C", "icona": "forno_statico", "temperatura": "160-170°C" },
+        { "tipo": "bivio", "rami": [
+        { "step_id": "step-7a", "testo": "Un biscotto cuoce in 8-10 minuti.", "testo_nodo": "Biscotti", "tempo": "8-10 min"},
+        { "step_id": "step-7b", "testo": "Un fondo di crostata cuoce in bianco 14-16 minuti.", "testo_nodo": "Fondo crostata", "tempo": "14-16 min"}
+      ]
+    }
+    ]
+}

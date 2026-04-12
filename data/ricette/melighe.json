@@ -1,0 +1,89 @@
+{
+    "id": "melighe",
+    "titolo": "Paste di meliga (P.A.T.)",
+    "nota_dosi": "per 45-70 biscotti (a seconda della grandezza), circa 2 teglie 60x40.",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina di mais fioretto"
+        },
+        {
+            "quantita": 160,
+            "unita_descrizione": "g Zucchero semolato fine (o 50% semolato e 50% a velo)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Uova intere (circa 2 uova medie) rigorosamente a temperatura ambiente"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Lievito chimico per dolci"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a piacere (limone, vaniglia)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Fare ammorbidire il burro a pomata (24°C)",
+            "icona": "microonde",
+            "temperatura": "24°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In planetaria con la foglia (o scudo), \"cremare\" il burro morbido con lo zucchero, il sale e gli aromi per un paio di minuti, senza montare eccessivamente ma ottenendo un composto omogeneo.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Inserire le uova a filo, in più riprese, aspettando che la dose precedente sia stata assorbita prima di aggiungere la successiva, per creare un'emulsione perfetta.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+                {
+            "step_id": "step-4",
+            "testo": "Setacciare la farina 00 con il lievito e mescolarli alla farina di mais fioretto.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Inserire le polveri tutte in una volta nell'emulsione di burro e uova. Far girare la planetaria al minimo solo per i pochi secondi necessari ad amalgamare il tutto.",
+            "icona": "foglia",
+            "velocita": "minimo"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Inserire immediatamente l'impasto in un sac à poche con bocchetta rigata a stella (da 10 o 12 mm) e dressare le melighe sulla teglia foderata di carta forno, dando la classica forma a ciambellina rotonda o a esse.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far riposare le teglie in frigorifero per almeno 20-30 minuti per stabilizzare il burro e garantire il mantenimento della forma.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "20-30 min."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere in forno (preferibilmente statico) a 170-180°C per circa 15 minuti, o fino a doratura omogenea.",
+            "icona": "forno_statico",
+            "temperatura": "170-180°C",
+            "tempo": "15 min."
+        }
+    ]
+}

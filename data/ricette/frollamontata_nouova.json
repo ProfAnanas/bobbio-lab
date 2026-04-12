@@ -1,0 +1,80 @@
+{
+    "id": "frollamontata_nouova",
+    "titolo": "Frolla montata al mascarpone (senza uova)",
+    "nota_dosi": "30-60 frollini (a seconda della grandezza)",
+    "ingredienti": [
+        {
+            "quantita": 220,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 170,
+            "unita_descrizione": "g Burro morbido (20-22°C)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 65,
+            "unita_descrizione": "g Mascarpone a temperatura ambiente"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Farina di mais"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Cannella in polvere"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cioccolato sciolto a bagnomaria (o microonde) per intingere i biscotti"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria montata con la foglia, montare il burro morbido con lo zucchero e la cannella",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere il mascarpone a temperatura ambiente",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Mescolare insieme le due farine e aggiungerle in planetaria in due volte",
+            "icona": "foglia",
+            "velocita": "minima"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Dressare i frollini con bocchetta rigata n° 13 su un tappetino di silicone microforato.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Riporre le teglie in frigorifero (o in abbattitore positivo) per almeno 20-30 minuti. Questo passaggio è fondamentale per far ricristallizzare il burro e mantenere i disegni della bocchetta intatti durante la cottura.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "20-30 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere a 160°C per circa 14 minuti, fino a doratura.",
+            "icona": "forno_statico",
+            "temperatura": "160°C",
+            "tempo": "14 min."
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Una volta freddi intingere i frollini nel cioccolato fondente sciolto a bagnomaria.",
+            "opzionale": true,
+            "icona": "spennellare"
+        }
+    ]
+}

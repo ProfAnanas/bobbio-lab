@@ -1,0 +1,84 @@
+{
+    "id": "frolla_cotturabianco",
+    "titolo": "Pasta frolla per cottura in bianco",
+    "nota_dosi": "per 3 dischi da 22cm. Questa frolla è adatta anche per crostate con confettura di frutta già in cottura (aumenta il tempo di cottura)",
+    "ingredienti": [
+        {
+            "quantita": 370,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 220,
+            "unita_descrizione": "g Burro morbido"
+        },
+        {
+            "quantita": 145,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Farina di mandorle"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Vaniglia"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una planetaria con la foglia, impastare il burro morbido con lo zucchero e la vaniglia.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere le uova, il sale e la farina di mandorle",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Setacciare la farina",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere in planetaria, in due volte, la farina debole setacciata",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Stendere tra due fogli di carta da forno a 2-3mm di spessore e lasciare riposare. (se l'impasto è molto fare un panetto più spesso per non occupare troppo spazio)",
+            "icona": "mattarello",
+            "dimensione": "2-3 mm"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Coppare la frolla con un anello microforato su un tappetino microforato, sia il fondo che il bordo",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Se non si usa il tappetino microforato ma teglia in alluminio o carta da forno, bucherellare il fondo della crostata con l'apposito strumento o una forchetta.",
+            "opzionale": true,
+            "testo_nodo": "FORCHETTA O RULLO BUCASFOGLIA"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere a 165°C fino a doratura ( Circa 12-14 minuti)",
+            "icona": "forno_statico",
+            "temperatura": "165°C",
+            "tempo": "12-14 min."
+        }
+    ]
+}

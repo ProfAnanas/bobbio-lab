@@ -1,0 +1,133 @@
+{
+    "id": "ganache_base",
+    "titolo": "Ganache al cioccolato (e varianti)",
+    "nota_dosi": "Ganache perfetta per: tartellette moderne, praline, macaron, ripieno di biscotti di frolla.",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Ganache al cioccolato fondente"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Cioccolato fondente al 55%"
+        },
+        {
+            "quantita": 95,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Burro morbido"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Zucchero invertito (o miele delicato)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Ganache al cioccolato bianco o biondo"
+        },
+        {
+            "quantita": 170,
+            "unita_descrizione": "g Cioccolato bianco o biondo"
+        },
+        {
+            "quantita": 95,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Zucchero invertito (o miele delicato)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Ganache al cioccolato al latte"
+        },
+        {
+            "quantita": 160,
+            "unita_descrizione": "g Cioccolato al latte"
+        },
+        {
+            "quantita": 95,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Zucchero invertito (o miele delicato)"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Procedimento \"Classico\"\n\nTritare finemente il cioccolato e raccoglierlo in una caraffa o in una ciotola stretta e alta (ideale per agevolare l'uso del mixer a immersione).",
+                    "icona": "tagliare"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Procedimento \"Moderno\"\n\nFondere il cioccolato (a bagnomaria o in microonde) portandolo a una temperatura compresa tra i 45°C e i 50°C. Raccoglierlo in una caraffa o in una ciotola stretta e alta.",
+                    "icona": "microonde",
+                    "temperatura": "45-50°C"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un pentolino, scaldare la panna insieme allo zucchero invertito fino a sfiorare il bollore (circa 80-85°C).°C.",
+            "condizione": "a",
+            "icona": "pentolino",
+            "temperatura": "80-85°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In un pentolino, scaldare la panna insieme allo zucchero invertito portandola a una temperatura di circa 35-40°C.",
+            "condizione": "b",
+            "icona": "pentolino",
+            "temperatura": "35-40°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Versare la panna calda sul cioccolato in tre o quattro riprese. Dopo ogni aggiunta, frizionare energicamente al centro con una marisa, creando attrito per avviare un'emulsione elastica, lucida e scura (il \"cuore\" dell'emulsione).",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Verificare la temperatura: quando il composto si stabilizza tra i 35°C e i 40°C, aggiungere il burro morbido a pezzetti (solo per la versione fondente).",
+            "opzionale": true,
+            "icona": "aggiungere",
+            "temperatura": "35-40°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Affinare la struttura frullando con un mixer a immersione, avendo cura di tenerlo ben sommerso per non inglobare bolle d'aria.",
+            "icona": "pimer"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-7a",
+                    "testo": "Coprire con pellicola a contatto e lasciare cristallizzare in frigorifero per una notte (o almeno 12 ore) prima dell'utilizzo con il sac à poche.",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C",
+                    "tempo": "12 ore"
+                },
+                {
+                    "step_id": "step-7b",
+                    "testo": "Se si utilizza per riempire delle tartellette o una crostata moderna: colare subito nel disco di frolla cotta in bianco.",
+                    "icona": "versare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Lasciare cristallizzare in frigorifero per una notte (o almeno 12 ore).",
+            "condizione": "b",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "12 ore"
+        }
+    ]
+}

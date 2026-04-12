@@ -1,0 +1,85 @@
+{
+    "id": "krumiri",
+    "titolo": "Krumiri dressati con sac a poche",
+    "nota_dosi": "per 40-60 biscotti (a seconda della grandezza), circa 2 teglie 60x40.",
+    "ingredienti": [
+        {
+            "quantita": 360,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 240,
+            "unita_descrizione": "Burro"
+        },
+        {
+            "quantita": 140,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 35,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a piacere (limone, vaniglia)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Fare ammorbidire il burro a pomata (24°C)",
+            "icona": "microonde",
+            "temperatura": "24°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In planetaria con la foglia (o scudo), \"cremare\" il burro morbido con lo zucchero, il sale e gli aromi per un paio di minuti, senza montare eccessivamente ma ottenendo un composto omogeneo.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Inserire i tuorli e le uova a filo, in più riprese, aspettando che la dose precedente sia stata assorbita prima di aggiungere la successiva, per creare un'emulsione perfetta.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+                {
+            "step_id": "step-4",
+            "testo": "Setacciare la farina 00.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere la farina tutta in una volta nell'emulsione di burro e uova. Far girare la planetaria al minimo solo per i pochi secondi necessari ad amalgamare il tutto.",
+            "icona": "foglia",
+            "velocita": "minimo"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Trasferire subito nel sac à poche con bocchetta stellata (N° 14 o 15). Formare i bastoncini da 10 cm curvandoli a \"V\" direttamente sulla teglia.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far riposare le teglie in frigorifero per almeno 20-30 minuti per stabilizzare il burro e garantire il mantenimento della forma.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "20-30 min."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere in forno (preferibilmente statico) a 175-180°C per circa 12-14 minuti, o fino a doratura omogenea.",
+            "icona": "forno_statico",
+            "temperatura": "175-180°C",
+            "tempo": "12-14 min."
+        }
+    ]
+}

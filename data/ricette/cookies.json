@@ -1,0 +1,119 @@
+{
+    "id": "cookies",
+    "titolo": "Chocolate Chip Cookies",
+    "nota_dosi": "per 20 cookies",
+    "ingredienti": [
+        {
+            "quantita": 320,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 220,
+            "unita_descrizione": "g Zucchero di canna moscovado"
+        },
+        {
+            "quantita": 170,
+            "unita_descrizione": "g Burro morbido (20-22°C)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 85,
+            "unita_descrizione": "g Uova intere a temperatura ambiente"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Cioccolato fondente tritato al coltello"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Gocce di cioccolato fondente"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Bicarbonato di sodio"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Vaniglia"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Setacciare insieme: farina, bicarbonato, sale",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In una planetaria munita di foglia unire il burro, lo zucchero, la vaniglia e far girare finchè il composto non è un po’ montato ma ancora compatto.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere le uova poco alla volta fino a completo assorbimento della precedente.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere le polveri tutte insieme e mescolare a velocità minima senza stressare l’impasto.",
+            "icona": "foglia",
+            "velocita": "minima"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Quando la farina è quasi del tutto assorbita, aggiungere il cioccolato tritato e le gocce. L’impasto deve essere morbido, umido ma non appiccicoso",
+            "icona": "foglia",
+            "velocita": "minima"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Coprire e lasciare riposare in frigorifero o abbattitore minimo 2 ore.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "2 ore"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Porzionare l’impasto in palline da 56g ciascuna usando uno spallinatore o pesando le palline e dando la forma tonda con le mani umide.",
+            "icona": "porzionare",
+            "dimensione": "56g"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Disporre le palline su teglia coperta da carta da forno distanziando di circa 8 cm l’una dalle altre.",
+            "icona": "porzionare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Aggiungere qualche goccia di cioccolato extra sulla superficie di ogni pallina.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Infornare a 190°C per circa 8-10 minuti. I bordi dovranno essere dorati e la superficie leggermente dorata.",
+            "icona": "forno_statico",
+            "temperatura": "190°C",
+            "tempo": "8-10 min."
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Se la forma non è perfetta una volta tolti dal forno è possibile usare un cerchio per modellare la forma.",
+            "opzionale": true,
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Dopo 3 minuti di riposo in teglia, trasferire su griglia per completare il raffreddamento.",
+            "icona": "riposo"
+        }
+    ]
+}

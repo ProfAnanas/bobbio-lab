@@ -1,0 +1,68 @@
+{
+    "id": "crumble",
+    "titolo": "Crumble (e varianti)",
+    "ingredienti": [
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Burro freddo"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a piacere come spezie o scorze di agrumi"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante frutta secca"
+        },
+        {
+            "quantita": -50,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Farina di frutta secca"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al cacao"
+        },
+        {
+            "quantita": -25,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria con la foglia (o a mano in una bacinella), sabbiare tutti gli ingredienti insieme sfregandoli velocemente finché non si formano delle briciole irregolari.",
+            "icona": "foglia"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Lasciare riposare in frigo come per una frolla.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Grattugiare l'impasto o passarlo attraverso un setaccio a maglie larghe o nel cutter per qualche secondo per sbriciolarlo.",
+            "icona": "mixer"
+        }
+    ]
+}

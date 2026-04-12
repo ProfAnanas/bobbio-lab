@@ -1,0 +1,71 @@
+{
+    "id": "frangipane",
+    "titolo": "Crema frangipane",
+    "ingredienti": [
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Burro morbido (20°C)"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Uova a temperatura ambiente"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina di mandorle"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Zucchero a velo (o semolato finissimo)"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi (vaniglia, limone, rum)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di foglia, lavorare il burro a pomata con lo zucchero e gli aromi. Attenzione: il composto va solo \"cremato\" per renderlo omogeneo, non deve montare e incamerare troppa aria, altrimenti in forno si gonfierà per poi collassare.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Iniziare ad aggiungere le uova a temperatura ambiente, versandole a filo molto lentamente. Se l'impasto dovesse iniziare a slegarsi o \"stracciarsi\", inserire un paio di cucchiai della farina di frutta secca per ripristinare l'emulsione.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Setacciare la farina 00 insieme alla polvere di frutta secca.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere le polveri all'emulsione in due riprese, facendo girare la planetaria al minimo per non smontare la massa",
+            "icona": "foglia",
+            "velocita": "minimo"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-5a",
+                    "testo": "Utilizzare la crema immediatamente dressandola con il sac à poche",
+                    "icona": "sac"
+                },
+                {
+                    "step_id": "step-5b",
+                    "testo": "Conservare in frigorifero (ricordandosi di riportarla a temperatura ambiente prima dell'uso per far ammorbidire il burro).",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C"
+                }
+            ]
+        }
+    ]
+}

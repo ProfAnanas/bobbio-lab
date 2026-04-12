@@ -1,0 +1,83 @@
+{
+    "id": "crostata_frangipane",
+    "titolo": "Crostata con frangipane",
+    "nota_dosi": "per un cerchio di 24cm di diametro.",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`frolla_cotturabianco`, `data/ricette/frolla_cotturabianco.json`, `Pasta frolla per cottura in bianco`)\">Pasta frolla</span>"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": 105,
+            "unita_descrizione": "g Frutta secca in polvere"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Burro morbido (20°C)"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 35,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Confettura (gusto a piacere)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare la frolla, foderare una tortiera o un anello microforato da 24cm e bucherellare leggermente il fondo.",
+            "icona": "forma",
+            "dimensione": "24cm"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In planetaria con la foglia, montare il burro morbido (circa 20°C) con lo zucchero a velo fino a ottenere un composto chiaro e spumoso.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Iniziare ad aggiungere le uova a temperatura ambiente, versandole a filo molto lentamente. Se l'impasto dovesse iniziare a slegarsi o \"stracciarsi\", inserire un paio di cucchiai della farina di frutta secca per ripristinare l'emulsione.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Setacciare la farina 00 insieme alla polvere di frutta secca.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere le polveri all'emulsione in due riprese, facendo girare la planetaria al minimo per non smontare la massa",
+            "icona": "foglia",
+            "velocita": "minimo"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Stendere uno strato sottile e uniforme di confettura sul fondo della frolla cruda.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Trasferire il frangipane in un sac à poche e dressarlo a spirale sopra la confettura, riempiendo il guscio fino a un massimo di 2/3 della sua altezza (la crema si gonfierà in cottura).",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere in forno a 170-175°C per circa 30-40 minuti, o fino a doratura della superficie.",
+            "icona": "forno_statico",
+            "temperatura": "170-175°C",
+            "tempo": "30-40 min."
+        }
+    ]
+}

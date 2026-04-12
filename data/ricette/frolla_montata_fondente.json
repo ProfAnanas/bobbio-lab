@@ -1,0 +1,87 @@
+{
+    "id": "frolla_montata_fondente",
+    "titolo": "Pasta frolla montata al cioccolato fondente",
+    "nota_dosi": "Ricetta tecnica dove non bisogna sbagliare nessuna temperatura.",
+    "ingredienti": [
+        {
+            "quantita": 210,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 55,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Cioccolato fondente 60%"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Fare ammorbidire il burro a pomata (24°C)",
+            "icona": "microonde",
+            "temperatura": "24°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In planetaria montata con la foglia, montare il burro con lo zucchero a velo",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere i tuorli in più riprese fino al totale assorbimento",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+                {
+            "step_id": "step-4",
+            "testo": "Sciogliere a bagnomaria o nel microonde il cioccolato fondente.",
+            "icona": "microonde"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Versare il cioccolato in planetaria a una temperatura di 28-30°C massimo",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere la farina e amalgamare all’impasto",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Dressare con la forma desiderata",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Fare riposare in frigorifero 20-30 minuti una volta finito di formare.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "20-30 min."
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Cuocere in forno a 165°C per 10-14 minuti (a seconda della grandezza).",
+            "icona": "forno_statico",
+            "temperatura": "165°C",
+            "tempo": "10-14 min."
+        }
+    ]
+}

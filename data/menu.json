@@ -85,16 +85,23 @@
           "nome_sottocategoria": "Frolle",
           "preparazioni": [
             { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/ricette/frolla_milano.json", "anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" },
+            { "id": "frolla_cotturabianco", "nome": "Pasta frolla per cottura in bianco", "url_dati": "data/ricette/frolla_cotturabianco.json", "anno": "3, 4, 5", "tag": "crostata, sablè, biscotti" },
+            { "id": "frolla_glutenlactosefree", "nome": "Pasta frolla senza glutine, senza lattosio", "url_dati": "data/ricette/frolla_glutenlactosefree.json", "anno": "3, 4, 5", "tag": "crostata, biscotti" },
             { "id": "frolla_salata_tecnica", "nome": "Pasta frolla salata tecnica", "url_dati": "data/ricette/frolla_salata_tecnica.json", "anno": "5", "tag": "burro, aperitivo, antipasto" },
+            { "id": "sable_classica", "nome": "Pasta frolla sablé", "url_dati": "data/ricette/sable_classica.json", "anno": "3, 4, 5", "tag": "crostata, biscotti, sabbiato, sabbiatura" },
+            { "id": "frolla_montata", "nome": "Pasta frolla montata (e varianti)", "url_dati": "data/ricette/frolla_montata.json", "anno": "3, 4, 5", "tag": "biscotti" },
+            { "id": "frolla_montata_fondente", "nome": "Pasta frolla montata al cioccolato fondente", "url_dati": "data/ricette/frolla_montata_fondente.json", "anno": "4, 5", "tag": "biscotti" },
             { "id": "sable_parmigiano", "nome": "Sablé al Parmigiano Reggiano DOP", "url_dati": "data/ricette/sable_parmigiano.json", "anno": "3, 4, 5", "tag": "burro, aperitivo, frolla" },
             { "id": "brise", "nome": "Pasta brisée con variante al Parmigiano Reggiano DOP", "url_dati": "data/ricette/brise.json", "anno": "2, 3, 4, 5", "tag": "frolla, biscotti, aperitivo, appetizer" },
-            { "id": "bacidama", "nome": "Baci di dama", "url_dati": "data/ricette/bacidama.json", "anno": "3, 4", "tag": "piemonte, piemontese" }
+            { "id": "bacidama", "nome": "Baci di dama", "url_dati": "data/ricette/bacidama.json", "anno": "3, 4", "tag": "piemonte, piemontese" },
+            { "id": "crumble", "nome": "Crumble (e varianti)", "url_dati": "data/ricette/crumble.json", "anno": "3, 4, 5", "tag": "" }
           ]
         },
         { "nome_sottocategoria": "Sfoglie e sfogliati", "preparazioni": [
           { "id": "sfoglia_base", "nome": "Pasta sfoglia base (francese)", "url_dati": "data/ricette/sfoglia_base.json", "anno": "1, 2, 3", "tag": "sfoglia, sfogliati" },
           { "id": "sfoglia_italiana", "nome": "Pasta sfoglia all'italiana", "url_dati": "data/ricette/sfoglia_italiana.json", "anno": "1, 2, 3", "tag": "sfoglia, sfogliati" },
           { "id": "sfoglia_italiana_cacao", "nome": "Pasta sfoglia all'italiana al cacao", "url_dati": "data/ricette/sfoglia_italiana_cacao.json", "anno": "2, 3, 4", "tag": "sfoglia, quiche" },
+          { "id": "brise", "nome": "Pasta brisée con variante al Parmigiano Reggiano DOP", "url_dati": "data/ricette/brise.json", "anno": "2, 3, 4, 5", "tag": "frolla, biscotti, aperitivo, appetizer" },
           { "id": "pasta_matta", "nome": "Pasta matta", "url_dati": "data/ricette/pasta_matta.json", "anno": "1, 2, 3", "tag": "sfoglia" }       
           ] },
         { "nome_sottocategoria": "Choux", "preparazioni": [
@@ -106,7 +113,12 @@
         ] },
         { "nome_sottocategoria": "Biscotteria e piccola pasticceria", "preparazioni": [
           { "id": "amaretti_secchi", "nome": "Amaretti secchi", "url_dati": "data/ricette/amaretti_secchi.json", "anno": "3, 4", "tag": "piemonte, piemontese" },
-          { "id": "bacidama", "nome": "Baci di dama", "url_dati": "data/ricette/bacidama.json", "anno": "3, 4", "tag": "piemonte, piemontese" }
+          { "id": "canestrelli", "nome": "Canestrelli", "url_dati": "data/ricette/canestrelli.json", "anno": "3, 4", "tag": "biscotti, ovis mollis, liguria" },
+          { "id": "melighe", "nome": "Paste di meliga (P.A.T.)", "url_dati": "data/ricette/melighe.json", "anno": "3, 4, 5", "tag": "melighe, monferrato, piemonte" },
+          { "id": "krumiri", "nome": "Krumiri dressati con sac a poche", "url_dati": "data/ricette/krumiri.json", "anno": "3, 4, 5", "tag": "monferrato, piemonte" },
+          { "id": "bacidama", "nome": "Baci di dama", "url_dati": "data/ricette/bacidama.json", "anno": "3, 4", "tag": "piemonte, piemontese" },
+          { "id": "cookies", "nome": "Chocolate Chip Cookies", "url_dati": "data/ricette/cookies.json", "anno": "3, 4, 5", "tag": "cioccolato, biscotti" },
+          { "id": "frollamontata_nouova", "nome": "Frolla montata al mascarpone (senza uova)", "url_dati": "data/ricette/frollamontata_nouova.json", "anno": "3, 4, 5", "tag": "frollini, biscotti" }
         ] },
         {
           "nome_sottocategoria": "Creme e dolci al cucchiaio",
@@ -114,8 +126,10 @@
             { "id": "crema_pasticcera", "nome": "Crema pasticcera (e varianti)", "url_dati": "data/ricette/crema_pasticcera.json", "anno": "1, 2, 3", "tag": "diplomatica,chantilly,uovo,uova,latte,panna,cioccolato" },
             { "id": "crema_diplomatica", "nome": "Crema diplomatica", "url_dati": "data/ricette/crema_diplomatica.json", "anno": "1, 2, 3", "tag": "pasticciera, torta, pasticcera" },
             { "id": "chantilly_mascarpone", "nome": "Chantilly al mascarpone", "url_dati": "data/ricette/chantilly_mascarpone.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "frangipane", "nome": "Crema frangipane", "url_dati": "data/ricette/frangipane.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "bonet", "nome": "Bonet", "url_dati": "data/ricette/bonet.json", "anno": "1, 2, 3", "tag": "bunet, amaretti, piemonte" },
             { "id": "crema_tiramisu", "nome": "Crema Tiramisù (2 varianti)", "url_dati": "data/ricette/crema_tiramisu.json", "anno": "2, 3", "tag": "tiramisu, mascarpone, savoiardi" },
+            { "id": "ganache_base", "nome": "Ganache al cioccolato (e varianti)", "url_dati": "data/ricette/ganache_base.json", "anno": "3, 4, 5", "tag": "macaron, tartelletta, pralina" },
             { "id": "pasticcera_salata", "nome": "Crema pasticcera salata", "url_dati": "data/ricette/pasticcera_salata.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "semolino", "nome": "Semolino (e variante al cacao)", "url_dati": "data/ricette/semolino.json", "anno": "2, 3", "tag": "piemonte, piemontese" }
           ]
@@ -135,7 +149,9 @@
           "preparazioni": [
             { "id": "torta_langarola", "nome": "Torta langarola (Torta di nocciole)", "url_dati": "data/ricette/torta_langarola.json", "anno": "3", "tag": "tonda gentile trilobata, nocciola igp, alba, cuneo" },
             { "id": "plumcake","nome": "Plumcake e varianti","url_dati": "data/ricette/plumcake.json","anno": "1, 2, 3","tag": "merenda, torta" },
-            { "id": "pastiera", "nome": "Pastiera", "url_dati": "data/ricette/pastiera.json", "anno": "2, 3, 4", "tag": "napoli, napoletana, pasqua, frolla" }
+            { "id": "pastiera", "nome": "Pastiera", "url_dati": "data/ricette/pastiera.json", "anno": "2, 3, 4", "tag": "napoli, napoletana, pasqua, frolla" },
+            { "id": "crostatacrumble", "nome": "Crostata crumble di mele al profumo di cannella", "url_dati": "data/ricette/crostatacrumble.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "crostata_frangipane", "nome": "Crostata con frangipane", "url_dati": "data/ricette/crostata_frangipane.json", "anno": "3, 4, 5", "tag": "" }
           ]
         },
         {

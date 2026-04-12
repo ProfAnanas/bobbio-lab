@@ -1,0 +1,98 @@
+{
+    "id": "canestrelli",
+    "titolo": "Canestrelli",
+    "nota_dosi": "per 100-120 canestrelli",
+    "ingredienti": [
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Fecola di patate"
+        },
+        {
+            "quantita": 160,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 6,
+            "unita_descrizione": "n° Tuorli sodi"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a piacere (vaniglia, limone)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Setacciare la farina, la vaniglia, la scorza di limone e lo zucchero a velo tutto insieme",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare il mix di polveri nella planetaria munita di foglia",
+            "icona": "foglia"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere burro freddo (ma non freddissimo, a circa 10-15 °C) e lavorare fino a ottenere un effetto sabbiato.",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Setacciare i tuorli a maglia fine",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere i tuorli in planetaria e far girare per poco tempo fino ad ottenere un composto omogeneo",
+            "icona": "foglia",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Compattare il panetto sul piano di lavoro, stendere a uno spessore di 1cm tra due fogli di carta forno",
+            "icona": "mattarello",
+            "dimensione": "1 cm"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far riposare 2 ore in frigo o abbattitore positivo.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "2 ore"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Con uno stampino per biscotti sagomato a fiore di 3 cm di diametro, ricavare i biscotti. Con un coppapasta tondo da 1 cm ricavare il buco al centro del fiore.",
+            "icona": "forma",
+            "dimensione": "3cm e 1cm"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-9a",
+                    "testo": "Cuocere in forno 170°C 15-18 min. Attenzione che non devono mai scurire.",
+                    "icona": "forno_statico",
+                    "temperatura": "170°C",
+                    "tempo": "15-18 min."
+                },
+                {
+                    "step_id": "step-9b",
+                    "testo": "Cuocere in forno ventilato 150°C 8-10 min. Attenzione che non devono mai scurire.",
+                    "icona": "forno_ventilato",
+                    "temperatura": "150°C",
+                    "tempo": "8-10 min."
+                }
+            ]
+        }
+    ]
+}
