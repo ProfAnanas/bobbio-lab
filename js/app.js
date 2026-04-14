@@ -295,6 +295,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 
                 const details = document.createElement('details');
                 details.classList.add('tendina-variante');
+                details.open = true; // Teniamo la tendina aperta di default
                 
                 const summary = document.createElement('summary');
                 // Usa il nome dell'opzione o la descrizione come titolo della tendina
@@ -304,12 +305,31 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
 
                 const ulSub = document.createElement('ul');
                 ulSub.classList.add('lista-sotto-ingredienti');
+                ulSub.style.paddingRight = "10px"; // Diamo respiro a destra per allineare i box
                 
-                // Popola la tendina con i sotto-ingredienti
-                ingrediente.sotto_ingredienti.forEach(subIng => {
+                // Popola la tendina con i sotto-ingredienti (con e senza calcolatore)
+                ingrediente.sotto_ingredienti.forEach((subIng, subIndex) => {
                     const liSub = document.createElement('li');
-                    const testoSub = subIng.unita_descrizione || `${subIng.nome}: ${subIng.quantita}`;
-                    liSub.innerHTML = `<span>${testoSub}</span>`;
+                    
+                    // Se il sotto-ingrediente ha una quantità, mettiamo il calcolatore
+                    if (subIng.quantita !== null && subIng.quantita !== undefined) {
+                        liSub.classList.add('riga-ingrediente');
+                        const quantitaBase = subIng.quantita;
+                        const unitaDesc = subIng.unita_descrizione;
+
+                        liSub.innerHTML = `
+                            <div class="ingrediente-originale" style="font-size: 0.95em;">${quantitaBase} ${unitaDesc}</div>
+                            <div class="ingrediente-proporzionato">
+                                <input type="number" step="any" class="input-quantita" data-index="${index}-${subIndex}" data-base="${quantitaBase}" value="${quantitaBase}">
+                            </div>
+                        `;
+                    } else {
+                        // Se è q.b. o nullo, lo trattiamo come nota normale
+                        liSub.classList.add('riga-nota-ingrediente');
+                        const testoSub = subIng.unita_descrizione || subIng.nome;
+                        liSub.innerHTML = `<span>${testoSub}</span>`;
+                    }
+                    
                     ulSub.appendChild(liSub);
                 });
                 
