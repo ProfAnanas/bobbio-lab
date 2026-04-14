@@ -1,0 +1,74 @@
+{
+    "id": "crespelle",
+    "titolo": "Crespelle",
+    "nota_dosi": "per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 180,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Cognac"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Latte intero fresco"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Olio di semi (per la cottura)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Sbattere le uova con il sale e il cognac",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Incorporare la farina, il latte e il burro sciolto",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Far riposare a 4°C per una notte.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "12 ore"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Ungere la padella calda con carta monouso bagnata con olio",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Versare a filo un mestolino di pastella al centro della padella, mentre si fa roteare per stendere uniformemente l’impasto.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere su un lato, quindi girare sull’altro lato con l’aiuto di una spatola",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Ultimare la cottura e rovesciare in una teglia",
+            "icona": "padella"
+        }
+    ]
+}

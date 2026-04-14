@@ -1,0 +1,68 @@
+{
+    "id": "quiche_ai_porri",
+    "titolo": "Quiche ai porri",
+    "nota_dosi": "per uno stampo 24cm (o 12 monoporzioni)",
+    "ingredienti": [
+        {
+            "quantita": 300,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`brise`, `data/ricette/brise.json`, `Pasta brisé`)\">Pasta brisé</span>"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "ml Latte fresco"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Uova intere"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Porri"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Grana Padano DOP"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare e mondare i porri",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tagliare i porri a rondelle tutte uguali, circa 1cm",
+            "icona": "tagliare",
+            "dimensione": "1cm"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Foderare con la pasta brisé il fondo e i bordi di uno stampo per torta salata",
+            "icona": "mattarello",
+            "dimensione": "24 cm"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere i porri sulla pasta brisé coprendo il fondo della tortiera",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Preparare un apparecchio con il latte, le uova, il formaggio grattugiato, il sale e il pepe.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Versare l'apparecchio nella tortiera.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere in forno a 160°C: il tempo varierà a seconda della dimensione e dello spessore della farcia. Al cuore deve arrivare a 85°C",
+            "icona": "forno_statico",
+            "temperatura": "160°C",
+            "tempo": "85°C al cuore"
+        }
+    ]
+}

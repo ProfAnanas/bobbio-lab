@@ -1,6 +1,7 @@
 {
     "id": "focaccia_diretto",
     "titolo": "Focaccia (Impasto Diretto)",
+    "nota_dosi": "per una teglia 30x40cm.",
     "ingredienti": [
         {
             "quantita": 400,

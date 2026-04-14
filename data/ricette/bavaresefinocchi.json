@@ -1,0 +1,138 @@
+{
+    "id": "bavaresefinocchi",
+    "titolo": "Bavarese di finocchi con riduzione agrodolce di arancia",
+    "nota_dosi": "10-20 bavaresi (a seconda della grandezza, se antipasto o amuse-bouche)",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Finocchi"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 7,
+            "unita_descrizione": "g Gelatina 200 Bloom"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "spicchio d'aglio (o un pezzo di scalogno)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la riduzione"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Arance da spremuta (tipo Navel)"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "ml Aceto di vino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aneto"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare e mondare i finocchi",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tagliare le coste del finocchio a julienne dal lato lungo per uniformare la cottura.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una padella, calore moderato, versare un filo d'olio, uno spicchio d'aglio (o uno scalogno tritato) e i finocchi. far stufare.",
+            "icona": "padella",
+            "temperatura": "medio-bassa"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Trasferire i finocchi stufati in abbattitore positivo fino a raffreddamento",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Una volta freddi, frullare i finocchi nel cutter.",
+            "icona": "mixer"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-6a",
+                    "testo": "Ammollare la gelatina in acqua fredda.",
+                    "icona": "lavare"
+                },
+                {
+                    "step_id": "step-6b",
+                    "testo": "prelevare 20g di gelatina e tenere da parte. nel frattempo montare la panna con un pizzico di sale. Attenzione a non eccedere e mantenerla cremosa!\nLa panna non deve essere a fiocchi.",
+                    "icona": "frusta"
+                }
+            ]
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Strizzare la gelatina e  scioglierla nella panna messa da parte e riscaldata a circa 50-60°C.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Incorporare la panna montata alla purea di finocchi e, successivamente il composto di panna e gelatina.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Riempire gli stampi. Sceglierei quelli a ciambellina (savarin), in modo da poter mettere la riduzione di arance al centro.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Mettere in abbattitore, processo NEGATIVO.",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Per la riduzione: spremere le arance, e filtrare il succo Quindi aggiungere lo zucchero, l'aceto e un po' di aneto lavato e spezzato a mano.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Mettere il liquido in un pentolino e far ridurre del 50% circa a calore moderato. Bisogna ottenere una salsa naturalmente legata (densa come uno sciroppo leggero)",
+            "icona": "pentolino",
+            "temperatura": "media"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Far raffreddare in abbattitore positivo",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Sformare le bavaresi, decorare con la salsa al centro del savarin.\nAttendere il tempo necessario allo scongelamento. Decorare con l’aneto e servire",
+            "icona": "impiattare"
+        }
+    ]
+}

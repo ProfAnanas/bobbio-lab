@@ -1,0 +1,31 @@
+{
+    "id": "crema_mascarpone",
+    "titolo": "Crema al mascarpone",
+    "ingredienti": [
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Mascarpone freddo da frigo"
+        },
+        {
+            "quantita": 240,
+            "unita_descrizione": "g Panna fresca 35%"
+        },
+        {
+            "quantita": 110,
+            "unita_descrizione": "g Zucchero a velo"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria versare tutti gli ingredienti ben freddi da frigo (zucchero compreso!).",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Montare fino ad ottenere una consistenza ferma esostenuta.",
+            "icona": "frusta",
+            "velocita": "media-alta"
+        }
+    ]
+}

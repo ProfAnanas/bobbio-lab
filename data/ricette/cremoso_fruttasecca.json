@@ -1,0 +1,132 @@
+{
+    "id": "cremoso_fruttasecca",
+    "titolo": "Cremoso al cioccolato e pasta di frutta secca",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Crema pasticcera di partenza"
+        },
+        {
+            "quantita": 240,
+            "unita_descrizione": "g Panna fresca 35%"
+        },
+        {
+            "quantita": 190,
+            "unita_descrizione": "g Latte"
+        },
+        {
+            "quantita": 95,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Amido di riso"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso al pistacchio"
+        },
+        {
+            "quantita": 190,
+            "unita_descrizione": "g Cioccolato bianco"
+        },
+        {
+            "quantita": 35,
+            "unita_descrizione": "g Burro di cacao"
+        },
+        {
+            "quantita": 135,
+            "unita_descrizione": "g Pasta di pistacchio"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso al gianduia"
+        },
+        {
+            "quantita": 190,
+            "unita_descrizione": "g Cioccolato al latte"
+        },
+        {
+            "quantita": 35,
+            "unita_descrizione": "g Burro di cacao"
+        },
+        {
+            "quantita": 135,
+            "unita_descrizione": "g Pasta di nocciole"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso Cioccolato fondente e mandorle"
+        },
+        {
+            "quantita": 220,
+            "unita_descrizione": "g Cioccolato fondente 55%"
+        },
+        {
+            "quantita": 135,
+            "unita_descrizione": "g Crema di mandorle"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per tutte le versioni, se serve dressarla con sac a poche"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Colla di pesce"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Fare una crema pasticcera classica",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tritare il cioccolato.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare la crema pasticcera calda sul cioccolato, burro di cacao e pasta di frutta secca.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Agguingere il burro ed emulsionare",
+            "icona": "pimer"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-5a",
+                    "testo": "Lasciare riposare una notte prima dell'utilizzo",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C",
+                    "tempo": "12 ore"
+                },
+                {
+                    "step_id": "step-5b",
+                    "testo": "Stenderla in una pirofila ad uno spessore di 1-2cm al massimo. Coprire con pellicola a contatto e lasciare in abbattitore positivo per 2 ore",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C",
+                    "tempo": "2 ore",
+                    "dimensione": "1-2cm"
+                }
+            ]
+        }
+    ]
+}

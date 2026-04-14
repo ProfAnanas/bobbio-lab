@@ -1,0 +1,72 @@
+{
+    "id": "cream_tart",
+    "titolo": "Cream Tart",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Sablé preparata con 400g di Farina debole"
+        },
+        {
+            "quantita": 650,
+            "unita_descrizione": "g <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`crema_mascarpone`, `data/ricette/crema_mascarpone.json`, `Crema al mascarpone`)\">Crema al mascarpone</span>"
+        },
+        {
+            "quantita": 450,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`cremoso`, `data/ricette/cremoso.json`, `Cremoso`)\">Cremoso al cioccolato bianco</span>"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Frutta fresca di stagione"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Stendere la sablé ad uno spessore di 4 mm (non più sottile o sarà troppo fragile, non più spessa o al taglio schiaccerà la crema)",
+            "icona": "mattarello",
+            "dimensione": "4mm"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Con uno stencil sagomare la sablé della forma desiderata",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Disporre le sagome di sablè su tappetini microforati e fare un passaggio in abbattitore positivo fino a completo raffreddamento. questo aiuterà in cottura a mantenere la forma perfetta.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere la sablé in forno ventilato a 160°C per circa 12-16 minuti.",
+            "icona": "forno_ventilato"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Far raffreddare la sablé cotta",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Farcire con spumoni di crema al mascarpone i bordi della prima sagoma di sablé creando un perimetro.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Farcire quindi con spumoni del cremoso all'interno del perimetro",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Con delicatezza sovrapporre l'altra sagoma di sablé quindi farcire con spumoni di crema al mascarpone",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Finire il dolce decorando con la frutta fresca lavata e tagliata.",
+            "icona": "impiattare"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "id": "crespelle_gratinate",
+    "titolo": "Crespelle gratinate",
+    "nota_dosi": "Per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 20,
+            "unita_descrizione": "n°  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`crespelle`, `data/ricette/crespelle.json`, `Crespelle`)\">Crespelle</span>"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "l <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`besciamella`, `data/ricette/besciamella.json`, `Besciamella`)\">Besciamella per nappatura</span>"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "kg <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`farcia_crespelle`, `data/ricette/farcia_crespelle.json`, `Farcia per crespelle`)\">Farcia per crespelle</span>"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Formaggio grattugiato"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Burro"
+        }
+        
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Stendere le crespelle sul tavolo da lavoro, disporre al centro un cucchiaio di farcia, chiudere a mezzaluna.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "DIsporre le crespelle in una pirofila o una teglia imburrata quindi nappare con della besciamella leggera.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Cospargere con formaggio grattugiato e irrorare con burro sciolto",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Gratinare in forno a +180°C per circa 15 minuti, fino a che la superficie non è dorata e croccante.",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "15 min."
+        }
+    ]
+}

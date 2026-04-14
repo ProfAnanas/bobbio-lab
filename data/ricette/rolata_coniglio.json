@@ -1,0 +1,93 @@
+{
+    "id": "rolata_coniglio",
+    "titolo": "Rolata di coniglio",
+    "ingredienti": [
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Coniglio"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Spinaci"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Prosciutto cotto"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Pancetta arrotolata"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° spicchio d'aglio"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Mirepoix (sedano, carote, cipolle)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Spago da cucina"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Disossare il coniglio senza creare fori sulla schiena.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Scottare e aromatizzare gli spinaci.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Distendere la carne del coniglio sul tavolo. Farcirla con uno strato di prosciutto e uno di spinaci.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Arrotolare ben stretto, cercando di creare un cilindro regolare di 6-7 cm di diametro.\nBardare con la pancetta e legare.",
+            "icona": "impastare_mano",
+            "dimensione": "6-7cm"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Con le verdure fare una mirepoix magra.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere in forno o in casseruola. Fare prima un passaggio a temperatura elevata (per rosolare) e poi moderare la temperatura. Se necessario bagnare di tanto in tanto con fondo vegetale.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "La temperatura al cuore deve arrivare a 78°C, ma è consigliabile mantenerla per 15-20’ per una migliore morbidezza delle carni.",
+            "icona": "tegame",
+            "temperatura": "78°C"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Tenere in disparte al caldo la rolata e nel frattempo finire la salsa",
+            "icona": "riposo"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Per la salsa sarà necessario frullare il fondo di cottura ed eventualmente legarlo",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Tagliare la rolata a fette spesse 1,5-2 cm e dressarla sul piatto con la sua salsa",
+            "icona": "impiattare",
+            "dimensione": "1,5-2 cm"
+        }
+    ]
+}

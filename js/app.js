@@ -64,7 +64,7 @@ caricaGlossarioCucina();
 // --- 1. DIZIONARIO SOTTOCATEGORIE ---
 const mappaSottocategorie = {
     cucina: ["Preparazioni base", "Stuzzichini e aperitivi", "Antipasti", "Primi", "Secondi", "Contorni", "Salse e riduzioni"],
-    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme e dolci al cucchiaio", "Masse montate", "Torte da credenza", "Lievitati", "Dolci fritti", "Cioccolato e pralineria", "Gelati e sorbetti", "Pasticceria salata", "Tecniche avanzate"],
+    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme e dolci al cucchiaio", "Masse montate", "Torte fresche e da credenza", "Lievitati", "Dolci fritti", "Cioccolato e pralineria", "Gelati e sorbetti", "Pasticceria salata", "Tecniche avanzate"],
     panificazione: ["Preparazioni base", "Lievitati", "Pani speciali", "Pizze e focacce", "Tecniche avanzate"],
     qualifiche_cucina: ["Prove d'esame"],
     qualifiche_pasticceria: ["Prove d'esame"]
@@ -285,11 +285,39 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
             listaIngredienti.parentNode.insertBefore(notaEl, listaIngredienti);
         }
         
-        // --- MOTORE INGREDIENTI PROPORZIONALI ---
+       // --- MOTORE INGREDIENTI PROPORZIONALI E VARIANTI ---
         ricetta.ingredienti.forEach((ingrediente, index) => {
             const li = document.createElement('li');
 
-            if (typeof ingrediente === 'object' && ingrediente.quantita !== null && ingrediente.quantita !== undefined) {
+            // 1. NUOVA CONDIZIONE: Se l'ingrediente contiene "sotto_ingredienti", crea la tendina
+            if (typeof ingrediente === 'object' && ingrediente.sotto_ingredienti && ingrediente.sotto_ingredienti.length > 0) {
+                li.style.listStyle = 'none'; // Togliamo il pallino standard per fare spazio alla tendina
+                
+                const details = document.createElement('details');
+                details.classList.add('tendina-variante');
+                
+                const summary = document.createElement('summary');
+                // Usa il nome dell'opzione o la descrizione come titolo della tendina
+                const titoloTendina = ingrediente.unita_descrizione || ingrediente.nome || "Opzione variante";
+                summary.innerHTML = titoloTendina;
+                details.appendChild(summary);
+
+                const ulSub = document.createElement('ul');
+                ulSub.classList.add('lista-sotto-ingredienti');
+                
+                // Popola la tendina con i sotto-ingredienti
+                ingrediente.sotto_ingredienti.forEach(subIng => {
+                    const liSub = document.createElement('li');
+                    const testoSub = subIng.unita_descrizione || `${subIng.nome}: ${subIng.quantita}`;
+                    liSub.innerHTML = `<span>${testoSub}</span>`;
+                    ulSub.appendChild(liSub);
+                });
+                
+                details.appendChild(ulSub);
+                li.appendChild(details);
+            }
+            // 2. VECCHIA CONDIZIONE: Ingrediente proporzionale (calcolabile)
+            else if (typeof ingrediente === 'object' && ingrediente.quantita !== null && ingrediente.quantita !== undefined) {
                 li.classList.add('riga-ingrediente');
                 const quantitaBase = ingrediente.quantita;
                 const unitaDesc = ingrediente.unita_descrizione;
@@ -300,15 +328,19 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                         <input type="number" step="any" class="input-quantita" data-index="${index}" data-base="${quantitaBase}" value="${quantitaBase}">
                     </div>
                 `;
-            } else {
+            } 
+            // 3. VECCHIA CONDIZIONE: Nota testuale (es. "Sale q.b.", "Aromi")
+            else {
                 li.classList.add('riga-nota-ingrediente');
                 const testoIngrediente = typeof ingrediente === 'object' ? ingrediente.unita_descrizione : ingrediente;
                 li.innerHTML = `<span>${testoIngrediente}</span>`;
             }
+            
             listaIngredienti.appendChild(li);
         });
 
-        const inputsQuantita = listaIngredienti.querySelectorAll('.input-quantita');
+        // Qui riprende il tuo codice intatto...
+        const inputsQuantita = listaIngredienti.querySelectorAll('.input-quantita'); 
         inputsQuantita.forEach(input => {
             input.addEventListener('input', (evento) => {
                 const nuovoValore = parseFloat(evento.target.value);

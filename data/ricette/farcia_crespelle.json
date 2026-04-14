@@ -1,0 +1,30 @@
+{
+    "id": "farcia_crespelle",
+    "titolo": "Farcia salata per crespelle",
+    "nota_dosi": "Per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 800,
+            "unita_descrizione": "g Ingrediente caratterizzante cotto (funghi, radicchio, spinaci, asparagi, ecc.)"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Formaggi a scelta (fontina, raschera, toma, gorgonzola, ecc.)"
+        },
+        {
+            "quantita": 800,
+            "unita_descrizione": "g <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`besciamella`, `data/ricette/besciamella.json`, `Besciamella`)\">Besciamella per farcia</span>"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Formaggio grattugiato"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mescolare gli ingredienti caratterizzanti, il formaggio a cubetti e il formaggio grattugiato alla besciamella.",
+            "icona": "mescolare"
+        }
+    ]
+}

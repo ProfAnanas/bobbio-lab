@@ -1,0 +1,135 @@
+{
+    "id": "coniglio_carpione",
+    "titolo": "Bocconcini di coniglio in carpione, zucchine grigliate e mentuccia",
+    "ingredienti": [
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Spalle di coniglio"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "n° Uova"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Pangrattato"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Olio per frittura"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il carpione"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Aceto di vino bianco"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Vino bianco"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Salvia"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aglio"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Cipolla"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per le zucchine di contorno"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "kg Zucchine"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Menta fresca"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Disossare il coniglio, dividere la polpa in parti regolari e formare delle bistecchine appiattendole con il batticarne.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Impanare le bistecchine di coniglio all’inglese (farina, uovo, pangrattato)",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Friggerle in olio di semi: attenzione alla temperatura!",
+            "icona": "tegame",
+            "temperatura": "150-170°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Preparare il carpione mettendo in un pentolino acqua, aceto e vino bianco in parti uguali.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Tagliare la cipolla in mirepoix e lavare la salvia",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere la cipolla e la salvia al pentolino di carpione",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Fare bollire per alcuni minuti il carpione",
+            "icona": "pentolino",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "versare (filtrando) sulle bistecchine di coniglio fritte il carpione. Questo passaggio permette di allungare notevolmente la conservazione",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Raffreddare in abbattitore (ciclo positivo). Per insaporire adeguatamente l’immersione nel carpione dovrebbe essere mantenuta per almeno un giorno.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "24 ore"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Lavare e mondare le zucchine",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Tagliare oblique (tipo fetta di salame) le zucchine.  Lo spessore dev’essere regolare, circa mezzo cm.",
+            "icona": "tagliare",
+            "dimensione": "0,5cm"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Grigliarle sulla piastra rigata o in forno (con l’apposita teglia)",
+            "icona": "piastrare"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Condire con olio, sale pepe e menta",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Dressare sul piatto le zucchine e i bocconcini di coniglio ben sgocciolati.",
+            "icona": "impiattare"
+        }
+    ]
+}

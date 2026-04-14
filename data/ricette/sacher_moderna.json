@@ -1,0 +1,129 @@
+{
+    "id": "sacher_moderna",
+    "titolo": "Torta sacher moderna",
+    "nota_dosi": "per uno stampo da 22cm",
+    "ingredienti": [
+        {
+            "quantita": 165,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Zucchero invertito (o miele)"
+        },
+        {
+            "quantita": 75,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Cioccolato fondente 60%"
+        },
+        {
+            "quantita": 115,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 190,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Lievito chimico (possibilmente non vanigliato)"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Farina di mandorle"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        },
+                {
+            "quantita": 300,
+            "unita_descrizione": "g Confettura liscia di albicocche (priva di pezzi)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`glassacioccolato`, `data/ricette/glassacioccolato.json`, `Glassa al cioccolato`)\">Glassa al cioccolato</span>"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di frusta, montare il burro morbido con gli zuccheri.",
+            "icona": "frusta",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere i tuorli a filo",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "A parte montare a neve gli albumi (non troppo ferma, a becco d'uccello)",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Fondere il cioccolato",
+            "icona": "microonde"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Unire al composto di burro e tuorli il cioccolato fuso alternando con metà degli albumi",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Setacciare le polveri (farina, farina di mandorle, lievito, cacao)",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Aggiungere le polveri alternando con la restante parte di albumi",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Riempire uno stampo da 22cm",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Cuocere in forno statico a 160-165°C per circa 25 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "160-165°C",
+            "tempo": "25 min."
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Quando la base sacher è fredda, tagliarla orizzontalmente per ottenere due strati.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Farcire con la confettura di albicocche",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Spennellare con confettura calda (va bene scaldarla al microonde) i lati e la superficie della base.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Glassare la torta con la copertura scelta (temperatura della glassa di 32-35°C circa)",
+            "icona": "versare"
+        }
+    ]
+}

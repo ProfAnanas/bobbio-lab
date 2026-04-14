@@ -1,0 +1,138 @@
+{
+    "id": "glassacioccolato",
+    "titolo": "Glassa al cioccolato (metodo sciroppo e metodo ganache)",
+    "nota_dosi": "La glassa con metodo a sciroppo è quella più vicina allo stile dell'hotel Sacher di Vienna. Quella metodo ganache è moderna: lucida, morbida e cremosa al palato.",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Glassa metodo a sciroppo",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 200,
+                    "unita_descrizione": "g Zucchero semoalto"
+                },
+                {
+                    "quantita": 125,
+                    "unita_descrizione": "g Acqua"
+                },
+                {
+                    "quantita": 250,
+                    "unita_descrizione": "g Cioccolato fondente 60-70%"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Glassa moderna metodo ganache",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 250,
+                    "unita_descrizione": "g Panna fresca 35%"
+                },
+                {
+                    "quantita": 40,
+                    "unita_descrizione": "g Sciroppo di glucosio"
+                },
+                {
+                    "quantita": 250,
+                    "unita_descrizione": "g Cioccolato fondente 55-60%"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Burro morbido (facoltativo"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Glassa metodo sciroppo:",
+                    "testo_nodo": "cliccare qui"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Glassa metodo ganache",
+                    "testo_nodo": "cliccare qui"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tritare il cioccolato finemente",
+            "condizione": "a",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In un pentolino portare a bollore l'acqua con lo zucchero e cuocere fino a 110°C.",
+            "condizione": "a",
+            "icona": "pentolino",
+            "temperatura": "110°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Togliere dal fuoco lo sciroppo e aggiungere il cioccolato tritato finemente",
+            "condizione": "a",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Mescolare energicamente con una frusta fino a completo scioglimento.",
+            "condizione": "a",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Rimettere sul fuoco basso per pochi secondi se necessario per renderla fluida, ma senza bruciarla.",
+            "condizione": "a",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "TABLAGGIO: trasferire in una bowl pulita e fare un bagnomaria di acqua fredda con cubetti di ghiaccio; a quel punto si mescolare delicatamente (senza incorporare aria) finché la temperatura scende intorno ai 37-40°C e la glassa inizia a \"tirare\" (diventa più viscosa).",
+            "condizione": "a",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Tritare il cioccolato e metterlo in una caraffa alta e stretta (ideale per l'uso del mixer a immersione).",
+            "condizione": "b",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "In un pentolino portare a bollore la panna insieme al glucosio.",
+            "condizione": "b",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Versare la panna bollente sul cioccolato. Attendere un minuto che il calore penetri.",
+            "condizione": "b",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Iniziare a frizionare con una marisa partendo dal centro.",
+            "condizione": "b",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Aggiungere il burro morbido (se si usa) quando la massa è scesa sotto i 50°C.",
+            "condizione": "b",
+            "opzionale": true,
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Emulsionare con il mixer a immersione facendo attenzione a non inglobare aria (tenere la testa del mixer sempre immersa). Questo garantisce la lucentezza \"a specchio\".",
+            "condizione": "b",
+            "icona": "pimer"
+        }
+    ]
+}

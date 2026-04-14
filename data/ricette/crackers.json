@@ -1,0 +1,83 @@
+{
+    "id": "crackers",
+    "titolo": "Crackers",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina media (280W)"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Malto diastasico"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Olio EVO"
+        }
+    ],
+    "procedimento": [{
+            "step_id": "step-1",
+            "testo": "In planetaria munita di gancio inserire la farina, l'acqua, il lievito e il malto. Impastare 8 minuti a velocità bassa",
+            "icona": "gancio",
+            "tempo": "8 min.",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Quando l'impasto inizia a staccarsi dalle pareti, unire l'olio e aumentare la velocità",
+            "icona": "gancio",
+            "tempo": "4 min.",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Ribaltare l'impasto sul banco da lavoro, dare una forma tonda non troppo tirata e far riposare 15 minuti.",
+            "icona": "riposo",
+            "tempo": "5 min."
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Stirare con la sfogliatrice ad uno spessore di 2mm",
+            "icona": "mattarello",
+            "dimensione": "2 mm"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Fare una piega a 3 quindi abbassare nuovamente a 2mm",
+            "icona": "mattarello",
+            "dimensione": "2 mm"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Tagliare a rettangolini, forare con il bucasfoglia e disporre su teglia microforata",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Mettere a lievitare a 26-28°C per un'ora circa.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Salare a pioggia con sale grosso",
+            "icona": "salare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Cuocere in forno ventilato a 170°C per 10 minuti.",
+            "icona": "forno_ventilato",
+            "temperatura": "170°C",
+            "tempo": "10 min."
+        }
+    ]
+}

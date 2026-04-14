@@ -1,0 +1,54 @@
+{
+    "id": "ghinefle",
+    "titolo": "Ghinefle gratinate con toma d’alpeggio e salvia",
+    "ingredienti": [
+        {
+            "quantita": 1,
+            "unita_descrizione": "kg Patate rosse"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Pane raffrermo ammorbidito nel latte"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Farina"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "ml Latte"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "n° Uova intere"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il condimento"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Toma d'alpeggio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Salvia"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare le Ghinefle con lo stesso procedimento che si userebbe per gli <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`gnocchi_patate`, `data/ricette/gnocchi.json`, `Gnocchi di patate`)\">gnocchi di patate</span>. Si differenziano unicamente per il fatto di avere tra gli ingredienti il pane ammollato e per la forma a quenelle.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Condire con burro, salvia e toma e far gratinare in forno",
+            "icona": "forno_statico"
+        }
+    ]
+}

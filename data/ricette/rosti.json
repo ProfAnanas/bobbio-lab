@@ -1,0 +1,59 @@
+{
+    "id": "rosti",
+    "titolo": "Rosti di patate",
+    "ingredienti": [
+        {
+            "quantita": 1,
+            "unita_descrizione": "kg Patate"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Pancetta"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cipolle"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Fecola di patate"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Tagliare la cipolla e la pancetta a cubetti",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Inn una padella stufare la cipolla e la pancetta insieme",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Pelare e grattugiare le patate quindi strizzarle bene per eliminare quanta più acqua possibile",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "In una bowl mescolare le patate, le cipolle stufate con la pancetta, la fecola, sale pepe.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Formare direttamente in teglia (antiaderente) o in padella dei dischetti di 5 cm di diametro, equivalenti al contenuto di una cucchiaiata di composto.",
+            "icona": "forma",
+            "dimensione": "5 cm"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Fare rosolare a temperatura vivace fino a cottura completa.",
+            "icona": "padella"
+        }
+    ]
+}

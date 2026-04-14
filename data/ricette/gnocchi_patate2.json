@@ -1,0 +1,148 @@
+{
+    "id": "gnocchi_patate2",
+    "titolo": "Gnocchi di patate v2 (e varianti)",
+    "nota_dosi": "per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Gnocchi di patate senza uova"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "kg Patate farinose"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gnocchi di patate e ortaggi (zucca, spinaci ecc.)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "kg Patate farinose"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g di ortaggi puliti (zucca, spinaci, ecc.)"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Tuorli d'uovo"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Amido di mais"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gnocchi di patate con amido e uova"
+        },
+        {
+            "quantita": 1.5,
+            "unita_descrizione": "kg Patate farinose"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Tuorli d'uovo"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Amido di mais (maizena)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare e cuocere le patate a vapore (60/80 minuti)",
+            "icona": "forno_vapore",
+            "tempo": "60-80 min."
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Cuocere a vapore anche l'ortaggio scelto",
+            "opzionale": true,
+            "icona": "forno_vapore"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Sbucciare le patate con l’aiuto di uno spelucchino e schiacciarle su un tavolo d’acciaio quindi condire con sale fino. Eventualmente schiacciare anche l'ortaggio scelto.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Impastare a mano, aggiungendo sempre poca farina alla volta fino a che si ottiene un impasto malleabile",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere insieme alla farina i tuorli d'uovo se previsti",
+            "opzionale": true,
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Formare dei filoncini di 2 cm di circonferenza, con l’aiuto del palmo delle mani",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Con  una  spatola, sempre sul  tavolo infarinato, tagliare degli gnocchi della lunghezza di 2 cm quindi pressare sui rebbi di una forchetta o sul retro di una grattugia, per formare delle righe o dei puntini.",
+            "icona": "tagliare",
+            "dimensione": "2 cm"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Versare gli gnocchi in acqua bollente salata",
+            "icona": "pentola_alta"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-9a",
+                    "testo": "Scolare,  quando  vengono  a  galla,  direttamente  in  padella con la salsa desiderata e saltare",
+                    "icona": "padella"
+                },
+                {
+                    "step_id": "step-9b",
+                    "testo": "Scolare  quando  vengono  a  galla  in  una  bowl  con  acqua fredda, oppure scolare in una teglia unta d’olio da far raffreddare in abbattitore.",
+                    "icona": "microonde"
+                }
+            ]
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Se immersi in acqua fredda, scolare, ungere con olio di semi di girasole e versare in una teglia.",
+            "condizione": "b",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Coprire  la  teglia e conservare in frigorifero a +3°C per 2 giorni. Oppure riempire dei sacchetti e conservare in atmosfera modificata per 20 giorni circa.",
+            "icona": "frigorifero",
+            "temperatura": "+3°C"
+        }
+    ]
+}

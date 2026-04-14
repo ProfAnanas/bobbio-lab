@@ -1,0 +1,123 @@
+{
+    "id": "sacher_tradizionale",
+    "titolo": "Torta sacher tradizionale",
+    "nota_dosi": "per uno stampo da 22cm",
+    "ingredienti": [
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 110,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Cioccolato fondente 60%"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 180,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 110,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Sale (1 pizzico)"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Confettura liscia di albicocche (priva di pezzi)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g  <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`glassacioccolato`, `data/ricette/glassacioccolato.json`, `Glassa al cioccolato`)\">Glassa al cioccolato</span>"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di frusta, montare il burro morbido con lo zucchero a velo e il sale fino ad ottenere una crema spumosa e chiara.",
+            "icona": "frusta",
+            "velocita": "media"
+        },        
+        {
+            "step_id": "step-2",
+            "testo": "Fondere il cioccolato",
+            "icona": "microonde"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Unire al composto di burro il cioccolato fuso (non deve essere troppo caldo)",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere i tuorli a filo, uno alla volta, continuando a montare per emulsionare bene i grassi",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "A parte montare a neve gli albumi con lo zucchero semolato (non troppo ferma, a becco d'uccello)",
+            "icona": "frusta"
+        },        
+        {
+            "step_id": "step-6",
+            "testo": "Incorporare un terzo degli albumi montati al composto di burro e cioccolato, mescolando con una frusta per stemperare e alleggerire la massa.",
+            "icona": "mescolare"
+        },
+
+        {
+            "step_id": "step-7",
+            "testo": "Setacciara la farina",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Aggiungere la farina, alternandola con la restante parte degli albumi, incorporando il tutto delicatamente con una marisa dal basso verso l'alto per non smontare la struttura.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Riempire uno stampo da 22cm",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Cuocere in forno statico a 170°C per circa 40-45 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "170-175°C",
+            "tempo": "40-45 min."
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Quando la base sacher è fredda, tagliarla orizzontalmente per ottenere due strati.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Farcire con la confettura di albicocche",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Spennellare con confettura calda (va bene scaldarla al microonde) i lati e la superficie della base.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-15",
+            "testo": "Glassare la torta con la copertura scelta (temperatura della glassa di 32-35°C circa)",
+            "icona": "versare"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "id": "muffinsalati_cottoformaggio",
+    "titolo": "Muffin salati cotto e formaggio",
+    "nota_dosi": "per 12 muffin",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Lievito istantaneo per torte salate"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Formaggio grattugiato"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Provolone dolce (o scamorza bianca) tagliata a cubetti"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Prosciutto cotto (a cubetti o listarelle)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Uova intere"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "ml Latte intero fresco"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Burro fuso (o olio di semi)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una bowl grande, unire tutti gli ingredienti secchi (inclusi i salumi e i formaggi) quindi mescolare.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In una caraffa alta emulsionare gli ingredienti liquidi.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare i liquidi sui secchi e amalgamare velocemente con una marina: l'impasto non deve essere lavorato troppo altrimenti si sviluppa il glutine e i muffin risulteranno gommosi",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Riempire gli stampi per muffin per 2/3 della sua altezza, circa 60-65g di impasto",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Cuocere a 170°C per 20-25 minuti. (temperatura al cuore con sonda tra 92 e 94°C)",
+            "icona": "forno_ventilato",
+            "temperatura": "170°C",
+            "tempo": "20-25 min. (92-94°C)"
+        }
+    ]
+}

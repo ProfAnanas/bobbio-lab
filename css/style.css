@@ -1393,3 +1393,29 @@ body.body-accoglienza .blocco-categoria summary {
 body.body-accoglienza .blocco-categoria summary::-webkit-details-marker {
     display: none; /* Nasconde la freccina su Safari/Chrome vecchi */
 }
+/* =========================================
+   TENDINE VARIANTI INGREDIENTI
+   ========================================= */
+.tendina-variante {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fdf2e9; /* Sfondo leggermente arancione per staccare */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.tendina-variante summary {
+    cursor: pointer;
+    color: #d35400; /* Arancione acceso */
+    font-weight: bold;
+    font-size: 1.05em;
+    outline: none;
+}
+
+/* Stile per la lista dentro la tendina */
+.lista-sotto-ingredienti {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px dashed #d35400;
+    list-style-type: disc;
+}

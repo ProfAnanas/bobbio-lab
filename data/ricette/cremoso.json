@@ -1,0 +1,204 @@
+{
+    "id": "cremoso",
+    "titolo": "Cremoso al cioccolato (e varianti)",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso al cioccolato fondente (60-70%)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 240,
+                    "unita_descrizione": "g Panna fresca 35%"
+                },
+                {
+                    "quantita": 190,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 95,
+                    "unita_descrizione": "g Tuorli"
+                },
+                {
+                    "quantita": 80,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Amido di riso"
+                },
+                {
+                    "quantita": 230,
+                    "unita_descrizione": "g Cioccolato fondente (60-70%)"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Burro"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso al gianduia",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 240,
+                    "unita_descrizione": "g Panna fresca 35%"
+                },
+                {
+                    "quantita": 190,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 95,
+                    "unita_descrizione": "g Tuorli"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Amido di riso"
+                },
+                {
+                    "quantita": 320,
+                    "unita_descrizione": "g Cioccolato Gianduia"
+                },
+                {
+                    "quantita": 20,
+                    "unita_descrizione": "g Burro di cacao"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Burro"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso al cioccolato bianco",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 240,
+                    "unita_descrizione": "g Panna fresca 35%"
+                },
+                {
+                    "quantita": 190,
+                    "unita_descrizione": "g Latte intero fresco"
+                },
+                {
+                    "quantita": 95,
+                    "unita_descrizione": "g Tuorli"
+                },
+                {
+                    "quantita": 20,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Amido di riso"
+                },
+                {
+                    "quantita": 310,
+                    "unita_descrizione": "g Cioccolato bianco"
+                },
+                {
+                    "quantita": 35,
+                    "unita_descrizione": "g Burro di cacao"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Burro"
+                },
+                {
+                    "quantita": 1,
+                    "unita_descrizione": "g Vaniglia"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cremoso al cioccolato al latte",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 240,
+                    "unita_descrizione": "g Panna fresca 35%"
+                },
+                {
+                    "quantita": 190,
+                    "unita_descrizione": "g Latte intero fresco"
+                },
+                {
+                    "quantita": 95,
+                    "unita_descrizione": "g Tuorli"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Amido di riso"
+                },
+                {
+                    "quantita": 290,
+                    "unita_descrizione": "g Cioccolato al latte 35-40%"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Burro di cacao"
+                }
+            ]
+        },
+                {
+            "quantita": null,
+            "unita_descrizione": "Per tutte le versioni, se serve dressare il cremoso con la sac a poche"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Colla di pesce"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Fare la crema pasticcera con i primi cinque ingredienti (panna, latte, tuorli, zucchero, amido di riso)",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tritare il cioccolato finemente",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare la crema pasticcera CALDA sul cioccolato e il burro di cacao",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere il burro ed emulsionare",
+            "icona": "pimer"
+        },
+                {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-5a",
+                    "testo": "Lasciare riposare una notte prima dell'utilizzo",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C",
+                    "tempo": "12 ore"
+                },
+                {
+                    "step_id": "step-5b",
+                    "testo": "Stenderla in una pirofila ad uno spessore di 1-2cm al massimo. Coprire con pellicola a contatto e lasciare in abbattitore positivo per 2 ore",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C",
+                    "tempo": "2 ore",
+                    "dimensione": "1-2cm"
+                }
+            ]
+        }
+    ]
+}
