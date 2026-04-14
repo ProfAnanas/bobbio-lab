@@ -295,7 +295,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
                 
                 const details = document.createElement('details');
                 details.classList.add('tendina-variante');
-                details.open = true; // Teniamo la tendina aperta di default
+                details.open = false; // Teniamo la tendina aperta di default
                 
                 const summary = document.createElement('summary');
                 // Usa il nome dell'opzione o la descrizione come titolo della tendina
