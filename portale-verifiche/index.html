@@ -76,37 +76,19 @@
         if (!inputId) return;
 
         try {
-            // Ricordati di rimettere qui il tuo link del CSV pubblicato!
-            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9OFdqfrexzl5zJcPHyIECZx-6Qd5S4Z1WVdDcjIn58YjBDsY4-I1JzYniPRb_wRB6YgFmqZ9x3yn3/pub?gid=213780094&single=true&output=csv';
-            
-            const response = await fetch(csvUrl);
-            const csvText = await response.text();
-
-            const righe = csvText.split('\n');
-            let database = {};
-
-            // Partiamo da 1 per saltare la riga dei titoli
-            for (let i = 1; i < righe.length; i++) {
-                // Gestisce sia la virgola che il punto e virgola come separatore
-                const colonne = righe[i].split(/,|;/);
-
-                // Controlla che la riga abbia almeno 4 colonne, poi legge indice 2 (ID) e indice 3 (Link)
-                if (colonne.length >= 4 && colonne[2] && colonne[3]) {
-                    // Rimuove eventuali virgolette di formattazione e pulisce il testo
-                    const id = colonne[2].replace(/"/g, '').trim().toUpperCase();
-                    const link = colonne[3].replace(/"/g, '').trim();
-                    database[id] = link;
-                }
-            }
+            // Ora peschiamo il file locale, niente più Google Fogli
+            const response = await fetch('database.json');
+            const database = await response.json();
 
             if (database[inputId]) {
                 window.location.href = database[inputId];
             } else {
+                messaggioErrore.textContent = "Codice non valido o non trovato. Riprova.";
                 messaggioErrore.style.display = 'block';
             }
         } catch (error) {
-            console.error("Errore di connessione a Google Fogli:", error);
-            messaggioErrore.textContent = "Errore di connessione al database scolastico.";
+            console.error("Errore:", error);
+            messaggioErrore.textContent = "Errore di lettura del database locale.";
             messaggioErrore.style.display = 'block';
         }
     }
