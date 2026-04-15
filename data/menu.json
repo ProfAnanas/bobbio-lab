@@ -168,6 +168,7 @@
             { "id": "crostatine_fragole", "nome": "Crostatine monoporzione alle fragole", "url_dati": "data/ricette/crostatine_fragole.json", "anno": "tutti", "tag": "" },
             { "id": "cream_tart", "nome": "Cream Tart", "url_dati": "data/ricette/cream_tart.json", "anno": "3, 4", "tag": "frolla, sablè, sablé, sable" },
             { "id": "sacher_moderna", "nome": "Torta sacher moderna", "url_dati": "data/ricette/sacher_moderna.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "sacher_tradizionale", "nome": "Torta sacher tradizionale", "url_dati": "data/ricette/sacher_tradizionale.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "glassacioccolato", "nome": "Glassa al cioccolato (metodo sciroppo e metodo ganache)", "url_dati": "data/ricette/glassacioccolato.json", "anno": "3, 4, 5", "tag": "" }
           ]
         },

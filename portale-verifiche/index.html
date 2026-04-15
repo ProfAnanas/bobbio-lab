@@ -76,9 +76,17 @@
         if (!inputId) return;
 
         try {
-            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9OFdqfrexzl5zJcPHyIECZx-6Qd5S4Z1WVdDcjIn58YjBDsY4-I1JzYniPRb_wRB6YgFmqZ9x3yn3/pubhtml?gid=213780094&single=true';
+            // Inserisci sempre qui il tuo link CSV
+            const csvUrl = 'INCOLLA_QUI_IL_TUO_LINK_CSV';
             const response = await fetch(csvUrl);
             const csvText = await response.text();
+
+            // La trappola: controlliamo se ci è arrivata una pagina HTML di blocco invece del CSV
+            if (csvText.toLowerCase().includes("<html")) {
+                messaggioErrore.textContent = "Errore di rete: il sistema sta bloccando il database (ricevuta pagina HTML).";
+                messaggioErrore.style.display = 'block';
+                return;
+            }
 
             const righe = csvText.split('\n');
             let database = {};
@@ -99,8 +107,7 @@
                 messaggioErrore.style.display = 'block';
             }
         } catch (error) {
-            console.error("Errore di connessione a Google Fogli:", error);
-            messaggioErrore.textContent = "Errore di connessione al database scolastico.";
+            messaggioErrore.textContent = "Errore fatale di connessione al database.";
             messaggioErrore.style.display = 'block';
         }
     }

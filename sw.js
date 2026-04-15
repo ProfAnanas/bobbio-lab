@@ -1,4 +1,4 @@
-const NOME_CACHE = 'bobbiolab-cache-v1.8.5';
+const NOME_CACHE = 'bobbiolab-cache-v1.8.6';
 
 // Elenco dei file base da salvare per far funzionare l'interfaccia offline
 const FILE_DA_SALVARE = [
