@@ -42,7 +42,7 @@
     "procedimento": [
         {
             "step_id": "step-1",
-            "testo": "Preparare le Ghinefle con lo stesso procedimento che si userebbe per gli <span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`gnocchi_patate`, `data/ricette/gnocchi.json`, `Gnocchi di patate`)\">gnocchi di patate</span>. Si differenziano unicamente per il fatto di avere tra gli ingredienti il pane ammollato e per la forma a quenelle.",
+            "testo": "Preparare le Ghinefle con lo stesso procedimento che si userebbe per gli gnocchi di patate. Si differenziano unicamente per il fatto di avere tra gli ingredienti il pane ammollato e per la forma a quenelle.",
             "icona": "impastare_mano"
         },
         {
