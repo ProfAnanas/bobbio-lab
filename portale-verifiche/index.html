@@ -69,26 +69,22 @@
     </div>
 
 <script>
-    async function accediAllaVerifica() {
+    function accediAllaVerifica() {
         const inputId = document.getElementById('codiceVerifica').value.trim().toUpperCase();
         const messaggioErrore = document.getElementById('messaggioErrore');
         
         if (!inputId) return;
 
-        try {
-            // Ora peschiamo il file locale, niente più Google Fogli
-            const response = await fetch('database.json');
-            const database = await response.json();
+        // Inseriamo le verifiche direttamente qui dentro!
+        const database = {
+            "TERZE-SOST": "https://forms.gle/4UpLep1iYbpZXdEd8",
+            "GATTONERO26": "https://forms.gle/LINK_A_CASO"
+        };
 
-            if (database[inputId]) {
-                window.location.href = database[inputId];
-            } else {
-                messaggioErrore.textContent = "Codice non valido o non trovato. Riprova.";
-                messaggioErrore.style.display = 'block';
-            }
-        } catch (error) {
-            console.error("Errore:", error);
-            messaggioErrore.textContent = "Errore di lettura del database locale.";
+        if (database[inputId]) {
+            window.location.href = database[inputId];
+        } else {
+            messaggioErrore.textContent = "Codice non valido o non trovato. Riprova.";
             messaggioErrore.style.display = 'block';
         }
     }
