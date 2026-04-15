@@ -69,22 +69,38 @@
     </div>
 
 <script>
-    function accediAllaVerifica() {
+    async function accediAllaVerifica() {
         const inputId = document.getElementById('codiceVerifica').value.trim().toUpperCase();
         const messaggioErrore = document.getElementById('messaggioErrore');
         
         if (!inputId) return;
 
-        // Inseriamo le verifiche direttamente qui dentro!
-        const database = {
-            "TERZE-SOST": "https://forms.gle/4UpLep1iYbpZXdEd8",
-            "GATTONERO26": "https://forms.gle/LINK_A_CASO"
-        };
+        try {
+            const csvUrl = 'INCOLLA_QUI_IL_TUO_LINK_CSV';
+            const response = await fetch(csvUrl);
+            const csvText = await response.text();
 
-        if (database[inputId]) {
-            window.location.href = database[inputId];
-        } else {
-            messaggioErrore.textContent = "Codice non valido o non trovato. Riprova.";
+            const righe = csvText.split('\n');
+            let database = {};
+
+            for (let i = 1; i < righe.length; i++) {
+                const colonne = righe[i].split(/,|;/);
+                if (colonne.length >= 4 && colonne[2] && colonne[3]) {
+                    const id = colonne[2].replace(/"/g, '').trim().toUpperCase();
+                    const link = colonne[3].replace(/"/g, '').trim();
+                    database[id] = link;
+                }
+            }
+
+            if (database[inputId]) {
+                window.location.href = database[inputId];
+            } else {
+                messaggioErrore.textContent = "Codice non valido o non trovato. Riprova.";
+                messaggioErrore.style.display = 'block';
+            }
+        } catch (error) {
+            console.error("Errore di connessione a Google Fogli:", error);
+            messaggioErrore.textContent = "Errore di connessione al database scolastico.";
             messaggioErrore.style.display = 'block';
         }
     }
