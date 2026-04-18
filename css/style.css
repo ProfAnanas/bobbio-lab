@@ -1419,3 +1419,32 @@ body.body-accoglienza .blocco-categoria summary::-webkit-details-marker {
     border-left: 2px dashed #d35400;
     list-style-type: disc;
 }
+/* =========================================
+   BADGE "NEW" PER LE RICETTE
+   ========================================= */
+/* Assicuriamoci che i bottoni possano "trattenere" il badge al loro interno */
+.bottone-quadrato, .bottone-quadrato-accoglienza {
+    position: relative; 
+}
+
+.badge-new {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    animation: battito-new 2s infinite;
+    z-index: 10;
+    letter-spacing: 1px;
+}
+
+@keyframes battito-new {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); background-color: #c0392b; }
+    100% { transform: scale(1); }
+}

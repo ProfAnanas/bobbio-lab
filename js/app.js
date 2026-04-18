@@ -203,11 +203,58 @@ function disegnaGrigliaMenu(catalogo) {
     if (!contenitore) return;
     contenitore.innerHTML = '';
 
+    // --- INIZIO: MOTORE CATEGORIA VIRTUALE "NOVITÀ" ---
+    const ricetteNuove = [];
+    const dataOggi = new Date();
+
+    // 1. Esploriamo tutto il catalogo alla ricerca delle ricette "NEW"
     catalogo.forEach(categoria => {
+        categoria.sottocategorie.forEach(sub => {
+            sub.preparazioni.forEach(ricetta => {
+                if (ricetta.data_inserimento) {
+                    const dataInserimento = new Date(ricetta.data_inserimento);
+                    const differenzaTempo = Math.abs(dataOggi - dataInserimento);
+                    const giorniPassati = Math.ceil(differenzaTempo / (1000 * 60 * 60 * 24));
+                    
+                    // Se la ricetta ha 15 giorni o meno, ne facciamo una copia
+                    if (giorniPassati <= 15) {
+                        ricetteNuove.push(ricetta);
+                    }
+                }
+            });
+        });
+    });
+
+    // 2. Facciamo una copia del catalogo originale per non modificarlo permanentemente
+    let catalogoDaDisegnare = [...catalogo]; 
+
+    // 3. Se abbiamo trovato ricette nuove, creiamo la Categoria Virtuale e la mettiamo in cima (unshift)
+    if (ricetteNuove.length > 0) {
+        const categoriaNovita = {
+            id_categoria: "novita",
+            nome_categoria: "🌟 Ultime Novità",
+            sottocategorie: [
+                {
+                    nome_sottocategoria: "Ricette aggiunte di recente",
+                    preparazioni: ricetteNuove
+                }
+            ]
+        };
+        catalogoDaDisegnare.unshift(categoriaNovita);
+    }
+    // --- FINE: MOTORE CATEGORIA VIRTUALE ---
+
+    // Ora usiamo il "catalogoDaDisegnare" (che include le novità) per creare i bottoni
+    catalogoDaDisegnare.forEach(categoria => {
         const detailsCat = document.createElement('details');
         detailsCat.classList.add('blocco-categoria');
         // ID MACRO FONDAMENTALE PER IL FILTRO
         detailsCat.setAttribute('data-id-macro', categoria.id_categoria.toLowerCase().trim());
+        
+        // Teniamo aperta la categoria delle novità di default per farla notare subito!
+        if(categoria.id_categoria === "novita") {
+            detailsCat.open = false;
+        }
         
         const summaryCat = document.createElement('summary');
         summaryCat.textContent = categoria.nome_categoria;
@@ -216,6 +263,11 @@ function disegnaGrigliaMenu(catalogo) {
         categoria.sottocategorie.forEach(sub => {
             const detailsSub = document.createElement('details');
             detailsSub.classList.add('blocco-sottocategoria');
+            
+            // Apriamo in automatico anche la tendina interna delle novità
+            if(categoria.id_categoria === "novita") {
+                detailsSub.open = true;
+            }
 
             const summarySub = document.createElement('summary');
             summarySub.textContent = sub.nome_sottocategoria;
@@ -228,10 +280,27 @@ function disegnaGrigliaMenu(catalogo) {
                 const bottone = document.createElement('button');
                 bottone.textContent = ricetta.nome;
                 bottone.classList.add('btn-ricetta');
+                bottone.style.position = 'relative'; // Necessario per tenere fermo il badge
                 
                 bottone.setAttribute('data-anno', String(ricetta.anno || 'tutti').toLowerCase());
                 bottone.setAttribute('data-tag', String(ricetta.tag || '').toLowerCase());
                 bottone.setAttribute('data-nome', String(ricetta.nome).toLowerCase());
+                
+                // --- INIZIO MOTORE BADGE "NEW" ---
+                if (ricetta.data_inserimento) {
+                    const dataInserimento = new Date(ricetta.data_inserimento);
+                    const dataOggi = new Date();
+                    const differenzaTempo = Math.abs(dataOggi - dataInserimento);
+                    const giorniPassati = Math.ceil(differenzaTempo / (1000 * 60 * 60 * 24));
+
+                    if (giorniPassati <= 15) {
+                        const badge = document.createElement('span');
+                        badge.classList.add('badge-new');
+                        badge.textContent = 'NEW';
+                        bottone.appendChild(badge);
+                    }
+                }
+                // --- FINE MOTORE BADGE "NEW" ---
                 
                 bottone.onclick = () => apriAlgoritmo(ricetta.id, ricetta.url_dati, ricetta.nome);
                 divRicette.appendChild(bottone);

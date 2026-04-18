@@ -38,8 +38,9 @@
           { "id": "bavaresefinocchi", "nome": "Bavarese di finocchi con riduzione agrodolce di arancia", "url_dati": "data/ricette/bavaresefinocchi.json", "anno": "3, 4, 5", "tag": "" },
           { "id": "coniglio_carpione", "nome": "Bocconcini di coniglio in carpione, zucchine grigliate e mentuccia", "url_dati": "data/ricette/coniglio_carpione.json", "anno": "3, 4, 5", "tag": "piemonte" },
           { "id": "quiche_ai_porri", "nome": "Quiche ai porri", "url_dati": "data/ricette/quiche_ai_porri.json", "anno": "tutti", "tag": "brisé, brisè, brise, sfoglia, torta salata" },
-          { "id": "muffinsalati_cottoformaggio", "nome": "Muffin salati cotto e formaggio", "url_dati": "data/ricette/muffinsalati_cottoformaggio.json", "anno": "2, 3", "tag": "" }
-                     ]
+          { "id": "muffinsalati_cottoformaggio", "nome": "Muffin salati cotto e formaggio", "url_dati": "data/ricette/muffinsalati_cottoformaggio.json", "anno": "2, 3", "tag": "" },
+          { "id": "gyoza", "nome": "Gyoza (ravioli giapponesi)", "url_dati": "data/ricette/gyoza.json", "anno": "3, 4, 5", "tag": "giappone, etnica", "data_inserimento": "2026-04-18" }
+        ]
         },
         {
           "nome_sottocategoria": "Primi",

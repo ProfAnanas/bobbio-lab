@@ -1,0 +1,157 @@
+{
+    "id": "gyoza",
+    "titolo": "Gyoza (ravioli giapponesi)",
+    "nota_dosi": "Per circa 16 gyoza",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il ripieno"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Cavolo cappuccio bianco (o verza)"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Cipollotto (o cipolla rossa)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Macinato di maiale (o di pollo, o di gamberi o tofu o misto)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Zenzero fresco grattugiato"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Aglio grattugiato"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Salsa di soia chiara"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sakè (o vino bianco secco)"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Olio di semi di sesamo (meglio se tostato)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e Pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la pasta"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Farina di grano tenero"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Acqua bollente"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la salsa"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Salsa di soia chiara"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Aceto di riso"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Rayu (olio di sesamo piccante)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Per il ripieno: tritare il cavolo bianco, condire con il sale e lasciare riposare per qualche minuto.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tritare il cipollotto grossolanamente",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Strizzare il cavolo facendo uscire quanta più acqua possibile",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "In una bowl mettere tutti gli ingredienti per il ripieno e amalgamarli bene.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Far riposare il ripieno coperto di pellicola, in frigorifero, per almeno 30 minuti.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "30 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Per la pasta: in una bowl, impastare la farina con l'acqua bollente fino a ottenere un impasto liscio e omogeneo.\nPer non scottarsi, iniziare a mescolare usando una forchetta e poi passare alle mani.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far riposare l'impasto almeno 30 min a temperatura ambiente",
+            "icona": "riposo",
+            "temperatura": "t. amb.",
+            "tempo": "30 min."
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-8a",
+                    "testo": "Metodo palline:  Lavorare la pasta creando dei filoncini di 3cm di diametro da cui ricavare 16 palline da 12g l'una.",
+                    "icona": "impastare_mano",
+                    "dimensione": "12g"
+                },
+                {
+                    "step_id": "step-8b",
+                    "testo": "Metodo coppapasta: Tirare la sfoglia sottile 1-2mm quindi con un coppapasta largo 10 cm creare dei dischi. Non usare farina nel piano di lavoro ma poca fecola di patate.",
+                    "icona": "mattarello"
+                }
+            ]
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Inserire una noce di ripieno al centro della sfoglia quindi richiudere i gyoza con la caratteristica forma a mezzaluna e applicare le pieghe sui bordi per sigillare bene il raviolo. Attenzione a non sporcare il bordo della sfoglia con il ripieno o farà fatica a chiudersi.",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Scaldare una padella, ungerla con dell'olio di semi quindi disporre i gyoza e rosolarli per pochi minuti a fiamma/potenza medio-alta.",
+            "icona": "padella",
+            "temperatura": "media-alta",
+            "tempo": "2-3 min."
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Sfumare con dell'acqua naturale e coprire con il coperchio. Abbassare al minimo e proseguire la cottura per 7-8 minuti.",
+            "icona": "padella",
+            "temperatura": "bassa",
+            "tempo": "7-8 min."
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Togliere il coperchio, versare un filo di olio di semi di sesamo e proseguire la cottura per qualche minuto fino ad ottenere la doratura desiderata sul fondo dei gyoza.",
+            "icona": "padella",
+            "temperatura": "media-alta"
+        }
+    ]
+}
