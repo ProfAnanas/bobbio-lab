@@ -152,7 +152,7 @@
         },
                 {
             "quantita": null,
-            "unita_descrizione": "Per tutte le versioni, se serve dressare il cremoso con la sac a poche"
+            "unita_descrizione": "Per tutte le versioni, se serve dressare il cremoso con la sac a poche (la quantità può andare da 4 a 8g)"
         },
         {
             "quantita": 8,
@@ -172,7 +172,7 @@
         },
         {
             "step_id": "step-3",
-            "testo": "Versare la crema pasticcera CALDA sul cioccolato e il burro di cacao",
+            "testo": "Versare la crema pasticcera CALDA sul cioccolato e il burro di cacao (e la gelatina idratata se prevista)",
             "icona": "versare"
         },
         {

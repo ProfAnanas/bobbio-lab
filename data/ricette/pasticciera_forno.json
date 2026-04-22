@@ -1,0 +1,114 @@
+{
+    "id": "pasticciera_forno",
+    "titolo": "Crema pasticciera da forno",
+    "nota_dosi": "perfetta per torte in cui la crema cuoce in forno (es. torta della nonna)",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Latte fresco intero"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Versione \"classica\"",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 150,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Farina debole 00"
+                },
+                {
+                    "quantita": null,
+                    "unita_descrizione": "Aromi (limone, vaniglia, ecc.)"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al cacao",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 160,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 25,
+                    "unita_descrizione": "g Farina 00 debole"
+                },
+                {
+                    "quantita": 25,
+                    "unita_descrizione": "g Cacao amaro in polvere"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Variante al cioccolato fondente",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 120,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 40,
+                    "unita_descrizione": "g Farina 00 debole"
+                },
+                {
+                    "quantita": 90,
+                    "unita_descrizione": "g Cioccolato fondente (al 60-70%) tritato finemente"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Portare a bollore il latte e la panna con gli aromi",
+            "icona": "pentolino",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In una ciotola unire i tuorli, lo zucchero e le polveri setacciate (la farina e l'eventuale cacao)",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stemperare il composto di tuorli con una parte dei liquidi caldi, quindi rimettere tutto sul fuoco.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere la crema mescolando continuamente, ma toglierla dal fuoco non appena si addensa e accenna il primo bollore. Non deve essere stracotta in pentola, perché completerà la sua cottura e si stabilizzerà direttamente in forno.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Non appena la crema si addensa e accenna il primo bollore, toglierla dal fuoco e versarla immediatamente, ancora bollente, sopra il cioccolato tritato.",
+            "opzionale": true,
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Lasciare riposare un minuto per far sciogliere il burro di cacao, quindi mescolare energicamente con una frusta per creare un'emulsione liscia, lucida e priva di grumi.",
+            "opzionale": true,
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Versare la crema in una pirofila larga, coprire con pellicola a contatto e abbattere in positivo. non inserire mai la crema calda nel guscio di frolla cruda, altrimenti scioglierà il burro rovinando la torta prima ancora di infornarla.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        }
+    ]
+}

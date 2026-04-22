@@ -135,6 +135,7 @@
           "nome_sottocategoria": "Creme e dolci al cucchiaio",
           "preparazioni": [
             { "id": "crema_pasticcera", "nome": "Crema pasticcera (e varianti)", "url_dati": "data/ricette/crema_pasticcera.json", "anno": "1, 2, 3", "tag": "diplomatica,chantilly,uovo,uova,latte,panna,cioccolato" },
+            { "id": "pasticciera_forno", "nome": "Crema pasticciera da forno", "url_dati": "data/ricette/pasticciera_forno.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-04-22" },
             { "id": "crema_diplomatica", "nome": "Crema diplomatica", "url_dati": "data/ricette/crema_diplomatica.json", "anno": "1, 2, 3", "tag": "pasticciera, torta, pasticcera" },
             { "id": "crema_mascarpone", "nome": "Crema al mascarpone", "url_dati": "data/ricette/crema_mascarpone.json", "anno": "3, 4, 5", "tag": "cream tart" },
             { "id": "chantilly_mascarpone", "nome": "Chantilly al mascarpone", "url_dati": "data/ricette/chantilly_mascarpone.json", "anno": "3, 4, 5", "tag": "" },
