@@ -1,0 +1,32 @@
+{
+    "id": "crema_anacardi",
+    "titolo": "Crema di anacardi",
+    "nota_dosi": "per mantecare risotti",
+    "ingredienti": [
+        {
+            "quantita": 1600,
+            "unita_descrizione": "g Anacardi al naturale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Ammollare gli anacardi in acqua bollente per almeno 30 minuti.",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Frullare gli anacardi con pochissima acqua naturale pulita (non quella di ammollo) fino a ottenere una crema liscissima e densa come un formaggio spalmabile.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiustare di sale, coprire e conservare.",
+            "icona": "aggiungere"
+        }
+    ]
+}

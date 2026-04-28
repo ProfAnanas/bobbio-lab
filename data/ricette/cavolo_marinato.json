@@ -1,0 +1,49 @@
+{
+    "id": "cavolo_marinato",
+    "titolo": "Insalatina di cavolo viola marinato",
+    "nota_dosi": "per 80 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 5,
+            "unita_descrizione": "n° Teste di cavolo viola"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aceto di mele"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sciroppo d'acero"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mondare e lavare le teste di cavolo viola",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Con la mandolina, affettare molto sottilmente (chiffonade) il cavolo.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Mettere il cavolo tagliato in uno scolapasta e spargere un po' di sale grosso per far perdere tutta l'acqua. Lasciar colare almeno 1 ora.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Strizzare bene il cavolo quindi condirlo con aceto di mele, sciroppo d'acero, olio EVO. Massaggiarlo con le mani per rompere delicatamente le fibre e renderlo bello morbido",
+            "icona": "impastare_mano"
+        }
+    ]
+}

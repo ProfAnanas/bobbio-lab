@@ -1,0 +1,35 @@
+{
+    "id": "pasticcera_vegan",
+    "titolo": "Crema pasticcera vegan",
+    "ingredienti": [
+        {
+            "quantita": 5000,
+            "unita_descrizione": "ml Latte di Soia (possibilmente alla vaniglia)"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Amido di mais"
+        },
+        {
+            "quantita": 800,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "pizzico di curcuma in polvere"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare una crema scaldando il latte con l'amido, lo zucchero e la curcuma. Mescolare con una frusta fino a che non si addensa.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Abbattere in positivo con pellicola a contatto",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        }
+    ]
+}

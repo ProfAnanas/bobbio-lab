@@ -67,7 +67,8 @@ const mappaSottocategorie = {
     pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme e dolci al cucchiaio", "Masse montate", "Torte fresche e da credenza", "Lievitati", "Dolci fritti", "Cioccolato e pralineria", "Gelati e sorbetti", "Pasticceria salata", "Tecniche avanzate"],
     panificazione: ["Preparazioni base", "Lievitati", "Pani speciali", "Pizze e focacce", "Tecniche avanzate"],
     qualifiche_cucina: ["Prove d'esame"],
-    qualifiche_pasticceria: ["Prove d'esame"]
+    qualifiche_pasticceria: ["Prove d'esame"],
+    cena_vegana: ["Ricette"],
 };
 
 // --- 2. AVVIO E COLLEGAMENTO SENSORI ---

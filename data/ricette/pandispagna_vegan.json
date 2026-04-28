@@ -1,0 +1,58 @@
+{
+    "id": "pandispagna_vegan",
+    "titolo": "Pan di Spagna vegan e gluten free",
+    "ingredienti": [
+        {
+            "quantita": 3000,
+            "unita_descrizione": "g Farina di riso finissima"
+        },
+        {
+            "quantita": 1000,
+            "unita_descrizione": "g Fecola di patate"
+        },
+        {
+            "quantita": 1600,
+            "unita_descrizione": "g Zucchero di canna"
+        },
+        {
+            "quantita": 3000,
+            "unita_descrizione": "ml Latte di soia"
+        },
+        {
+            "quantita": 800,
+            "unita_descrizione": "ml Olio di semi"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Lievito per dolci (baking)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Scorza di limone"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mescolare tutte le polveri insieme",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere i liquidi e montare con una frusta (o in planetaria montata di frusta)",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare il composto in teglie alte 2cm circa.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere a 180°C in forno statico per circa 20 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "20 min."
+        }
+    ]
+}

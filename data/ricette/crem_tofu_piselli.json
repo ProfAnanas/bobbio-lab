@@ -1,0 +1,50 @@
+{
+    "id": "crem_tofu_piselli",
+    "titolo": "Crema di tofu, piselli e menta",
+    "nota_dosi": "per 80 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 4,
+            "unita_descrizione": "kg Piselli freschi puliti o surgelati"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "kg Tofu compatto"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Menta fresca"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Limoni"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e Pepe"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Sbollentare i piselli in acqua bollente per 5-7 minuti.",
+            "icona": "pentolino",
+            "tempo": "5-7 min."
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Sbollentare per 2 minuti il tofu quindi metterlo a sgocciolare su una griglia.",
+            "icona": "pentolino",
+            "tempo": "2 min."
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In un cutter o con il frullatore a immersione, frullare i piselli, il tofu, la menta precedentemente lavata, l'olio e il succo di limone. (se la crema è troppo densa, aggiungere un cucchiaio di acqua di cottura dei piselli o di latte vegetale non zuccherato)",
+            "icona": "mixer"
+        }
+    ]
+}

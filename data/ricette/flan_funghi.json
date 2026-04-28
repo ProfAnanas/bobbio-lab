@@ -1,0 +1,79 @@
+{
+    "id": "flan_funghi",
+    "titolo": "Flan di funghi",
+    "nota_dosi": "per 80 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 6,
+            "unita_descrizione": "kg Funghi (misti o champignon)"
+        },
+        {
+            "quantita": 1500,
+            "unita_descrizione": "g Tofu Vellutato (silken tofu)"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Maizena"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aglio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Prezzemolo"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e Pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Mondare e lavare i funghi, pelare l'aglio lasciandolo intero.",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tagliare i funghi a fette larghe mezzo centimetro",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Tritare il prezzemolo finemente",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "In una padella far saltare i funghi con un filo d'olio fino a completa cottura",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere sale, pepe, maizena e prezzemolo. Mescolare bene",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "con il frullatore a immersione o il cutter, frullare i funghi insieme al tofu vellutato, aggiustare eventualmente di sale.",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Versare negli stampini da flan oliati.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere in forno a bagnomaria a 180°C per circa 30-40 min.",
+            "icona": "forno_ventilato",
+            "temperatura": "180°C",
+            "tempo": "30-40 min."
+        }
+    ]
+}

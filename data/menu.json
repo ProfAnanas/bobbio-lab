@@ -269,6 +269,25 @@
           ]
         }
       ]
+    },
+    {
+      "id_categoria": "cena_vegana",
+      "nome_categoria": "Cena Vegana 29/04",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Ricette",
+          "preparazioni": [
+            { "id": "flan_funghi", "nome": "Flan di funghi", "url_dati": "data/ricette/flan_funghi.json", "anno": "3, 4, 5", "tag": "vegan", "data_inserimento": "2026-04-28" },
+            { "id": "cavolo_marinato", "nome": "Insalatina di cavolo viola marinato", "url_dati": "data/ricette/cavolo_marinato.json", "anno": "3, 4, 5", "tag": "vegan", "data_inserimento": "2026-04-28" },
+            { "id": "crepes_integrali", "nome": "Crepes integrali al rosmarino", "url_dati": "data/ricette/crepes_integrali.json", "anno": "3, 4, 5", "tag": "vegan", "data_inserimento": "2026-04-28" },
+            { "id": "crem_tofu_piselli", "nome": "Crema di tofu, piselli e menta", "url_dati": "data/ricette/crem_tofu_piselli.json", "anno": "3, 4, 5", "tag": "vegan", "data_inserimento": "2026-04-28" },
+            { "id": "crema_anacardi", "nome": "Crema di anacardi", "url_dati": "data/ricette/crema_anacardi.json", "anno": "3, 4, 5", "tag": "vegan, burro", "data_inserimento": "2026-04-28" },
+            { "id": "pandispagna_vegan", "nome": "Pan di spagna vegan e gluten free", "url_dati": "data/ricette/pandispagna_vegan.json", "anno": "3, 4, 5", "tag": "veg, senza glutine", "data_inserimento": "2026-04-28" },
+            { "id": "pasticcera_vegan", "nome": "Crema pasticcera vegan", "url_dati": "data/ricette/pasticcera_vegan.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-04-28" }
+
+          ]
+        }
+      ]
     }
   ]
 }

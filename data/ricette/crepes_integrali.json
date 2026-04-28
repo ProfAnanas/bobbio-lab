@@ -1,0 +1,64 @@
+{
+    "id": "crepes_integrali",
+    "titolo": "Crepes integrali al rosmarino",
+    "nota_dosi": "Per 80 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 750,
+            "unita_descrizione": "g Farina integrale"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "l Latte vegetale (soia o avena) senza zucchero"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "ml Olio di semi"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino fresco"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una ciotola, mescolare la farina e il sale",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare a filo il latte vegetale mescolando con una frusta per evitare di formare grumi",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Lavare e tritare finemente il rosmarino (solo gli aghi!)",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere alla pastella, l'olio e il rosmarino tritato.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Lasciare riposare la pastella per almeno 30 minuti.",
+            "icona": "riposo"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere le crepes usando le apposite padelle antiaderenti leggermente unte.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Conservare le crepes cotte coperte da pellicola per evitare che si secchino.",
+            "icona": "riposo"
+        }
+    ]
+}
