@@ -631,7 +631,7 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
-    // Sincronia visiva al passaggio del mouse
+    // --- Sincronia visiva al passaggio del mouse ---
     const handleMouseEnter = () => {
         testo.classList.add('evidenziato');
         nodo.classList.add('nodo-attivo');
@@ -649,123 +649,114 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
     nodo.addEventListener('mouseenter', handleMouseEnter);
     nodo.addEventListener('mouseleave', handleMouseLeave);
 
-    let timerTocco = null;
-    let tocchi = 0;
+    // --- Motore Immediato di Selezione Rami ---
+    function eseguiSelezioneRamo(forzaSelezione = false) {
+        const match = dati.step_id.match(/step-\d+([ab])$/);
+        if (!match || tipoPadre !== 'bivio') return;
 
-    function gestisciInterazione(evento) {
+        const lettera = match[1];
+        const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+        const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+        
+        const containerOpposto = document.getElementById('testo-' + idOpposto);
+        const nodoOpposto = document.getElementById('nodo-' + idOpposto);
+
+        const giaScelto = containerOpposto && containerOpposto.classList.contains('nascosto-step');
+
+        if (giaScelto && !forzaSelezione) {
+            // INTERRUTTORE OFF: Se ritocco la mia scelta, si resetta e riappaiono entrambe
+            document.querySelectorAll('.condizione-' + lettera).forEach(el => el.classList.remove('mostra-step'));
+            document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                el.classList.remove('nascosto-step');
+                el.classList.remove('mostra-step');
+            });
+            if (containerOpposto) containerOpposto.classList.remove('nascosto-step');
+            if (nodoOpposto) nodoOpposto.classList.remove('nascosto-step');
+        } else {
+            // INTERRUTTORE ON: Seleziona questa e nascondi l'altra
+            document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                el.classList.add('mostra-step');
+                el.classList.remove('nascosto-step');
+            });
+            document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                el.classList.remove('mostra-step');
+                el.classList.add('nascosto-step');
+            });
+            if (containerOpposto) containerOpposto.classList.add('nascosto-step');
+            if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
+
+            const containerAttuale = document.getElementById('testo-' + dati.step_id);
+            if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+            if (nodo) nodo.classList.remove('nascosto-step');
+        }
+    }
+
+    // --- Gestione Tocco Singolo (Istantaneo) ---
+    function gestisciSingoloClick(evento) {
         evento.stopPropagation();
-        tocchi++; 
+        
+        // Ignora i click sui rami di scarto già nascosti
+        if (testo.classList.contains('nascosto-step')) return;
 
-        // Salviamo subito il target prima che il timer lo faccia "dimenticare" al browser
-        const targetCliccato = evento.currentTarget;
+        // Aziona la selezione ramo senza nessun timer!
+        eseguiSelezioneRamo(false);
 
-        if (tocchi === 1) {
-            // Aumentato a 350ms per rendere il doppio tap infallibile sui telefoni
-            timerTocco = setTimeout(() => {
-                tocchi = 0; 
+        // Gestione popup in modalità "Mostra algoritmo"
+        if (document.body.classList.contains('modalita-algoritmo')) {
+            const eraAperto = testoStep.classList.contains('mostra-testo-popup');
+            
+            document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
+            document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
+            document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
+            
+            if (!eraAperto) {
+                testoStep.classList.add('mostra-testo-popup');
+                testo.classList.add('evidenziato');
+                nodo.classList.add('nodo-attivo');
                 
-                // Selezionare un ramo già nascosto non fa nulla
-                if (testo.classList.contains('nascosto-step')) return;
-
-                const match = dati.step_id.match(/step-\d+([ab])$/);
-                
-                if (match && tipoPadre === 'bivio') {
-                    const lettera = match[1];
-                    const letteraOpposta = lettera === 'a' ? 'b' : 'a';
-                    const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
-                    
-                    const containerOpposto = document.getElementById('testo-' + idOpposto);
-                    const nodoOpposto = document.getElementById('nodo-' + idOpposto);
-
-                    // Controlla se avevamo già scelto questo ramo (l'altro è nascosto)
-                    const giaScelto = containerOpposto && containerOpposto.classList.contains('nascosto-step');
-
-                    if (giaScelto) {
-                        // TOGGLE OFF: L'alunno ci ha ripensato, riaccendiamo entrambe le scelte
-                        document.querySelectorAll('.condizione-' + lettera).forEach(el => {
-                            el.classList.remove('mostra-step');
-                        });
-                        document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
-                            el.classList.remove('nascosto-step');
-                            el.classList.remove('mostra-step');
-                        });
-
-                        if (containerOpposto) containerOpposto.classList.remove('nascosto-step');
-                        if (nodoOpposto) nodoOpposto.classList.remove('nascosto-step');
-                        
-                    } else {
-                        // TOGGLE ON: L'alunno ha scelto, nascondiamo l'altra opzione
-                        document.querySelectorAll('.condizione-' + lettera).forEach(el => {
-                            el.classList.add('mostra-step');
-                            el.classList.remove('nascosto-step');
-                        });
-                        document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
-                            el.classList.remove('mostra-step');
-                            el.classList.add('nascosto-step');
-                        });
-
-                        if (containerOpposto) containerOpposto.classList.add('nascosto-step');
-                        if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
-
-                        const containerAttuale = document.getElementById('testo-' + dati.step_id);
-                        if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
-                        if (nodo) nodo.classList.remove('nascosto-step');
-                    }
+                if (evento.currentTarget === nodo) {
+                    nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-
-                // Popup testo per la visualizzazione "Mostra algoritmo"
-                if (document.body.classList.contains('modalita-algoritmo')) {
-                    const eraAperto = testoStep.classList.contains('mostra-testo-popup');
-                    
-                    document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
-                    document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
-                    document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
-                    
-                    if (!eraAperto) {
-                        testoStep.classList.add('mostra-testo-popup');
-                        testo.classList.add('evidenziato');
-                        nodo.classList.add('nodo-attivo');
-                        
-                        if (targetCliccato === nodo) {
-                            nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        } else {
-                            testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-                }
-            }, 350); 
-            
-        } else if (tocchi === 2) {
-            clearTimeout(timerTocco); 
-            tocchi = 0; 
-            
-            // Logica per non far barrare roba nascosta
-            if (testo.classList.contains('nascosto-step') || 
-               (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
-                return; 
-            }
-            
-            const completato = testoStep.classList.contains('testo-barrato');
-            
-            if (!completato) {
-                testoStep.classList.add('testo-barrato');
-                if(numeroStep) numeroStep.classList.add('numero-barrato');
-                if(nodo) nodo.classList.add('nodo-completato');
-            } else {
-                testoStep.classList.remove('testo-barrato');
-                if(numeroStep) numeroStep.classList.remove('numero-barrato');
-                if(nodo) nodo.classList.remove('nodo-completato');
-            }
-
-            // Pulisce la fastidiosa selezione testo blu
-            if (window.getSelection) {
-                window.getSelection().removeAllRanges();
             }
         }
     }
 
-    testo.addEventListener('click', gestisciInterazione);
-    nodo.addEventListener('click', gestisciInterazione);
+    // --- Gestione Doppio Tocco (Per sbarrare) ---
+    function gestisciDoppioClick(evento) {
+        evento.stopPropagation();
+        
+        if (testo.classList.contains('nascosto-step')) return;
+        
+        // Sicurezza: blocca la selezione sul ramo corretto prima di sbarrarlo
+        eseguiSelezioneRamo(true);
+        
+        const completato = testoStep.classList.contains('testo-barrato');
+        
+        // Metti o togli la riga
+        if (!completato) {
+            testoStep.classList.add('testo-barrato');
+            if(numeroStep) numeroStep.classList.add('numero-barrato');
+            if(nodo) nodo.classList.add('nodo-completato');
+        } else {
+            testoStep.classList.remove('testo-barrato');
+            if(numeroStep) numeroStep.classList.remove('numero-barrato');
+            if(nodo) nodo.classList.remove('nodo-completato');
+        }
+
+        // Elimina l'effetto di testo evidenziato in blu che capita col doppio tap
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+        }
+    }
+
+    // Applichiamo i comandi diretti e veloci
+    testo.addEventListener('click', gestisciSingoloClick);
+    nodo.addEventListener('click', gestisciSingoloClick);
+    
+    testo.addEventListener('dblclick', gestisciDoppioClick);
+    nodo.addEventListener('dblclick', gestisciDoppioClick);
 }
 function cambiaVista() {
     const body = document.body;
