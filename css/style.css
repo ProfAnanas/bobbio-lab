@@ -1448,3 +1448,48 @@ body.body-accoglienza .blocco-categoria summary::-webkit-details-marker {
     50% { transform: scale(1.15); background-color: #c2574b; }
     100% { transform: scale(1); }
 }
+/* =========================================
+   REGOLE PER LA STAMPA (PDF PULITO)
+   ========================================= */
+@media print {
+    /* Nascondi tutto ciò che è interattivo o di navigazione */
+    header, 
+    #pannello-controllo, 
+    #pulsante-indietro, 
+    #pulsante-toggle-vista, 
+    #pulsanti-esportazione,
+    .badge-new,
+    #btn-wake-lock,
+    #btn-sync {
+        display: none !important;
+    }
+
+    /* Nascondi la visualizzazione ad algoritmo se attiva (troppo caotica per il PDF) */
+    #pannello-algoritmo {
+        display: none !important;
+    }
+
+    /* Forza la visualizzazione del testo a tutta pagina */
+    #pannello-testo {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Rimuovi ombre e colori di sfondo inutili per risparmiare inchiostro */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    #vista-ricetta {
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    /* Evita che una ricetta si interrompa a metà tra due pagine se possibile */
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "id": "sorbetto_frutta",
+    "titolo": "Sorbetto base frutta",
+    "nota_dosi": "per 1kg di miscela (con frutta polposa tipo fragola, pesca, melone, mango, pera)",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Polpa frutta fresca (o già mondata)"
+        },
+        {
+            "quantita": 275,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Destrosio"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Neutro per frutta"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Succo di limone fresco"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto agrumi e frutti molto acidi (limone, lime, pompelmo, maracuja, passion fruit, ecc.)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 220,
+                    "unita_descrizione": "g Succo del frutto scelto"
+                },
+                {
+                    "quantita": 225,
+                    "unita_descrizione": "g Acqua"
+                },
+                {
+                    "quantita": 50,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": -500,
+                    "unita_descrizione": "g Frutta fresca"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto frutti di bosco (lampone, mora, mirtillo, ecc.)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 380,
+                    "unita_descrizione": "g Polpa setacciata"
+                },
+                {
+                    "quantita": 95,
+                    "unita_descrizione": "g Acqua"
+                },
+                {
+                    "quantita": 20,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": -500,
+                    "unita_descrizione": "g Frutta fresca"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una boule, mescolare accuratamente con una frusta il saccarosio, il destrosio e il neutro per frutta.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In una pentola, portare l'acqua a circa 40-45°C",
+            "icona": "pentolino",
+            "temperatura": "40-45°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare a pioggia le polveri nell'acqua calda, mescolando con la frusta.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Portare lo sciroppo a 85°C. Questo passaggio è obbligatorio per attivare gli idrocolloidi del neutro, che hanno bisogno di calore per \"aprirsi\" e legare l'acqua.",
+            "icona": "pentolino",
+            "temperatura": "85°C"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Passare immediatamente in abbattitore positivo per portarlo a +4°C.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Lavate, mondare e frullare le fragole a freddo con il succo di limone, ottenendo una purea liscia.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Unire la purea di frutta fredda allo sciroppo base freddo. Frullare il tutto con il mixer a immersione..",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Versare la miscela liquida e fredda nel mantecatore e avviare fino a ottenere una struttura fine e vellutata.",
+            "icona": "versare"
+        }
+    ]
+}

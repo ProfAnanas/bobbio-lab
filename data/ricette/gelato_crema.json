@@ -1,0 +1,150 @@
+{
+    "id": "gelato_crema",
+    "titolo": "Gelato base crema (e varianti)",
+    "nota_dosi": "per 1 kg di miscela",
+    "ingredienti": [
+        {
+            "quantita": 600,
+            "unita_descrizione": "g Latte intero fresco"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Zucchero semolato (saccarosio)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Panna fresca 35% min grassi"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Destrosio"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Latte magro in polvere"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Neutro per creme"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi (Vaniglia, limone, ecc.)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto frutta secca",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Pasta 100% frutta secca (nocciole, pistacchi, mandorle, ecc)"
+                },
+                {
+                    "quantita": -100,
+                    "unita_descrizione": "g Panna fresca (da eliminare)"
+                },
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Latte fresco (da aggiungere)"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto Cacao (usando quello in polvere)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 50,
+                    "unita_descrizione": "g Cacao amaro in polvere"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Zucchero semolato"
+                },
+                {
+                    "quantita": 80,
+                    "unita_descrizione": "g Acqua calda"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto Cioccolato",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Cioccolato fondente (60-70%)"
+                },
+                {
+                    "quantita": -40,
+                    "unita_descrizione": "g Zucchero semolato (da eliminare)"
+                },
+                {
+                    "quantita": -100,
+                    "unita_descrizione": "g Panna fresca (da eliminare)"
+                },
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Acqua (da aggiungere)"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una boule, mescolare accuratamente con una frusta il saccarosio, il destrosio, il latte magro in polvere e il neutro.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un'altra boule, sbattere leggermente i tuorli con una piccola parte della miscela di zuccheri prelevata dal totale. Non devono montare ma solo iniziare a schiumare",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una pentola capiente, versare il latte, la panna e gli aromi. Portate il liquido a circa 40°C.",
+            "icona": "pentolino",
+            "temperatura": "40°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Raggiunti i 40°C, aggiungere i tuorli sbattuti e mescolate bene. A circa 45°C, versare a pioggia tutto il resto delle polveri, continuando a mescolare con la frusta per sciogliere tutto perfettamente.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Portare la miscela a 85°C e mantenere la temperatura per 10-15 secondi (pastorizzazione alta). Questa fase è cruciale non solo per le uova se si usano quelle crude, ma perché a 80-85°C gli stabilizzanti del neutro (come la farina di semi di carrube) si attivano e si idratano correttamente.",
+            "icona": "pentolino",
+            "temperatura": "85°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere l'eventuale gusto scelto (cioccolato, cacao o pasta di nocciole) quindi emulsionare molto bene quando ancora la miscela è a 80°C.",
+            "opzionale": true,
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Trasferire la miscela in un contenitore pulito, filtrando gli aromi con un colino, pellicola a contatto e passare in abbattitore positivo a +4°C.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Riporre la miscela in frigorifero a +4°C per almeno 4-6 ore (o meglio una notte).",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "6-12 ore"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Versare la miscela maturata nel mantecatore e avviare la macchina fino a ottenere la giusta consistenza (circa 10-15 minuti a seconda della macchina).",
+            "icona": "versare"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "id": "semifreddo",
+    "titolo": "Semifreddo all'italiana",
+    "nota_dosi": "Per 12-14 porzioni",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la crema inglese"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Latte fresco"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Panna fresca"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la meringa italiana"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Albumi"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la massa grassa"
+        },
+        {
+            "quantita": 350,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto pasta di frutta secca",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 80,
+                    "unita_descrizione": "g Pasta 100% di frutta secca"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto Cioccolato fondente",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Cioccolato fondente 60-70% sciolto a bagnomaria o microonde"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto caffè",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 10,
+                    "unita_descrizione": "g Caffè solubile sciolto in"
+                },
+                {
+                    "quantita": 30,
+                    "unita_descrizione": "g Caffè espresso bollente"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare la crema inglese, trasferire quindi in una pirofila o teglia bassa, pellicola a contatto e abbattere in positivo.\n(In questa fase emulsionare l'aromatizzazione scelta alla crema inglese bollente, prima dell'abbattimento)",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Preparare la meringa italiana portando acqua e zucchero a 121°C. Quando lo sciroppo è a 115°C, iniziare a schiumare gli albumi in planetaria. A 121°C esatti, versare lo sciroppo a filo sugli albumi e fare montare fino a completo raffreddamento (meringa lucida e ferma).",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Montare la panna fredda a lucido (consistenza morbida, non a neve ferma) e mettere in frigorifero a +4°C.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Prendere la crema inglese (a temperatura ambiente) e alleggerire incorporando un terzo della meringa con una frusta.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere la restante meringa con una marisa, mescolando delicatamente dal basso verso l'alto.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Incorporate la panna semimontata sempre con la marisa.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Colare negli stampi e abbattere a -18°C.",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        }
+    ]
+}

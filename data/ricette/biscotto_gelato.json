@@ -1,0 +1,62 @@
+{
+    "id": "biscotto_gelato",
+    "titolo": "Frolla morbida al miele (biscotto gelato)",
+    "nota_dosi": "per una teglia 30x40 (ottenendo due mini lastre 30x20)",
+    "ingredienti": [
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Burro morbido a pomata (20°C)"
+        },
+        {
+            "quantita": 180,
+            "unita_descrizione": "g Zucchero a velo"
+        },
+        {
+            "quantita": 140,
+            "unita_descrizione": "g Miele millefiori (o acacia)"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 660,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Lievito baking"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "g Sale fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare la frolla a mano o con la planetaria munita di foglia.",
+            "icona": "foglia"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Appiattire leggermente il panetto a 2cm e metterlo in frigorifero o abbattitore positivo per almeno 20 minuti.",
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "20 min."
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stendere la frolla ad uno spessore di 4mm e foderare la teglia 30x40",
+            "icona": "mattarello",
+            "dimensione": "4 mm"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere a 160-170°C per 14-16 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "160-170°C",
+            "tempo": "14-16 min."
+        }
+    ]
+}

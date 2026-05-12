@@ -1,0 +1,119 @@
+{
+    "id": "parfait_caffe",
+    "titolo": "Parfait al caffè (e varianti)",
+    "nota_dosi": "per 10 porzioni",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Panna fresca 35% grassi min."
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 170,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Caffè ristretto"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Caffè solubile"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto vaniglia",
+            "sotto_ingredienti": [
+                {
+                    "quantita": null,
+                    "unita_descrizione": "Eliminare il caffè"
+                },
+                {
+                    "quantita": null,
+                    "unita_descrizione": "Aggiungere i semi di mezza bacca di vaniglia"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto cioccolato fondente",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 130,
+                    "unita_descrizione": "g Cioccolato fondente 60-70%"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto frutta secca",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 80,
+                    "unita_descrizione": "g Pasta 100% di frutta secca"
+                },
+                {
+                    "quantita": -50,
+                    "unita_descrizione": "g Panna fresca"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare l'espresso e ancora bollente, sciogliere immediatamente all'interno la polvere di caffè solubile. Mescolare bene per non lasciare grumi",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Semimontare la panna fredda da frigo in planetaria fino a ottenere una consistenza lucida e morbida (a becco d'uccello).",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Trasferire in una boule e abbattere in positivo",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "In un pentolino, unire l'acqua e lo zucchero e portare a 121°C. \nQuando lo sciroppo arriva intorno ai 115°C, iniziare a montare i tuorli a media velocità in planetaria.",
+            "icona": "pentolino",
+            "temperatura": "121°C"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Non appena lo sciroppo tocca i 121°C, abbassare leggermente la velocità della planetaria e versare lo sciroppo a filo sui tuorli.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Mentre i tuorli montano, versare a filo anche l'estratto di caffè preparato in precedenza. Lasciare girare la planetaria fino al completo raffreddamento della massa (deve essere spumosa e a temperatura ambiente).\n\nIn questa fase sostituire l'eventuale caffè con altro gusto scelto (il cioccolato va inserito fuso a fiso)",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Trasferire la pate a bomb in una boule più grande quindi aggiungere un terzo di panna fredda e mescolate delicatamente con una marisa.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Aggiungere la restante panna, amalgamando con movimenti circolari dal basso verso l'alto per non smontare le due masse.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Colare il composto negli stampi scelti. Passare subito in abbattitore fino al completo congelamento.",
+            "icona": "abbattitore",
+            "temperatura": "-18°C"
+        }
+    ]
+}

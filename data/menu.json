@@ -105,7 +105,8 @@
             { "id": "sable_parmigiano", "nome": "Sablé al Parmigiano Reggiano DOP", "url_dati": "data/ricette/sable_parmigiano.json", "anno": "3, 4, 5", "tag": "burro, aperitivo, frolla" },
             { "id": "brise", "nome": "Pasta brisée con variante al Parmigiano Reggiano DOP", "url_dati": "data/ricette/brise.json", "anno": "2, 3, 4, 5", "tag": "frolla, biscotti, aperitivo, appetizer" },
             { "id": "bacidama", "nome": "Baci di dama", "url_dati": "data/ricette/bacidama.json", "anno": "3, 4", "tag": "piemonte, piemontese" },
-            { "id": "crumble", "nome": "Crumble (e varianti)", "url_dati": "data/ricette/crumble.json", "anno": "3, 4, 5", "tag": "" }
+            { "id": "crumble", "nome": "Crumble (e varianti)", "url_dati": "data/ricette/crumble.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "biscotto_gelato", "nome": "Frolla morbida al miele (biscotto gelato)", "url_dati": "data/ricette/biscotto_gelato.json", "anno": "3, 4", "tag": "", "data_inserimento": "2026-05-12" }
           ]
         },
         { "nome_sottocategoria": "Sfoglie e sfogliati", "preparazioni": [
@@ -129,7 +130,8 @@
           { "id": "krumiri", "nome": "Krumiri dressati con sac a poche", "url_dati": "data/ricette/krumiri.json", "anno": "3, 4, 5", "tag": "monferrato, piemonte" },
           { "id": "bacidama", "nome": "Baci di dama", "url_dati": "data/ricette/bacidama.json", "anno": "3, 4", "tag": "piemonte, piemontese" },
           { "id": "cookies", "nome": "Chocolate Chip Cookies", "url_dati": "data/ricette/cookies.json", "anno": "3, 4, 5", "tag": "cioccolato, biscotti" },
-          { "id": "frollamontata_nouova", "nome": "Frolla montata al mascarpone (senza uova)", "url_dati": "data/ricette/frollamontata_nouova.json", "anno": "3, 4, 5", "tag": "frollini, biscotti" }
+          { "id": "frollamontata_nouova", "nome": "Frolla montata al mascarpone (senza uova)", "url_dati": "data/ricette/frollamontata_nouova.json", "anno": "3, 4, 5", "tag": "frollini, biscotti" },
+          { "id": "lingue_gatto", "nome": "Lingue di gatto", "url_dati": "data/ricette/lingue_gatto.json", "anno": "3, 4", "tag": "", "data_inserimento": "2026-05-12" }
         ] },
         {
           "nome_sottocategoria": "Creme e dolci al cucchiaio",
@@ -180,7 +182,8 @@
             { "id": "maritozzi", "nome": "Maritozzi", "url_dati": "data/ricette/maritozzi.json", "anno": "3", "tag": "panna, lievito, roma" },
             { "id": "pangoccioli", "nome": "Pangoccioli", "url_dati": "data/ricette/pangoccioli.json", "anno": "3", "tag": "cioccolato, gocce di cioccolato, colazione, merenda" },
             { "id": "krapfen", "nome": "Krapfen", "url_dati": "data/ricette/krapfen.json", "anno": "3", "tag": "bomboloni, crema, fritto, ciambelle" },
-            { "id": "pasta_brioche", "nome": "Pasta brioche", "url_dati": "data/ricette/pasta_brioche.json", "anno": "3, 4", "tag": "panbrioche" }
+            { "id": "pasta_brioche", "nome": "Pasta brioche", "url_dati": "data/ricette/pasta_brioche.json", "anno": "3, 4", "tag": "panbrioche" },
+            { "id": "brioche_tuppo", "nome": "Brioche col tuppo", "url_dati": "data/ricette/brioche_tuppo.json", "anno": "3", "tag": "sicilia, siciliana, granita, gelato", "data_inserimento": "2026-05-12" }
           ]
         },
         { "nome_sottocategoria": "Dolci fritti", "preparazioni": [
@@ -188,7 +191,13 @@
           { "id": "fritto_piemontese_dolce", "nome": "Fritto misto dolce alla piemontese", "url_dati": "data/ricette/fritto_piemontese_dolce.json", "anno": "3, 4", "tag": "piemonte" }
         ] },
         { "nome_sottocategoria": "Cioccolato e pralineria", "preparazioni": [] },
-        { "nome_sottocategoria": "Gelati e sorbetti", "preparazioni": [] },
+        { "nome_sottocategoria": "Gelati, sorbetti e creme ghiacciate", "preparazioni": [
+          { "id": "gelato_crema", "nome": "Gelato base crema (e varianti)", "url_dati": "data/ricette/gelato_crema.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
+          { "id": "sorbetto_frutta", "nome": "Sorbetto base frutta", "url_dati": "data/ricette/sorbetto_frutta.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
+          { "id": "granita", "nome": "Granita ricetta base", "url_dati": "data/ricette/granita.json", "anno": "tutti", "tag": "", "data_inserimento": "2026-05-12" },
+          { "id": "parfait_caffe", "nome": "Parfait al caffè (e varianti)", "url_dati": "data/ricette/parfait_caffe.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
+          { "id": "semifreddo", "nome": "Semifreddo all'italiana", "url_dati": "data/ricette/semifreddo.json", "anno": "3", "tag": "", "data_inserimento": "2026-05-12" }
+        ] },
         { "nome_sottocategoria": "Tecniche avanzate", "preparazioni": [] },
         {
           "nome_sottocategoria": "Pasticceria salata",

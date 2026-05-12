@@ -64,11 +64,10 @@ caricaGlossarioCucina();
 // --- 1. DIZIONARIO SOTTOCATEGORIE ---
 const mappaSottocategorie = {
     cucina: ["Preparazioni base", "Stuzzichini e aperitivi", "Antipasti", "Primi", "Secondi", "Contorni", "Salse e riduzioni"],
-    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme e dolci al cucchiaio", "Masse montate", "Torte fresche e da credenza", "Lievitati", "Dolci fritti", "Cioccolato e pralineria", "Gelati e sorbetti", "Pasticceria salata", "Tecniche avanzate"],
+    pasticceria: ["Preparazioni base", "Frolle", "Sfoglie e sfogliati", "Choux", "Biscotteria e piccola pasticceria", "Creme e dolci al cucchiaio", "Masse montate", "Torte fresche e da credenza", "Lievitati", "Dolci fritti", "Cioccolato e pralineria", "Gelati, sorbetti e creme ghiacciate", "Pasticceria salata", "Tecniche avanzate"],
     panificazione: ["Preparazioni base", "Lievitati", "Pani speciali", "Pizze e focacce", "Tecniche avanzate"],
     qualifiche_cucina: ["Prove d'esame"],
-    qualifiche_pasticceria: ["Prove d'esame"],
-    cena_vegana: ["Ricette"],
+    qualifiche_pasticceria: ["Prove d'esame"]
 };
 
 // --- 2. AVVIO E COLLEGAMENTO SENSORI ---
@@ -632,114 +631,119 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
-    testo.addEventListener('mouseenter', () => {
+    // --- Hover Sync ---
+    const handleMouseEnter = () => {
         testo.classList.add('evidenziato');
         nodo.classList.add('nodo-attivo');
-    });
+    };
     
-    testo.addEventListener('mouseleave', () => {
+    const handleMouseLeave = () => {
         if (!testoStep.classList.contains('mostra-testo-popup')) {
             testo.classList.remove('evidenziato');
             nodo.classList.remove('nodo-attivo');
         }
-    });
-    
-    nodo.addEventListener('mouseenter', () => {
-        nodo.classList.add('nodo-attivo');
-        testo.classList.add('evidenziato');
-    });
-    
-    nodo.addEventListener('mouseleave', () => {
-        if (!testoStep.classList.contains('mostra-testo-popup')) {
-            nodo.classList.remove('nodo-attivo');
-            testo.classList.remove('evidenziato');
-        }
-    });
+    };
 
-    let timerTocco = null;
-    let tocchi = 0;
+    testo.addEventListener('mouseenter', handleMouseEnter);
+    testo.addEventListener('mouseleave', handleMouseLeave);
+    nodo.addEventListener('mouseenter', handleMouseEnter);
+    nodo.addEventListener('mouseleave', handleMouseLeave);
 
-    function gestisciInterazione(evento) {
+    // --- Gestione Singolo Click (Bivi e Popup Algoritmo) ---
+    function gestisciSingoloClick(evento) {
         evento.stopPropagation();
-        tocchi++; 
+        
+        // Se il nodo è nascosto (es. ramo di un bivio scartato), non fa nulla
+        if (testo.classList.contains('nascosto-step') || 
+           (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
+            return;
+        }
 
-        if (tocchi === 1) {
-            timerTocco = setTimeout(() => {
-                tocchi = 0; 
+        const match = dati.step_id.match(/step-\d+([ab])$/);
+        
+        // Magia di spegnimento rami per i bivi
+        if (match && tipoPadre === 'bivio') {
+            const lettera = match[1];
+            const letteraOpposta = lettera === 'a' ? 'b' : 'a';
+            const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
+
+            // Mostra il ramo scelto
+            document.querySelectorAll('.condizione-' + lettera).forEach(el => {
+                el.classList.add('mostra-step');
+                el.classList.remove('nascosto-step');
+            });
+            // Nascondi il ramo scartato
+            document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
+                el.classList.remove('mostra-step');
+                el.classList.add('nascosto-step');
+            });
+
+            const containerOpposto = document.getElementById('testo-' + idOpposto);
+            const nodoOpposto = document.getElementById('nodo-' + idOpposto);
+            if (containerOpposto) containerOpposto.classList.add('nascosto-step');
+            if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
+
+            const containerAttuale = document.getElementById('testo-' + dati.step_id);
+            if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
+            if (nodo) nodo.classList.remove('nascosto-step');
+        }
+
+        // Popup testo in modalità Algoritmo
+        if (document.body.classList.contains('modalita-algoritmo')) {
+            const eraAperto = testoStep.classList.contains('mostra-testo-popup');
+            
+            document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
+            document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
+            document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
+            
+            if (!eraAperto) {
+                testoStep.classList.add('mostra-testo-popup');
+                testo.classList.add('evidenziato');
+                nodo.classList.add('nodo-attivo');
                 
-                const match = dati.step_id.match(/step-\d+([ab])$/);
-                
-                // LA MODIFICA È QUI: la magia di spegnimento avviene SOLO se è un bivio
-                if (match && tipoPadre === 'bivio') {
-                    const lettera = match[1];
-                    const letteraOpposta = lettera === 'a' ? 'b' : 'a';
-                    const idOpposto = dati.step_id.replace(lettera, letteraOpposta);
-
-                    document.querySelectorAll('.condizione-' + lettera).forEach(el => {
-                        el.classList.add('mostra-step');
-                        el.classList.remove('nascosto-step');
-                    });
-                    document.querySelectorAll('.condizione-' + letteraOpposta).forEach(el => {
-                        el.classList.remove('mostra-step');
-                        el.classList.add('nascosto-step');
-                    });
-
-                    const containerOpposto = document.getElementById('testo-' + idOpposto);
-                    const nodoOpposto = document.getElementById('nodo-' + idOpposto);
-                    if (containerOpposto) containerOpposto.classList.add('nascosto-step');
-                    if (nodoOpposto) nodoOpposto.classList.add('nascosto-step');
-
-                    const containerAttuale = document.getElementById('testo-' + dati.step_id);
-                    if (containerAttuale) containerAttuale.classList.remove('nascosto-step');
-                    if (nodo) nodo.classList.remove('nascosto-step');
+                if (evento.currentTarget === nodo) {
+                    nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-
-                if (document.body.classList.contains('modalita-algoritmo')) {
-                    const eraAperto = testoStep.classList.contains('mostra-testo-popup');
-                    
-                    document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
-                    document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
-                    document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
-                    
-                    if (!eraAperto) {
-                        testoStep.classList.add('mostra-testo-popup');
-                        testo.classList.add('evidenziato');
-                        nodo.classList.add('nodo-attivo');
-                        
-                        if (evento.currentTarget === nodo) {
-                            nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        } else {
-                            testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    }
-                }
-            }, 250); 
-            
-        } else if (tocchi === 2) {
-            clearTimeout(timerTocco); 
-            tocchi = 0; 
-            
-            if (testo.classList.contains('nascosto-step') || 
-               (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
-                return; 
-            }
-            
-            const completato = testoStep.classList.contains('testo-barrato');
-            
-            if (!completato) {
-                testoStep.classList.add('testo-barrato');
-                if(numeroStep) numeroStep.classList.add('numero-barrato');
-                if(nodo) nodo.classList.add('nodo-completato');
-            } else {
-                testoStep.classList.remove('testo-barrato');
-                if(numeroStep) numeroStep.classList.remove('numero-barrato');
-                if(nodo) nodo.classList.remove('nodo-completato');
             }
         }
     }
 
-    testo.addEventListener('click', gestisciInterazione);
-    nodo.addEventListener('click', gestisciInterazione);
+    // --- Gestione Doppio Click (Sbarramento / Completamento) ---
+    function gestisciDoppioClick(evento) {
+        evento.stopPropagation();
+        
+        // Impedisce di sbarrare un ramo nascosto o scartato
+        if (testo.classList.contains('nascosto-step') || 
+           (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
+            return; 
+        }
+        
+        const completato = testoStep.classList.contains('testo-barrato');
+        
+        if (!completato) {
+            testoStep.classList.add('testo-barrato');
+            if(numeroStep) numeroStep.classList.add('numero-barrato');
+            if(nodo) nodo.classList.add('nodo-completato');
+        } else {
+            testoStep.classList.remove('testo-barrato');
+            if(numeroStep) numeroStep.classList.remove('numero-barrato');
+            if(nodo) nodo.classList.remove('nodo-completato');
+        }
+        
+        // Pulisce eventuali selezioni di testo accidentali causate dal doppio click
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+        }
+    }
+
+    // Attacchiamo i listener nativi: 'click' per le logiche UI, 'dblclick' per barrare
+    testo.addEventListener('click', gestisciSingoloClick);
+    nodo.addEventListener('click', gestisciSingoloClick);
+    
+    testo.addEventListener('dblclick', gestisciDoppioClick);
+    nodo.addEventListener('dblclick', gestisciDoppioClick);
 }
 function cambiaVista() {
     const body = document.body;
@@ -756,49 +760,45 @@ function cambiaVista() {
 
 // --- 7. ESPORTAZIONE E UTILITÀ ---
 function esportaWord() {
-    if (!window.ricettaCorrente) return alert("Nessuna ricetta caricata!");
-    const r = window.ricettaCorrente;
+    const titoloGrezzo = document.getElementById('titolo-ricetta-corrente').innerText;
+    // Forza il titolo in Sentence case (solo prima lettera maiuscola)
+    const titoloFormattato = titoloGrezzo.charAt(0).toUpperCase() + titoloGrezzo.slice(1).toLowerCase();
+    
+    const ingredienti = document.getElementById('lista-ingredienti').innerHTML;
+    const procedimento = document.getElementById('lista-procedimento').innerHTML;
 
-    let html = `<html xmlns:w="urn:schemas-microsoft-com:office:word">
-                <head><meta charset="utf-8"><title>${r.titolo}</title></head>
-                <body style="font-family: Arial, sans-serif; color: #000;">`;
+    // Costruiamo un documento HTML completo con stili incorporati per Word
+    const contenutoHtml = `
+    <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+    <head>
+        <meta charset='utf-8'>
+        <style>
+            body { font-family: 'Arial', sans-serif; line-height: 1.6; }
+            h1 { color: #2c3e50; font-size: 24pt; margin-bottom: 20px; }
+            h2 { color: #2980b9; font-size: 18pt; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 30px; }
+            ul { margin-bottom: 20px; }
+            li { margin-bottom: 5px; }
+            .procedimento-step { margin-bottom: 15px; padding: 10px; background: #f9f9f9; }
+        </style>
+    </head>
+    <body>
+        <h1>${titoloFormattato}</h1>
+        <h2>Ingredienti</h2>
+        <ul>${ingredienti}</ul>
+        <h2>Procedimento</h2>
+        <div>${procedimento}</div>
+        <p style='font-size: 9pt; color: #7f8c8d; margin-top: 50px;'>Dispensa generata da Bobbio Lab</p>
+    </body>
+    </html>`;
 
-    html += `<h1>${r.titolo}</h1>`;
-    if (r.nota_dosi) html += `<p><em>${r.nota_dosi}</em></p>`;
-
-    html += `<h2>Ingredienti</h2><ul>`;
-    r.ingredienti.forEach(ing => {
-        if (ing.quantita) {
-            html += `<li><strong>${ing.quantita}</strong> ${ing.unita_descrizione}</li>`;
-        } else {
-            const desc = typeof ing === 'object' ? ing.unita_descrizione : ing;
-            html += `<li><em>${desc}</em></li>`;
-        }
+    const blob = new Blob(['\ufeff', contenutoHtml], {
+        type: 'application/msword'
     });
-    html += `</ul>`;
 
-    html += `<h2>Procedimento</h2><ol>`;
-    r.procedimento.forEach(passaggio => {
-        if (passaggio.tipo === 'bivio') {
-            html += `<li><strong>Bivio:</strong><ul>`;
-            passaggio.rami.forEach(ramo => html += `<li>${ramo.testo}</li>`);
-            html += `</ul></li>`;
-        } else if (passaggio.tipo === 'parallelo') {
-            html += `<li><strong>In contemporanea:</strong><ul>`;
-            passaggio.rami.forEach(ramo => html += `<li>${ramo.testo}</li>`);
-            html += `</ul></li>`;
-        } else {
-            let prefisso = passaggio.opzionale ? "<em>(Opzionale)</em> " : "";
-            html += `<li>${prefisso}${passaggio.testo}</li>`;
-        }
-    });
-    html += `</ol></body></html>`;
-
-    const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${r.id}.doc`;
+    link.download = titoloFormattato.replace(/\s+/g, '_') + ".doc";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

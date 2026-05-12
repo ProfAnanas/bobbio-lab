@@ -1,0 +1,89 @@
+{
+    "id": "granita",
+    "titolo": "Granita ricetta base",
+    "nota_dosi": "per 1kg di miscela",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Base sciroppo (tipo sciroppo di menta)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 200,
+                    "unita_descrizione": "g Sciroppo (di menta, amarena, chinotto, ecc.)"
+                },
+                {
+                    "quantita": 650,
+                    "unita_descrizione": "g Acqua"
+                },
+                {
+                    "quantita": 150,
+                    "unita_descrizione": "g Zucchero semolato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Base agrumi (limone, arancia, pompelmo, ecc.)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 200,
+                    "unita_descrizione": "g Succo di agrumi filtrato"
+                },
+                {
+                    "quantita": 550,
+                    "unita_descrizione": "g Acqua"
+                },
+                {
+                    "quantita": 250,
+                    "unita_descrizione": "g Zucchero semolato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Base frutta acquosa (anguria, melone, ecc.)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 600,
+                    "unita_descrizione": "g Polpa di frutta frullata e passata"
+                },
+                {
+                    "quantita": 250,
+                    "unita_descrizione": "g Acqua"
+                },
+                {
+                    "quantita": 150,
+                    "unita_descrizione": "g Zucchero semolato"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Scaldare leggermente l'acqua, sciogliervi il saccarosio creando un semplice sciroppo e poi lasciarlo raffreddare in abbattitore.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Una volta che lo sciroppo di acqua e zucchero è ben freddo, Unire a freddo l'ingrediente principale (es. il succo di limone, la polpa di anguria o lo sciroppo di menta).",
+            "icona": "versare"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Mantecatore: Versare il composto liquido nel mantecatore e far girare per meno tempo rispetto a un gelato. Appena inizia a \"sgranare\" e i cristalli si formano, va estratta.",
+                    "testo_nodo": "MANTECATORE-GELATIERA"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Abbattitore: Versare la miscela liquida in una vaschetta metallica e riporre in abbattitore o freezer, andando a mescolarla vigorosamente con una frusta ogni 15-20 minuti per rompere il blocco di ghiaccio e formare i macro-cristalli.",
+                    "icona": "abbattitore",
+                    "temperatura": "-18°c"
+                }
+            ]
+        }
+    ]
+}

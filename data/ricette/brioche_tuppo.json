@@ -1,0 +1,172 @@
+{
+    "id": "brioche_tuppo",
+    "titolo": "Brioche col tuppo",
+    "nota_dosi": "per 10-11 brioche",
+    "ingredienti": [
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Farina 00 debole"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina manitoba"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "g Latte intero fresco"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per l'emulsione aromatica"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Burro morbido a pomata (20°C)"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Miele d'acacia o meglio di arancio"
+        },
+        {
+            "quantita": 18,
+            "unita_descrizione": "g Rum"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Arance (solo scorza)"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Limoni (solo scorza)"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Vaniglia (semi)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per spennellare"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Tuorlo"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Latte fresco"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una boule, lavorare con una marisa il burro insieme al miele, le scorze degli agrumi e la vaniglia.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Inserire il rum a filo, mescolando vigorosamente per creare un'emulsione stabile. Coprire e lasciare a temperatura ambiente.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Setacciate insieme le due farine.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "In planetaria con il gancio, inserire le farine, il lievito sbriciolato e il latte. Avviare a bassa velocità.",
+            "icona": "gancio",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Inserire le uova leggermente sbattute, in tre riprese, attendendo sempre l'assorbimento della dose precedente.",
+            "icona": "gancio",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere lo zucchero in due volte.",
+            "icona": "gancio",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Inserire il sale e portare l'impasto a incordatura perfetta.",
+            "icona": "gancio",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Con la macchina in movimento a velocità media, iniziare a inserire l'emulsione di burro aromatico un cucchiaio alla volta. L'impasto non deve mai perdere la corda",
+            "icona": "gancio",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Controllare le temperature: se l'attrito fa superare i 26°C all'impasto, fermarsi e mettere la ciotola in abbattitore per 5 minuti.",
+            "opzionale": true,
+            "icona": "frigorifero",
+            "temperatura": "+4°C",
+            "tempo": "5 min."
+        },
+        {
+            "step_id": "step-10",
+            "testo": "A impasto lucido, trasferire sul banco, dare un giro di pieghe (slap and fold) e pirlare formando una palla liscia e tesa.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Mettere in un contenitore coperto e fare lievitare a 26-28°C fino al raddoppio del volume (circa 2 ore).",
+            "icona": "lievitazione",
+            "temperatura": "+26-28°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Dividete l'impasto pesando le basi da 80 g e i tuppi da 15 g.  Pirlare accuratamente ogni pezzo: le palline devono avere la superficie tesa e la chiusura sigillata sul fondo.",
+            "icona": "impastare_mano",
+            "dimensione": "80g e 15g"
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Prendere le basi da 80g e premere profondamente al centro con due dita, creando una conca. Allungare leggermente a goccia le palline da 15 g e posizionare la punta all'interno della conca, premendo leggermente per saldare i due pezzi.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Disponerre le brioche sulle teglie ben distanziate e fare lievitare a 26-28°C fino al raddoppio. Il tuppo dovrà risultare gonfio ma ancora ben saldo al centro.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-15",
+            "testo": "Spennellare la superficie con il mix di tuorlo e latte in modo molto delicato.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-16",
+            "testo": "Infornare in forno statico preriscaldato a 170°C per circa 16-18 minuti, fino a completa doratura.",
+            "icona": "forno_statico",
+            "temperatura": "170°C",
+            "tempo": "16-18 min."
+        }
+    ]
+}
