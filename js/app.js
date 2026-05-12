@@ -631,7 +631,7 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
     const numeroStep = testo.querySelector('.numero-step');
     const testoStep = testo.querySelector('.testo-step');
 
-    // --- Hover Sync ---
+    // --- Hover Sync (Evidenziazione al passaggio del mouse) ---
     const handleMouseEnter = () => {
         testo.classList.add('evidenziato');
         nodo.classList.add('nodo-attivo');
@@ -649,19 +649,16 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
     nodo.addEventListener('mouseenter', handleMouseEnter);
     nodo.addEventListener('mouseleave', handleMouseLeave);
 
-    // --- Gestione Singolo Click (Bivi e Popup Algoritmo) ---
+    // --- Gestione Singolo Click (Seleziona Bivio e Popup Algoritmo) ---
     function gestisciSingoloClick(evento) {
         evento.stopPropagation();
         
-        // Se il nodo è nascosto (es. ramo di un bivio scartato), non fa nulla
-        if (testo.classList.contains('nascosto-step') || 
-           (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
-            return;
-        }
+        // Ho RIMOSSO il blocco qui! Il click singolo deve funzionare sempre 
+        // per permettere di attivare e cambiare la scelta del bivio.
 
         const match = dati.step_id.match(/step-\d+([ab])$/);
         
-        // Magia di spegnimento rami per i bivi
+        // Magia di accensione/spegnimento rami per i bivi
         if (match && tipoPadre === 'bivio') {
             const lettera = match[1];
             const letteraOpposta = lettera === 'a' ? 'b' : 'a';
@@ -678,6 +675,7 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
                 el.classList.add('nascosto-step');
             });
 
+            // Gestione estetica dei contenitori
             const containerOpposto = document.getElementById('testo-' + idOpposto);
             const nodoOpposto = document.getElementById('nodo-' + idOpposto);
             if (containerOpposto) containerOpposto.classList.add('nascosto-step');
@@ -688,10 +686,11 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
             if (nodo) nodo.classList.remove('nascosto-step');
         }
 
-        // Popup testo in modalità Algoritmo
+        // Popup testo per la visualizzazione "Mostra algoritmo"
         if (document.body.classList.contains('modalita-algoritmo')) {
             const eraAperto = testoStep.classList.contains('mostra-testo-popup');
             
+            // Chiudi tutti gli altri
             document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
             document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
             document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
@@ -714,7 +713,7 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
     function gestisciDoppioClick(evento) {
         evento.stopPropagation();
         
-        // Impedisce di sbarrare un ramo nascosto o scartato
+        // Qui il blocco serve: Impedisce di sbarrare un ramo nascosto o scartato
         if (testo.classList.contains('nascosto-step') || 
            (testo.classList.contains('blocco-condizionato') && !testo.classList.contains('mostra-step'))) {
             return; 
@@ -722,6 +721,7 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
         
         const completato = testoStep.classList.contains('testo-barrato');
         
+        // Metti o togli la sbarra e i colori completati
         if (!completato) {
             testoStep.classList.add('testo-barrato');
             if(numeroStep) numeroStep.classList.add('numero-barrato');
@@ -732,13 +732,13 @@ function attivaSincronia(testo, nodo, dati, tipoPadre) {
             if(nodo) nodo.classList.remove('nodo-completato');
         }
         
-        // Pulisce eventuali selezioni di testo accidentali causate dal doppio click
+        // Rimuove la fastidiosa selezione blu del testo che capita quando si fa doppio click in fretta
         if (window.getSelection) {
             window.getSelection().removeAllRanges();
         }
     }
 
-    // Attacchiamo i listener nativi: 'click' per le logiche UI, 'dblclick' per barrare
+    // Attacchiamo gli "ascoltatori": click singolo per le logiche, dblclick nativo per barrare
     testo.addEventListener('click', gestisciSingoloClick);
     nodo.addEventListener('click', gestisciSingoloClick);
     
