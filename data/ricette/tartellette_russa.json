@@ -5,7 +5,7 @@
     "ingredienti": [
         {
             "quantita": 250,
-            "unita_descrizione": "g Pasta frolla salata"
+            "unita_descrizione": "<span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`frolla_salata_tecnica`, `data/ricette/frolla_salata_tecnica.json`, `Pasta frolla salata`)\">Pasta frolla salata al Parmigiano Reggiano DOP</span>"
         },
         {
             "quantita": null,
@@ -85,7 +85,7 @@
         },
         {
             "quantita": 60,
-            "unita_descrizione": "g Salsa alla maionese"
+        "unita_descrizione": "<span style=\"color: #d35400; text-decoration: underline; cursor: pointer;\" onclick=\"apriAlgoritmo(`salsa_maionese`, `data/ricette/salsa_maionese.json`, `Salsa alla maionese`)\">Salsa alla maionese</span>"
         },
         {
             "quantita": null,

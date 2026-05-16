@@ -3,16 +3,16 @@
     "titolo": "Focaccia ligure",
         "nota_dosi": "Per una teglia 30x40",
         "ingredienti": [
-        { "quantita": 500, "unita_descrizione": "g Farina 00 media (200-250W" },
-        { "quantita": 300, "unita_descrizione": "g Acqua" },
-        { "quantita": 10, "unita_descrizione": "g Lievito di birra fresco" },
-        { "quantita": 12, "unita_descrizione": "g Sale + 10g di Acqua" },
-        { "quantita": 40, "unita_descrizione": "g Olio EVO (o 20g e 20g di strutto)" },
-        { "quantita": 5, "unita_descrizione": "g Malto Diastasico (o 5g di miele)" },
+        { "quantita": 350, "unita_descrizione": "g Farina 00 media (200-250W" },
+        { "quantita": 210, "unita_descrizione": "g Acqua" },
+        { "quantita": 7, "unita_descrizione": "g Lievito di birra fresco" },
+        { "quantita": 8, "unita_descrizione": "g Sale + 10g di Acqua" },
+        { "quantita": 28, "unita_descrizione": "g Olio EVO (o 14g e 14g di strutto)" },
+        { "quantita": 3, "unita_descrizione": "g Malto Diastasico (o 3g di miele)" },
         { "quantita": null, "unita_descrizione": "Per la salamoia" },
-        { "quantita": 160, "unita_descrizione": "g Acqua" },
-        { "quantita": 80, "unita_descrizione": "g Olio EVO" },
-        { "quantita": 10, "unita_descrizione": "g Sale" }
+        { "quantita": 30, "unita_descrizione": "g Acqua" },
+        { "quantita": 30, "unita_descrizione": "g Olio EVO" },
+        { "quantita": 5, "unita_descrizione": "g Sale" }
     ],
     "procedimento": [
         {
